@@ -102,9 +102,9 @@ The board is divided into multiple versions, such as version 1.2 and version 1.4
 
 - [LM1117](https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/LM1117.pdf)
 
-- [MPU-9250 Datasheet-v1.1-ch](https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/MPU-9250%20Datasheet-v1.1-ch. Pdf)
+- [MPU-9250-Datasheet-v1.1-ch](https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/MPU-9250%20Datasheet-v1.1-ch. Pdf)
 
-- [MPU-9250 Datasheet-v1.1-en](https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/MPU-9250%20Datasheet-v1.1-en. Pdf)
+- [MPU-9250-Datasheet-v1.1-en](https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/MPU-9250%20Datasheet-v1.1-en. Pdf)
 
 - [MPU-9250 Register Map-v1.6](https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/MPU-9250%20Register%20Map-v1.6.pdf )
 
