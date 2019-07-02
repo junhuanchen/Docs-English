@@ -10,10 +10,6 @@ Welcome to BPI-STEAM documentation!
 
     Welcome to the user documentation for BPI-STEAM, which is hosted on the `Github BPI-STEAM <https://github.com/BPI-STEAM>`_ open source organization.
 
-.. Attention::
-
-    Due to the rapid development of open source, the English reference document can be searched in the document, which is helpful for developers to learn and consult the API in the future, and cannot fully Chinese content. Please understand.
-
 I will introduce you to the basic information of BPI-BIT.
 
 .. image:: _static/facade.gif
