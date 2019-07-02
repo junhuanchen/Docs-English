@@ -1,35 +1,35 @@
-最简单的开始
-=====================================================
+The easiest start
+=========================================================== ===
 
 .. Hint::
 
-    工欲善其事，必先利其器。
+    If a worker wants to do something good, he must first sharpen his tools.
 
-    请确保你已经准备好 BPI-BIT ，且已经 :ref:`flash_mpy`。
+    Make sure you have BPI-BIT ready and have :ref:`flash_mpy`.
 
-    并从这里获取最简单的 MicroPython 编辑器 :download:`mpy-editor <https://github.com/BPI-STEAM/mpy-editor>`.
+    And get the simplest MicroPython editor from here: download:`mpy-editor <https://github.com/BPI-STEAM/mpy-editor>`.
 
-在 Windows 下连接设备
+Connect devices under Windows
 ---------------------------
 
-当你插入设备，打开软件后会提示你选择设备串口，如图点击 COM4 即可，如果断开设备了，你也可以继续点击 Connect（连接设备） 图标重连。
+When you plug in the device, you will be prompted to select the serial port of the device after opening the software. Click on COM4 as shown in the figure. If you disconnect the device, you can continue to click the Connect icon to reconnect.
 
 .. image:: simple_use/ready.png
 
-确认连接后，运行代码
+Run the code after confirming the connection
 ---------------------------
 
-复制粘贴到编辑框中，点击 Run（运行），即可让板子显示笑脸::
+Copy and paste into the edit box, click Run, you can let the board display a smile::
 
-    from microbit import *
-    display.show(Image.HAPPY)
+    From microbit import *
+    Display.show(Image.HAPPY)
 
-如你所见，板子显示了一个笑脸，我已经成功了运行 MicroPython 代码。
+As you can see, the board shows a smiley face and I have successfully run the MicroPython code.
 
 .. image:: simple_use/display.png
 
 .. Hint::
 
-    固件已经兼容了 microbit 的 Python 代码，所以你可以直接调用大部分 microbit 功能。
+    The firmware is already compatible with microbit's Python code, so you can call most of the microbit functions directly.
 
-本文展示了你如何使用工具进行编程，但还仅仅只是刚刚开始，还有很多基础要学，例如：学习使用更多的案例，或是改善所用的编程工具。
+This article shows you how to program with tools, but it's just the beginning, there are many basics to learn, such as learning to use more cases, or improving the programming tools used.

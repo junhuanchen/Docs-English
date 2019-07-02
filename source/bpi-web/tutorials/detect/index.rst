@@ -1,10 +1,10 @@
-外部监听
-========================================
+External monitoring
+=================================================
 
 .. toctree::
-   :maxdepth: 2
-   :numbered:
+   :maxdepth: 2
+   :numbered:
 
-   keyboard
-   time
-   input
+   Keyboard
+   Time
+   Input

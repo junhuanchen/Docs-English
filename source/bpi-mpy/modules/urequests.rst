@@ -1,98 +1,96 @@
-
 .. _urequests:
 :mod:`urequests`
 
-urequests 模块
-================================
+Urequests module
+=================================
 
-之前我用了 socket 库，这个作为入门的工具还是不错的，对了解一些爬虫的基本理念，掌握爬虫爬取的流程有所帮助。
-入门之后，我们就需要学习一些更加高级的内容和工具来方便我们的爬取。
-那么这一节来简单介绍一下 urequests 库的基本用法。
+I used the socket library before. This is a good tool for getting started. It is helpful to understand the basic concepts of crawlers and master the process of crawler crawling.
+After getting started, we need to learn some more advanced content and tools to facilitate our crawling.
+Then this section will briefly introduce the basic usage of the urequests library.
 
-Response类
+Response class
 ---------
 
 .. class:: Response(s)
 
-该Response类的对象，包含服务器对HTTP请求的响应。
+The object of the Response class, which contains the server's response to the HTTP request.
 
-    - ``s``-ussl对象
+    - ``s``-ussl object
 
-方法
+method
 ---------
 
 .. method:: close()
 
-关闭socket。
+Close the socket.
 
 .. decorator:: content
 
-返回响应的内容，以字节为单位。
+Returns the content of the response, in bytes.
 
 .. decorator:: text
 
-以文本方式返回响应的内容，编码为unicode。
+The content of the response is returned as text, encoded as unicode.
 
 .. method:: json()
 
-返回响应的json编码内容并转为dict类型。
+Returns the response's json encoded content and converts to the dict type.
 
-方法
+method
 ---------
 
 .. method:: request(method, url, data=None, json=None, headers={},params=None)
 
-向服务器发送HTTP请求。
+Send an HTTP request to the server.
 
-    - ``method`` - 要使用的HTTP方法
-    - ``url`` - 要发送的URL
-    - ``data`` - 要附加到请求的正文。如果提供字典或元组列表，则将进行表单编码。
-    - ``json`` - json用于附加到请求的主体。
-    - ``headers`` - 要发送的标头字典。
-    - ``params`` - 附加到URL的URL参数。如果提供字典或元组列表，则将进行表单编码。
+    - ``method`` - the HTTP method to use
+    - ``url`` - the URL to send
+    - ``data`` - to be attached to the body of the request. If a dictionary or tuple list is provided, the form will be encoded.
+    - ``json`` - json is used to attach to the body of the request.
+    - ``headers`` - the header dictionary to be sent.
+    - ``params`` - the URL parameter attached to the URL. If a dictionary or tuple list is provided, the form will be encoded.
 
 .. method:: head(url, **kw)
 
-发送HEAD请求,返回Response对象。
+Send a HEAD request and return the Response object.
 
-    - ``url`` - Request对象的URL
-    - ``**kw`` - request方法的参数。
+    - ``url`` - the URL of the Request object
+    - ``**kw`` - the parameters of the request method.
 
 .. method:: get(url, **kw)
 
-发送GET请求,返回Response对象。
+Send a GET request and return the Response object.
 
-    - ``url`` - Request对象的URL
-    - ``**kw`` - request方法的参数。
+    - ``url`` - the URL of the Request object
+    - ``**kw`` - the parameters of the request method.
 
 .. method:: post(url, **kw)
 
-发送POST请求,返回Response对象。
+Send a POST request and return a Response object.
 
-    - ``url`` - Request对象的URL
-    - ``**kw`` - request方法的参数。
-    
+    - ``url`` - the URL of the Request object
+    - ``**kw`` - the parameters of the request method.
+    
 
 .. method:: put(url, **kw)
 
-发送PUT请求,返回Response对象。
+Send a PUT request and return a Response object.
 
-    - ``url`` - Request对象的URL
-    - ``**kw`` - request方法的参数。
-    
+    - ``url`` - the URL of the Request object
+    - ``**kw`` - the parameters of the request method.
+    
 .. method:: patch(url, **kw)
 
-送PATCH请求,返回Response对象。
+Send a PATCH request and return a Response object.
 
-    - ``url`` - Request对象的URL
-    - ``**kw`` - request方法的参数。
+    - ``url`` - the URL of the Request object
+    - ``**kw`` - the parameters of the request method.
 
 
-    
+    
 .. method:: delete(url, **kw)
 
-发送DELETE请求。,返回Response对象。
+Send a DELETE request. , return the Response object.
 
-    - ``url`` - Request对象的URL
-    - ``**kw`` - request方法的参数。
-
+    - ``url`` - the URL of the Request object
+    - ``**kw`` - the parameters of the request method.

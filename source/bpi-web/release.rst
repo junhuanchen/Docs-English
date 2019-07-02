@@ -1,36 +1,35 @@
-
-发布中心
-=====================================================
+Release center
+=========================================================== ===
 
 .. image:: logo.png
 
-Webduino 是结合 Arduino X Web 的理念所成，使用 HTML \ JAVASCRIPT \ NODEJS(ES6) 所开发而成。
+Webduino is a combination of Arduino X Web and developed using HTML \ JAVASCRIPT \ NODEJS (ES6).
 
-其拥有多语言环境、直接 Blockly 编程、积木插件化接口、云端服务器托管、物联网开发实例等一系列从简至专的软件体系。
+It has a series of simple to specialized software systems, such as multi-language environment, direct blockly programming, building block plug-in interface, cloud server hosting, and IoT development examples.
 
-release firmware
+Release firmware
 ------------------
 
-源自于台湾 Webduino 官方提供的支持固件，添加了许多额外的特性，如 物联网开发、代码托管、积木编程 等等。
+From the official support firmware provided by Taiwan Webduino, it adds many additional features, such as IoT development, code hosting, building block programming and so on.
 
-- `使用教程 <https://github.com/BPI-STEAM/BPI-BIT-WebDuino>`_
-- `项目主页 <https://github.com/webduinoio/wafirmata>`_
+- `Using the tutorial <https://github.com/BPI-STEAM/BPI-BIT-WebDuino>`_
+- `Project Homepage <https://github.com/webduinoio/wafirmata>`_
 
-WebBit 教育版
+WebBit Education Edition
 ------------------------------------
 
-- `在线文档 <https://tutorials.webduino.io/zh-tw/docs/webbit/index.html>`_ & `在线网站 <https://webbit.webduino.io/blockly/>`_
-- `离线软件 <https://github.com/BPI-STEAM/BPI-BIT-WebDuino/releases>`_
+- `Online documentation <https://tutorials.webduino.io/zh-tw/docs/webbit/index.html>`_ & `Online Website <https://webbit.webduino.io/blockly/>`_
+- `Offline software <https://github.com/BPI-STEAM/BPI-BIT-WebDuino/releases>`_
 
 .. image:: images/github-desktop-webduino.png
 
-Webduino 开发版
+Webduino development version
 ------------------------------------
 
 .. Hint::
 
-    在线教程已同步到进阶教程，请查看左侧列表。
+    The online tutorial has been synced to the advanced tutorial, please see the list on the left.
 
-- `在线教程 <https://webduino.com.cn/site/zh_cn/tutorials.html>`_ & `在线网站 <https://webduino.com.cn/site/zh_cn/index.html>`_
+- `Online tutorial <https://webduino.com.cn/site/zh_cn/tutorials.html>`_ & `Online website <https://webduino.com.cn/site/en_us/index.html>`_
 
 .. image:: images/github-browser-webduino.png

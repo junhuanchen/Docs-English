@@ -1,9 +1,9 @@
 HTTP
 =======
 
-HTTP是基于客户端/服务端（C/S）的架构模型，通过一个可靠的链接来交换信息，是一个无状态的请求/响应协议。
+HTTP is a client/server (C/S) based architectural model that exchanges information over a reliable link and is a stateless request/response protocol.
 
-一个HTTP"客户端"是一个应用程序（Web浏览器或其他任何客户端），通过连接到服务器达到向服务器发送一个或多个HTTP的请求的目的。
+An HTTP "client" is an application (web browser or any other client) that achieves the purpose of sending one or more HTTP requests to the server by connecting to the server.
 
 HTTP GET request
 ----------------
@@ -11,95 +11,93 @@ HTTP GET request
 
 
 
-以下示例显示了如何下载网页。HTTP使用端口80，您首先需要发送“GET”请求才能下载任何内容。作为请求的一部分，您需要指定要检索的页面。
+The following example shows how to download a web page. HTTP uses port 80, you first need to send a "GET" request to download anything. As part of the request, you need to specify which page to retrieve.
 
-让我定义一个可以下载和打印URL的函数::
+Let me define a function that can download and print URLs:
 
-    import socket
+    Import socket
 
-    def http_get(url):
-        _, _, host, path = url.split('/', 3)
-        addr = socket.getaddrinfo(host, 80)[0][-1]
-        s = socket.socket()
-        s.connect(addr)
-        s.send(bytes('GET /%s HTTP/1.0\r\nHost: %s\r\n\r\n' % (path, host), 'utf8'))
-        while True:
-            data = s.recv(100)
-            if data:
-                print(str(data, 'utf8'), end='')
-            else:
-                break
-        s.close()
+    Def http_get(url):
+        _, _, host, path = url.split('/', 3)
+        Addr = socket.getaddrinfo(host, 80)[0][-1]
+        s = socket.socket()
+        S.connect(addr)
+        S.send(bytes('GET /%s HTTP/1.0\r\nHost: %s\r\n\r\n' % (path, host), 'utf8'))
+        While True:
+            Data = s.recv(100)
+            If data:
+                Print(str(data, 'utf8'), end='')
+            Else:
+                Break
+        S.close()
 
 .. Hint::
 
-    在使用socket模块时，请先连接wifi，并且确保可以访问互联网。有关如何wifi连接，请查看上章节 :ref:`配置wifi<network_base>` 。
+    When using the socket module, please connect to wifi first and make sure you can access the internet. For information on how to connect to wifi, please see the previous section :ref:`config wifi<network_base>`.
 
-然后您可以尝试：
+Then you can try:
 
-    >>> http_get('http://micropython.org/ks/test.html')
+    >>> http_get('http://micropython.org/ks/test.html')
 
 
-此时接收到html网页并打印到终端。
+At this point, the html page is received and printed to the terminal.
 
 
 
 HTTP Server
 ----------------
 
-以下示例，板子作为HTTP服务端，使用浏览器可以访问板载光线传感器::
+In the following example, the board acts as an HTTP server and can access the onboard light sensor using a browser:
 
-    import socket
-    import network,time
-    from MicroPython import *
+    Import socket
+    Import network,time
+    From MicroPython import *
 
-    mywifi=wifi()     #实例化wifi类
+    Mywifi=wifi() #instantiate wifi class
 
-    mywifi.connectWiFi("ssid","password")                  # WiFi连接，设置ssid 和password
+    mywifi.connectWiFi("ssid","password") #WiFi connection, set ssid and password
 
-    CONTENT = b"""\
-    HTTP/1.0 200 OK
+    CONTENT = b"""\
+    HTTP/1.0 200 OK
 
-    <meta charset="utf-8">
-    欢迎使用MicroPython！你的光线传感器值是:%d
-    """
+    <meta charset="utf-8">
+    Welcome to MicroPython! Your light sensor value is: %d
+    """
 
-    def main():
-        s = socket.socket()
-        ai = socket.getaddrinfo(mywifi.sta.ifconfig()[0], 80)
-        print("Bind address info:", ai)
-        addr = ai[0][-1]
-        s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-        s.bind(addr)
-        s.listen(5)
-        print("Listening, connect your browser to http://%s:80/" %addr[0])
-        oled.DispChar('Connect your browser',0,0,)                       #oled显示板子ip地址
-        oled.DispChar('http://%s' %addr[0],0,16)
-        oled.show()
-        while True:
-            res = s.accept()
-            client_s = res[0]
-            client_addr = res[1]
-            print("Client address:", client_addr)
-            print("Client socket:", client_s)
-            req = client_s.recv(4096)
-            print("Request:")
-            print(req)
-            client_s.send(CONTENT % light.read())
-            client_s.close()
-
-
+    Def main():
+        s = socket.socket()
+        Ai = socket.getaddrinfo(mywifi.sta.ifconfig()[0], 80)
+        Print("Bind address info:", ai)
+        Addr = ai[0][-1]
+        S.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        S.bind(addr)
+        S.listen(5)
+        Print("Listening, connect your browser to http://%s:80/" %addr[0])
+        oled.DispChar('Connect your browser',0,0,) #oledDisplay board ip address
+        oled.DispChar('http://%s' %addr[0],0,16)
+        Oled.show()
+        While True:
+            Res = s.accept()
+            Client_s = res[0]
+            Client_addr = res[1]
+            Print("Client address:", client_addr)
+            Print("Client socket:", client_s)
+            Req = client_s.recv(4096)
+            Print("Request:")
+            Print(req)
+            Client_s.send(CONTENT % light.read())
+            Client_s.close()
 
 
-在REPL中运行main::
 
-    >>> main()
+
+Run main: in the REPL:
+
+    >>> main()
 
 .. image:: ../../images/tutorials/http_1.png
 
 
-手机或笔记本电脑连接相同wifi，使其在同个局域网内。按打印提示或oled屏幕显示ip，使用浏览器访问板子主机IP地址。
+Connect your mobile phone or laptop to the same wifi so that it is on the same LAN. Press the print prompt or oled screen to display ip, use the browser to access the board sub-host IP address.
 
 .. image:: ../../images/tutorials/http_2.png
-
-

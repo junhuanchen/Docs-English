@@ -1,16 +1,16 @@
-拓展积木
-========================================
+Expanding blocks
+=================================================
 
 .. Hint::
 
-    请在标准环境下进行 `Webduino Blockly 标准版 <https://bit.webduino.com.cn/blockly/>`_ 。
-    教育版暂不支持导入拓展积木。
+    Please do `Webduino Blockly Standard Edition <https://bit.webduino.com.cn/blockly/>`_ in a standard environment.
+    The education version does not support the import of expansion blocks.
 
-在这里你将体验到 Webduino 的额外拓展功能，更多第三方的功能模块可以在开源社区中获得。
+Here you will experience the extra extensions of Webduino, and more third-party functional modules are available in the open source community.
 
 .. toctree::
-    :maxdepth: 1
-    :numbered:
-    
-    basic
-    itpk_robot
+    :maxdepth: 1
+    :numbered:
+    
+    Basic
+    Itpk_robot

@@ -1,112 +1,112 @@
-模拟IO
+Analog IO
 ===============
 
-本章节介绍板子引脚的模拟输入输出的使用方法。引脚是您的电路板与连接到它的外部设备进行通信的方式。板子可以通过拓展板将IO引脚拓展并连接控制或读取其他元器件或模块。
+This section describes how to use the analog input and output of the board pins. A pin is how your board communicates with external devices connected to it. The board can be extended and connected to control or read other components or modules through the expansion board.
 
-.. Attention:: 
+.. Attention::
 
-    你可以查阅 :ref:`板子接口引脚说明<MicroPythonPindesc>` ,了解可供使用的模拟引脚 。
+    You can refer to the :ref:`board subinterface pin description <MicroPythonPindesc>` for the available analog pins.
 
 
 .. _analog_in:
 
-模拟输入
+Analog input
 --------
 
-板子可供使用的模拟输入引脚有 **P0**、**P1**、**P2**、**P3**、P4、P10,其中P4,P10分别被板子的光线和麦克风传感器使用。
+The analog input pins available for the board are **P0**, **P1**, **P2**, **P3**, P4, P10, where P4 and P10 are respectively used by the board's light and microphone sensors. use.
 
 
-.. admonition:: 什么是模拟输入呢？
+.. admonition:: What is an analog input?
 
-    模拟输入是将模拟信号转换为数字信号，简称ADC。
+    The analog input is the conversion of an analog signal to a digital signal, referred to as the ADC.
 
 
 
-以下是使用P0引脚读取模拟输入::
+The following is to read the analog input using the P0 pin:
 
-    from MicroPython import *           # 导入MicroPython模块
+    From MicroPython import * # Import MicroPython module
 
-    p0=MicroPythonPin(0,PinMode.ANALOG)     # 实例化MicroPythonPin,将P0设置为"PinMode.ANALOG"模式
-    while True:
-        value=p0.read_analog()          # 读取P0引脚模拟量
-        oled.DispChar("analog:%d" %value,30,20)
-        oled.show()
-        oled.fill(0)
+    P0=MicroPythonPin(0,PinMode.ANALOG) # Instantiate MicroPythonPin and set P0 to "PinMode.ANALOG" mode
+    While True:
+        Value=p0.read_analog() # Read P0 pin analog
+        oled.DispChar("analog:%d" %value,30,20)
+        Oled.show()
+        Oled.fill(0)
 
 
 ::
-    
-    from MicroPython import *
-    p0=MicroPythonPin(0,PinMode.ANALOG)
-
-.. Note:: 
-
-    ``MicroPythonPin`` 实例化。``mode`` 设置为 ``PinMode.ANALOG`` 模拟输入模式。
-
-
-
-读模拟输入::
-
-    p0.read_analog()
+    
+    From MicroPython import *
+    P0=MicroPythonPin(0,PinMode.ANALOG)
 
 .. Note::
 
-    因为adc采样数据宽度为12bit，所以满量程为4095。
+    ``MicroPythonPin`` is instantiated. ``mode`` is set to ``PinMode.ANALOG`` analog input mode.
 
 
-EXT鳄鱼夹
+
+Read analog input::
+
+    P0.read_analog()
+
+.. Note::
+
+    Because the adc sample data width is 12bit, the full scale is 4095.
+
+
+EXT alligator clip
 +++++++++
 
-接下来，你可以通过鳄鱼夹线将阻性元件(如光敏、热敏电阻)接到板子的 ``EXT`` 和 ``GND`` 焊盘 ,测量传感器的输入值变化……
+Next, you can connect resistive components (such as light-sensitive, thermistor) to the board's ``EXT`` and ``GND`` pads through the crocodile clip line to measure the sensor's input value change...
 
 
-EXT连接是板子的P3引脚::
+The EXT connection is the P3 pin of the board::
 
-    from MicroPython import *           # 导入MicroPython模块
+    From MicroPython import * # Import MicroPython module
 
-        p3=MicroPythonPin(3,PinMode.ANALOG)     # 实例化MicroPythonPin,将P3设置为"PinMode.ANALOG"模式
-        while True:
-            value=p3.read_analog()          # 读取EXT(P3)引脚模拟量
-            oled.DispChar("analog:%d" %value,30,20)
-            oled.show()
-            oled.fill(0)
+        P3=MicroPythonPin(3,PinMode.ANALOG) # Instantiate MicroPythonPin and set P3 to "PinMode.ANALOG" mode
+        While True:
+            Value=p3.read_analog() # Read EXT(P3) pin analog
+            oled.DispChar("analog:%d" %value,30,20)
+            Oled.show()
+            Oled.fill(0)
 
 .. image:: ../../images/tutorials/ext.png
-    :width: 180
-    :align: center
+    :width: 180
+    :align: center
 
 
-模拟输出
+Analog output
 --------
 
-.. admonition:: 什么是模拟输出呢？
+.. admonition:: What is an analog output?
 
-    电路板的引脚不能像音频放大器那样输出模拟信号 - 通过调制引脚上的电压。这些引脚只能使能全3.3V输出，或者将其下拉至0V。
-    然而，仍然可以通过非常快速地接通和断开该电压来控制LED的亮度或电动机的速度，并控制它的开启时间和关闭时间。
-    这种技术称为脉冲宽度调制（PWM），这就是 ``write_analog`` 的方法。
+    The board's pins cannot output analog signals like an audio amplifier - by modulating the voltage on the pins. These pins can only enable a full 3.3V output or pull it down to 0V.
+    However, it is still possible to control the brightness of the LED or the speed of the motor by turning the voltage on and off very quickly, and to control its turn-on time and turn-off time.
+    This technique is called Pulse Width Modulation (PWM), which is the method of ``write_analog``.
 
 
-输出某电压的PWM信号::
+Output a PWM signal of a voltage::
 
-    from MicroPython import *           # 导入MicroPython模块
+    From MicroPython import * # Import MicroPython module
 
-    p0=MicroPythonPin(0,PinMode.PWM)     # 实例化MicroPythonPin,将P0设置为"PinMode.PWM"模式
+    P0=MicroPythonPin(0,PinMode.PWM) # Instantiate MicroPythonPin, set P0 to "PinMode.PWM" mode
 
-    voltage=2.0                      # 电压2V
-    p0.write_analog(int(voltage/3.3*1023))    #计算对应电压PWM的占空比    
+    Voltage=2.0 # voltage 2V
+    P0.write_analog(int(voltage/3.3*1023)) #calculate the duty cycle of the corresponding voltage PWM
 
 .. Note::
 
-    * ``write_analog(value)`` 中的 ``value`` 为PWM信号的占空比。
-    * 由于IO引脚电压为3.3V，我需要输出电压为2V。因此，映射值是2/3*1023。
-    * 由于计算出来的为浮点型数，我们还需要使用 ``int()`` 转成整型。
+    * ``value`` in ``write_analog(value)`` is the duty cycle of the PWM signal.
+    * Since the IO pin voltage is 3.3V, I need an output voltage of 2V. Therefore, the mapped value is 2/3*1023.
+    * Since the calculated floating point number, we also need to use ``int()`` to convert to integer.
 
 .. image:: ../../images/tutorials/pwm.png
 
-您可以在上面看到三种不同PWM信号的图表。它们都具有相同的周期（因此具有频率），但它们具有不同的占空比。
+You can see a graph of three different PWM signals on it. They all have the same period (and therefore frequency), but they have different duty cycles.
 
-* 第一个产生的是 ``write_analog(511)`` ，因为它具有恰好50％的占空比 - 功率在一半的时间内，而在一半的时间内。结果是该信号的总能量是相同的，就好像它是1.65V而不是3.3V。
+* The first one produced is ``write_analog(511)`` because it has exactly 50% duty cycle - power is in half the time, and in half the time. The result is that the total energy of the signal is the same as if it were 1.65V instead of 3.3V.
 
-* 第二个信号具有25％的占空比，可以用 ``write_analog(255)`` 。它具有类似的效果，就好像在该引脚上输出0.825V一样。
+* The second signal has a 25% duty cycle and can be ``write_analog(255)``. It has a similar effect, as if it were outputting 0.825V on this pin.
 
-* 第三个信号具有75％的占空比，并且可以生成 ``write_analog(767)``。它的能量是第二个信号的三倍，相当于在第二个引脚输出2.475V。
+* The third signal has a 75% duty cycle and can generate ``write_analog(767)``. Its energy is three times that of the second signal, which is equivalent to 2.475V on the second pin.

@@ -1,38 +1,37 @@
-# 對話框輸入文字
+# Dialog input text
 
-在 編輯器中如果使用了「對話框輸入文字」的積木，網頁執行後，在怪獸互動五泰的畫面底部，會出現可以輸入文字的對話框，透過輸入文字就能進一步與開發板或小怪獸互動。
+If you use the "Dialog Input Text" building block in the editor, after the web page is executed, at the bottom of the screen of the monster interaction Wutai, a dialog box for entering text will appear, which can be further developed with the development board or the little monster by inputting the text. interactive.
 
-## 積木清單
+## Building block list
 
-對話框輸入文字的積木有兩種，第一種是「在對話框輸入文字」，執行後會出現用來輸入文字的對話框，第二種是「輸入的文字」，執行後會取得所輸入的文字。
+There are two types of building blocks for entering text in the dialog box. The first one is "Enter text in dialog box". After execution, a dialog box for inputting text will appear. The second type is "Entered text". After execution, the input will be obtained. Text.
 
-![對話框輸入文字](../images/zh-tw/docs/webbit/detect/input-01.jpg)
+![Dialog input text] (../images/zh-tw/docs/webbit/detect/input-01.jpg)
 
-## 對話框輸入文字
+## Dialog input text
 
-「對話框輸入文字」積木屬於「*執行完成才會繼續執行後方程序*」的類型 ( 點擊前方問號小圖示會提示 )，當編輯畫面中有這塊積木，*執行時當程序遇到這塊積木會暫停，直到輸入文字後才會再繼續*。
+The "Dialog Input Text" building block belongs to the type of "* Execution will continue to execute the following program*" (click on the small question mark in the front) will be prompted. When there is this brick in the editing screen, * when the program encounters this Block bricks will pause until the text is entered before continuing *.
 
-![對話框輸入文字](../images/zh-tw/docs/webbit/detect/input-02.jpg)
+![Dialog input text] (../images/zh-tw/docs/webbit/detect/input-02.jpg)
 
-舉例來說，下方的程序裡的小怪獸在網頁執行後不會講話，直到輸入文字後才會說話。
+For example, the little monster in the program below will not speak after the web page is executed, and will not speak until the text is entered.
 
-![對話框輸入文字](../images/zh-tw/docs/webbit/detect/input-03.gif)
+![Dialog input text] (../images/zh-tw/docs/webbit/detect/input-03.gif)
 
-## 取得輸入的文字
+## Get the entered text
 
-「輸入的文字」積木*一律都放在「對話框輸入文字」積木之後*，會取得輸入的文字，將上述的例子稍做修改，就能夠再讓小怪獸，講出輸入的文字。
+The "input text" building blocks* are always placed after the "dialog input text" building block*, and the input text will be obtained. If the above example is slightly modified, the little monster can be told to input the input text.
 
-![對話框輸入文字](../images/zh-tw/docs/webbit/detect/input-04.gif)
+![Dialog input text] (../images/zh-tw/docs/webbit/detect/input-04.gif)
 
-## 重複輸入文字
+## Repeat input text
 
-搭配無限重複的迴圈，就能將上述的例子修改「不斷輸入文字」的版本。
+With the infinitely repeated loops, you can modify the above example to change the version of "Continuously Enter Text".
 
-![對話框輸入文字](../images/zh-tw/docs/webbit/detect/input-05.gif)
+![Dialog input text] (../images/zh-tw/docs/webbit/detect/input-05.gif)
 
-## 一問一答
+##一问一答
 
-透過輸入文字的方式，能夠輕鬆實現「一問一答」的效果，在輸入文字積木之前擺放小怪獸詢問姓名的文字，網頁執行後會停留在輸入文字的階段，輸入文字之後透過建立字串積木，讓小怪獸說出「XXX 你好」的文字組合。
+By inputting text, you can easily achieve the effect of "one question and one answer". Before entering the text block, place the small monster to ask for the name of the text. After the web page is executed, it will stay at the stage of inputting the text. After inputting the text, create the string. Building blocks, let the little monsters say "XXX hello" text combination.
 
-![對話框輸入文字](../images/zh-tw/docs/webbit/detect/input-06.gif)
-
+![Dialog input text] (../images/zh-tw/docs/webbit/detect/input-06.gif)

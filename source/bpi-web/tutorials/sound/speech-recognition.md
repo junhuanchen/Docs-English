@@ -1,43 +1,43 @@
-# 語音辨識
+#语音识别
 
-隨著科技的技術日新月異，過去在行動裝置才能使用的語音辨識功能，如今 編輯器也能完整實現，結合 Google 語音辨識的技術，如果電腦有麥克風，就能輕鬆做出「Hey Siri」或「OK Google」的有趣聲控效果。
+With the ever-changing technology of technology, the voice recognition function that can be used in mobile devices in the past can now be fully realized. Combined with the technology of Google voice recognition, if the computer has a microphone, it can easily make "Hey Siri" or "OK. Google's fun voice control.
 
-## 語音辨識積木說明
+## Speech recognition building block description
 
-語音辨識積木可以分別識別中文和英文的語言，無法進行中英文夾雜的混合辨識。
+The speech recognition building blocks can recognize Chinese and English languages ​​separately, and cannot mix and match Chinese and English.
 
-![語音辨識](../images/zh-tw/docs/webbit/sound/speech-recognition-01.jpg)
+![Voice Recognition](../images/zh-tw/docs/webbit/sound/speech-recognition-01.jpg)
 
-語音辨識積木屬於「*執行完成才會繼續執行後方程序*」的類型 ( 點擊前方問號小圖示會提示 )，每段語音辨識時間為兩秒，*辨識後才會繼續執行後方的程序*。
+The voice recognition building block belongs to the type of “* will continue to execute the rear program* after execution is completed” (click on the small question mark in the front) and the voice recognition time is two seconds. After the recognition, the program will be executed*.
 
-![語音辨識](../images/zh-tw/docs/webbit/sound/speech-recognition-02.jpg)
+![Voice Recognition](../images/zh-tw/docs/webbit/sound/speech-recognition-02.jpg)
 
-## 透過小怪獸顯示語音辨識文字
+## Displaying voice recognition text through small monsters
 
-進行語音辨識之後，就能使用「辨識的文字」積木，下圖的範例會在語音辨識後，讓小怪獸講出辨識的文字。
+After the speech recognition, you can use the "identified text" building block. The example in the following figure will let the little monster speak the recognized text after the speech recognition.
 
-![語音辨識](../images/zh-tw/docs/webbit/sound/speech-recognition-03.jpg)
+![Voice Recognition](../images/zh-tw/docs/webbit/sound/speech-recognition-03.jpg)
 
-使用語音辨識積木時，如果是「網頁版」的編輯器，在網頁執行後會詢問「是否允許使用麥克風」，勾選允許。
+When using the voice recognition building block, if it is a "web version" editor, after the web page is executed, it will ask "whether the microphone is allowed" and check the permission.
 
-![語音辨識](../images/zh-tw/docs/webbit/sound/speech-recognition-04.jpg)
+![Voice Recognition](../images/zh-tw/docs/webbit/sound/speech-recognition-04.jpg)
 
-網頁允許麥克風後，在瀏覽器頁籤上會出現一個小圓點，提示麥克風正在運作。
+After the web page allows the microphone, a small dot will appear on the browser tab to indicate that the microphone is working.
 
-![語音辨識](../images/zh-tw/docs/webbit/sound/speech-recognition-05.jpg)
+![Voice Recognition](../images/zh-tw/docs/webbit/sound/speech-recognition-05.jpg)
 
-此時可以對著麥克風講話，語畢就能看見小怪獸講出辨識的文字。
+At this point, you can speak into the microphone, and you can see the little monsters telling the recognized words.
 
-![語音辨識](../images/zh-tw/docs/webbit/sound/speech-recognition-06.jpg)
+![Voice Recognition](../images/zh-tw/docs/webbit/sound/speech-recognition-06.jpg)
 
-## 連續語音辨識
+## Continuous speech recognition
 
-藉由語音辨識積木的特性，搭配重複迴圈，就能不斷進行語音辨識來更新小怪獸講出的文字。
+By recognizing the characteristics of the building blocks and matching the repeated loops, the speech recognition can be continuously performed to update the text spoken by the little monsters.
 
-![語音辨識](../images/zh-tw/docs/webbit/sound/speech-recognition-08.gif)
+![Voice Recognition](../images/zh-tw/docs/webbit/sound/speech-recognition-08.gif)
 
-## 語音辨識控制 開發板
+## Voice Identification Control Development Board
 
-如果將語音辨識結合 開發板，搭配邏輯判斷判斷文字內包含的字詞，就能實現物聯網聲控的應用，下圖的例子便可以很簡單的透過聲控開關燈，或透過聲控改變顏色。
+If the speech recognition is combined with the development board and the logic is used to judge the words contained in the text, the application of the voice control of the Internet of Things can be realized. The example of the following figure can be easily changed by the voice-activated switch light or by the voice control.
 
-![語音辨識](../images/zh-tw/docs/webbit/sound/speech-recognition-09.gif)
+![Voice Recognition](../images/zh-tw/docs/webbit/sound/speech-recognition-09.gif)

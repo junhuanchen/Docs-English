@@ -1,69 +1,69 @@
-制作一个指南针
-=====================================================
+Make a compass
+=========================================================== ===
 
-注意：在 1.2 的版型上没有磁力计功能。
+Note: There is no magnetometer function on the 1.2 version.
 
-这个模块可以让你访问内置的电子罗盘(即 AK8963 )。在使用指南针之前，应该校准指南针，否则读数可能会出错。
+This module gives you access to the built-in electronic compass (ie AK8963). The compass should be calibrated before using the compass, otherwise the reading may be wrong.
 
-校准罗盘会导致程序暂停，直到校准完成。校准由一个小游戏组成，通过旋转板子在空中画圈完成校准。
+Calibrating the compass will cause the program to pause until the calibration is complete. The calibration consists of a small game that is calibrated by rotating the board in the air.
 
-有关指南针的函数
+Function about compass
 --------------------
 
 .. function:: compass.calibrate()
 
-执行此函数开始校准过程，你会收到一条有指导意义的信息，然后我需要旋转板子，在空中画一个倒立的’8’或着转圈，(这个动作可以参考你的手机，手机的指南针功能在使用之前都会有一个校准的步骤)，这个校准的过程会占用大概1分钟的时间，校准期间你无法执行其他程序
-提示信息
+Execute this function to start the calibration process, you will receive a guiding message, then I need to rotate the board and draw an inverted '8' or a circle in the air. (This action can refer to your mobile phone, the compass function of the phone. There will be a calibration step before use. This calibration process takes about 1 minute. You cannot execute other programs during calibration.
+Prompt message
 
 .. figure:: compass/prompt.png
 
 .. function:: compass.is_calibrated ()
 
-如果罗盘校准成功，返回True，否则返回False。
+Returns True if the compass is successfully calibrated, otherwise returns False.
 
 .. function:: compass.get_x ()
 
-返回x轴上磁场强度的读数，它是一个正整数或负整数，取决于磁场的方向。
+Returns the reading of the magnetic field strength on the x-axis, which is a positive or negative integer, depending on the direction of the magnetic field.
 
 .. function:: compass.get_y ()
 
-返回y轴上磁场强度的读数，它是一个正整数或负整数，取决于磁场的方向。
+Returns the reading of the magnetic field strength on the y-axis, which is a positive or negative integer, depending on the direction of the magnetic field.
 
 .. function:: compass.get_z ()
 
-返回z轴磁场强度的读数，它是一个正整数或负整数，取决于磁场的方向。
+Returns the reading of the z-axis magnetic field strength, which is a positive or negative integer, depending on the direction of the magnetic field.
 
 .. function:: compass.heading()
 
-给出从上述读数计算出的罗盘航向，为0到360范围内的整数，表示按顺时针方向的角度，12点钟方向为0
+Give the compass heading calculated from the above readings as an integer in the range 0 to 360, indicating the angle in the clockwise direction, 0 in the 12 o'clock direction
 
 .. function:: compass.get_field_strength()
 
-返回设备周围磁场大小，它是一个整数。
+Returns the size of the magnetic field around the device, which is an integer.
 
-体验一下指南针
+Experience the compass
 --------------------
 
 .. code:: python
 
-   """
-       compass.py
-       Creates a compass.
-       The user will need to calibrate the compass first. The compass uses the
-       built-in clock images to display the position of the needle.
+   """
+       Compass.py
+       Creates a compass.
+       The user will need to calibrate the compass first. The compass uses the
+       Built-in clock images to display the position of the needle.
 
-   """
-   from microbit import *
+   """
+   From microbit import *
 
-   # Start calibrating
-   compass.calibrate()
-   # Try to keep the needle pointed in (roughly) the correct direction
-   while True:
-       sleep(100)
-       needle = ((15 - compass.heading()) // 30) % 12
-       display.show(Image.ALL_CLOCKS[needle])
+   # Start calibrating
+   Compass.calibrate()
+   # Try to keep the needle pointed in (roughly) the correct direction
+   While True:
+       Sleep(100)
+       Needle = ((15 - compass.heading()) // 30) % 12
+       Display.show(Image.ALL_CLOCKS[needle])
 
-在这个例子中第一步程序先校准了电子罗盘（mpu），校准完成后我们可以看到我们的led面板上有一个指南针它不管我们如何转动板子它始终指向南方
+In this example, the first step is to calibrate the electronic compass (mpu). After the calibration is complete, we can see that there is a compass on our led panel. It always points to the south no matter how we turn the board.
 |compass|
 
 .. |compass| image:: compass/compass.gif

@@ -1,10 +1,10 @@
-语音 & 音效
-========================================
+Voice & sound
+=================================================
 
 .. toctree::
-   :maxdepth: 2
-   :numbered:
+   :maxdepth: 2
+   :numbered:
 
-   sound-effect
-   speak-aloud
-   speech-recognition
+   Sound-effect
+   Speak-aloud
+   Speech-recognition

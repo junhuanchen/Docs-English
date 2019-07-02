@@ -1,143 +1,143 @@
-让板子联上网
-=====================================================
+Let the board connect to the Internet
+=========================================================== ===
 
 .. Attention::
 
-    20190528 以后正式版的固件已经关闭了 debug 信息，所以你需要禁用下述代码，可在 boot.py 内容修改它。
-    
-    .. code:: python
+    After the 20190528 official firmware has been turned off the debug information, so you need to disable the following code, you can modify it in the boot.py content.
+    
+    .. code:: python
 
-        import esp
-        esp.osdebug(None)
+        Import esp
+        Esp.osdebug(None)
 
-连接 WIFI 热点
+Connect to a WIFI hotspot
 ---------------------------
 
-固件上电后，在面板 LED 灯滚动完毕后，默认就会尝试联网，你可以注意到，如果这时候被工具或人为的 Ctrl + C 停止后，将不会进行联网操作，需要使用以下代码
+After the firmware is powered on, after the panel LED is scrolled, the network will try to connect by default. You can notice that if the tool or artificial Ctrl + C stops, it will not be connected. You need to use the following code.
 
 .. code:: python
 
-   import wifi # booy.py default enable
-   wifi.try_connect()
+   Import wifi # booy.py default enable
+   Wifi.try_connect()
 
-效果如下图，默认 boot.py 里会默认调用
-``import wifi``\ ，所以你也可以直接在 REPL 中调用
-``wifi.try_connect()``\ 。
+The effect is as shown below. The default boot.py will be called by default.
+``import wifi``\ , so you can also call directly in REPL
+``wifi.try_connect()``\.
 
 .. image:: wifi/try_connect.png
 
-在默认的联网模式下，如果从来没有配网过，板子最初会自动连接 WIFI 名称
-``webduino.io`` 密码 ``webduino`` 的 WIFI 热点。
+In the default networking mode, if the network has never been configured, the board will automatically connect to the WIFI name initially.
+``webduino.io`` Password ``webduino`` WIFI hotspot.
 
-如果附近没有该热点，将会输出\ ``no AP found``\ ，而我的环境里提前准备了这个热点，因此会得到一个IP地址\ ``192.168.10.185``\ （如图），否则将会反复输出连接存在的问题（这并不会影响你的输入和输出），如果不希望它继续连接网络，可以手动输入\ ``wifi.close()``\ 停止
-WIFI 连接。
+If there is no such hotspot nearby, \ ``no AP found``\ will be output, and this hotspot is prepared in advance in my environment, so I will get an IP address \ ``192.168.10.185``\ (pictured). Otherwise, the connection will be repeatedly outputted (this will not affect your input and output). If you do not want it to continue to connect to the network, you can manually enter \ ``wifi.close()``\
+WIFI connection.
 
 .. image:: wifi/got_ip.png
 
-SmartConfig 配网
+SmartConfig distribution network
 ---------------------------
 
-当然，你的 WIFI 热点不一定是这个，所以你现在可以在开机的 LED 滚动过程中按下 **A键** 并松开，会自动进入配网模式，重新给板子连入其他WIFI，帮助板子连上指定 WIFI，进入\ ``SmartConfig`` 的配网模式，LED（18）将会亮起，图例所示 LED 灯。
+Of course, your WIFI hotspot is not necessarily this, so you can now press the **A button** and release it during the LED scrolling process, it will automatically enter the distribution mode, and re-connect the board to other WIFI, help The board is connected to the specified WIFI, enter the distribution mode of \ ``SmartConfig``, the LED (18) will light up, the LED light shown in the legend.
 
 .. image:: wifi/start_config.png
 
-复位后看板子的 LED 灯长亮。
+After reset, the LED of the board is lit.
 
-即可确认进入了配网模式，如果有必要，你也可以在此时的串口查看输出对应的信息。
+You can confirm that you have entered the distribution mode. If necessary, you can also view the output corresponding information at the serial port at this time.
 
 .. Attention::
 
-    在这个模式将无法正常使用 ``Mpfshell`` 的 open ，但可以使用其他串口工具进入，这是因为此时板子已经无法响应 REPL 操作了，当配网完成后 REPL 会继续运行。
+    In this mode, the ``Mpfshell`` open will not work properly, but it can be accessed using other serial tools. This is because the board has been unable to respond to the REPL operation, and the REPL will continue to run when the distribution network is completed.
 
 .. image:: wifi/smartconfig.png
 
-若运行期间工具软件出错，你也可以使用其他串口工具查看输出信息。
+If the tool software fails during the run, you can also use other serial tools to view the output information.
 
-确认进入了配网模式后，此时你需要使用一台安卓手机来安装 `EspTouch`_ 的配网软件，你也可以在手机应用市场里搜索 SmartConfig 相关软件下载使用。
+After confirming that you have entered the distribution mode, you need to use an Android phone to install the distribution software of `EspTouch`_. You can also search for the SmartConfig related software in the mobile application market.
 
 .. Attention::
 
-    现在软件发展速度很快，下图中的软件 UI 界面已经改变，但功能不变，请下载 EspTouch.APK 查看，支持在 Android 9+ 以后读取 WIFI 名称。
-    
-    如果获取不到，请到社区中搜索获得。
+    Now the software is developing very fast. The software UI interface in the figure below has changed, but the function is unchanged. Please download EspTouch.APK to view and support reading the WIFI name after Android 9+.
+    
+    If you can't get it, go to the community and search for it.
 
 .. image:: wifi/view_apk.png
 
-以 ``Android-SmartConfig.apk`` 为例，先将手机连入WIFI，然后再将让板子也连入同一个WIFI，再到软件中输入所连WIFI的密码，这将告知板子，如何连接到该WIFI。
+Take ``Android-SmartConfig.apk`` as an example, first connect the phone to WIFI, then connect the board to the same WIFI, and then enter the password of the connected WIFI in the software, this will inform the board, how to connect To the WIFI.
 
 .. image:: wifi/open_apk.png
 
-点击唯一的按钮启动配网，可以看到 REPL 有对应信息输出，同时板子的 LED
-灯也会跟着变化。
+Click the only button to start the distribution network, you can see that REPL has corresponding information output, and the board's LED
+The lights will also change.
 
 .. _EspTouch: https://github.com/EspressifApp/EspRelease/raw/master/EspTouch/esptouch.apk
 
 
-等待一会，如果卡在了配网模式没有成功，则会在两分钟内会自动重启。而当配网成功后，LED
-灯会变成 **微亮**\ ，此时 REPL 会输出板子连上 WIFI 得到的 IP
-地址，如下图为：\ ``192.168.10.185``\ ，并且 值得注意的是 3de1
-就对应的是板子的名称，这个名称以后会用到。
+Wait for a while, if the card is not successful in the distribution mode, it will automatically restart within two minutes. And when the distribution network is successful, the LED
+The light will turn into **light **\ , at which point REPL will output the IP of the board connected to WIFI
+The address is as follows: \ ``192.168.10.185``\, and it is worth noting that 3de1
+Corresponding to the name of the board, this name will be used later.
 
 .. image:: wifi/smc_apk.png
 
-并且在手机上，也会看到板子的 IP 地址，此时板子已经完成了网络配置。
+And on the phone, you will also see the IP address of the board, at this time the board has completed the network configuration.
 
 .. image:: wifi/smc_finish.png
 
 .. image:: wifi/apk_finish.png
 
-小提示：如果配网失败，请按以下流程排除问题。
+Tip: If the distribution network fails, please follow the process below to solve the problem.
 
-- 确认进入了 配网模式（SmartConfig）
-- 确认 WIIFI 热点密码无误
-- 输入 wifi.isconnected() 返回 True
-- 确认 WIFI 射频 是 2.4Ghz（重要）
+- Confirmed to enter the distribution network mode (SmartConfig)
+- Confirm that the WIIFI hotspot password is correct
+- Enter wifi.isconnected() to return True
+- Confirm that the WIFI RF is 2.4Ghz (Important)
 
-修改联网配置文件
+Modify the networking profile
 ---------------------------
 
-当你出现以上配网失败的时候，且找不到任何解决办法，你可以直接修改联网的配置文件，即手动创建或修改 WIFI 名称和密码配置文件 ``wifi_cfg,py``。
+When you fail to find the above distribution network, and can't find any solution, you can directly modify the network configuration file, that is, manually create or modify the WIFI name and password configuration file ``wifi_cfg, py``.
 
-（现在固件会在调用 wifi.start() 后自动生成 ``wifi_cfg,py``\ ）
+(The firmware will now automatically generate ``wifi_cfg,py``\ after calling wifi.start())
 
-准备一个 ``wifi_cfg,py``, 其中内容为：
+Prepare a ``wifi_cfg, py`` with the contents:
 
 .. code:: python
 
-   WIFI_SSID = '你的WIFI热点名称'
-   WIFI_PSWD = '你的WIFI热点密码'
-   HOST_NAME = '你板子的网络名称' # 可选
+   WIFI_SSID = 'Your WIFI hotspot name'
+   WIFI_PSWD = 'Your WIFI Hotspot Password'
+   HOST_NAME = 'Your board's network name' #Optional
 
-（现在已经可以先 ``get wifi_cfg.py`` 取回配置）与 ``mpfshell``
-同一个目录中使用 ``put wifi_cfg.py``, 将其替换掉现在的 WIFI 连接配置。
+(Now you can first ``get wifi_cfg.py`` to retrieve the configuration) and ``mpfshell``
+Use ``put wifi_cfg.py`` in the same directory and replace it with the current WIFI connection configuration.
 
-你也可以直接在 ``repl`` 中输入 ‘wifi.smartcoinfig()’，来手动启动配网模式，而不是使用开机时的按键触发。
+You can also manually enter the ‘wifi.smartcoinfig()’ in ``repl`` to manually start the distribution mode instead of using the button trigger at power-on.
 
-无线使用 REPL
+Wireless use REPL
 ---------------------------
 
-注意，使用前确保允许应用通过网络防火墙，且电脑与板子连接处于同一网络下（同一个WIFI下）。
+Note that before using, make sure that the application is allowed to pass through the network firewall, and the computer and the board are connected under the same network (under the same WIFI).
 
-在这之前先进入 ``repl`` 输入\ ``import webrepl_setup``\ 启动网络配置流程。
+Before entering the ``repl`` input\ ``import webrepl_setup``\, start the network configuration process.
 
-根据步骤依次为（e、1234、y）
+According to the steps, (e, 1234, y)
 
-启动网络服务配置（启动输入 e，停止输入 d）
-设置网络连接密码（不少于4位，需输入两遍，由自己决定，我只是为了省事）
-是否需要重启板子（复位输入y，否则输入 n）
+Start network service configuration (start input e, stop input d)
+Set the network connection password (not less than 4 digits, you need to enter it twice, it is up to you, I just want to save trouble)
+Is it necessary to restart the board (reset input y, otherwise enter n)
 
 .. image:: wifi/webrepl.png
 
-此前我已经知道了板子现在的 IP为 ``192.168.10.185``\ ，如果不知道可以重新上电查看，接着使用\ ``mpfshell`` ，输入\ ``ws:192.168.10.185,1234``\ ，其中\ ``,1234``\ 是我此前设定的连接密码（前一章），你也可以现在不输入，但待会也一样会提示你输入密码的。（注意是英文输入法的逗号）
+I already knew that the IP of the board is ``192.168.10.185``\. If you don't know, you can power it back, then use \ ``mpfshell`` and enter \ ``ws:192.168.10.185,1234`` \ , where \ ``,1234``\ is the connection password I have previously set (previous chapter), you can also not enter now, but will also prompt you to enter the password. (Note that the comma of the English input method)
 
 .. image:: wifi/into_webrepl.png
 
-可以看到已经连接成功，此时板子也可以透过无线来操作了，你也可以重启复位再试一次。
+You can see that the connection has been successful. At this time, the board can also be operated by wireless. You can also restart the reset and try again.
 
-连接失败会有以下两种提示：
+There are two tips for connecting failures:
 
-连接远端无响应，提示\ ``WebREPL Remote IP Does not respond``\ ，分析的情况是一种可能是与板子不同属一个网络，另一种可能是各种软件或硬件防火墙挡住了。
-连接密码错误，提示\ ``WebREPL Password Error``\ ，重新输入密码即可，也许你连到别人的板子了。
-出现问题时的操作，假设连不上，先用有线进去按 Ctrl + D 软复位后核对连接，接着退出来换成无线连接。
+The remote connection is not responding, prompt \ ``WebREPL Remote IP Does not respond``\. The analysis is that one may be a network different from the board, and the other may be blocked by various software or hardware firewalls.
+The connection password is incorrect, prompt \ ``WebREPL Password Error``\, re-enter the password, maybe you are connected to someone else's board.
+In the case of a problem, if you can't connect, use the cable to press Ctrl + D to reset the connection after soft reset, and then exit to change to a wireless connection.
 
 .. image:: wifi/error_webrepl.png

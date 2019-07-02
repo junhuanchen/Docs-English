@@ -1,47 +1,47 @@
-# 5x5 全彩 LED 点矩阵
+# 5x5 Full Color LED Dot Matrix
 
-Webduino Bit 的正中央内嵌一组 5x5 共 25 颗全彩 LED 的点矩阵，每个灯都可透过红绿蓝三原色进行混色，透过不同位置的灯号与颜色显示，就能呈现各种不同的图案造型。
+The center of the Webduino Bit is embedded with a 5x5 dot matrix of 25 full-color LEDs. Each of the lights can be mixed with the three primary colors of red, green and blue. It can be displayed through various positions of lights and colors. Different pattern shapes.
 
-## 基本操作
+## Basic operation
 
-打开 [Webduino Blockly Bit 体验版](https://webduino.com.cn/link.html?lang=zh-hant&type=blockly)，在编辑区放入*开发板积木*， 开发板默认使用「*仿真器*」，联机到画面中「*虚拟的 Bit 开发板*」，默认 Device ID 为 「*1234*」。
+Open [Webduino Blockly Bit Experience Edition] (https://webduino.com.cn/link.html?lang=zh-hant&type=blockly), put * development board building blocks* in the editing area, and use "* emulation by default. "*", connect to the "*Virtual Bit Development Board*" on the screen, and the default Device ID is "*1234*".
 
-> 开发板相关积木，在「*开发板*」目录下。
+> Development board related building blocks, under the "* development board*" directory.
 
 ![](img/tutorials/zh_cn/rgbmatrix-01.jpg)
 
-如果是使用「*实体 Bit 开发板*」，下拉选单选择「*Wi-Fi*」，并于后方字段填入开发板的 Device ID。
+If you are using "*Ent Bit Development Board*", select "*Wi-Fi*" from the drop-down menu and fill in the Device ID of the development board in the back field.
 
 ![](img/tutorials/zh_cn/rgbmatrix-02.jpg)
 
-在开发板内放入「*设定 matrix 为全彩点矩阵*」的积木，在其下方接着摆入「*设定 matrix 色彩*」的积木。
+In the development board, the building block "* sets the matrix to be a full-color dot matrix*" is placed, and the blocks of "*set matrix color*" are placed below it.
 
-> 全彩点矩阵相关积木，在「*全彩点矩阵*」目录下。
+> Full color dot matrix related building blocks in the "* Full color dot matrix*" directory.
 
 ![](img/tutorials/zh_cn/rgbmatrix-03.jpg)
 
-先用鼠标选择颜色，点击下方空格就能将颜色填入并绘制图案，如果选择黑色则该颗灯不会发光。
+First select the color with the mouse, click on the space below to fill in the color and draw the pattern, if you choose black, the light will not shine.
 
 ![](img/tutorials/zh_cn/rgbmatrix-04.jpg)
 
-点选右上方红色按钮执行，就可以看到仿真器的虚拟开发板，或是自己的实体开发板显示对应的颜色和图案。
+Click the red button on the top right to execute, you can see the virtual development board of the emulator, or your own physical development board to display the corresponding color and pattern.
 
-> 范例解答：[Webduino Bit 全彩点矩阵显示颜色](https://webduino.com.cn/link.html?lang=zh-hans&type=example&blockly=rgbmatrix01)
+> Example Answer: [Webduino Bit Full Color Dot Matrix Display Color] (https://webduino.com.cn/link.html?lang=zh-hans&type=example&blockly=rgbmatrix01)
 
 ![](img/tutorials/zh_cn/rgbmatrix-05.jpg)
 
-## 网页按钮互动
+## Web button interaction
 
-已经了解全彩点矩阵的基本应用之后，接着要使用「网页互动区」的「网页按钮」操控灯号显示，点选上方选单的网页互动区按钮，下拉选单选择「*按钮行为*」，选择后在画面中会出现五个按钮，同时在左侧也会出现对应的积木选单。
+Now that you have learned the basic application of the full-color dot matrix, you need to use the "Web button" of the "Webpage Interactive Area" to control the light number display, click the webpage interactive area button of the above menu, select the "* button behavior*" from the drop-down menu, and select After that, five buttons will appear on the screen, and the corresponding building block menu will appear on the left side.
 
 ![](img/tutorials/zh_cn/rgbmatrix-06.jpg)
 
-将「*点选按钮执行*」的积木放到画面里，分别设定点选按钮 1 和点选按钮 2 时会出现不同图案，点选按钮 3 则会将全彩点矩阵关闭。
+Put the blocks of "*click button to execute*" on the screen, and set different buttons when setting click button 1 and click button 2 respectively. Clicking button 3 will close the full color point matrix.
 
 ![](img/tutorials/zh_cn/rgbmatrix-07.jpg)
 
-点选右上方红色按钮执行，就可以用网页互动区的按钮，控制仿真器的虚拟开发板，或是自己的实体开发板显示对应的颜色和图案。
+Click the red button on the top right to execute, you can use the buttons in the interactive area of ​​the web page to control the virtual development board of the emulator, or display the corresponding color and pattern on your own physical development board.
 
-> 范例解答：[网页按钮切换 Webduino Bit 全彩点矩阵图案](https://webduino.com.cn/link.html?lang=zh-hans&type=example&blockly=rgbmatrix02)
+> Example Answer: [Web Button Switch Webduino Bit Full Color Dot Matrix Pattern] (https://webduino.com.cn/link.html?lang=zh-hans&type=example&blockly=rgbmatrix02)
 
 ![](img/tutorials/zh_cn/rgbmatrix-08.gif)

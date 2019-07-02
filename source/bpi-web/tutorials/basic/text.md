@@ -1,134 +1,133 @@
-# 文字
+#文字
 
-文字積木除了可以顯示有意義的詞彙，也可以透過相加的方式把文字組合，或是在一段詞彙中尋找對應的字詞或字母，甚至也可顯示語音辨識的內容或物聯網串感器的狀態。
+In addition to displaying meaningful vocabulary, the text building block can also combine texts by adding them, or find corresponding words or letters in a vocabulary, or even display the content of speech recognition or the status of the Internet of Things serial sensor. .
 
-## 文字積木清單
+## Text Block List
 
-文字積木分別有指定文字、換行、轉換大小寫、建立字串、文字工具、文字查找、文字取代、文字轉換...等常用的文字功能。
+Text blocks have common text functions such as specifying text, line feed, conversion case, creating string, text tool, text search, text substitution, text conversion, etc.
 
-![文字](../images/zh-tw/docs/webbit/basic/text-01.jpg)
+![Text](../images/zh-tw/docs/webbit/basic/text-01.jpg)
 
-## 指定文字
+## Specify text
 
-「指定文字」積木可以輸入指定的文字，以便其他積木使用。
+The "specified text" building block can input the specified text for use by other building blocks.
 
-![文字](../images/zh-tw/docs/webbit/basic/text-02.jpg)
+![Text](../images/zh-tw/docs/webbit/basic/text-02.jpg)
 
-例如在小怪獸講話積木後方接上指定文字，輸入 hello，網頁執行後小怪獸就會說出 hello。
+For example, after the little monster talks the building block, the specified text is entered, and hello is entered. After the web page is executed, the little monster will say hello.
 
-![文字](../images/zh-tw/docs/webbit/basic/text-03.jpg)
+![Text](../images/zh-tw/docs/webbit/basic/text-03.jpg)
 
-## 換行
+## Wrap
 
-「換行」積木可以將一段文字從指定的位置折行。
+A "wrap" block can wrap a piece of text from a specified position.
 
-![文字](../images/zh-tw/docs/webbit/basic/text-04.jpg)
+![Text](../images/zh-tw/docs/webbit/basic/text-04.jpg)
 
-## 建立字串
+##Create a string
 
-「建立字串」積木可以把不同的文字積木組合成一段文字。
+The "Build String" building block can combine different text blocks into a single paragraph of text.
 
-![文字](../images/zh-tw/docs/webbit/basic/text-05.jpg)
+![Text](../images/zh-tw/docs/webbit/basic/text-05.jpg)
 
-點擊藍色小齒輪，透過拖拉組合可以增加文字缺口。
+Click on the blue pinion to increase the text gap by dragging and dropping.
 
-![文字](../images/zh-tw/docs/webbit/basic/text-06.gif)
+![Text](../images/zh-tw/docs/webbit/basic/text-06.gif)
 
-在文字缺口內放入指定的文字積木或是換行積木，就可以認字組合出欲顯示的文字，從下圖可以看到組合過的文字和單行文字的差異。
+By inserting the specified text block or line-changing block in the text gap, you can combine the words to be displayed, and you can see the difference between the combined text and the single-line text.
 
-![文字](../images/zh-tw/docs/webbit/basic/text-07.jpg)
+![Text](../images/zh-tw/docs/webbit/basic/text-07.jpg)
 
-建立字串也可以用來組合兩個变量，例如变量 a 為 hello，变量 b 為 world，透過建立字串就能將兩個变量組合為中間換行的 hello world。
+The creation of a string can also be used to combine two variables. For example, the variable a is hello and the variable b is world. By constructing a string, the two variables can be combined into a hello world of the intermediate line break.
 
-![文字](../images/zh-tw/docs/webbit/basic/text-08.jpg)
+![Text](../images/zh-tw/docs/webbit/basic/text-08.jpg)
 
-## 在变量後方加入文字
+## Add text after the variable
 
-「在变量後加入文字」能夠改變原本变量的內容，使原本变量的內容後方額外增加文字。
+"Adding text after a variable" can change the content of the original variable so that the text of the original variable is followed by additional text.
 
-![文字](../images/zh-tw/docs/webbit/basic/text-09.jpg)
+![Text](../images/zh-tw/docs/webbit/basic/text-09.jpg)
 
-因為是以「变量」為主，所以如果要讓小怪獸講話，就變成是使用变量的方式呈現。
+Because it is based on "variables", if you want the little monster to talk, it will be rendered using variables.
 
-![文字](../images/zh-tw/docs/webbit/basic/text-10.jpg)
+![Text](../images/zh-tw/docs/webbit/basic/text-10.jpg)
 
 
-## 取代文字
+## replace text
 
-「取代文字」積木可以快速將一段文字裡的某些字，替換為其他的文字，下拉選單可以選擇要更換第一個指定的文字，或所有指定的文字。( 取代文字不會對变量進行變更，而是產生一段全新的文字 )
+The "Replace Text" block can quickly replace some words in a paragraph with other text. The drop-down menu allows you to choose to replace the first specified text, or all specified text. (Replacing text does not change the variable, but produces a new piece of text)
 
-![文字](../images/zh-tw/docs/webbit/basic/text-11.jpg)
+![Text](../images/zh-tw/docs/webbit/basic/text-11.jpg)
 
-下圖的例子可以只更換第一個「蘋果」變成「楊桃」，或是更換所有的「蘋果」為「楊桃」。
+The example below can change only the first "Apple" to "Carambola" or replace all "Apple" to "Carambola".
 
-![文字](../images/zh-tw/docs/webbit/basic/text-12.jpg)
+![Text](../images/zh-tw/docs/webbit/basic/text-12.jpg)
 
-## 尋找字串出現位置
+## Find the position where the string appears
 
-「尋找字串出現位置」會回傳指定文字在一段文字中出現的位置，可以選擇第一個出現的位置或最後一個出現的位置。
+"Finding the position of the string" will return the position where the specified text appears in a piece of text. You can select the first occurrence or the last occurrence.
 
-![文字](../images/zh-tw/docs/webbit/basic/text-13.jpg)
+![Text](../images/zh-tw/docs/webbit/basic/text-13.jpg)
 
-文字出現的位置是以「字數」來判斷，以下圖的例子，橘子的「橘」位在整段文字的第 4 個位置，所以出現的數字為 4，蘋果的蘋出現在第 10 個位置，如果換成英文，orange 的 o 位在第 10 個位置，banana 的 b 位在第 16 個位置。
+The position where the text appears is judged by the number of words. In the example below, the orange of the orange is in the fourth position of the entire paragraph, so the number appears as 4, and the apple appears in the 10th position. If it is changed to English, the o bit of orange is in the 10th position, and the b bit of banana is in the 16th position.
 
-![文字](../images/zh-tw/docs/webbit/basic/text-14.jpg)
+![Text](../images/zh-tw/docs/webbit/basic/text-14.jpg)
 
-## 取得指定位置的文字
+## Get the text of the specified location
 
-「取得指定位置的文字」積木會取出指定位置的文字，下拉選單共有五種指定位置，分別是第幾個、倒數第幾個、第一個、最後一個和隨機位置。
+The "Get Text at the Specified Position" block will retrieve the text at the specified position. The drop-down menu has five specified positions, which are the first, the last, the first, the last, and the random position.
 
-![文字](../images/zh-tw/docs/webbit/basic/text-15.jpg)
+![Text](../images/zh-tw/docs/webbit/basic/text-15.jpg)
 
-以下圖的例子，第 4 個字是橘，第 11 個字是果。
+In the example below, the fourth word is orange and the eleventh word is fruit.
 
-![文字](../images/zh-tw/docs/webbit/basic/text-16.jpg)
+![Text](../images/zh-tw/docs/webbit/basic/text-16.jpg)
 
 
-## 取得指定區間的文字
+## Get the text of the specified interval
 
-「取得指定區間的文字」積木會取出一段指定區間內的文字，需注意的是*第一個空格的數字要比第二個空格內的數字小*。
+The "Get the specified range of text" block will take out the text within a specified interval. Note that the * first space number is smaller than the number in the second space.
 
-![文字](../images/zh-tw/docs/webbit/basic/text-17.jpg)
+![Text](../images/zh-tw/docs/webbit/basic/text-17.jpg)
 
-以下圖的例子，第 3~8 的文字為「、橘子、西瓜」，而第 8 到最後的文字為「瓜、蘋果、香蕉、西瓜」。
+In the example below, the texts in the 3rd to 8th are ", orange, watermelon", and the text from the 8th to the last is "melon, apple, banana, watermelon".
 
-![文字](../images/zh-tw/docs/webbit/basic/text-18.jpg)
+![Text](../images/zh-tw/docs/webbit/basic/text-18.jpg)
 
 
-## 轉換大小寫
+## Convert case
 
-「轉換大小寫」積木可以針對「英文字」進行大小寫轉換，包含全部轉大寫、全部轉小寫或是首字母大寫。
+The "convert case" block can convert the "English word" to the upper and lower case, including all uppercase, all lowercase, or initial capitalization.
 
-![文字](../images/zh-tw/docs/webbit/basic/text-19.jpg)
+![Text](../images/zh-tw/docs/webbit/basic/text-19.jpg)
 
-以下圖的例子，可以全部轉換為大寫，或是只有第一個 A 是大寫。
+In the example below, you can convert all to uppercase, or only the first A is uppercase.
 
-![文字](../images/zh-tw/docs/webbit/basic/text-20.jpg)
+![Text](../images/zh-tw/docs/webbit/basic/text-20.jpg)
 
 
-## 消除空格
+## Eliminate spaces
 
-「消除空格」積木可以消除一段文字中左邊、右邊或左右兩邊的空白字元。
+The "Erase Space" block eliminates blank characters on the left, right, or left and right sides of a paragraph.
 
-![文字](../images/zh-tw/docs/webbit/basic/text-21.jpg) 
+![Text](../images/zh-tw/docs/webbit/basic/text-21.jpg)
 
-## 進位轉換
+## carry conversion
 
-「進位轉換」積木能把數字轉換為二進位、八進位、十進位或十六進位的文字。
+The "carry conversion" building block converts numbers into binary, octal, decimal or hexadecimal characters.
 
-![文字](../images/zh-tw/docs/webbit/basic/text-22.jpg) 
+![Text](../images/zh-tw/docs/webbit/basic/text-22.jpg)
 
-例如數字 200 轉換為二進位就是 11001000，轉換為八進位就是 310，轉換為十六進位就是 c8。
+For example, the conversion of the number 200 to binary is 11001000, the conversion to octal is 310, and the conversion to hexadecimal is c8.
 
-![文字](../images/zh-tw/docs/webbit/basic/text-23.jpg) 
+![Text](../images/zh-tw/docs/webbit/basic/text-23.jpg)
 
-## 文字長度
+## text length
 
-「文字長度」積木可以取得一串文字的總字數，比較需要注意的是英文字以「字母」為單位，且空白也算是一個字元。
+The "text length" building block can get the total number of words in a string of characters. The more important thing to note is that the English word is in "letter" and the blank is also a character.
 
-![文字](../images/zh-tw/docs/webbit/basic/text-24.jpg) 
+![Text](../images/zh-tw/docs/webbit/basic/text-24.jpg)
 
-以下圖為例，「一個蘋果」的文字長度為 4，「An apple」因為包含空格，所以文字長度為 8。
+For example, the length of the text of "One Apple" is 4, and the length of the text is 8 because "An apple" contains spaces.
 
-![文字](../images/zh-tw/docs/webbit/basic/text-25.jpg) 
-
+![Text](../images/zh-tw/docs/webbit/basic/text-25.jpg)

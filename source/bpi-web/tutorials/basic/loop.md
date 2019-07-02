@@ -1,126 +1,122 @@
-# 重複
+#重复
 
-在程序領域裡，重複 ( 迴圈 ) 是常常使用的基本功能，重複顧名思義就是重複執行的過程，也可以將需要重複執行的程序碼放在迴圈內，就能指定次數、延遲時間，或是無窮盡的執行。
+In the field of programming, repetition (loop) is a basic function that is often used. Repeating the name is the process of repeated execution. It can also put the code that needs to be executed repeatedly in the loop, and can specify the number of times, delay time, or none. Exhaustive execution.
 
-## 重複積木清單
+## Repeating list of blocks
 
-重複的積木分別有一個「等待」的積木，五種不同重複模式的積木和一個「停止重複」的積木。
+The duplicate blocks have a "waiting" building block, five different repeating pattern blocks and a "stop repeating" building block.
 
-![重複](../images/zh-tw/docs/webbit/basic/loop-01.jpg)
+![repeat](../images/zh-tw/docs/webbit/basic/loop-01.jpg)
 
-## 等待
+## Waiting
 
-「等待」積木可以讓我們讓程序暫停一段指定的時間，當程序積木裡遇到等待積木，就會等待指定的時間之後才會進行接續的動作。
+The "waiting" building block allows us to pause the program for a specified period of time. When the waiting block is encountered in the program building block, it will wait for the specified time before proceeding.
 
-![重複](../images/zh-tw/docs/webbit/basic/loop-23.jpg)
+![repeat](../images/zh-tw/docs/webbit/basic/loop-23.jpg)
 
-以下方的例子來說，如果不加上等待，四隻小怪獸會同時說出 hello，如果加上等待 1 秒，四隻小怪獸就會以每隔一秒的時間依序說出 hello。
+In the following example, if you don't wait, the four little monsters will say hello at the same time. If you wait for 1 second, the four little monsters will say hello every second.
 
-> 注意，上述所謂的「同時」，是針對人類肉眼來說的意思，對於程序而言仍然是按照順序進行，只是間隔時間非常短，短到人類的肉眼分辨不出來
+> Note that the so-called "simultaneous" above is for the human eye. For the program, it is still in order, but the interval is very short, so short to the human eye can not distinguish it.
 
-沒有加上等待積木
+No waiting for building blocks
 
-![重複](../images/zh-tw/docs/webbit/basic/loop-02.jpg)
+![repeat](../images/zh-tw/docs/webbit/basic/loop-02.jpg)
 
-有加上等待積木
+Plus plus waiting blocks
 
-![重複](../images/zh-tw/docs/webbit/basic/loop-03.gif)
+![repeat](../images/zh-tw/docs/webbit/basic/loop-03.gif)
 
-## 重複執行幾次
+## Repeated several times
 
-「重複執行幾次」積木，可以指定迴圈內的積木程序重複的次數，預設次數為 10 次。
+The "Repeat execution" block can specify the number of times the block program in the loop is repeated, the preset number of times is 10.
 
-![重複](../images/zh-tw/docs/webbit/basic/loop-06.jpg)
+![repeat](../images/zh-tw/docs/webbit/basic/loop-06.jpg)
 
-透過重複十次，可以讓小怪獸旋轉 100 度。
+By repeating ten times, you can make the little monster rotate 100 degrees.
 
-![重複](../images/zh-tw/docs/webbit/basic/loop-04.jpg)
+![repeat](../images/zh-tw/docs/webbit/basic/loop-04.jpg)
 
-延續前面介紹過的等待，如果在重複裡頭不加入等待，就會看見怪獸瞬間旋轉了 100 度，如果我們在加上等待 0.5 秒的積木，就會看到怪獸每隔 0.5 秒旋轉 10 度，旋轉十次。
+Continuing the wait described earlier, if you don't wait in the repeat, you will see the monster rotate 100 degrees in an instant. If we add a block waiting for 0.5 seconds, we will see the monster rotate 10 degrees every 0.5 seconds, rotate. ten times.
 
-![重複](../images/zh-tw/docs/webbit/basic/loop-05.gif)
+![repeat](../images/zh-tw/docs/webbit/basic/loop-05.gif)
 
-## 計數
+## Counting
 
-「計數」積木有點類似「重複執行幾次」積木的進階版，差別在於計數積木使用了一個变量，透過改變這個变量的數值，來決定重複幾次、如何重複以及重複的間隔。
+The "count" building block is somewhat similar to the advanced version of the "repeated execution" block. The difference is that the counting block uses a variable. By changing the value of this variable, you decide how many times to repeat, how to repeat, and the interval between repetitions.
 
-> 因為內含一個变量，所以當編輯畫面裡有計數的積木，在变量的目錄下也會出現一個對應的变量。
+> Because there is a variable in it, when there are counted blocks in the edit screen, a corresponding variable will appear in the variable directory.
 
-![重複](../images/zh-tw/docs/webbit/basic/loop-07.jpg)
+![repeat](../images/zh-tw/docs/webbit/basic/loop-07.jpg)
 
-使用「計數積木搭配等待」，可以讓綠色小怪獸每隔 0.5 秒講出变量 i 的數值，這個变量 i 會*根據我們指定的起始數值、最終數值和間隔作數值進行遞增或遞減*，以下圖的例子而言，变量 i 會每隔 1 進行加總，直到變成 10 為止 ( 也就會依序念出 1234...10 )。
+Use "Counting Blocks with Waiting" to let the green monster tell the value of the variable i every 0.5 seconds. This variable i will be incremented or decremented by the value of the starting value, final value and interval we specify. In the example of the figure, the variable i is summed every 1 until it becomes 10 (and 1234...10 will be read in order).
 
-> 注意，*如果要「依序」唸出數字，一定要加上等待的積木*，不然就會呈現最後的數字。
+> Note that * If you want to read the numbers "in order", you must add the waiting blocks *, or you will present the last number.
 
-![重複](../images/zh-tw/docs/webbit/basic/loop-08.gif)
+![repeat](../images/zh-tw/docs/webbit/basic/loop-08.gif)
 
-## 重複無限次
+## Repeat unlimited times
 
-「重複無限次」積木會無止盡的一直執行迴圈內容，除非使用「停止重複」，重複的事件才會停止。
+The "repeated infinite" building blocks will continue to execute the loop content indefinitely, and the repeated events will stop unless you use "stop repeating".
 
-![重複](../images/zh-tw/docs/webbit/basic/loop-09.jpg)
+![repeat](../images/zh-tw/docs/webbit/basic/loop-09.jpg)
 
-延續前面介紹過的等待，在重複無限次的積木內加入「等待」，搭配小怪獸的旋轉，就可以讓小怪獸不斷地旋轉。
+Continuing the wait described above, adding "waiting" to the infinite number of blocks, with the rotation of the little monster, allows the little monster to rotate continuously.
 
-![重複](../images/zh-tw/docs/webbit/basic/loop-10.gif)
+![repeat](../images/zh-tw/docs/webbit/basic/loop-10.gif)
 
-## 判斷為真，就重複無限次
+## Judging as true, repeating unlimited times
 
-「判斷為真，就重複無限次」積木等同於「重複無限次」積木加上「邏輯」判斷，*只要空格內的邏輯判斷為「真」( true )，就會開始進行無限重複*。
+"If the judgment is true, repeat it indefinitely." The building block is equivalent to the "repeated infinite" building block plus the "logical" judgment. * As long as the logic in the space is judged as "true" (true), infinite repetition* will begin.
 
-![重複](../images/zh-tw/docs/webbit/basic/loop-11.jpg)
+![repeat](../images/zh-tw/docs/webbit/basic/loop-11.jpg)
 
-舉例來說，我們可以先設定一個变量 a 為 2 到 9 之間的數字，透過判斷如果 a 是偶數，就讓小怪獸開始旋轉，否則就不旋轉。
+For example, we can first set a variable a to a number between 2 and 9. By judging if a is an even number, let the little monster start to rotate, otherwise it will not rotate.
 
-![重複](../images/zh-tw/docs/webbit/basic/loop-12.gif)
+![repeat](../images/zh-tw/docs/webbit/basic/loop-12.gif)
 
-上面的例子也可以使用「邏輯」搭配「重複無限次」來實現同樣的效果。
+The above example can also use "logic" with "repeated infinite times" to achieve the same effect.
 
-![重複](../images/zh-tw/docs/webbit/basic/loop-13.jpg)
+![repeat](../images/zh-tw/docs/webbit/basic/loop-13.jpg)
 
-## 取出陣列元素並執行
+## Take out array elements and execute
 
-有別於上述的重複方式，「取出陣列元素並執行」積木是以陣列長度作為重複次數的依據，因此空格內必須放入陣列積木，網頁執行後就會依序取出陣列內容並執行對應動作。
+Different from the above repeated method, the "removing array elements and executing" building blocks is based on the length of the array as the basis of the number of repetitions. Therefore, the array blocks must be placed in the spaces. After the web page is executed, the array contents are sequentially taken out and the corresponding actions are performed.
 
-![重複](../images/zh-tw/docs/webbit/basic/loop-14.jpg)
+![repeat](../images/zh-tw/docs/webbit/basic/loop-14.jpg)
 
-我們可以設定变量 a 為一個陣列，裡頭放入五種水果名稱，接著設定一個变量 i，依序讓变量 i 等於水果名稱，再讓小怪獸講出水果名稱並進行旋轉的動作。
+We can set the variable a to an array with five fruit names, then set a variable i, let the variable i equal the fruit name, and let the little monster speak the fruit name and rotate it.
 
-![重複](../images/zh-tw/docs/webbit/basic/loop-15.gif)
+![repeat](../images/zh-tw/docs/webbit/basic/loop-15.gif)
 
-## 背景執行
+## Background execution
 
-「背景執行」是所有重複積木裡頭的功能選項，由於程序碼的執行順序緣故，「**前一段程序尚未完成前，無法執行下一段程序**」，也因此*大多數的情況在畫面上只能同時執行一個重複迴圈*，然而背景執行**可以讓重複的動作進入背景執行，就能同時使用多個重複迴圈**。
+"Background execution" is a function option in all the repeating blocks. Due to the execution order of the program code, "** The previous program cannot be executed until the previous program has not been completed**", and therefore * most of the cases are on the screen. Only one repeat loop* can be executed at the same time. However, background execution** allows repeated actions to enter the background, and multiple repeat loops** can be used at the same time.
 
-![重複](../images/zh-tw/docs/webbit/basic/loop-17.jpg)
+![repeat](../images/zh-tw/docs/webbit/basic/loop-17.jpg)
 
-舉例來說，如果我們使用兩個「重複十次」的積木，都*不勾選背景執行*，第一個放入小怪獸旋轉，第二個放入小怪獸移動，網頁執行後，就會看到小怪獸*先旋轉再移動*。
+For example, if we use two "repeated ten times" blocks, *do not check the background execution*, the first one is placed into the little monster to rotate, the second is placed into the small monster to move, after the web page is executed, See the little monster * rotate and move * first.
 
-![重複](../images/zh-tw/docs/webbit/basic/loop-18.gif)
+![repeat](../images/zh-tw/docs/webbit/basic/loop-18.gif)
 
-如果我們把上面的例子中的重複，*都勾選背景執行*，網頁執行後就會發現小怪獸*一邊移動一邊旋轉*。
+If we repeat the above example, * check the background to execute *, after the web page is executed, you will find that the little monster * rotates while moving *.
 
-![重複](../images/zh-tw/docs/webbit/basic/loop-19.gif)
+![repeat](../images/zh-tw/docs/webbit/basic/loop-19.gif)
 
-是否有背景執行，在「重複無限次」的情況下會更容易發現差異，**如果畫面中有兩個重複無限次的迴圈，如果沒有勾選背景執行，因為行為還停留在前一個重複無限次，在後面的重複無限次就不會執行**。
+Whether there is background execution, it is easier to find the difference in the case of "repeated infinite times", **If there are two loops in the screen that are repeated infinitely, if the background execution is not checked, because the behavior stays in the previous repeat Unlimited times, indefinitely after the repetition will not execute **.
 
-![重複](../images/zh-tw/docs/webbit/basic/loop-20.gif)
+![repeat](../images/zh-tw/docs/webbit/basic/loop-20.gif)
 
-## 停止重複
+## Stop repeating
 
-上述所有的重複行為，都可以透過「停止重複」積木來停止，停止重複又分成「*停止畫面上所有重複*」，或「*放在重複迴圈內，停止所在位置的重複*」。
+All of the above repetitive behaviors can be stopped by the "stop repeating" building block, and the repetition is divided into "*stop all repeats on the screen*", or "* is placed in the repeating loop, and the repetition of the position is stopped*".
 
-![重複](../images/zh-tw/docs/webbit/basic/loop-16.jpg)
+![repeat](../images/zh-tw/docs/webbit/basic/loop-16.jpg)
 
-例如在「重複無限次」積木裡加入「小怪獸旋轉角度大於 90 度就*停止這個重複*」的判斷，就會在小怪獸角度大於 90 度時停止重複，繼續執行下方的講話程序。
+For example, if you add the "Small monster rotation angle greater than 90 degrees* stop this repetition*" in the "Repeat Unlimited" building block, it will stop repeating when the small monster angle is greater than 90 degrees, and continue to execute the following speech program.
 
-![重複](../images/zh-tw/docs/webbit/basic/loop-21.gif)
+![repeat](../images/zh-tw/docs/webbit/basic/loop-21.gif)
 
 
-如果有多個重複，也可以使用「停止所有重複」來停止，例如下方的程序，當小怪獸旋轉角度大於 90 度，就會停止所有重複。( 此處勾選了背景執行，請參閱「[背景執行](loop.html#loop07)」章節 )
+If there are multiple repetitions, you can also use Stop All Repeats to stop. For example, if the small monster rotates more than 90 degrees, all repetitions will be stopped. (The background execution is checked here, please refer to "[Background Execution] (loop.html#loop07)")
 
-![重複](../images/zh-tw/docs/webbit/basic/loop-22.gif)
-
-
-
-
+![repeat](../images/zh-tw/docs/webbit/basic/loop-22.gif)

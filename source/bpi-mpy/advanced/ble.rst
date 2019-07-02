@@ -1,8 +1,8 @@
-摇身一变蓝牙从机 
-=====================================================
+Change the Bluetooth slave
+=========================================================== ===
 
-我们知道 microbit 有一个蓝牙，同样的 bpibit 不仅有 WIFI ，也有蓝牙 ble，本文就是讲解一下如何在 MicroPyhton 中使用它。
+We know that microbit has a Bluetooth, the same bpibit is not only WIFI, but also Bluetooth ble, this article is to explain how to use it in MicroPyhton.
 
-由于代码变动过快，此处的文档内容也会随着变化。
+Due to the code changes too quickly, the content of the documentation here will also change.
 
-内容还在准备中......
+The content is still in preparation...

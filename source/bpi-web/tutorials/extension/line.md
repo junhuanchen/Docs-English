@@ -1,95 +1,93 @@
-# LINE 聊天操控
+# LINE Chat Control
 
-編輯器預設 LINE 即時通訊相關功能，除了支援 LINE Notify 的推播，更可以接收 LINE 的聊天訊息，透過聊天的方式操控 開發板或和小怪獸進行互動。
+Editor preset LINE Instant messaging related function, in addition to support LINE Notify push, you can also receive LINE chat messages, control the development board through chat or interact with small monsters.
 
-## LINE 聊天操控積木清單
+## LINE Chat Control Block List
 
-LINE 聊天操控的積木包含發送推播專用的 LINE Notify 積木、聊天專用 LINE Chat 積木，以及接收訊息、回傳訊息、表情符號三種積木。
+The LINE chat-controlled building blocks include LINE Notify blocks for push-casting, LINE Chat blocks for chat, and three blocks for receiving messages, returning messages, and emoji.
 
-![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-01.jpg)
+![LINE Chat Control](../images/zh-tw/docs/webbit/extension/line-01.jpg)
 
 ## LINE Notify
 
-LINE Notify 是 LINE 所提供的一項非常方便的推播服務，每個人的 LINE 帳號都可以使用，使用之前，必須先前往 LINE Notify 的網站 ( [https://notify-bot.line.me/zh_TW/](https://notify-bot.line.me/zh_TW/#_blank) )，使用自己的 LINE 帳號登入，申請 LINE Notify 權杖。
+LINE Notify is a very convenient push service provided by LINE. Everyone can use the LINE account. Before using it, you must go to the LINE Notify website ([https://notify-bot.line.me/zh_TW /](https://notify-bot.line.me/zh_TW/#_blank) ), log in with your own LINE account and apply for the LINE Notify token.
 
-> 更多詳細資訊可參考：[自建 LINE Notify 訊息通知](https://www.oxxostudio.tw/articles/201806/line-notify.html#_blank)
+> For more details, please refer to: [Self-built LINE Notify Message Notification] (https://www.oxxostudio.tw/articles/201806/line-notify.html#_blank)
 
-![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-02.jpg)
+![LINE Chat Control](../images/zh-tw/docs/webbit/extension/line-02.jpg)
 
-登入後，滑鼠移至上方個人帳號，選擇「個人頁面」。
+After logging in, move your mouse over the personal account above and select "Personal Page".
 
-![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-03.jpg)
+![LINE Chat Control](../images/zh-tw/docs/webbit/extension/line-03.jpg)
 
-在個人頁面可以發行「權杖」，權杖的作用在於讓「連動的服務」可以透過 LINE Notify 發送訊息通知，發行後的權杖與其名稱會出現在上方的清單中，如果之前有申請過像是 IFTTT 的連動通知，就會發現上方出現 IFTTT 的服務。
+The "scepter" can be issued on the personal page. The role of the token is to enable the "linked service" to send a message notification via LINE Notify. The issued token and its name will appear in the list above. It is the linkage notice of IFTTT, and you will find the service with IFTTT above.
 
-![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-04.jpg)
+![LINE Chat Control](../images/zh-tw/docs/webbit/extension/line-04.jpg)
 
-點選「發行權杖」，指定權杖名稱 ( 傳送通知訊息時所顯示的名稱 )，以及選擇是要一對一接收，或是讓群組也可以接收通知。
+Click on "Distribution Scepter" to specify the name of the token (the name that is displayed when the notification message is sent), and whether the selection is to be received one-to-one or that the group can also receive notifications.
 
-![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-05.jpg)
+![LINE Chat Control](../images/zh-tw/docs/webbit/extension/line-05.jpg)
 
-點選「發行」，會出現一段權杖代碼，由於這段代碼「**只會出現一次**」，請先複製這段代碼，找個筆記本或文件儲存這段代碼，就可以點選下方按鈕「關閉」。
+Click "Issue", there will be a token code, because this code "** will only appear once **", please copy this code first, find a notebook or file to save this code, you can click below The button "Close".
 
-![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-06.jpg)
+![LINE Chat Control](../images/zh-tw/docs/webbit/extension/line-06.jpg)
 
-完成後在連動的服務裡，就會出現了自訂的服務。
+Upon completion, a customized service will appear in the linked service.
 
-![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-07.jpg)
+![LINE Chat Control](../images/zh-tw/docs/webbit/extension/line-07.jpg)
 
-同時，LINE 訊息裡也會收到 LINE Notify 發出「已發行個人存取權杖」的訊息，到這一步 LINE Notify 已經設定完成，已經可以開始從 發送訊息。
+At the same time, the LINE message will also receive a message that LINE Notify has issued the "Published Individual Access Scepter". At this point, LINE Notify has been set and the message can be started.
 
-![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-08.jpg)
+![LINE Chat Control](../images/zh-tw/docs/webbit/extension/line-08.jpg)
 
-回到 編輯器，使用 LINE Notify 積木，在 Token 的位置填入剛剛產生的權杖代碼，在發送訊息的位置填入欲發送的訊息，執行後，自己的 LINE 就會收到 LINE Notify 的訊息。
+Go back to the editor, use the LINE Notify building block, fill in the token code just generated in the Token location, fill in the message you want to send at the location where the message is sent, and your LINE will receive the LINE Notify message after execution.
 
-> 「LINE Notify」積木屬於「*發送訊息後才會繼續執行後方程序*」的類型 ( 點擊前方問號小圖示會提示 )，當編輯畫面中有這塊積木，*執行時當程序遇到這塊積木會暫停，直到發送訊息後後才會再繼續*。
+> "LINE Notify" is the type of "* will continue to execute the program after sending the message*" (click on the small question mark in the front) will be prompted. When there is this brick in the editing screen, * when the program encounters this The block will pause until the message is sent before continuing.
 
-![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-10.jpg)
+![LINE Chat Control](../images/zh-tw/docs/webbit/extension/line-10.jpg)
 
-搭配 開發板，也可以做到按下 A 開關就發送 A，按下開關 B 就發送 B 的效果。
+With the development board, you can also send A by pressing the A switch and B when you press the switch B.
 
-![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-11.jpg)
+![LINE Chat Control](../images/zh-tw/docs/webbit/extension/line-11.jpg)
 
-如果要發送圖片，只要填入圖片網址即可發送，搭配 開發板，也可以做到按下 A 開關就發送一張皮卡丘的圖片。
+If you want to send an image, just fill in the image URL and send it. With the development board, you can also send a picture of Pikachu by pressing the A switch.
 
-![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-13.jpg)
+![LINE Chat Control](../images/zh-tw/docs/webbit/extension/line-13.jpg)
 
-如果要傳送表情貼圖，可使用「表情貼圖」積木，表情貼圖有三種 ( 初次安裝 LINE 時預設的三種 )，每種貼圖分成表情代號 ( STKID ) 和 表情主題 ( STKPKGID )，可以透過 [表情清單](https://devdocs.line.me/files/sticker_list.pdf#_blank)查詢對應的號碼，輸入指定的號碼，執行後就可以發送表情貼圖，舉例來說，搭配 開發板，按下 A 開關就發送生氣圖案，按下 B 開關就發送開心圖案。
+If you want to send emoticons, you can use the "Emoji Map" blocks. There are three types of emoticons (three presets when you first install LINE). Each texture is divided into an emoticon (STKID) and an emoticon (STKPKGID). ](https://devdocs.line.me/files/sticker_list.pdf#_blank)Query the corresponding number, enter the specified number, and send the emoticon after execution. For example, with the development board, press the A switch Send an angry pattern and press the B switch to send a happy pattern.
 
-![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-12.jpg)
+![LINE Chat Control](../images/zh-tw/docs/webbit/extension/line-12.jpg)
 
-## LINE Chat 聊天操控
+## LINE Chat Chat Control
 
-「LINE Chat」積木能讓我們透過「聊天」的方式，接收從 LINE 發送過來的訊息，透過訊息和 編輯器或 開發板互動。
+The "LINE Chat" building block allows us to receive messages sent from LINE via "chat" and interact with the editor or development board via messages.
 
-> LINE Chat 積木是屬於「一來一往」的積木，，接收一則訊息才能回應一則訊息，無法像 LINE Notify 積木可以主動發送訊息，或接收一則訊息而回傳多則訊息。
+> LINE Chat Blocks are blocks that are "one to one". You can receive a message in order to respond to a message. You can't send a message as LINE Notify blocks, or receive a message and return multiple messages.
 
-![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-14.jpg)
+![LINE Chat Control](../images/zh-tw/docs/webbit/extension/line-14.jpg)
 
-要使用 LINE Chat 功能，必須先加入 Webduino Bot 為 LINE 的好友，*使用 LINE 掃描下方 QRCode 加入好友*。
+To use the LINE Chat feature, you must first join Webduino Bot as a friend of LINE, * use LINE to scan the QRCode below to join a friend*.
 
-![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-15.jpg)
+![LINE Chat Control](../images/zh-tw/docs/webbit/extension/line-15.jpg)
 
-加入好友後，會收到一則歡迎訊息，歡迎訊息包含了三個提示：
+When you join a friend, you will receive a welcome message with three tips:
 
-> - 輸入「id」兩個英文字母，取得頻道名稱 ( 不是你的 id )。
-> - 輸入「newid」產生新的頻道名稱。
-> - 輸入「id:名稱」自訂頻道名稱 ( 可能會重複 )。
+> - Enter two English letters "id" to get the channel name (not your id).
+> - Enter "newid" to generate a new channel name.
+> - Enter the "id: name" custom channel name (may be repeated).
 
-按照指示，輸入 i 和 d 兩個英文字母，就會收到系統配發的聊天頻道名稱，如果是系統配發的頻道名稱，每個人的聊天頻道都不相同，如果是自訂頻道名稱，則可能會和別人的名稱重複，也就可能會收到別人的訊息。
+According to the instructions, input i and d two English letters, you will receive the name of the chat channel assigned by the system. If it is the channel name assigned by the system, each person's chat channel is different. If it is a custom channel name, then It may be duplicated with someone else's name, and may receive someone else's message.
 
-![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-16.jpg)
+![LINE Chat Control](../images/zh-tw/docs/webbit/extension/line-16.jpg)
 
-在 編輯畫面放入 LINE Chat 的積木，接收到訊息時讓小怪獸說出 LINE 的訊息，執行後，就可用 LINE 傳送訊息給 Webduino Bot，訊息收到的當下，小怪獸就會說出訊息。
+Put the LINE Chat block on the edit screen. When the message is received, let the little monster say the LINE message. After the execution, you can use LINE to send the message to Webduino Bot. When the message is received, the little monster will say the message.
 
-![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-17.jpg)
+![LINE Chat Control](../images/zh-tw/docs/webbit/extension/line-17.jpg)
 
-如果要回傳訊息，只需要放入回傳訊息的積木，寫入回傳的內容 ( 支援文字、表情貼圖和圖片，使用方式請參考上方 LINE Notify 教學 )，執行後，就會在收到訊息後回傳對應的訊息，下圖的範例會在收到訊息後，回傳一模一樣的訊息。
+If you want to return the message, you only need to put the backhaul message, write the returned content (support text, expression map and picture, please refer to the above LINE Notify teaching), after receiving, you will receive the message. After returning the corresponding message, the example in the following figure will return the same message after receiving the message.
 
-![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-18.jpg)
+![LINE Chat Control](../images/zh-tw/docs/webbit/extension/line-18.jpg)
 
-除了單純的接收訊息，也可以使用 LINE Chat 來控制 開發板，透過邏輯判斷，就能收到「開燈」的文字就點亮 LED，收到「紅色」的指令就發出紅光，實現真正物聯網的應用情境。
+In addition to simply receiving messages, you can also use LINE Chat to control the development board. Through logical judgment, you can receive the "lights on" text and light the LED. When you receive the "red" command, it will emit red light to realize the real thing. Networked application scenarios.
 
-![LINE 聊天操控](../images/zh-tw/docs/webbit/extension/line-19.jpg)
-
-
+![LINE Chat Control](../images/zh-tw/docs/webbit/extension/line-19.jpg)

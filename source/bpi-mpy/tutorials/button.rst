@@ -1,70 +1,69 @@
-检测面板按键
-=====================================================
+Detection panel button
+=========================================================== ===
 
-好的，至少我现在已经会创建一些代码让板子做一些事情了。
-那么，接下来我们来处理设备的输入，比如按键输入吧。
-首先，我们要知道两个概念， Output 输出是表示从设备输出到外围，Input
-输入是处理设备过程中接受到的一些信息
+Ok, at least I have created some code to let the board do something.
+So, let's deal with the input of the device, such as the key input.
+First, we need to know two concepts, the Output output is the output from the device to the periphery, Input
+Input is some information received during the processing of the device
 
-那么在板子上最明显的输入便是二个按钮，灯板左右两个 A 和 B
-按键，如果我们能想得知板子按键按下了吗，或者是按过吗，又或是，按了几次，要如何做到呢？
+Then the most obvious input on the board is two buttons, two A and B left and right on the board.
+Button, if we can know if the board button is pressed, or if it is pressed, or if it is pressed a few times, how to do it?
 
-其实这并不难，倒不如说很容易做到。
+In fact, this is not difficult, it is better to say that it is easy to do.
 
 .. code:: python
 
-   from microbit import *
+   From microbit import *
 
-   sleep(2000)
+   Sleep(2000)
 
-   display.scroll(str(button_a.get_presses()))
+   Display.scroll(str(button_a.get_presses()))
 
-这段代码运行时候会先暂停两秒，然后你才开始按键，此时将会滚动显示你按下 A
-的次数。就是这样简单，虽然这些代码并没有什么用，但还是提供了些许新思路，让你可以去想象更多控制硬件的方式。
+This code will pause for two seconds before running, then you will start to press the button, which will scroll to show you press A.
+The number of times. It's that simple, although the code is not very useful, it still provides some new ideas, so you can imagine more ways to control the hardware.
 
-1. 这个 sleep
-   函数可以让板子暂停些许时间，暂停的时间为方块数字的毫秒，如果你想在你的程序某个时候暂停，就按照上面那样写个
-   sleep 函数就行。
-2. button_a 对象允许你通过 get_presses 方法 获取一个时间内被按的次数
+This sleep
+   The function can pause the board for a certain amount of time. The pause time is the number of milliseconds. If you want to pause at some time in your program, write it as above.
+   The sleep function will do.
+2. The button_a object allows you to get the number of times pressed in a time via the get_presses method.
 
-然后一旦 get_presses 获取到了值，将其传递到 display.sroll
-中，这个方法只能接受字符型，所以我们需要通过 str 函数将 整型转换成字符串
-所以针对 python 原理我们做了一个假设，进行更深层次的理解 如果你在 10
-秒内按了 10 次，那么上面代码的第三行怎么执行呢？ 由于 python
-是从最内层开始执行代码的。 所以：
+Then once get_presses gets the value, pass it to display.sroll
+In this method, only the character type can be accepted, so we need to convert the integer to a string through the str function.
+So for the python principle we made a hypothesis for a deeper understanding if you are at 10
+Pressed 10 times in seconds, then how to execute the third line of the above code? Thanks to python
+The code is executed from the innermost layer. and so:
 
 ``display.scroll(str(button_a.get_presses()))``
 
-当然变成这样就会显示你按下的按键次数（一段时间里，可指定）。
+Of course, this will show the number of times you press the button (you can specify it for a while).
 
 ``display.scroll(str(10))``
 
-现在python已经知道按了多少下了，所以接下来将里面的变成字符串，记注一定是最内层优先执行，即先执行
-str(“10”)。
+Now Python already knows how much has been pressed, so the next one will become a string, and the note must be the innermost priority, ie execute first.
+Str("10").
 
 ``display.scroll(str("10"))``
 
-循环处理事件
+Loop processing event
 ----------------------------------------
 
-如果你想要板子去响应一个按钮按压事件，那么你就需要用 if
-进行判断按钮是否按压，而且这个判断方法建议放在一个死循环中。 例如：
+If you want the board to respond to a button press event, then you need to use if
+It is judged whether the button is pressed, and this judgment method is suggested to be placed in an infinite loop. E.g:
 
 .. code:: python
 
-   while True:
-       # Do stuff
+   While True:
+       # Do stuff
 
-所以我们可以构筑一个很简单的代码
+So we can build a very simple code
 
 .. code:: python
 
-   from microbit import *
+   From microbit import *
 
-   while True:
-       if button_a.is_pressed():
-           display.show(Image.HAPPY)
-           display.clear()
+   While True:
+       If button_a.is_pressed():
+           Display.show(Image.HAPPY)
+           Display.clear()
 
-此时可以按下按键 A 显示我们之前学习到的 Image ，这便是所谓的学以致用了。
-
+At this point, you can press the button A to display the Image we have learned before. This is what the so-called learning is.

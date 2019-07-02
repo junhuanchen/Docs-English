@@ -1,37 +1,37 @@
 .. _flash_mpy:
 
-刷入 MicroPython 固件
-=====================================================
+Brush in MicroPython firmware
+=========================================================== ===
 
-第一次使用，请先烧入 MicroPython 固件，如果不烧录就没有 MicroPython 编程环境。
+For the first time, please burn the MicroPython firmware first. If you don't burn it, there is no MicroPython programming environment.
 
 .. Hint::
 
-    使用请确认已经安装驱动，且已经得知自己的硬件串口名称，例如：COM5、ttyUSB0。
+    Please confirm that the driver has been installed and you have already know the name of your hardware serial port, for example: COM5, ttyUSB0.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 2
 
-   ../bpi-steam/driver
+   ../bpi-steam/driver
 
-在 Windows 下
+Under Windows
 ---------------------------
 
-- 从 `BPI-BIT-MicroPython/release <https://github.com/BPI-STEAM/BPI-BIT-MicroPython/releases/tag/FlashTool>`_ 中获取烧写工具的链接，附有国内微云网盘分流。
+- Get a link to the programming tool from `BPI-BIT-MicroPython/release <https://github.com/BPI-STEAM/BPI-BIT-MicroPython/releases/tag/FlashTool>`_ with a domestic micro cloud The network disk is diverted.
 
-- 下载后打开 `FlashMicroPython-*.zip` 压缩包，然后运行里面的 Flashtool.exe 工具即可。
+- After downloading, open the `FlashMicroPython-*.zip` package and run the Flashtool.exe tool inside.
 
 .. image:: flash_mpy/flash_mpy.png
 
-- 请先插入硬件后打开软件，这个软件会自动运行烧写，你也可以直接点击 Flash 按钮烧写。
+- Please open the software after inserting the hardware first. This software will automatically run the programming. You can also directly click the Flash button to burn.
 
-- 你也可以自己选择串口烧录，升级固件只需要替换压缩包中的 firmware.bin 重新烧入即可。
+- You can also choose the serial port to burn. To upgrade the firmware, just replace the firmware.bin in the compressed package and re-burn it.
 
-在 其他系统 下
+Under other systems
 ---------------------------
 
-请参照其他网络教程，如果有特别的需求，可以到 社区 提交问题 或 开 issue 。
+Please refer to other web tutorials. If you have special needs, you can submit a question or open an issue to the community.
 
 .. Attention::
 
-    有问题可以到 `中文社区 <https://forum.banana-pi.org.cn/c/bpi-bit>`_ 反馈。
+    If you have any questions, please go to the Chinese community <https://forum.banana-pi.org.cn/c/bpi-bit>`_ feedback.

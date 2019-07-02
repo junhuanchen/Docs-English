@@ -1,25 +1,25 @@
-Webduino Bit 在线标准版
-========================================
+Webduino Bit Online Standard Edition
+=================================================
 
-从这里开始，就正式进入物联网网页开发环节了，请按下述教程开始你的进阶之旅吧。
+From here, you will officially enter the development of the Internet of Things webpage, please follow the tutorial below to start your advanced journey.
 
-可能会有些老生常谈的基础问题，但这并不影响你深入学习。
+There may be some basic questions that are commonplace, but this does not affect your in-depth study.
 
 .. Hint::
 
-    请在标准环境下进行 `Webduino Blockly 标准版 <https://bit.webduino.com.cn/blockly/?lang=zh-hans>`_ 开发。
+    Please perform the `Webduino Blockly Standard Edition <https://bit.webduino.com.cn/blockly/?lang=zh-hans>`_ development in a standard environment.
 
-以下教程对应的教学网站：`在线教学文件 <https://bit.webduino.com.cn/site/zh_cn/tutorials.html>`_ 。
+The following tutorial corresponds to the teaching website: `Online teaching files <https://bit.webduino.com.cn/site/zh_cn/tutorials.html>`_.
 
 .. toctree::
-    :maxdepth: 1
-    :numbered:
-    
-    setting
-    blockly
-    rgbmatrix
-    button
-    photocell
-    temperature
-    buzzer
-    mpu9250
+    :maxdepth: 1
+    :numbered:
+    
+    Setting
+    Blockly
+    Rgbmatrix
+    Button
+    Photocell
+    Temperature
+    Buzzer
+    Mpu9250

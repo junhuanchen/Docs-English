@@ -1,73 +1,73 @@
-网络基础
+Network foundation
 ==============
 
 .. _network_base:
 
-MicroPython :mod:`network` 模块用于配置WiFi连接。有两个WiFi接口，STA模式即工作站模式（ESP32连接到路由器），
-AP模式提供接入服务（其他设备连接到ESP32）。如需了解MicroPython的网络连接方法，请查阅 :mod:`network` 模块。
+The MicroPython :mod:`network` module is used to configure the WiFi connection. There are two WiFi interfaces, STA mode is workstation mode (ESP32 is connected to the router),
+AP mode provides access services (other devices connect to ESP32). For a discussion of MicroPython's network connection methods, check out the :mod:`network` module.
 
-STA模式
+STA mode
 -------
 
-板子以基于network模块封装 :ref:`MicroPython.wifi()<MicroPython.wifi>` 类简化wifi连接设置::
+The board is packaged in a network-based module :ref:`MicroPython.wifi()<MicroPython.wifi>` Simplified wifi connection settings::
 
-    from MicroPython import *       #导入MicroPython模块
+    From MicroPython import * #import MicroPython module
 
-    mywifi=wifi()     #实例化wifi类
-    mywifi.connectWiFi("ssid","password")  # WiFi连接，设置ssid 和password
+    Mywifi=wifi() #instantiate wifi class
+    mywifi.connectWiFi("ssid","password") #WiFi connection, set ssid and password
 
-.. Note:: 
+.. Note::
 
-    实例化wifi()后，会构建 ``sta`` 和 ``ap`` 两个对象。 ``sta`` 对象为工作站模式，通过路由器连接至网络。``ap`` 为AP模式，提供wifi接入。
+    After instantiating wifi(), two objects ``sta`` and ``ap`` are built. The ``sta`` object is in workstation mode and is connected to the network via a router. ``ap`` is AP mode, providing wifi access.
 
-连接成功后Repl串口如下打印::
+After the connection is successful, the Repl serial port prints as follows:
 
-    Connecting to network...
-    Connecting to network...
-    WiFi Connection Successful,Network Config:('192.168.0.2', '255.255.255.0', '192.168.0.1', '192.168.0.1')
+    Connecting to network...
+    Connecting to network...
+    WiFi Connection Successful, Network Config:('192.168.0.2', '255.255.255.0', '192.168.0.1', '192.168.0.1')
 
 
-断开WiFi连接::
+Disconnect WiFi connection::
 
-    mywifi.disconnectWiFi()
+    mywifi.disconnectWiFi()
 
-查询wifi连接是否已建立::
+Check if the wifi connection has been established::
 
-    mywifi.sta.isconnected()
+    Mywifi.sta.isconnected()
 
-.. Note:: 如已建立连接，返回 ``True`` ,否则 ``False`` 。
+.. Note:: If a connection has been established, return ``True``, otherwise ``False``.
 
-您可以通过以下方式查看网络设置::
+You can view the network settings in the following ways:
 
-    mywifi.sta.ifconfig()
+    Mywifi.sta.ifconfig()
 
-.. Note:: 返回值4元组: (IP address, netmask, gateway, DNS)
-    
-``ifconfig()`` 带参数时，配置静态IP。例如:
+.. Note:: Return value 4 tuples: (IP address, netmask, gateway, DNS)
+    
+When ``ifconfig()`` takes parameters, configure a static IP. E.g:
 
-    mywifi.sta.ifconfig(('192.168.0.4', '255.255.255.0', '192.168.0.1', '192.168.0.1'))
+    Mywifi.sta.ifconfig(('192.168.0.4', '255.255.255.0', '192.168.0.1', '192.168.0.1'))
 
-AP模式
+AP mode
 -------
 
-除STA模式连接路由器wifi,板子还可以使用AP模式,提供wifi接入服务。
+In addition to the STA mode to connect to the router wifi, the board can also use the AP mode to provide wifi access services.
 
 ::
 
-    from MicroPython import wifi                    # 导入MicroPython模块的wifi类
+    From MicroPython import wifi # Import the wifi class of the MicroPython module
 
-    mywifi=wifi()                               # 实例wifi
-    mywifi.enable_APWiFi("MicroPython-wifi", 13)    # 配置并打开AP模式,第一参数:wifi名称,使用信道
+    Mywifi=wifi() # instance wifi
+    mywifi.enable_APWiFi("MicroPython-wifi", 13) # Configure and enable AP mode, the first parameter: wifi name, use channel
 
-``wifi.enable_APWiFi(essid,channel=10)`` 用于配置并开启AP模式函数, ``essid`` 参数为wifi名称, ``channel`` 参数为wifi信道。AP模式开启后,其他板子或网络设备就能连接该网络,进行网络通信。
+``wifi.enable_APWiFi(essid, channel=10)`` is used to configure and enable the AP mode function. The ``essid`` parameter is the wifi name, and the ``channel`` parameter is the wifi channel. After the AP mode is enabled, other boards or network devices can connect to the network for network communication.
 
-.. Attention:: AP模式并不是类似手机的热点功能,设备可以通过热点连接至互联网。这点需要注意。
+.. Attention:: AP mode is not a hotspot feature similar to mobile phones, devices can connect to the Internet through hotspots. This needs attention.
 
 ----------------------------
 
-一旦设置了WiFi，访问网络的方式就是使用套接字。
-套接字表示网络设备上的端点，当两个套接字连接在一起时，可以继续进行通信。
-Internet协议构建在套接字之上，例如电子邮件（SMTP），Web（HTTP），telnet，ssh等等。
-为这些协议中的每一个分配一个特定的端口，它只是一个整数。给定IP地址和端口号，您可以连接到远程设备并开始与之通信。
+Once WiFi is set up, the way to access the network is to use sockets.
+A socket represents an endpoint on a network device that can continue to communicate when two sockets are connected together.
+Internet protocols are built on top of sockets such as email (SMTP), Web (HTTP), telnet, ssh, and more.
+Each of these protocols is assigned a specific port, which is just an integer. Given the IP address and port number, you can connect to the remote device and start communicating with it.
 
-本教程的下一部分将讨论如何使用套接字来执行一些常见且有用的网络任务。
+The next part of this tutorial will discuss how to use sockets to perform some common and useful network tasks.

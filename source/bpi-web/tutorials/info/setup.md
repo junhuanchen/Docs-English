@@ -1,73 +1,72 @@
-# 硬體開發板 ( 初始化設定 )
+#硬件开发板( Initialization setting)
 
-使用 之前，最重要的就是進行初始化設定，初始化設定的目的在於讓 開發板可以自動上網 ( Internet )，有了初始化設定，我們也能夠自訂開發板的顯示名稱和密碼，更可以連上 internet 進行遠端更新。
+Before use, the most important thing is to initialize the settings. The purpose of the initialization settings is to enable the development board to automatically access the Internet (Internet). With the initial settings, we can also customize the display name and password of the development board, and even connect to the internet. Remote update.
 
-> 初始化設定**僅針對透過「Wi-Fi」連線控制**，如果單純使用「USB 操控」，則可以不需要初始化設定。
+> Initialization settings** Only for Wi-Fi connection control**, if you simply use "USB Control", you do not need to initialize the settings.
 
-## 初始化方法 1：使用安裝版進行初始化
+## Initialization method 1: Initialize using the installation version
 
-如果是使用安裝版 ( 不清楚什麼是安裝版，請參考 [編輯器](../index.html#software) )，可以直接透過安裝版的工具，按照下列步驟進行初始化設定。
+If you are using the installation version (it is not clear what is the installation version, please refer to [Editor] (../index.html#software)), you can directly initialize the settings by following the steps in the installation version of the tool.
 
-### 步驟 1、開啟工具列
+### Step 1. Open the toolbar
 
-打開安裝版後，最上方會出現安裝版的「版本號碼」以及「掃描 USB 裝置」的提示訊息，此時可以將 硬體開發板使用 USB 線連接電腦，讓软件進行掃描。
+After opening the installation version, the installation version of the "version number" and the "scan USB device" message will appear at the top. At this time, the hardware development board can be connected to the computer using a USB cable to allow the software to scan.
 
-![硬體 ( 初始化設定 )](../images/zh-tw/docs/webbit/info/setup-01.jpg)
+![Hardware (Initial setting)](../images/zh-tw/docs/webbit/info/setup-01.jpg)
 
-掃描到開發板後，*上方會出現 開發板的 Device ID 以及版本號碼*，接著按下電腦鍵盤的 *`Ctrl + W`* 開啟工具列，用滑鼠選擇「*工具 > 設定 WiFi*」，開始進行初始化更新。
+After scanning to the development board, the Device ID and version number* of the development board will appear on the top of *, then press *`Ctrl + W`* on the computer keyboard to open the toolbar, and select "*Tools> Set WiFi*" with the mouse. Start the initial update.
 
-> *特別提醒！如果無法出現 Device ID 以及版本號碼*，**可能需要先手動更新開發板韌體**。
-> 
-> 更新韌體方式請按照以下步驟進行
+> *Special reminder! If the Device ID and version number* cannot be displayed, ** may need to manually update the board firmware**.
 >
-> - [初始化方法 2：連線到開發板進行初始化](#step2)
-> - [更新韌體方法 2：透過 Wi-Fi 遠端更新](ota.html#step2)
+> Update the firmware method, please follow the steps below
+>
+> - [Initialization Method 2: Wire to the development board for initialization] (#step2)
+> - [Update Firmware Method 2: Update via Wi-Fi Remote] (ota.html#step2)
 
-![硬體 ( 初始化設定 )](../images/zh-tw/docs/webbit/info/setup-02.jpg)
-
-
-### 步驟 2、設定 Wi-Fi SSID 與密碼
-
-點選設定 WiFi 後，會彈出一個對話視窗，詢問欲連線的 WiFi 基地台 SSID 名稱和連線密碼。( 這裡就填入所在場所例如：公司、學校或家裡的 Wi-Fi 基地台的帳號和密碼 )
-
-![硬體 ( 初始化設定 )](../images/zh-tw/docs/webbit/info/setup-03.jpg)
-
-設定完成後，會彈出一個對話視窗，詢問是否關閉 USB 連線，如果選擇「確定」，開發板就會透過剛剛設定的 Wi-Fi SSID 與密碼，連線到指定的 Wi-Fi 基地台，如果選擇「取消」，就會關閉 Wi-Fi 連線功能，僅能使用 USB 連線操作。
-
-若選擇關閉 USB 連線功能，開發板會進入重啟並閃爍紅燈，當紅燈熄滅且綠燈亮起一次之後，表示 Bit 開發板已經成功連結上家裡或環境內的 WiFi 基地台*。( 若紅燈持續閃爍或恆亮，請重新進行步驟 2，若紅燈閃完後亮起「藍燈」而不是綠燈，表示已有新版本可以進行下載更新，請參考 [硬體 ( 更新韌體 )](ota.html) 一文。 )
-
-> 簡單來說，*在 Wi-Fi 連線操控的狀態下，可以使用遠端操控* ( 例如將開發板接行動電源遠離電腦、在公司或學校控制家裡的開發板 )，而*透過 USB 操控必須將開發板連接控制的電腦*，雖然說無法遠距操控，但可以在沒有 Wi-Fi 的情形下進行操作體驗。
-
-![硬體 ( 初始化設定 )](../images/zh-tw/docs/webbit/info/setup-04.jpg)
+![Hardware (Initial setting)](../images/zh-tw/docs/webbit/info/setup-02.jpg)
 
 
-## 初始化方法 2：連線到開發板進行初始化
+### Step 2, Set Wi-Fi SSID and Password
 
-如果無法使用安裝版初始化，也可以透過有 Wi-Fi 連線功能的電腦或行動裝置，連接到開發板進行初始化設定，相關步驟如下所示：
+After clicking Set WiFi, a dialog window will pop up asking for the WiFi base station SSID name and connection password to be connected. (Enter the account and password of your location, such as a company, school or home Wi-Fi base station)
 
-### 步驟 1、接上電源，輸入 WiFi 帳號密碼連線
+![Hardware (Initial setting)](../images/zh-tw/docs/webbit/info/setup-03.jpg)
 
-把 接上電源，一開始在開發板正面的全彩 LED 點矩陣，會透過跑馬燈顯示一串文字 ( *預設是 bit 三個英文字加上四個數字* )，這串文字對應到電腦或行動裝置 WiFi 搜尋裡的 SSID 名稱，例如顯示 bit1234，在 WiFi 搜尋中就會看到 bit1234 的名稱，**注意，這串文字「不是」操控開發板的 Device ID，是識別用的 SSID**！
+After the setting is completed, a dialog window will pop up asking if you want to close the USB connection. If you select “OK”, the development board will connect to the designated Wi-Fi base station via the Wi-Fi SSID and password you just set. Selecting "Cancel" will turn off the Wi-Fi connection and only use the USB connection.
 
-![硬體 ( 初始化設定 )](../images/zh-tw/docs/webbit/info/setup-05.gif)
+If you choose to turn off the USB connection function, the development board will enter the restart and flash red. When the red light is off and the green light is on once, the Bit development board has been successfully connected to the WiFi base station* in the home or environment. (If the red light keeps flashing or steady light, please go back to step 2. If the red light flashes, the "blue light" will be illuminated instead of the green light, indicating that a new version can be downloaded and updated. Please refer to [Hardware (Updated and Tough) ()) (ota.html) article.)
 
-由於開發板尚未初始化設定完成，也就無法連線至區域網路，所以一開始*會閃紅燈，或者紅燈恆亮*。這時請準備一台具備 WiFi 功能的電腦、筆電或行動裝置，使用這台裝置進行 Wi-Fi 搜尋剛剛看到為「bitXXXX」的裝置 ( 以上述的例子就是搜尋 bit1234 )，找到該裝置後，輸入預設密碼 *12345678*，進行連線。
+> In simple terms, * With Wi-Fi connection control, you can use remote control* (such as moving the development board away from the computer, the development board at home or school control), and * controlling via USB The development board must be connected to the controlled computer*, although it cannot be remotely controlled, it can be operated without Wi-Fi.
 
-![硬體 ( 初始化設定 )](../images/zh-tw/docs/webbit/info/setup-06.jpg)
+![Hardware (Initial setting)](../images/zh-tw/docs/webbit/info/setup-04.jpg)
 
 
-### 步驟 2、設定 WiFi 帳號密碼與顯示名稱
+## Initialization Method 2: Wire to the development board for initialization
 
-*確認連線成功*後，打開瀏覽器 ( 建議使用 Chrome )，網址列輸入 192.168.4.1 連線到 Bit 開發板的設定畫面，畫面中包含以下幾種設定：
+If you can't use the installation version to initialize, you can also connect to the development board to initialize the settings through a Wi-Fi connection computer or mobile device. The relevant steps are as follows:
 
-- **WiFi SSID、PWD**：必填，表示開發板要連接哪個 Wi-Fi 基地台。
-- **Device ID**：每塊開發板的唯一識別代碼，目前版本預設都是短 ID。( *如果看到 ID 為 18 碼的長 ID，可以點擊 Shorten the ID 的按鈕更換為短 ID，或進行遠端更新自動更換為「短 ID」*，參考 [硬體 ( 更新韌體 )](ota.md) )
-- **Device SSID、PWD**：裝置*在 WiFi 搜尋中所顯示的名稱和密碼*，若不填寫會自動產生 SSID 以及預設密碼 12345678。
-- **MQTT Server**：開發板要連接的伺服器，預設 Global，中國地區請選擇 China。
+### Step 1. Connect the power supply and enter the WiFi account password to connect.
 
-![硬體 ( 初始化設定 )](../images/zh-tw/docs/webbit/info/setup-07.jpg)
+Connect the power supply. At the beginning, the full-color LED dot matrix on the front of the development board will display a series of texts through the marquee (* preset is three English characters plus four digits*). This string corresponds to the computer. Or the SSID name in the WiFi search of the mobile device, for example, bit1234 is displayed. The name of bit1234 will be seen in the WiFi search. **Note that the string "No" controls the Device ID of the development board, which is the SSID for identification** !
 
-設定完成後按下 SUBMIT 儲存，出現 SAVE OK 的字樣表示儲存成功，此時 開發板會重啟並閃爍紅燈，當紅燈熄滅且綠燈亮起一次之後，表示 Bit 開發板已經成功連結上家裡或環境內的 WiFi 基地台。( 若紅燈持續閃爍或恆亮，請移除電源，重新操作步驟 1 與步驟 2，若紅燈閃完後亮起「藍燈」而不是綠燈，表示已有新版本可以進行下載更新，請參考 [更新韌體](ota.html) 一文。 )
+![Hardware (Initial setting)](../images/zh-tw/docs/webbit/info/setup-05.gif)
 
-![硬體 ( 初始化設定 )](../images/zh-tw/docs/webbit/info/setup-08.jpg)
+Since the development board has not been initialized and set up, it will not be able to connect to the local area network, so the * will flash red at the beginning, or the red light will be steady*. In this case, please prepare a WiFi-enabled computer, laptop or mobile device. Use this device for Wi-Fi search. The device that you just saw as "bitXXXX" (search for bit1234 in the above example), after finding the device, Enter the default password *12345678* to connect.
 
+![Hardware (Initial setting)](../images/zh-tw/docs/webbit/info/setup-06.jpg)
+
+
+### Step 2, set the WiFi account password and display name
+
+* After confirming that the connection is successful*, open the browser (recommended to use Chrome), and enter 192.168.4.1 in the address bar to connect to the setting screen of the Bit development board. The screen contains the following settings:
+
+- **WiFi SSID, PWD**: Required, indicating which Wi-Fi base station the development board should connect to.
+- **Device ID**: The unique identification code for each development board. The current version is preset to be a short ID. ( *If you see a long ID with an ID of 18 yards, you can click the Shorten the ID button to change to a short ID, or remotely update to automatically change to a "short ID"*, refer to [Hardware (Update Firmware)] ( Ota.md) )
+- **Device SSID, PWD**: The name and password* displayed by the device* in the WiFi search. If not filled, the SSID and the default password 12345678 will be generated automatically.
+- **MQTT Server**: The server to be connected to the development board, default Global, please select China for China.
+
+![Hardware (Initial setting)](../images/zh-tw/docs/webbit/info/setup-07.jpg)
+
+After the setting is completed, press SUBMIT to save. The word “SAVE OK” indicates that the storage is successful. At this time, the development board will restart and flash red. When the red light is off and the green light is on once, the Bit development board has been successfully connected to the home or environment. WiFi base station inside. (If the red light keeps flashing or steady light, please remove the power supply and restart steps 1 and 2. If the red light flashes, the “blue light” will be illuminated instead of the green light, indicating that a new version can be downloaded and updated. Refer to [Update Firmware] (ota.html).
+
+![Hardware (Initial setting)](../images/zh-tw/docs/webbit/info/setup-08.jpg)

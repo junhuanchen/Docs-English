@@ -1,157 +1,152 @@
-# 小怪獸基本操作
+#小怪兽操作
 
-編輯器設計了四隻可愛的小怪獸，透過程序積木編排邏輯順序，就能控制每隻小怪獸的說話、聲音、互動與行為...等動作，甚至能進一步與實際 開發板互動，做出更多好玩的有趣應用。
+The editor has designed four cute little monsters, which can control the speech, sound, interaction and behavior of each little monster through the logical sequence of program blocks, and even further interact with the actual development board. More fun and interesting apps.
 
-## 小怪獸積木清單 ( 基本操作 )
+## Little monster building blocks list (basic operation)
 
-基本操作小怪獸的積木分別有講話、展示圖片、情緒、改變位置、改變角度、改變大小、顯示隱藏和階層...等，可以透過這些積木控制小怪獸的外在表現。
+Basically, the little monster's building blocks have speech, display pictures, emotions, change position, change angle, change size, display hiding and class, etc., and these blocks can control the external performance of the little monster.
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-01.jpg)
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-01.jpg)
 
-## 講話＆不講話
+## Speech & No Speech
 
-「講話」和「不講話」積木可以讓小怪獸講出指定的文字，或不要講出文字，透過下拉選單也可以選擇哪一隻小怪獸講話，或所有小怪獸一起講話。
+The "speech" and "no speech" blocks allow the little monster to speak the specified text, or don't speak the text. You can also choose which little monster to speak through the drop-down menu, or all the little monsters to talk together.
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-02.jpg)
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-02.jpg)
 
-只要在講話的積木後方，連接指定的文字，網頁執行後小怪獸就會說出指定的文字。
+As long as the specified text is connected behind the building blocks, the little monster will say the specified text after the web page is executed.
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-03.jpg)
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-03.jpg)
 
-只要把文字留空，或者使用不說話的積木，就能夠讓小怪獸不說話。
+Just leave the text blank or use a brick that doesn't talk, so that the little monster can't talk.
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-04.jpg)
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-04.jpg)
 
-## 展示圖片
+## Show pictures
 
-「展示圖片」積木可以讓小怪後展示一張「網路圖片」。
+The "show image" building block allows the mob to display a "web image".
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-05.jpg)
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-05.jpg)
 
-舉例來說，從維基百科上搜尋[蒙娜麗莎](https://zh.wikipedia.org/wiki/%E8%92%99%E5%A8%9C%E4%B8%BD%E8%8E%8E#_blank)，可以得到這張圖片的「[網址](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/460px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg#_blank)」，複製圖片網址，貼到小怪獸展示圖片的文字空格內，網頁執行後，就會看見小怪獸展示這張圖片。
+For example, search for [Mona Lisa] from Wikipedia (https://en.wikipedia.org/wiki/%E8%92%99%E5%A8%9C%E4%B8%BD%E8%8E %8E#_blank), you can get the "[URL] of this image (https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/460px-Mona_Lisa%2C_by_Leonardo_da_Vinci %2C_from_C2RMF_retouched.jpg#_blank)", copy the image URL and paste it into the text space of the small monster display image. After the webpage is executed, you will see the little monster display this image.
 
-> 目前圖片格式僅支援 jpg、jpeg、png、gif
+> The current image format only supports jpg, jpeg, png, gif
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-06.jpg)
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-06.jpg)
 
-## 情緒
+## Emotions
 
-「情緒」積木可以改變小怪獸的情緒，包含開心、驚訝、生氣、難過和隨機。
+"Emotional" blocks can change the mood of little monsters, including happy, surprised, angry, sad and random.
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-07.jpg)
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-07.jpg)
 
-選擇對應的小怪獸 ( 也可以四隻同時 )，選擇對應的情緒，網頁執行後就會看見小怪獸的情緒變化。
+Select the corresponding little monster (you can also have four at the same time), select the corresponding emotions, and you will see the emotional changes of the little monsters after the webpage is executed.
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-08.jpg)
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-08.jpg)
 
-## 改變位置
+## Change location
 
-「改變位置」積木可以指定小怪獸改變*目前的位置*，選項有往上、往下、往左、往右、隨機或朝向滑鼠方向。
+The "change position" block can specify that the little monster changes *the current position*, and the options are up, down, left, right, random or toward the mouse.
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-09.jpg)
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-09.jpg)
 
-搭配重複十次和等待 0.1 秒的積木，就能夠讓小怪獸往右上方移動。
+With the blocks that are repeated ten times and waiting for 0.1 seconds, you can move the little monsters to the upper right.
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-10.gif)
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-10.gif)
 
-如果使用無線重複的積木，搭配「朝著滑鼠位置」的設定，就能夠讓小怪獸追著滑鼠移動。
+If you use wireless repeating blocks, with the setting "Move to the mouse position", you can let the little monsters chase the mouse to move.
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-11.gif)
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-11.gif)
 
-## 定位
+## Positioning
 
-「定位」積木能夠把小怪獸擺放到指定的坐標位置。
+The "positioning" bricks can place the little monsters at the specified coordinate positions.
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-12.jpg)
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-12.jpg)
 
-怪獸的座標系統採用*笛卡兒座標系統* ( 直角座標系統 )，往上 y 為正，往右 x 為正，而 (0,0) *原點位在怪獸互動舞台的左下角*，指定小怪獸 xy 坐標，網頁執行後小怪獸就會出現在指定的位置。
+The monster's coordinate system uses the *Cartesian coordinate system* (right-angle coordinate system), with y being positive and x being positive to the right, and (0,0) * origin being at the lower left corner of the monster interactive stage*, specifying The little monster xy coordinates, the small monster will appear in the specified position after the web page is executed.
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-13.jpg)
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-13.jpg)
 
-## 旋轉角度
+## Rotation angle
 
-「旋轉角度」可以指定小怪獸改變*目前的角度*，選項有往左或往右。
+"Rotation Angle" can specify that the little monster changes *the current angle*, and the options are left or right.
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-14.jpg)
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-14.jpg)
 
-搭配重複無限次的積木，就能讓小怪獸不斷的每隔 0.1 秒旋轉 10 度。
+With the infinite number of blocks, you can make the little monsters rotate 10 degrees every 0.1 seconds.
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-15.gif)
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-15.gif)
 
 
-## 面朝方向
+## Facing the direction
 
-「面朝方向」角度可以指定小怪獸旋轉的角度，順時針為正，逆時針為負。
+The "facing direction" angle specifies the angle at which the little monster rotates, clockwise positive and counterclockwise negative.
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-16.jpg)
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-16.jpg)
 
-因為「面朝方向」是指定一個角度，如果要做到和前一個積木「旋轉角度」一樣的效果，可以使用变量搭配無限重複的積木，在每一次執行時修改变量數值即可。
+Because the "facing direction" is an angle specified, if you want to achieve the same effect as the previous building "rotation angle", you can use variables with infinitely repeating blocks, and modify the variable values ​​at each execution.
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-17.gif)
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-17.gif)
 
-## 自動面朝滑鼠方向
+## Auto face-to-mouse direction
 
-「自動面朝滑鼠方向」積木能讓小怪獸轉到滑鼠所在的方向，有自動和停止兩個選項，預設並不會面朝滑鼠。
+The "Automatic Face-to-Mouse" building block allows the little monster to go in the direction of the mouse. There are two options, Auto and Stop. The preset does not face the mouse.
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-18.jpg)
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-18.jpg)
 
-因為「自動面朝滑鼠方向」只會執行一次，所以如果要讓小怪獸不斷的面向滑鼠，就必須搭配無限重複的積木，如下圖，網頁執行後小怪獸就會自動面向滑鼠旋轉。
+Because the "automatic face-to-mouse direction" will only be executed once, if you want the little monster to face the mouse constantly, you must match the infinitely repeating blocks. As shown below, the small monster will automatically rotate toward the mouse after the webpage is executed.
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-19.gif)
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-19.gif)
 
-## 取得座標和角度
+## Get coordinates and angles
 
-「取得座標和角度」積木能夠讀取小怪獸當前的 X 座標、Y 座標和旋轉角度。
+The "Get coordinates and angles" bricks can read the current X coordinates, Y coordinates, and rotation angle of the little monster.
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-20.jpg)
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-20.jpg)
 
-下圖的例子，就能讓小怪獸自己講出自己的 X 座標、Y 座標和旋轉角度。
+In the example below, you can let the little monsters speak their own X coordinates, Y coordinates, and rotation angles.
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-21.jpg)
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-21.jpg)
 
-## 尺寸放大縮小
+## Size zoom in and out
 
-「尺寸放大縮小」積木可以指定小怪獸改變*目前的大小*，選項有放大或縮小。
+The "size enlargement" building block can specify that the little monster changes *the current size*, and the options are enlarged or reduced.
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-22.jpg)
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-22.jpg)
 
-搭配重複十次和等待 0.1 秒的積木，網頁執行後，就能夠讓小怪獸逐漸變大。
+With the blocks that are repeated ten times and waiting for 0.1 seconds, after the web page is executed, the monsters can be gradually enlarged.
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-23.gif)
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-23.gif)
 
-## 尺寸百分比
+## size percentage
 
-「尺寸百分比」積木可以指定小怪獸放大縮小的百分比。
+The "% of size" block allows you to specify the percentage of small monsters to zoom in and out.
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-24.jpg)
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-24.jpg)
 
-由於 100% 表示原本怪獸大小，所以 200% 就會是一倍大，50% 則是會縮成 1/2 大小，下圖透過尺寸百分比，分別讓四隻小怪獸呈現不同尺寸大小。
+Since 100% means the size of the original monster, 200% will be doubled, and 50% will be reduced to 1/2 size. The following figure shows the size of the four monsters in different sizes.
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-25.jpg)
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-25.jpg)
 
-## 顯示/不顯示
+## Display / Do not display
 
-「顯示/不顯示」積木可以指定小怪獸是否顯示在互動舞台區。
+The "Show/Do Not Show" building block allows you to specify whether the little monster is displayed in the interactive stage area.
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-26.jpg)
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-26.jpg)
 
-## 階層
+## hierarchy
 
-「階層」積木可以指定小怪獸排列的階層，最上層在最前面，最下層在最後面。
+The "hierarchy" building blocks can specify the hierarchy of small monsters, with the top layer at the top and the bottom layer at the bottom.
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-28.jpg)
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-28.jpg)
 
-透過重複迴圈以及等待的積木，能夠讓小怪獸的階層依序顯示在最前面。
+By repeating the loop and waiting for the blocks, the little monsters can be displayed in the front.
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-29.gif)
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-29.gif)
 
-## 回到原始狀態
+## Back to original state
 
-「回到原始狀態」積木可以讓小怪獸回到初始狀態，初始狀態包含不說話、預設座標、預設旋轉角度和預設尺寸大小。
+The "back to original state" building block allows the little monster to return to its original state. The initial state includes non-speaking, preset coordinates, preset rotation angle, and preset size.
 
-![小怪獸基本操作](../images/zh-tw/docs/webbit/monster/basic-27.jpg)
-
-
-
-
-
+![Little monster basic operation] (../images/zh-tw/docs/webbit/monster/basic-27.jpg)

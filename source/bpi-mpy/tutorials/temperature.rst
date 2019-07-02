@@ -1,35 +1,34 @@
-获取周围温度
-=====================================================
+Get ambient temperature
+=========================================================== ===
 
-这个 LED 面板底下的 热敏电阻 可以让你获得周围的环境温度。在使用它之前，建议将板子置于冷却下再采集，否则读取的温度和周围的温度有偏差，因为板子会发热，所以它的周围的影响最大的热源是板子自身的温度，所以环境的温度就会变成板子的温度。
+The thermistor underneath this LED panel allows you to get the ambient temperature around you. Before using it, it is recommended to place the board under cooling and collect it again. Otherwise, the reading temperature will deviate from the surrounding temperature. Because the board will heat up, the heat source that has the most influence around it is the temperature of the board itself, so the environment The temperature will change to the temperature of the board.
 
-所以在板子还没开始发热之前，起初获取的一定是环境温度，后来才逐渐变成板子温度。
+Therefore, before the board has begun to heat up, the initial acquisition must be the ambient temperature, and then gradually become the board temperature.
 
-赶快来试试吧
+Come and try it now.
 ---------------------------
 
 .. code:: python
 
-   from microbit import *
+   From microbit import *
 
-   while True:
-       temp = temperature() # get temperature ℃
-       print(temp)
-       display.scroll(str(temp))
-       sleep(10000)
+   While True:
+       Temp = temperature() # get temperature °C
+       Print(temp)
+       Display.scroll(str(temp))
+       Sleep(10000)
 
-实测对比效果
+Measured contrast effect
 ---------------------------
 
-LED 面板显示的内容
+LED panel display
 
 .. figure:: temperature/tem.gif
 
-REPL 打印出来的数据
+REPL printed data
 
 .. figure:: temperature/tem2.png
 
-温度枪实测的温度
+Temperature gun measured temperature
 
 .. figure:: temperature/tem1.jpg
-

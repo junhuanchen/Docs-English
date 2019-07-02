@@ -1,51 +1,51 @@
-# 使用方法
+# Instructions
 
-## 载入拓展积木
+## Loading and expanding building blocks
 
-> 以此示例模板为例：[webduino-blockly-template](https://bpi-steam.com/webduino-blockly-template/) 。
+> Take this example template as an example: [webduino-blockly-template](https://bpi-steam.com/webduino-blockly-template/) .
 
-进入 [ webduino blockly Bit ](https://bit.webduino.com.cn/blockly/?lang=zh-hans)。
+Go to [ webduino blockly Bit ] (https://bit.webduino.com.cn/blockly/?lang=zh-hans).
 
 ![](basic/0.png)
 
-点击左下角的 菜单键（设置） 然后可以看到 使用自有积木。
+Click on the menu button (Settings) in the lower left corner and you will see the use of your own building blocks.
 
 ![](basic/1.png)
 
-在该框粘贴拓展 `https://bpi-steam.com/webduino-blockly-template/blockly.json` 地址并点击 汇入 即可。
+Paste the https://bpi-steam.com/webduino-blockly-template/blockly.json` address in the box and click Import.
 
 ![](basic/2.png)
 
-汇入成功，再次点击 左下角的 × 返回主页吧。
+Once the import is successful, click again in the lower left corner to return to the home page.
 
 ![](basic/3.png)
 
-此时你可以在主页的菜单们看到它们了。
+At this point you can see them on the menus on the home page.
 
 ![](basic/4.png)
 
-## 载入使用范例
+## Loading usage examples
 
-> 标准的积木示例中应该提供 blockly.xml 供他人参考和使用。
+> The blocky.xml should be provided for reference and use by others in the standard building block example.
 
-如果提供的示例积木，可以通过下载项目的 demos/blockly.xml 文件并导入。
+If the example bricks are provided, you can download them by downloading the project's demos/blockly.xml file.
 
 ![](basic/5.png)
 
-选择文件后，点击汇入即可载入使用范例。
+After selecting the file, click Import to load the usage example.
 
 ![](basic/6.png)
 
-可以看到如下效果
+Can see the following effects
 
 ![](basic/7.png)
 
-可以点击右上角运行按钮，运行查看效果。
+You can run the view by clicking the Run button in the upper right corner.
 
 ![](basic/8.png)
 
-修改一下提问参数，再次运行得到新的结果。
+Modify the question parameters and run again to get the new results.
 
 ![](basic/9.png)
 
-如果想要自己制作和设计积木，可以参考[开发者文档](http://dev.bpi-steam.com)。
+If you want to make and design your own blocks, you can refer to [Developer Documentation] (http://dev.bpi-steam.com).

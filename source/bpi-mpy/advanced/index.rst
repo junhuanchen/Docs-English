@@ -1,40 +1,39 @@
-进阶教程
-=====================================================
+Advanced tutorial
+=========================================================== ===
 
-当你掌握了前面那些基础的教程后，你已经入门了，具备基础的使用代码的能力，想要进阶的话，就要看更高级的开发文档了。
+When you have mastered the basic tutorials above, you are already getting started, and you have the basic ability to use code. If you want to be advanced, you should look at the more advanced development documentation.
 
-看到这里，就是走进真正意义上的 Python 编程了。
+Seeing this is going into the real sense of Python programming.
 
-请从 `Python3 菜鸟教程 <https://www.runoob.com/python3/python3-tutorial.html>`_ 这里学会安装 Python3 环境，并运行 Python3 代码。
+Please learn to install the Python3 environment and run the Python3 code from the `Python3 Novice Tutorial <https://www.runoob.com/python3/python3-tutorial.html>`_ here.
 
-接下来的教程可能对你来说会难懂许多，但也是你编程修炼的必经之路。
+The next tutorial may be a lot difficult for you, but it is also the only way for you to practice programming.
 
-在 Windows 任何地方按下 Win + R 键弹出运行框，并输入 `cmd` ，确认弹出黑窗。
+Press Win + R on any place in Windows to pop up the run box and type `cmd` to confirm that a black window pops up.
 
 .. image:: run.png
 
-然后请确认你系统里安装了 Python3 和 PIP 代码包管理工具。
+Then make sure you have the Python3 and PIP code package management tools installed on your system.
 
 .. image:: python3.png
 
-如图示可知。
+As shown in the figure.
 
-- 输入 python 显示 `Python 3.5.4 (v3.5.4:3f56838, Aug  8 2017, 02:17:05) [MSC v.1900 64 bit (AMD64)] on win32` 表示安装了 python 3.5.4 ，此时按 Ctrl + C 可以退出。
+- Enter python to display `Python 3.5.4 (v3.5.4:3f56838, Aug 8 2017, 02:17:05) [MSC v.1900 64 bit (AMD64)] on win32` means that python 3.5.4 is installed. Press Ctrl + C to exit.
 
-- 输入 pip -V 可以得知当前的 pip Python 软件包管理工具版本，它可以帮你快速安装一些工具包。
+- Enter pip -V to get a current version of the pip Python package management tool, which will help you quickly install some toolkits.
 
-确认了这两件事后，就可以开始你的进阶之旅了。
+Once you have confirmed these two things, you can start your advanced journey.
 
 .. toctree::
-    :maxdepth: 2
-    :numbered:
+    :maxdepth: 2
+    :numbered:
 
-    mpfs
-    leds
-    wifi
-    wireless
-    vscode
-    mqtt
-    codelab
-    pycharm
-    
+    Mpfs
+    Leds
+    Wifi
+    Wireless
+    Vscode
+    Mqtt
+    Codelab
+    Pycharm

@@ -1,36 +1,35 @@
+Brush in the Webduino firmware
+=========================================================== ===
 
-刷入 Webduino 固件
-=====================================================
-
-第一次使用，请先烧入 Webduino 固件，如果不烧录就没有 Webduino 硬件运行环境。
+For the first time, please burn the Webduino firmware first. If you don't burn it, there is no Webduino hardware running environment.
 
 .. Hint::
 
-    使用请确认已经安装驱动，且已经得知自己的硬件串口名称，例如：COM5、ttyUSB0。
+    Please confirm that the driver has been installed and you have already know the name of your hardware serial port, for example: COM5, ttyUSB0.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 2
 
-   ../bpi-steam/driver
+   ../bpi-steam/driver
 
-在 Windows 下
+Under Windows
 ---------------------------
 
-- 从 `BPI-BIT-Webduino/release <https://github.com/BPI-STEAM/BPI-BIT-Webduino/releases/tag/FlashTool>`_ 中获取烧写工具的链接，附有国内微云网盘分流。
+- Get a link to the programming tool from `BPI-BIT-Webduino/release <https://github.com/BPI-STEAM/BPI-BIT-Webduino/releases/tag/FlashTool>`_ with a domestic micro cloud The network disk is diverted.
 
-- 下载后打开 `FlashWebduino-*.zip` 压缩包，然后运行里面的 Flashtool.exe 工具即可。
+- After downloading, open the `FlashWebduino-*.zip` archive and run the Flashtool.exe tool inside.
 
 .. image:: flash_web/flash_web.png
 
-- 请先插入硬件后打开软件，这个软件会自动运行烧写。
+- Please open the software after inserting the hardware first, and the software will automatically run the programming.
 
-- 你也可以自己选择串口烧录，升级固件只需要替换压缩包中的 firmware.bin 重新烧入即可。
+- You can also choose the serial port to burn. To upgrade the firmware, just replace the firmware.bin in the compressed package and re-burn it.
 
-在 其他系统 下
+Under other systems
 ---------------------------
 
-请参照其他网络教程，如果有特别的需求，可以到 社区 提交问题 或 开 issue 。
+Please refer to other web tutorials. If you have special needs, you can submit a question or open an issue to the community.
 
 .. Hint::
 
-    烧录后显示 x 的问题请看这个 `跳过产测 红 X <https://github.com/BPI-STEAM/BPI-BIT-WebDuino/issues/3>`_，更多问题可以到 `中文社区 <https://forum.banana-pi.org.cn/c/bpi-bit>`_ 反馈。
+    For the problem of displaying x after burning, please see this `Skip production test X <https://github.com/BPI-STEAM/BPI-BIT-WebDuino/issues/3>`_, more questions can be found in `中文Community <https://forum.banana-pi.org.cn/c/bpi-bit>`_ Feedback.

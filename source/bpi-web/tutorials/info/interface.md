@@ -1,65 +1,65 @@
-# 編輯器 ( 操作介面 )
+#编辑器(Operation interface)
 
-編輯器是 Webduino 最新的程序編輯＆學習软件，除了基於 Webduino Blockly 的操作方式，也大幅簡化了操作的步驟流程，甚至額外添加了虛擬開發板以及小怪獸互動舞台，不論是大朋友小朋友，都可以快速又輕鬆的入門 Web:Bit。
+The editor is Webduino's latest program editing & learning software. In addition to the Webduino Blockly-based operation mode, it also greatly simplifies the step-by-step process of the operation. Even the virtual development board and the small monster interactive stage are added, whether it is a big friend or a child. Quick and easy to get started with Web: Bit.
 
-> - 網頁版：[https://webbit.webduino.io](https://webbit.webduino.io#_blank)
-> - 安裝版下載：[WebBitSetup.zip](http://webduinoio.github.io/samples/content/bit-download/WebBitSetup.zip#_blank)
+> - Web version: [https://webbit.webduino.io](https://webbit.webduino.io#_blank)
+> - Installation version download: [WebBitSetup.zip] (http://webduinoio.github.io/samples/content/bit-download/WebBitSetup.zip#_blank)
 
-## 操作介面一覽
+## Operation interface list
 
-編輯器的操作介面分成下列幾個區塊：
+The editor's interface is divided into the following blocks:
 
-- **主功能選單**：包含檔案的儲存與開啟、範例和教學、刪除所有積木、更多功能和執行按鈕。
-- **積木/程序碼切換**：將寫好的程序轉換為標準 Javascript，讓學習程序更簡單。
-- **積木清單**：包含基本功能、小怪獸互動、開發板操控和物聯網擴充...等積木。
-- **積木編輯區**：進行積木的邏輯組合，產生各種不同的情境應用。
-- **開發板模擬器**：包含一塊虛擬的 開發板，可以模擬實際開發板的狀況和應用。
-- **小怪獸互動舞台**：包含四種不同造型顏色的小怪獸，可以透過積木設定相關動作和互動情境。
-- **縮放按鈕**：夠快速縮放畫面積木或刪除積木。
-- **畫面收折按鈕**：快速收折開發板模擬器和小怪獸互動區，讓積木編輯區域放大或縮小。
+- ** Main Function Menu**: Contains file storage and opening, example and teaching, delete all building blocks, more functions and execute buttons.
+- **Building block/code switching**: Convert the written program to standard Javascript to make the learning program easier.
+- **List of building blocks**: Contains basic functions, small monster interaction, development board control and IoT expansion...
+- **Building block editing area**: Perform a logical combination of building blocks to produce a variety of different contextual applications.
+- **Development Board Simulator**: Contains a virtual development board that simulates the condition and application of the actual development board.
+- **Little Monster Interactive Stage**: A small monster with four different styling colors that can be used to set related movements and interactive situations.
+- **Zoom button**: Fast enough to zoom in and out of the wood or remove blocks.
+- **Screen folding button**: Quickly fold the development board simulator and the small monster interaction area to enlarge or reduce the building block editing area.
 
-![編輯器 ( 操作介面 )](../images/zh-tw/docs/webbit/info/interface-01.jpg)
+![editor (operation interface)](../images/zh-tw/docs/webbit/info/interface-01.jpg)
 
-## 程序積木是什麼？
+## What is the program building block?
 
-對於第一次接觸的人來說，會不太清楚「程序積木」的由來，「積木」是翻譯自「block」這個英文單字，其操作方式類似「組裝積木」或「拼圖」的概念，透過互相堆疊和搭配組合，就能判斷不同的邏輯或依據指定的排列順序，實現對應的動作。
+For those who are in contact with the first time, it is not clear about the origin of the "program block". The "building block" is an English word translated from "block". Its operation is similar to the concept of "assembled building blocks" or "puzzles". By stacking and combining with each other, it is possible to judge different logics or implement corresponding actions according to a specified arrangement order.
 
-![編輯器 ( 操作介面 )](../images/zh-tw/docs/webbit/info/interface-02.gif)
+![editor (operation interface)](../images/zh-tw/docs/webbit/info/interface-02.gif)
 
-編輯器是基於 Google 的圖像式程序編輯工具 Blockly 所開發出的編輯工具，每塊積木都有對應的功能和用途，如果想了解該積木的使用方式，可以「*使用滑鼠在指定的積木上按右鍵*」，就能開啟積木的功能列表，點擊「教學」可以閱讀該積木的教學文件，如果該積木有「小工具」，則可以點擊小工具打開更多進階功能。
+The editor is an editing tool developed by Google's graphical program editing tool Blockly. Each building block has its own functions and uses. If you want to know how to use the building block, you can use the mouse in the specified building block. Press the right button *" to open the function list of the building block. Click "Teaching" to read the teaching file of the building block. If the building block has "Gadget", you can click the gadget to open more advanced functions.
 
-![編輯器 ( 操作介面 )](../images/zh-tw/docs/webbit/info/interface-03.jpg)
+![editor (operation interface)](../images/zh-tw/docs/webbit/info/interface-03.jpg)
 
-## 雲端部署
+## Cloud deployment
 
-雲端部署的功能可以幫主我們將編輯好的程序積木，部署到 Webduino 雲端伺服器，如此一來就可以*在電腦關閉的狀態下，繼續執行對應的程序動作* ( *仍然需保持開發板正常的網路連線* )，只要程序積木裡**包含 Wi-Fi 連線的開發板**，就能使用雲端部署的功能。
+The cloud deployment function can help us to deploy the edited program blocks to the Webduino cloud server, so that we can continue to execute the corresponding program actions when the computer is off* (* still need to keep the development board normal) Internet connection*), as long as the program board contains a Wi-Fi connection development board**, you can use the cloud deployment features.
 
-> 注意，雲端部署成功後，會在下列兩種狀況下停止：
-> - *第一種，開發板網路斷線超過 20 分鐘。*
-> - *第二種，重新雲端部署，或點擊編輯器的「執行」按鈕。*
+> Note that after the cloud deployment is successful, it will stop under the following two conditions:
+> - * First, the development board network is disconnected for more than 20 minutes. *
+> - * Second, re-cloud deployment, or click the editor's "Execute" button. *
 
-![編輯器 ( 操作介面 )](../images/zh-tw/docs/webbit/info/interface-06.jpg)
+![editor (operation interface)](../images/zh-tw/docs/webbit/info/interface-06.jpg)
 
-## 網頁版、安裝版的主功能選單差異
+## Web version, installed version of the main function menu differences
 
-右上方的主功能選單，包含 編輯器的主要功能，但「網頁版」和「安裝版」編輯器的選單略有不同，在網頁版可以使用「檔案 > 分享連結」而安裝版不行，分享連結可以幫助我們快速存檔產生一段「網址」，下次再開啟這個網址就可以開啟檔案，因為安裝版無法開啟網址，所以無法使用該選項。
+The main function menu at the top right contains the main functions of the editor, but the menus for the "Web Edition" and "Installed" editors are slightly different. In the web version, you can use "File > Share Link" and the installation version will not work. Share the link. It can help us quickly archive and generate a "URL". You can open the file the next time you open the URL, because the installation version can't open the URL, so you can't use this option.
 
-![編輯器 ( 操作介面 )](../images/zh-tw/docs/webbit/info/interface-04.jpg)
+![editor (operation interface)](../images/zh-tw/docs/webbit/info/interface-04.jpg)
 
-在網頁版主選單的「更多」裏頭，也包含「下載安裝版」的選項，點擊後會下載安裝版的壓縮檔，解壓縮安裝就可以使用安裝版。( 目前安裝版編輯器僅支援 Windows )
+In the "More" section of the main menu of the webpage, the option of "Download and install" is also included. After clicking, the compressed version of the installation version will be downloaded, and the installation version can be used after decompressing the installation. (The current installation editor only supports Windows)
 
-![編輯器 ( 操作介面 )](../images/zh-tw/docs/webbit/info/interface-05.jpg)
+![editor (operation interface)](../images/zh-tw/docs/webbit/info/interface-05.jpg)
 
-## 程序積木小技巧
+## Program Building Tips
 
-### 小技巧 1、多行與單行輸入
+### Tips 1, multi-line and single-line input
 
-如果程序積木太長，我們可以用滑鼠在積木上按右鍵，若該積木支援多行輸入，可以點選「*多行輸入*」將積木由單行變成多行，也更方便閱讀和編輯。
+If the program building block is too long, we can use the mouse to right click on the building block. If the building block supports multiple lines of input, you can click "*Multiple Line Input*" to change the building block from a single line to multiple lines, which is more convenient for reading and editing.
 
-![編輯器 ( 操作介面 )](../images/zh-tw/docs/webbit/info/interface-07.gif)
+![editor (operation interface)](../images/zh-tw/docs/webbit/info/interface-07.gif)
 
-### 小技巧 2、整理積木
+### Tips 2, organize the blocks
 
-在實作程序積木時，往往會遇到積木四面八方散落在畫面上的狀況，這時可以在編輯區域上按右鍵，選擇「*整理積木*」將積木排列整齊。
+When implementing the program building blocks, you will often encounter the situation that the building blocks are scattered on the screen. In this case, right click on the editing area and select “*Finished Building Blocks*” to arrange the blocks neatly.
 
-![編輯器 ( 操作介面 )](../images/zh-tw/docs/webbit/info/interface-08.gif)
+![editor (operation interface)](../images/zh-tw/docs/webbit/info/interface-08.gif)

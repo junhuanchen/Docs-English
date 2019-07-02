@@ -1,27 +1,26 @@
-基础教程
-========================================
+Basic tutorial
+=================================================
 
-MicroPython是 Python 3 语言的精简实现 ，包括Python标准库的一小部分，经过优化可在微控制器和受限环境中运行。
+MicroPython is a streamlined implementation of the Python 3 language, including a small portion of the Python standard library, optimized to run in microcontrollers and restricted environments.
 
 .. Hint::
 
-    如果你从没学过 Python3，建议你先从这里 `Python 3 菜鸟教程 <https://www.runoob.com/python3/python3-tutorial.html>`_ 进行学习 Python3 的软件基础知识，再过度到硬件部分会比较好。
+    If you have never learned Python3, I suggest you learn the basics of Python3 software from the `Python 3 Noob tutorial <https://www.runoob.com/python3/python3-tutorial.html>`_ here. The hardware part will be better.
 
 .. toctree::
-   :maxdepth: 2
-   :numbered:
+   :maxdepth: 2
+   :numbered:
 
-   flash_mpy
-   simple_use
-   repl
-   display
-   image
-   button
-   io
-   music
-   random
-   accelerometer
-   light
-   compass
-   temperature
-
+   Flash_mpy
+   Simple_use
+   Repl
+   Display
+   Image
+   Button
+   Io
+   Music
+   Random
+   Accelerometer
+   Light
+   Compass
+   Temperature

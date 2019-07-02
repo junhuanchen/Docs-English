@@ -1,46 +1,44 @@
-# 偵測光線＆溫度
+#检测光与温度
 
-開發板內建兩個光敏電阻，以及一個溫敏電阻，光敏電阻可以偵測環境光線的流明數值，溫敏電阻則可偵測到小數點兩位的溫度變化，藉由光線和溫度的偵測，就能輕鬆地做出環境監控相關的場域應用。
+The development board has two built-in photoresistors and a temperature-sensitive resistor. The photoresistor can detect the lumen value of the ambient light. The temperature-sensitive resistor can detect the temperature change of two decimal places, and the light and temperature are detected. It is easy to make field monitoring related environment applications.
 
-## 積木清單
+## Building block list
 
-偵測光線分別可以偵測左上和右上的亮度變化，偵測的單位為流明，數值區間為 0~1000 的整數，溫度偵測的單位為度 C，數值可到小數點兩位。
+The detection light can detect the brightness changes in the upper left and upper right respectively. The unit of detection is lumens, the value range is an integer from 0 to 1000, the unit of temperature detection is degree C, and the value can be two decimal places.
 
-![偵測光線＆溫度](../images/zh-tw/docs/webbit/board/photocell-thermistor-01.jpg)
+![Detect Light & Temperature](../images/zh-tw/docs/webbit/board/photocell-thermistor-01.jpg)
 
-> *偵測光線和溫度積木必須搭配「開發板」積木*，選擇模擬器，執行後可以使用滑鼠拖拉模擬器的燈泡或火焰，選擇 USB，執行後會透過 USB 連線方式控制實體開發板，選擇 Wi-Fi 則可透過 Wi-Fi 指定 Device ID 操控。
-> - USB 控制模式為「安裝版編輯器」限定，請參考 [編輯器](../index.html#software)
-> - Wi-Fi 模式需要開發板連接 Wi-Fi，請參考 [硬體開發板 ( 初始化設定 )](../info/setup.html)
+> * Detecting light and temperature building blocks must be matched with "development board" building blocks*, select the simulator, after execution, you can use the mouse to drag the light bulb or flame of the simulator, select USB, and then control the physical development board through USB connection. , select Wi-Fi to specify Device ID control via Wi-Fi.
+> - USB control mode is limited to "Installation Editor", please refer to [Editor] (../index.html#software)
+> - Wi-Fi mode requires a development board to connect to Wi-Fi, please refer to [Hardware Development Board (Initial Settings)] (../info/setup.html)
 
-![偵測光線＆溫度](../images/zh-tw/docs/webbit/board/photocell-thermistor-08.jpg)
-
-
-## 偵測光線
-
-「偵測光線」積木使用時只會偵測一次，搭配重複迴圈就能進行連續偵測。
-
-![偵測光線＆溫度](../images/zh-tw/docs/webbit/board/photocell-thermistor-02.jpg)
-
-執行後，如果是使用模擬器，*畫面裡會出現「一個燈泡」圖案*，拉動燈泡靠近畫面裡的光敏電阻，就能模擬光線的變化，如果是使用實體開發板，可用光線照射光敏電阻觀察光線變化。
-
-![偵測光線＆溫度](../images/zh-tw/docs/webbit/board/photocell-thermistor-03.gif)
-
-了解光線偵測原理後，若搭配簡單的邏輯判斷，就能做出小夜燈的效果，以下圖的例子而言，只要左邊或右邊的任何一個光敏電阻偵測到亮度大於等於 600 流明，就會熄燈，反之左右兩邊只要同時偵測的數值小於 600 流明就會亮白燈。
-
-![偵測光線＆溫度](../images/zh-tw/docs/webbit/board/photocell-thermistor-04.gif)
-
-## 偵測溫度
-
-「偵測溫度」積木使用時只會偵測一次，搭配重複迴圈就能進行連續偵測。
-
-![偵測光線＆溫度](../images/zh-tw/docs/webbit/board/photocell-thermistor-05.jpg)
-
-執行後，如果是使用模擬器，*畫面裡會出現「一個火焰」圖案*，拉動燈泡靠近畫面裡的熱敏電阻，就能模擬溫度的變化，如果是使用實體開發板，可用手指按壓熱敏電阻、或用嘴對著熱敏電阻吹氣，就能觀察溫度變化。
-
-![偵測光線＆溫度](../images/zh-tw/docs/webbit/board/photocell-thermistor-06.gif)
-
-了解溫度偵測原理後，若搭配簡單的邏輯判斷，就能做出用顏色反映溫度的效果，當溫度大於等於 50 度就呈現紅色，反之小於 40 度就是藍色。
-
-![偵測光線＆溫度](../images/zh-tw/docs/webbit/board/photocell-thermistor-07.gif)
+![Detect Light & Temperature](../images/zh-tw/docs/webbit/board/photocell-thermistor-08.jpg)
 
 
+## Detecting light
+
+The "Detect Light" building block will only be detected once, and it can be continuously detected with repeated loops.
+
+![Detect Light & Temperature](../images/zh-tw/docs/webbit/board/photocell-thermistor-02.jpg)
+
+After the execution, if the simulator is used, the “one light bulb” pattern* will appear in the screen, and the light bulb can be simulated by pulling the light bulb close to the screen. If the physical development board is used, the light can be used to observe the photosensitive resistor. Light changes.
+
+![Detect Light & Temperature](../images/zh-tw/docs/webbit/board/photocell-thermistor-03.gif)
+
+After understanding the principle of light detection, if you use simple logic judgment, you can make the effect of the night light. In the example of the following figure, as long as any one of the left or right photoresistors detects brightness greater than or equal to 600 lumens, Turn off the light, otherwise the left and right sides will light up as long as the value detected at the same time is less than 600 lumens.
+
+![Detect Light & Temperature](../images/zh-tw/docs/webbit/board/photocell-thermistor-04.gif)
+
+## Detecting temperature
+
+The "Detected Temperature" building block will only be detected once, and it can be continuously detected with repeated loops.
+
+![Detect Light & Temperature](../images/zh-tw/docs/webbit/board/photocell-thermistor-05.jpg)
+
+After the execution, if the simulator is used, the “one flame” pattern* will appear in the screen, and the temperature change can be simulated by pulling the bulb close to the thermistor in the screen. If the physical development board is used, the thermal can be pressed with a finger. The temperature change can be observed by resistance or by blowing the nozzle against the thermistor.
+
+![Detect Light & Temperature](../images/zh-tw/docs/webbit/board/photocell-thermistor-06.gif)
+
+After understanding the principle of temperature detection, if you use simple logic judgment, you can make the effect of reflecting the temperature with color. When the temperature is greater than or equal to 50 degrees, it will be red, and if it is less than 40 degrees, it will be blue.
+
+![Detect Light & Temperature](../images/zh-tw/docs/webbit/board/photocell-thermistor-07.gif)

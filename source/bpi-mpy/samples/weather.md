@@ -1,62 +1,61 @@
+## How to climb the city weather
 
-## 如何爬取城市天气
+### I. Prerequisites
 
-### 一、前提条件
-
-- 1.首先确保当前固件依赖包是否完整
+- 1. First make sure the current firmware dependency package is complete
 ```python
-help(“modules”)
+Help("modules")
 ```
 
-- 效果如下图，若没有图上两个依赖包，请烧录最新固件。
+- The effect is as shown below. If there are no two dependent packages on the map, please burn the latest firmware.
 
 - ![Evaluate](weather/check.png)
 
-- 2.确保已经连上网络
-详见：https://github.com/BPI-STEAM/BPI-BIT-MicroPython/wiki/how_to_wifi
+- 2. Make sure you are connected to the network
+See: https://github.com/BPI-STEAM/BPI-BIT-MicroPython/wiki/how_to_wifi
 
 
 
-### 二、准备天气api
+### Second, prepare weather api
 
-- 1.这里我用到了国家气象局的API
-`http://www.weather.com.cn/data/cityinfo/101200801.html   # 101200801为荆州市`
-各城市ID详见：http://mobile.weather.com.cn/js/citylist.xml
-- 2.请求返回Json数据样列
+- 1. Here I used the API of the National Weather Service.
+`http://www.weather.com.cn/data/cityinfo/101200801.html # 101200801 for Jingzhou City`
+See the city ID for details: http://mobile.weather.com.cn/js/citylist.xml
+- 2. Request to return Json data sample column
 ```python
 {
-  "weatherinfo": 
-  {
-    "city": "荆州",
-    "cityid": "101200801",
-    "img1": "n7.gif",
-    "img2": "d2.gif",
-    "ptime": "18:00",
-    "temp1": "16℃",
-    "temp2": "23℃",
-    "weather": "小雨转阴"
-  }
+  "weatherinfo":
+  {
+    "city": "Jingzhou",
+    "cityid": "101200801",
+    "img1": "n7.gif",
+    "img2": "d2.gif",
+    "ptime": "18:00",
+    "temp1": "16°C",
+    "temp2": "23°C",
+    "weather": "Little rain turns negative"
+  }
 }
 ```
 
 
-- 我们可以分析这些json文件写出下面这样的实例
-### 三、实例分析
+- We can analyze these json files and write the following example
+### III. Example Analysis
 ```python
 
-import urequests
-from microbit import *
+Import urequests
+From microbit import *
 
-def get_weather():
-	url = "http://www.weather.com.cn/data/cityinfo/101200801.html"
-	rsp = urequests.get(url)
-	data = eval(rsp.text) # eval函数用于把字符串类型的json数据->转为python的字典类型
-	weather = data["weatherinfo"]
-	L = weather["temp1"] #最低温
-	H = weather["temp2"] #最高温
-	return "L:" + L[:-1] + " H:" + H[:-1] # 数据样例->  L:16 H:23
+Def get_weather():
+Url = "http://www.weather.com.cn/data/cityinfo/101200801.html"
+Rsp = urequests.get(url)
+Data = eval(rsp.text) # eval function is used to convert string type json data -> to python dictionary type
+Weather = data["weatherinfo"]
+L = weather["temp1"] #lowest temperature
+H = weather["temp2"] #最高温
+Return "L:" + L[:-1] + " H:" + H[:-1] # Data Sample -> L:16 H:23
 
-display.scroll(get_weather())
+Display.scroll(get_weather())
 
-# L[:-1] H[:-1]去掉℃和℉两个特殊符号，否则会出现编码错误
+# L[:-1] H[:-1] Remove the two special symbols °C and °F, otherwise coding errors will occur
 ```

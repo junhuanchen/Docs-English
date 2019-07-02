@@ -1,69 +1,69 @@
-# 侦测光线
+#检测光
 
-Webduino Bit 内建许多的传感器，其中一项就是光敏电阻，藉由默认的两个光敏电阻，能够侦测光线的强弱，甚至互相搭配实作智能家电或自动侦测的相关应用。
+The Webduino Bit has a number of built-in sensors, one of which is a photoresistor. With the default two photoresistors, you can detect the intensity of light, even with the application of smart appliances or auto-detection.
 
-## 基本操作 ( 显示光线数值 )
+## Basic operation (displaying light values)
 
-打开 [Webduino Blockly Bit 体验版](https://webduino.com.cn/link.html?lang=zh-hans&type=blockly)，在编辑区放入*开发板积木*， 开发板默认使用「*仿真器*」，联机到画面中「*虚拟的 Bit 开发板*」，默认 Device ID 为 「*1234*」。
+Open [Webduino Blockly Bit Experience Edition] (https://webduino.com.cn/link.html?lang=zh-hans&type=blockly), put * development board building blocks* in the editing area, and use "* emulation by default. "*", connect to the "*Virtual Bit Development Board*" on the screen, and the default Device ID is "*1234*".
 
-> 开发板相关积木，在「*开发板*」目录下。
+> Development board related building blocks, under the "* development board*" directory.
 
 ![](img/tutorials/zh_cn/rgbmatrix-01.jpg)
 
-如果是使用「*实体 Bit 开发板*」，下拉选单选择「*Wi-Fi*」，并于后方字段填入开发板的 Device ID。
+If you are using "*Ent Bit Development Board*", select "*Wi-Fi*" from the drop-down menu and fill in the Device ID of the development board in the back field.
 
 ![](img/tutorials/zh_cn/rgbmatrix-02.jpg)
 
-在开发板内放入两个「*设定 photocell 为光敏电阻*」的积木，从后方光敏电阻的下拉选单，可以选择左上或右上，选择完成后，点选在前方设定积木的下拉选单，使用「*新变量*」将变量分别命名为 left 和 right。
+Put two "* set photocell for the photoresistor*" in the development board. From the pull-down menu of the rear photoresistor, you can select the upper left or upper right. After the selection is complete, click the drop-down menu for setting the block in front. Use "*new variable*" to name the variables left and right respectively.
 
-> 光敏电阻相关积木，在「*光敏电阻*」目录下。
+> Photosensitive resistor related building blocks in the "*Photosensitive Resistor*" catalog.
 
 ![](img/tutorials/zh_cn/photocell-01.jpg)
 
-点选右上方的选单，打开网页互动区，下拉选单选择「*显示文字*」，左侧选单也会出现对应的积木功能。
+Click the menu at the top right to open the interactive area of ​​the web page. Select the "*Display Text*" from the drop-down menu. The corresponding building block function will also appear on the left menu.
 
 ![](img/tutorials/zh_cn/photocell-02.jpg)
 
-因为有两个光敏电阻，所以如果要同时侦测，需要分别放入 left 和 right 侦测的积木。
+Because there are two photoresistors, if you want to detect them at the same time, you need to put the blocks detected by left and right respectively.
 
 ![](img/tutorials/zh_cn/photocell-03.jpg)
 
-为了让两个光敏电阻的数值同时显示，必须使用「变量」的积木来装载光线数值，这里分别建立 L 变量装载 left 侦测的数值，R 变量装载 right 侦测的数值。
+In order to display the values ​​of the two photoresistors at the same time, you must use the building blocks of the "variable" to load the ray value. Here, the L variable is loaded with the value detected by left, and the R variable is loaded with the value detected by right.
 
-> 变量相关积木在「*变量*」目录下。
+> Variable related building blocks are in the "* variable*" directory.
 
 ![](img/tutorials/zh_cn/photocell-04.jpg)
 
-使用显示文字的「显示」积木，搭配「*建立字符串*」的积木，将 R 与 L 变量的数值同时显示在网页互动区内，点选建立字符串积木的「*蓝色小齿轮*」可以新增组合的缺口，就能放入逗号做为分隔。
+Use the "display" block that displays the text, and the block with "*Create string*", display the values ​​of the R and L variables in the interactive area of ​​the webpage, and click "*Blue pinion*" to create the string building block. You can add a combination of gaps, you can put a comma as a separator.
 
-> 建立字符串相关积木在「*基本功能 > 文字*」目录下。
+> Create string related blocks in the "*Basic Functions > Text*" directory.
 
 ![](img/tutorials/zh_cn/photocell-05.jpg)
 
-点选右上方红色按钮执行，会看见虚拟 Bit 开发板下方出现一个灯泡和一个火焰的图案，这时候只要用鼠标拖曳灯泡靠近光敏电阻，就会看见不同的数值呈现，如果是使用实体 Bit 开发板，则可以使用灯光照射光敏电阻，或用手遮挡光敏电阻， 观察光线数值变化。
+Click on the red button at the top right to execute. You will see a light bulb and a flame pattern appearing below the virtual Bit development board. At this time, just drag the light bulb near the photoresistor with the mouse, you will see different values, if you are using the physical Bit development board. , you can use the light to illuminate the photoresistor, or block the photoresistor by hand to observe the change in the value of the light.
 
-> 范例链接：[Webduino Bit 光敏电阻侦测光线](https://webduino.com.cn/link.html?lang=zh-hans&type=example&blockly=photocell01)
+> Example link: [Webduino Bit Photosensitive Resistor Detecting Light] (https://webduino.com.cn/link.html?lang=zh-hans&type=example&blockly=photocell01)
 
 ![](img/tutorials/zh_cn/photocell-06.gif)
 
-## 逻辑互动 ( 点亮网页灯泡 )
+## Logic interaction (lighting page bulb)
 
-已经能够从光敏电阻获得光线数值后，接着就可以透过逻辑判断，来实作一个虚拟的小夜灯功能，因为小夜灯通常只需要一个光敏电阻，所以这里先使用左上的光敏电阻，名称设定为 left。
+After you have been able to obtain the ray value from the photoresistor, you can then use a logical judgment to implement a virtual night light function. Because the night light usually only needs one photoresistor, first use the upper left photoresistor, name setting. For left.
 
 ![](img/tutorials/zh_cn/photocell-07.jpg)
 
-打开网页互动区，下拉选单选择「*点击灯泡*」，左侧也会出现对应的积木选单。
+Open the webpage interactive area, select “*click bulb*” from the drop-down menu, and the corresponding building block menu will appear on the left side.
 
 ![](img/tutorials/zh_cn/photocell-08.jpg)
 
-放入「*逻辑判断*」的积木，判断光线数值小于 0.7 的时候，就点亮互动区的灯泡，若光线大于 0.7 则让灯泡熄灭，若要新增逻辑判断，可以点选逻辑积木的「*蓝色小齿轮*」新增。
+Put the building block of "*Logic Judgment*" and judge that the light value is less than 0.7, it will light the bulb in the interactive area. If the light is greater than 0.7, let the light bulb go out. If you want to add logic judgment, you can click on the logic block. *Blue pinion*" added.
 
-> 逻辑相关积木在「*基本功能 > 逻辑*」目录下，数字相关的积木在「*基本功能 > 数学式*」目录下。
+> Logic-related building blocks in the "*Basic Functions > Logic*" directory, and the number-related building blocks are in the "*Basic Functions > Mathematical*" directory.
 
 ![](img/tutorials/zh_cn/photocell-09.jpg)
 
-点选右上方红色按钮执行，虚拟 Bit 开发板下方出现一个灯泡和一个火焰的图案，用鼠标拖曳灯泡靠近左上的光敏电阻，就会看见互动区的灯泡熄灭，离开则灯泡就会亮起，如果是使用实体 Bit 开发板，则可以使用灯光照射光敏电阻， 或用手遮挡光敏电阻，观察网页虚拟灯泡变化。
+Click the red button on the upper right side to execute. A light bulb and a flame pattern appear below the virtual Bit development board. Use the mouse to drag the light bulb near the upper left of the light bulb. You will see the light bulb in the interactive area go out, and the light bulb will light up if you leave. If you use the physical Bit development board, you can use the light to illuminate the photoresistor, or block the photoresistor by hand to observe the virtual light bulb changes.
 
-> 范例链接：[Webduino Bit 侦测光线点亮网页灯泡](https://webduino.com.cn/link.html?lang=zh-hans&type=example&blockly=photocell02)
+> Example link: [Webduino Bit detects light to light the webpage bulb] (https://webduino.com.cn/link.html?lang=zh-hans&type=example&blockly=photocell02)
 
 ![](img/tutorials/zh_cn/photocell-10.gif)

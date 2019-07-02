@@ -1,21 +1,21 @@
-Web:bit 离线教育版
-========================================
+Web:bit offline education version
+=================================================
 
 .. Hint::
 
-    `教育版安装程序（ Windwos7+ ） <https://github.com/BPI-STEAM/BPI-BIT-Webduino/releases/tag/DevTools>`_
-    
-- `在线编程 <https://webbit.webduino.io/blockly/>`_ & `學習手冊（繁体版） <https://tutorials.webduino.io/zh-tw/docs/webbit/index.html>`_
+    `Educational Installer (Windwos7+) <https://github.com/BPI-STEAM/BPI-BIT-Webduino/releases/tag/DevTools>`_
+    
+- `Online programming <https://webbit.webduino.io/blockly/>`_ & `Learning Manual (Traditional Chinese) <https://tutorials.webduino.io/zh-tw/docs/webbit/index.html >`_
 
-正在准备简体版内容，敬请期待。
+We are preparing a simplified version of the content, so stay tuned.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 2
 
-   flash_web.rst
-   info/index
-   basic/index
-   monster/index
-   detect/index
-   sound/index
-   board/index
+   Flash_web.rst
+   Info/index
+   Basic/index
+   Monster/index
+   Detect/index
+   Sound/index
+   Board/index

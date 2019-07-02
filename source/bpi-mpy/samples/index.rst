@@ -1,10 +1,10 @@
-标准案例
-=====================================================
+Standard case
+=========================================================== ===
 
-在这里会归档一些社区上的小伙伴的成果，或是我的开源成果分享给大家。
+Here are some of the results of the small partners in the community, or my open source results are shared with everyone.
 
 .. toctree::
-    :maxdepth: 2
-    :numbered:
+    :maxdepth: 2
+    :numbered:
 
-    weather
+    Weather

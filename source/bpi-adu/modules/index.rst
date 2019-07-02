@@ -1,14 +1,14 @@
-第三方库
-========================================
+Third party library
+=================================================
 
 .. Hint::
 
-    第三方 Arduino 代码可能会出现接口缺失，但一般都有备用接口可以替代使用，出现错误无需紧张，根据接口类型对应处理和修复即可。
+    Third-party Arduino code may have missing interfaces, but generally there are alternate interfaces that can be used instead. There is no need to be nervous when there is an error, and it can be processed and repaired according to the interface type.
 
-在这里你将体验到 Arduino 的额外丰富的库代码，更多第三方的功能模块可以在各大开源社区中获得，但在这里出现的都是经过验证的。
+Here you will experience the extra rich library code of Arduino. More third-party functional modules are available in the major open source communities, but all of them are validated here.
 
 .. toctree::
-    :maxdepth: 1
-    :numbered:
-    
-    basic
+    :maxdepth: 1
+    :numbered:
+    
+    Basic

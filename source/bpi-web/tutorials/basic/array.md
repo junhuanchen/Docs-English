@@ -1,128 +1,122 @@
-# 陣列
+# Array
 
-陣列可以將數字、文字、列表或变量，按照順序組合起來，這些按序排列資料集合就稱作陣列，一個陣列可以再細分為多個元素，或是一個陣列內還包含其他陣列，在進行比較複雜的運算時，也會透過陣列的操作來實現。
+Arrays can combine numbers, literals, lists, or variables in order. These ordered collections are called arrays, an array can be subdivided into multiple elements, or an array contains other arrays for comparison. Complex operations are also implemented through the operation of the array.
 
-## 陣列積木清單
+## Array of building blocks
 
-陣列積木包含建立陣列、建立空陣列、使用文字建立陣列、陣列取值、陣列編輯...等常用功能。
+Array blocks include common functions such as building arrays, creating empty arrays, using arrays to create arrays, array values, and array editing.
 
-![陣列](../images/zh-tw/docs/webbit/basic/array-01.jpg)
+![Array](../images/zh-tw/docs/webbit/basic/array-01.jpg)
 
-## 空陣列
+## 空阵
 
-「空陣列」積木會建立一個陣列容器，也就是裡面沒有包含任何元素的陣列
+The "empty array" building block creates an array container, which is an array that does not contain any elements.
 
-![陣列](../images/zh-tw/docs/webbit/basic/array-02.jpg)
+![Array](../images/zh-tw/docs/webbit/basic/array-02.jpg)
 
-如果要用变量進行陣列的操作，首先必須把這個变量定義為陣列或空陣列，才能針對這個变量進行陣列數值的添加、刪除、編輯...等動作。
+If you want to use a variable to perform array operations, you must first define this variable as an array or an empty array, in order to add, delete, edit, etc. the array values ​​for this variable.
 
-![陣列](../images/zh-tw/docs/webbit/basic/array-03.jpg)
+![Array](../images/zh-tw/docs/webbit/basic/array-03.jpg)
 
-## 建立陣列
+## Build an array
 
-「建立陣列」積木可以透過指定位置放入對應的內容，建立一個帶有數值的陣列。
+The "Build Array" building block can create an array with values ​​by placing the corresponding content in the specified location.
 
-![陣列](../images/zh-tw/docs/webbit/basic/array-04.jpg)
+![Array](../images/zh-tw/docs/webbit/basic/array-04.jpg)
 
-點擊藍色小齒輪，可以增加放入內容的缺口。
+Click on the blue pinion to increase the gap in the content.
 
-![陣列](../images/zh-tw/docs/webbit/basic/array-05.gif)
+![Array](../images/zh-tw/docs/webbit/basic/array-05.gif)
 
-建立陣列完成後，可以透過小怪獸講出陣列 ( 陣列內容會用逗號分隔 )。
+Once the array is complete, you can tell the array through the little monsters (the array contents are separated by commas).
 
-![陣列](../images/zh-tw/docs/webbit/basic/array-06.jpg)
+![Array](../images/zh-tw/docs/webbit/basic/array-06.jpg)
 
-或是也可以透過重複迴圈，依序講出陣列內容。
+Or you can repeat the loop and repeat the contents of the array.
 
-![陣列](../images/zh-tw/docs/webbit/basic/array-07.gif)
+![Array](../images/zh-tw/docs/webbit/basic/array-07.gif)
 
 
-## 建立重複內容陣列
+## Creating a duplicate content array
 
-「建立重複內容陣列」積木可以建立具有重複數值重複的列表，數值可以变量、文字、數字或陣列陣列，將熟放入缺口內，就會根據重複設定的次數建立陣列。
+The "Build Repetitive Content Array" building block can create a list of duplicate numerical repeats. Values ​​can be variables, text, numbers, or an array of arrays. When cooked into a gap, the array is created based on the number of times it is repeated.
 
-![陣列](../images/zh-tw/docs/webbit/basic/array-08.jpg)
+![Array](../images/zh-tw/docs/webbit/basic/array-08.jpg)
 
-舉例來說讓「芭樂」文字重複五次並建立陣列，綠色小怪獸就會唸出五個芭樂的文字。
+For example, let the "Bale" text repeat five times and create an array, the green little monster will read the five guava words.
 
-![陣列](../images/zh-tw/docs/webbit/basic/array-09.jpg)
+![Array](../images/zh-tw/docs/webbit/basic/array-09.jpg)
 
-## 設定陣列內容
+## Setting array content
 
-「設定陣列內容」積木可以針對陣列的內容 ( 第幾個、倒數第幾個、第一個、最後一個和隨機 ) 進行三種編輯行為 ( 設定、插入或移除 )。
+The "Set Array Content" building block can perform three editing actions (set, insert, or remove) for the contents of the array (the first, last, first, last, and random).
 
-![陣列](../images/zh-tw/docs/webbit/basic/array-10.jpg)
+![Array](../images/zh-tw/docs/webbit/basic/array-10.jpg)
 
-舉例來說，原本的陣列有四種水果蘋果、柳丁、香蕉和芭樂，透過「設定陣列內容」積木將陣列中第一個水果元素換成蓮霧，綠色小怪獸講出的陣列第一個元素就變成了蓮霧，接著隨機移除陣列的一個內容，紅色小怪獸講出的陣列就會變成只有三種水果。
+For example, the original array has four kinds of fruit apples, willows, bananas, and guava. The first fruit element in the array is replaced with lotus fog by the "set array content" building block. The first array of green monsters speaks. The element becomes a lotus fog, then randomly removes one of the contents of the array, and the array of red monsters turns into only three fruits.
 
-![陣列](../images/zh-tw/docs/webbit/basic/array-11.jpg)
+![Array](../images/zh-tw/docs/webbit/basic/array-11.jpg)
 
-如果接著使用「插入」桃子元素在「最後一個項目」，就可以看到陣列又變成四種水果，最後一種是桃子。
+If you then use the "insert" peach element in the "last item", you can see that the array becomes four kinds of fruit, and the last one is peach.
 
-![陣列](../images/zh-tw/docs/webbit/basic/array-12.jpg)
+![Array](../images/zh-tw/docs/webbit/basic/array-12.jpg)
 
-## 取得陣列內容
+## Get array content
 
-「取得陣列內容」積木可以取得一個陣列中某個元素的值 ( 第幾個、倒數第幾個、第一個、最後一個和隨機 )，或是取得某個元素的值之後，同時移除該元素 。
+The "Get Array Content" building block can take the value of an element in the array (the first, the last, the first, the last, and the random), or after removing the value of an element, remove the element.
 
-![陣列](../images/zh-tw/docs/webbit/basic/array-13.jpg)
+![Array](../images/zh-tw/docs/webbit/basic/array-13.jpg)
 
-如果單純取得某個元素的值，並不會影響原本陣列的內容和長度，但如果是「取得後移除」，這個陣列就不再包含這個元素，例如一開始有四種水果，如果只是取得內容，取得內容後的陣列依然是四種水果，不過如果取得後移除內容，取得內容之後陣列就變成了只有三種水果。
+If you simply get the value of an element, it will not affect the content and length of the original array, but if it is "removed after acquisition", the array will no longer contain this element, for example, there are four kinds of fruits at the beginning, if only Content, the array after the content is still four kinds of fruits, but if the content is removed after the acquisition, the array becomes only three kinds of fruits after the content is obtained.
 
-![陣列](../images/zh-tw/docs/webbit/basic/array-14.jpg)
+![Array](../images/zh-tw/docs/webbit/basic/array-14.jpg)
 
-## 尋找陣列內容
+## Looking for array content
 
-「取得陣列內容」積木能從一個陣列中，找到特定元素所在的位置，並回傳該位置的號碼。
+The "Get Array Content" brick can find the location of a particular element from an array and return the number of that location.
 
-![陣列](../images/zh-tw/docs/webbit/basic/array-15.jpg)
+![Array](../images/zh-tw/docs/webbit/basic/array-15.jpg)
 
-透過取得陣列積木來取得水果陣列，就能知道蘋果位在第一個位置、柳丁位在第二個位置、香蕉位在第三個位置、芭樂位在第四個位置。
+By taking the array of blocks to get the fruit array, you can know that the apple is in the first position, the willow is in the second position, the banana is in the third position, and the baro is in the fourth position.
 
-> 注意，如果是「寫程序碼」而非使用「積木」，第一個位置通常都是 0，第二個位置是 1，因為和生活習慣一至，在程序積木裡頭第一個位置的顯示為 1，第二個位置為 2，依此類推。
+> Note that if you are "writing a program code" instead of using "building blocks", the first position is usually 0, and the second position is 1, because the first position in the program building block is displayed as usual. 1, the second position is 2, and so on.
 
-![陣列](../images/zh-tw/docs/webbit/basic/array-16.jpg)
+![Array](../images/zh-tw/docs/webbit/basic/array-16.jpg)
 
-## 陣列排序
+## Array sorting
 
-「陣列排序」積木會將指定的陣列做字母、數字的排序，排序後會形成一個新的陣列，*不會影響原本陣列的排序*。
+The "array sort" building block will sort the specified arrays by letters and numbers. After sorting, a new array will be formed, and * will not affect the sorting of the original array*.
 
-![陣列](../images/zh-tw/docs/webbit/basic/array-17.jpg)
+![Array](../images/zh-tw/docs/webbit/basic/array-17.jpg)
 
-從下圖的例子可以看出，綠色小怪獸會講出按照字母排序過後的水果陣列 ( a,b,c,.... )，而紅色小怪獸講出原本的水果陣列並沒有受到排序積木的影響。
+As you can see from the example below, the green monster will tell the alphabet array (a, b, c, ...) after sorting by alphabet, while the red monster tells the original fruit array and is not sorted by the blocks. Impact.
 
-![陣列](../images/zh-tw/docs/webbit/basic/array-18.jpg)
+![Array](../images/zh-tw/docs/webbit/basic/array-18.jpg)
 
-如果選擇字母排序，就會「*先按照字母大小寫排序，大寫在前，小寫在後，排序後再按照第二個字母排序*」，如果選擇不區分大小寫，就會直接進行排序，「*如果第一個字母相同，就用第二個字母排序*」，以下圖的例子，大寫 A 在前小寫 a 在後，排序後再按照 123、456 進行排序。
+If you choose alphabet sorting, it will be "* sorted first by letter, uppercase first, lowercase after, sorted by second letter* after sorting", if you choose not to be case sensitive, it will be sorted directly. * If the first letter is the same, use the second letter to sort *". In the example below, the uppercase A is sorted after the lowercase a, sorted, and then followed by 123, 456.
 
-![陣列](../images/zh-tw/docs/webbit/basic/array-19.jpg)
+![Array](../images/zh-tw/docs/webbit/basic/array-19.jpg)
 
-## 文字與陣列轉換
+## Text and Array Conversion
 
-「文字與陣列轉換」積木可以將帶有「分隔符」( 類似空白、逗號、分號...等分隔符號 ) 的文字轉換為陣列，或是將陣列合併為一串文字。
+The "Text and Array Conversion" building block converts text with "delimiters" (like blanks, commas, semicolons, etc.) into arrays, or merges arrays into a string of text.
 
-![陣列](../images/zh-tw/docs/webbit/basic/array-20.jpg)
+![Array](../images/zh-tw/docs/webbit/basic/array-20.jpg)
 
-如果一串文字沒有變成陣列，其中第二個元素就會是第二個字 ( 綠色小怪獸就會講出「果」 )，如果將文字拆分為陣列，第二個元素就會是陣列中的第二個內容 ( 紅色小怪獸就會講出「柳丁」 )。
+If a string of text does not become an array, the second element will be the second word (the green monster will say "fruit"). If the text is split into an array, the second element will be in the array. The second content (the red little monster will say "Liu Ding").
 
-![陣列](../images/zh-tw/docs/webbit/basic/array-21.jpg)
+![Array](../images/zh-tw/docs/webbit/basic/array-21.jpg)
 
-反之如果是將陣列合併為文字，可以將分隔符留空，就會看見陣列的內容變成一整串的文字，中間不會有逗號分隔，如果帶有分隔符 ( 例如 a )，就會看見結合成的文字中間都有 a。
+Conversely, if you merge the array into text, you can leave the separator blank and you will see that the contents of the array become a whole string of text, without comma-separated characters. If you have a separator (such as a), you will see the combination. There is a in the middle of the text.
 
-![陣列](../images/zh-tw/docs/webbit/basic/array-22.jpg)
+![Array](../images/zh-tw/docs/webbit/basic/array-22.jpg)
 
-## 陣列長度
+## Array length
 
-「陣列長度」積木可以取得個陣列的元素總數，如果是空陣列則陣列長度為 0。
+The "array length" bricks can take the total number of elements in an array, and if it is an empty array, the array length is zero.
 
-![陣列](../images/zh-tw/docs/webbit/basic/array-23.jpg)
+![Array](../images/zh-tw/docs/webbit/basic/array-23.jpg)
 
-因為陣列長度表示的是「陣列的空格數」( 陣列可以放入多少個元素 )，所以如果「有空格」但沒有放入元素，仍然會影響陣列長度，例如有個四格空格的陣列，但只放入了三種水果，最後呈現出來的陣列長度就是 3。
+Because the array length represents the number of spaces in the array (how many elements can be placed in the array), if there are "spaces" but no elements are placed, the length of the array will still be affected, for example, an array of four spaces, but Only three kinds of fruit are put in, and the length of the array that is finally presented is 3.
 
-![陣列](../images/zh-tw/docs/webbit/basic/array-24.jpg)
-
-
-
-
-
-
+![Array](../images/zh-tw/docs/webbit/basic/array-24.jpg)

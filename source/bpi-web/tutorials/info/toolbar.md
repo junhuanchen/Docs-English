@@ -1,65 +1,62 @@
-# 編輯器 ( 安裝版工具列 )
+#编辑器 (Installation Toolbar)
 
-編輯器的安裝版是特別為了沒有 Wi-Fi 的環境所打造，只要將編輯器打開，將 開發板連接 USB 線就可以進行操控、更新或相關設定，這篇教學會介紹安裝版的工具列功能。( 以下將編輯器安裝版統稱為安裝版 )
+The installed version of the editor is specially designed for environments without Wi-Fi. Just open the editor and connect the development board to the USB cable for control, update or related settings. This tutorial will introduce the toolbar function of the installation. . (The editor installation version is collectively referred to as the installation version below)
 
-> 安裝版下載：[WebBitSetup.zip](http://webduinoio.github.io/samples/content/bit-download/WebBitSetup.zip#_blank)
+> Installation version download: [WebBitSetup.zip] (http://webduinoio.github.io/samples/content/bit-download/WebBitSetup.zip#_blank)
 
-## 功能說明
+## Function Description
 
-打開安裝版之後按下電腦鍵盤的 *`Ctrl + W`* 可以打開工具列，工具列裡分別有「*系統*」、「*工具*」和「*資訊*」三個主要功能列表。
+After opening the installation version, press *`Ctrl + W`* on the computer keyboard to open the toolbar. There are three main function lists in the toolbar: "*System*", "*Tool*" and "*Information*".
 
-![編輯器 ( 安裝版工具列 )](../images/zh-tw/docs/webbit/info/toolbar-01.gif)
+![editor (installation toolbar)] (../images/zh-tw/docs/webbit/info/toolbar-01.gif)
 
-### 系統 > 以瀏覽器開啟
+###系统 > Open with browser
 
-點選「以瀏覽器開啟」，會自動開啟電腦的 Chrome 瀏覽器並連結至 [編輯器 ( 網頁版 )](https://webbit.webduino.io#_blank)，通常這個功能不太常用到，但如果使用安裝版不支援的功能 ( 像是「語音朗讀」在安裝版僅能發出英文語音 )，可以透過網頁版來實現。
+Click "Open with browser", it will automatically open the computer's Chrome browser and link to [editor (web version)] (https://webbit.webduino.io#_blank), usually this function is not commonly used, However, if you use features that are not supported by the installation version (such as "Voice Reading", you can only send English voices in the installation version), you can use the web version to achieve.
 
-### 工具 > 關閉 USB 連線
+### Tools > Close USB connection
 
-如果 開發板使用 USB 線連接到電腦，安裝版可以在沒有 Wi-Fi 的狀態下控制開發板，但此時開發板也「沒有 Wi-Fi 連線功能」，如果要開啟開發板的 Wi-Fi 連線功能，則需關閉安裝版程序，或是點擊「關閉 USB 連線」功能。
+If the development board is connected to the computer using a USB cable, the installation version can control the development board without Wi-Fi, but the development board also has "no Wi-Fi connection function", if you want to open the development board Wi-Fi To connect, you need to close the installation program or click the "Turn off USB connection" function.
 
-> 注意，*如果關閉 USB 連線，開發板就會採用 Wi-Fi 連線模式，反之開啟 USB 連線，開發板就會關閉 Wi-Fi 連線功能*。
+> Note, * If you turn off the USB connection, the development board will use Wi-Fi connection mode, otherwise the USB connection will be turned off and the development board will turn off the Wi-Fi connection function*.
 
-在操作上也可以透過下拉選單區隔 Wi-Fi 操控或 USB 連線操控。( 詳細操作方式會在後面的篇幅介紹 )
+In operation, you can also use the pull-down menu to separate Wi-Fi control or USB connection control. (Detailed operation will be introduced in the following pages)
 
-![編輯器 ( 安裝版工具列 )](../images/zh-tw/docs/webbit/info/toolbar-02.jpg)
+![editor (installation toolbar)] (../images/zh-tw/docs/webbit/info/toolbar-02.jpg)
 
-### 工具 > 設定 WiFi
+### Tools > Setting WiFi
 
-點擊該選項之後，會要求我們輸入 Wi-Fi 的 SSID 和密碼，這功能可以幫助我們將「欲連線的基地台」的 Wi-Fi SSID 和密碼設定到 開發板中，不過如果沒有 Wi-Fi 操控的需求，是不會用到該功能的。( 詳細設定可以參考 [初始化方法 1：使用安裝版進行初始化](setup.html#step1) )
+After clicking this option, we will be asked to enter the Wi-Fi SSID and password. This function will help us to set the Wi-Fi SSID and password of the "base station to be connected" to the development board, but if there is no Wi-Fi The function of the control does not use this function. (For detailed settings, please refer to [Initialization Method 1: Initialization with Installation Version] (setup.html#step1))
 
 
-> *特別提醒！如果無法使用該功能*，**可能需要先手動更新開發板韌體**。
-> 
-> 更新韌體方式請按照以下步驟進行
+> *Special reminder! If this feature is not available*, ** may need to manually update the board firmware**.
 >
-> - [初始化方法 2：連線到開發板進行初始化](#step2)
-> - [更新韌體方法 2：透過 Wi-Fi 遠端更新](ota.html#step2)
-
-
-![硬體 ( 初始化設定 )](../images/zh-tw/docs/webbit/info/setup-03.jpg)
-
-### 工具 > 更新韌體
-
-如果 開發板有新版本的韌體，可以點擊該選項進行韌體更新。( 詳細設定可以參考 [更新韌體方法 1：使用安裝版進行更新](setup.html#step1) )
-
-
-> *特別提醒！如果無法使用該功能*，**可能需要先手動更新開發板韌體**。
-> 
-> 更新韌體方式請按照以下步驟進行
+> Update the firmware method, please follow the steps below
 >
-> - [初始化方法 2：連線到開發板進行初始化](#step2)
-> - [更新韌體方法 2：透過 Wi-Fi 遠端更新](ota.html#step2)
-
-![硬體 ( 更新韌體 )](../images/zh-tw/docs/webbit/info/ota-04.jpg)
-
-![硬體 ( 更新韌體 )](../images/zh-tw/docs/webbit/info/ota-02.jpg)
-
-### 資訊 > 版本、複製裝置 ID、快捷鍵說明
-
-版本功能會顯示目前 的韌體版本，複製裝置 ID 可以將 開發板的 Device ID 複製到剪貼簿，而快捷鍵會顯示安裝版支援的各種快捷鍵。
-
-![編輯器 ( 安裝版工具列 )](../images/zh-tw/docs/webbit/info/toolbar-03.jpg)
+> - [Initialization Method 2: Wire to the development board for initialization] (#step2)
+> - [Update Firmware Method 2: Update via Wi-Fi Remote] (ota.html#step2)
 
 
+![Hardware (Initial setting)](../images/zh-tw/docs/webbit/info/setup-03.jpg)
 
+### Tools > Update Firmware
+
+If the board has a new version of firmware, you can click on this option to update the firmware. (For detailed settings, please refer to [Updating Firmware Method 1: Using Installation Version to Update] (setup.html#step1) )
+
+
+> *Special reminder! If this feature is not available*, ** may need to manually update the board firmware**.
+>
+> Update the firmware method, please follow the steps below
+>
+> - [Initialization Method 2: Wire to the development board for initialization] (#step2)
+> - [Update Firmware Method 2: Update via Wi-Fi Remote] (ota.html#step2)
+
+![Hardware (Update Firmware)](../images/zh-tw/docs/webbit/info/ota-04.jpg)
+
+![Hardware (Update Firmware)](../images/zh-tw/docs/webbit/info/ota-02.jpg)
+
+###资讯 > Version, copy device ID, shortcut description
+
+The version feature will display the current firmware version, the copy device ID will copy the board's Device ID to the scrapbook, and the shortcut will display the various shortcuts supported by the installer.
+
+![editor (installation toolbar)] (../images/zh-tw/docs/webbit/info/toolbar-03.jpg)

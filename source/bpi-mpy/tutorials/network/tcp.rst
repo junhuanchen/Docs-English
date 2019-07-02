@@ -1,189 +1,188 @@
-套接字-TCP
+Socket-TCP
 ================
 
 
-什么是socket?
+What is a socket?
 -----
 
-``Socket`` 是网络编程的一个抽象概念。通常我用一个Socket表示“打开了一个网络链接”，而打开一个Socket需要知道目标计算机的IP地址和端口号，再指定协议类型即可。
+``Socket`` is an abstract concept of network programming. Usually I use a Socket to mean "open a network link", and open a Socket needs to know the IP address and port number of the target computer, and then specify the protocol type.
 
-TCP协议简介
+Introduction to TCP protocol
 -----
 
-TCP协议，传输控制协议（Transmission Control Protocol，缩写为 TCP）是一种面向连接的、可靠的、基于字节流的传输层通讯协议，由IETF的RFC 793定义。
+The TCP protocol, Transmission Control Protocol (TCP) is a connection-oriented, reliable, byte stream-based transport layer communication protocol defined by IETF's RFC 793.
 
-TCP通信需要经过创建连接、数据传送、终止连接三个步骤。TCP通信模型中，在通信开始之前，一定要先创建相关连接，才能发送数据，类似于生活中，"打电话""。
+TCP communication requires three steps: creating a connection, transferring data, and terminating a connection. In the TCP communication model, before the communication starts, it is necessary to create a related connection before sending data, similar to "calling" in life.
 
-套接字在工作时将连接的双方分为服务器端和客户端,即C/S模式,TCP通讯原理如下图:
+When working, the socket divides the two sides of the connection into server and client, that is, C/S mode. The principle of TCP communication is as follows:
 
-.. figure:: ../../images/tutorials/tcp原理.png
-    :scale: 90 %
-    :align: center
+.. figure:: ../../images/tutorials/tcpprincipal.png
+    :scale: 90 %
+    :align: center
 
-    Socket TCP通讯过程
+    Socket TCP communication process
 
 
 ---------------------------------
 
-TCP编程
+TCP programming
 -----
 
 
-本教程的这一部分将介绍如何作为客户端或服务端使用TCP套接字。有关更全面的socket模块的使用，请查阅 :mod:`usocket` 模块。
-以下教程需要使用到TCP网络调试工具。下文使用的是IOS的 **Network Test Utility** ，可在APP Store搜索安装，android系统请点击下载。 :download:`Network Test Utility.apk </../docs/tools/com.jca.udpsendreceive.2.apk>` 
+This part of the tutorial will show you how to use TCP sockets as a client or server. For a more comprehensive use of the socket module, please refer to the :mod:`usocket` module.
+The following tutorials require the use of TCP network debugging tools. The following is the IOS Network Test Utility**, which can be searched and installed in the APP Store. Please click the download for the Android system. :download:`Network Test Utility.apk </../docs/tools/com.jca.udpsendreceive.2.apk>`
 
-声明：这里的TCP客户端（tcpClient）是你的电脑或者手机，而TCP服务端（tcpServer）是MicroPython板子。
+Disclaimer: The TCP client (tcpClient) here is your computer or mobile phone, and the TCP server (tcpServer) is the MicroPython board.
 
-TCP客户端
+TCP client
 ~~~~~~~~
 
 
-TCP编程的客户端一般步骤是：
+The general steps of the TCP programming client are:
 
-1. 创建一个socket，用函数socket()
-2. 设置socket属性，用函数setsockopt() , *可选* 
-3. 绑定IP地址、端口等信息到socket上，用函数bind() , *可选* 
-4. 设置要连接的对方的IP地址和端口等属性 
-5. 连接服务器,用函数connect()
-6. 收发数据,用函数send()和recv(),或者read()和write()
-7. 关闭网络连接
+1. Create a socket with the function socket()
+2. Set the socket property, use the functions setsockopt(), *optional*
+3. Bind the IP address, port, and other information to the socket, using the function bind(), *optional*
+4. Set the properties such as the IP address and port of the other party to connect to.
+5. Connect to the server, use the function connect()
+6. Send and receive data, using the functions send() and recv(), or read() and write()
+7. Turn off the network connection
 
 
-tcpClient示例:
+tcpClient example:
 
 .. code-block:: python
-    :linenos:
+    :linenos:
 
-    import socket
-    from MicroPython import *
+    Import socket
+    From MicroPython import *
 
-    host = "172.25.1.63"          # TCP服务端的IP地址
-    port = 5001                   # TCP服务端的端口
-    s=None
+    Host = "172.25.1.63" #TCP server IP address
+    Port = 5001 # TCP server port
+    s=None
 
-    mywifi=wifi()                 # 创建wifi类
+    Mywifi=wifi() # Create wifi class
 
 
-    # 捕获异常，如果在"try" 代码块中意外中断，则停止关闭套接字
-    try:
-        mywifi.connectWiFi("ssid","password")                   # WiFi连接，设置ssid 和password
-        # mywifi.enable_APWiFi("wifi_name",13)                  # 还可以开启AP模式,自建wifi网络
-        ip=mywifi.sta.ifconfig()[0]                             # 获取本机IP地址
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)   # 创建TCP的套接字,也可以不给定参数。默认为TCP通讯方式
-        s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) # 设置socket属性
-        s.connect((host,port))                                  # 设置要连接的服务器端的IP和端口,并连接
-        s.send("hello MicroPython,I am TCP Client")                 # 向服务器端发送数据
+    # caught exception, stop closing the socket if it is unexpectedly interrupted in the "try" code block
+    Try:
+        mywifi.connectWiFi("ssid","password") #WiFi connection, set ssid and password
+        # mywifi.enable_APWiFi("wifi_name",13) # You can also enable AP mode and build your own wifi network.
+        Ip=mywifi.sta.ifconfig()[0] # Get the local IP address
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Create a TCP socket, or you can give no parameters. The default is TCP communication mode
+        S.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) # Set the socket property
+        S.connect((host,port)) # Set the IP and port of the server to be connected and connect
+        S.send("hello MicroPython, I am TCP Client") # Send data to the server
 
-        while True:
-            data = s.recv(1024)                                 # 从服务器端套接字中读取1024字节数据
-            if(len(data) == 0):                                 # 如果接收数据为0字节时,关闭套接字
-                print("close socket")
-                s.close()                                      
-                break
-            print(data)
-            data=data.decode('utf-8')                         # 以utf-8编码解码字符串
-            oled.fill(0)                                      # 清屏
-            oled.DispChar(data,0,0)                           # oled显示socket接收数据
-            oled.show()                                       # 显示
-            s.send(data)                                      # 向服务器端发送接收到的数据
+        While True:
+            Data = s.recv(1024) # Read 1024 bytes of data from the server-side socket
+            If(len(data) == 0): # If the received data is 0 bytes, close the socket
+                Print("close socket")
+                S.close()
+                Break
+            Print(data)
+            Data=data.decode('utf-8') # decode the string in UTF-8 encoding
+            Oled.fill(0) #清屏
+            oled.DispChar(data,0,0) # oledDisplay socket receiving data
+            Oled.show() # show
+            S.send(data) # Send the received data to the server
 
-    # 当捕获异常,关闭套接字、网络
-    except:
-        if (s):
-            s.close()                              
-        mywifi.disconnectWiFi()
+    # When catching an exception, close the socket, network
+    Except:
+        If (s):
+            S.close()
+        mywifi.disconnectWiFi()
 
-.. Attention:: 
+.. Attention::
 
-    由于在网络中都是以bytes形式传输的，所以需要注意数据编码与解码。
+    Since it is transmitted in bytes in the network, it is necessary to pay attention to data encoding and decoding.
 
-.. Attention:: 上例,使用``connectWiFi()`` 连接同个路由器wifi。你也可以用 ``enable_APWiFi()`` 开启AP模式,自建wifi网络让其他设备接入进来。
+.. Attention:: In the above example, use ``connectWiFi()`` to connect to the same router wifi. You can also use the ``enable_APWiFi()`` to enable the AP mode and build a wifi network to allow other devices to access it.
 
-首先板子和手机须连接至同个局域网内。打开Network Test Utility，进入“TCP Server”界面，
-TCP Server IP选择手机在该网内的IP地址 ，端口号可设范围0~65535。然后，点击Listen，开始监听端口。
-在程序中设置上文选择的TCP服务端IP地址 ``host`` 和端口号 ``port`` ，重启运行程序。
+First, the board and mobile phone must be connected to the same LAN. Open Network Test Utility and go to the TCP Server interface.
+TCP Server IP selects the IP address of the mobile phone in the network. The port number can be set from 0 to 65535. Then, click on Listen and start listening to the port.
+In the program, set the TCP server IP address ``host`` and port number ``port`` selected above to restart the running program.
 
-当连接Server成功后，TCP Server会接收到Client发送的文本 ``hello MicroPython,I am TCP Client`` 。此时您在TCP Server发送文本给Client，板子会
-接收到文本并将文本显示至oled屏上。
+When the connection to the server is successful, the TCP Server will receive the text ``hello MicroPython, I am TCP Client`` sent by the client. At this point, you send text to the client in TCP Server, the board will
+Receive the text and display the text on the oled screen.
 
 
 .. image:: ../../images/tutorials/socket_1.gif
-   
+   
 
-TCP服务端
+TCP server
 ~~~~~~~~
 
 
-TCP编程的服务端一般步骤是：
+The general steps of the TCP programming server are:
 
-1. 创建一个socket，用函数socket()
-2. 设置socket属性，用函数setsockopt() , *可选* 
-3. 绑定IP地址、端口等信息到socket上，用函数bind() 
-4. 开启监听和设置最大监听数,用函数listen()
-5. 等待客户端請求一个连接，用函数accept()
-6. 收发数据，用函数send()和recv()，或者read()和write() 
-7. 关闭网络连接
+1. Create a socket with the function socket()
+2. Set the socket property, use the functions setsockopt(), *optional*
+3. Bind the IP address, port, and other information to the socket, using the function bind()
+4. Turn on the listener and set the maximum number of listeners, use the function listen()
+5. Wait for the client to request a connection with the function accept()
+6. Send and receive data, using the functions send() and recv(), or read() and write()
+7. Turn off the network connection
 
 
 
-tcpServer示例:
+tcpServer example:
 
 .. code-block:: python
-    :linenos:
+    :linenos:
 
-    import socket
-    from MicroPython import *
+    Import socket
+    From MicroPython import *
 
-    port=5001                   # TCP服务端的端口,range0~65535
-    listenSocket=None              
+    Port=5001 #TCP server port, range0~65535
+    listenSocket=None
 
-    mywifi=wifi()               # 创建wifi类
+    Mywifi=wifi() # Create wifi class
 
-    # 捕获异常，如果在"try" 代码块中意外中断，则停止关闭套接字
-    try:
-        mywifi.connectWiFi("ssid","password")                                   # WiFi连接，设置ssid 和password
-        # mywifi.enable_APWiFi("wifi_name",13)                                  # 还可以开启AP模式,自建wifi网络
-        ip= mywifi.sta.ifconfig()[0]                                            # 获取本机IP地址
-        listenSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)        # 创建socket,不给定参数默认为TCP通讯方式
-        listenSocket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)      # 设置套接字属性参数
-        listenSocket.bind((ip,port))                                            # 绑定ip和端口
-        listenSocket.listen(3)                                                  # 开始监听并设置最大连接数
-        print ('tcp waiting...')
-        oled.DispChar("%s:%s" %(ip,port),0,0)                                   # oled屏显示本机服务端ip和端口            
-        oled.DispChar('accepting.....',0,16)                                            
-        oled.show()
+    # caught exception, stop closing the socket if it is unexpectedly interrupted in the "try" code block
+    Try:
+        mywifi.connectWiFi("ssid","password") #WiFi connection, set ssid and password
+        # mywifi.enable_APWiFi("wifi_name",13) # You can also enable AP mode and build your own wifi network.
+        Ip= mywifi.sta.ifconfig()[0] # Get the local IP address
+        listenSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Create a socket, the default parameter is TCP communication mode.
+        listenSocket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) # Set socket property parameters
+        listenSocket.bind((ip,port)) # bind ip and port
+        listenSocket.listen(3) # Start listening and set the maximum number of connections
+        Print ('tcp waiting...')
+        oled.DispChar("%s:%s" %(ip,port),0,0) # oled screen shows the local server ip and port
+        oled.DispChar('accepting.....',0,16)
+        Oled.show()
 
-        while True:
-            print("accepting.....")
-            conn,addr = listenSocket.accept()                                   # 阻塞,等待客户端的请求连接,如果有新的客户端来连接服務器，那麼会返回一个新的套接字专门为这个客户端服务
-            print(addr,"connected")                                                         
-        
-            while True:
-                data = conn.recv(1024)                                          # 接收对方发送过来的数据,读取字节设为1024字节
-                if(len(data) == 0):
-                    print("close socket")
-                    conn.close()                                                # 如果接收数据为0字节时,关闭套接字
-                    break
-                data_utf=data.decode()                                          # 接收到的字节流以utf8编码解码字符串
-                print(data_utf)
-                oled.DispChar(data_utf,0,48)                                    # 将接收到文本oled显示出来
-                oled.show()
-                oled.fill_rect(0,48,128,16,0)                                   # 局部清屏
-                conn.send(data)                                                 # 返回数据给客户端
+        While True:
+            Print("accepting.....")
+            Conn, addr = listenSocket.accept() # Block, wait for the client's request to connect, if there is a new client to connect to the server, then a new socket will be returned to serve this client specifically
+            Print(addr,"connected")
+        
+            While True:
+                Data = conn.recv(1024) # Receive the data sent by the other party, the read byte is set to 1024 bytes.
+                If(len(data) == 0):
+                    Print("close socket")
+                    Conn.close() # Close the socket if the received data is 0 bytes
+                    Break
+                Data_utf=data.decode() # Received byte stream to decode the string in utf8 encoding
+                Print(data_utf)
+                oled.DispChar(data_utf,0,48) # will display the received text oled
+                Oled.show()
+                Oled.fill_rect(0,48,128,16,0) # Partial clear screen
+                Conn.send(data) # return data to the client
 
-    # 当捕获异常,关闭套接字、网络
-    except:
-        if(listenSocket):
-            listenSocket.close()
-        mywifi.disconnectWiFi()
+    # When catching an exception, close the socket, network
+    Except:
+        If(listenSocket):
+            listenSocket.close()
+        mywifi.disconnectWiFi()
 
-.. Attention:: 上例,使用``connectWiFi()`` 连接同个路由器wifi。你也可以用 ``enable_APWiFi()`` 开启AP模式,自建wifi网络让其他设备接入进来。
+.. Attention:: In the above example, use ``connectWiFi()`` to connect to the same router wifi. You can also use the ``enable_APWiFi()`` to enable the AP mode and build a wifi network to allow other devices to access it.
 
-首先板子和手机须连接至同个局域网内。板子重启运行程序，TCP Server端等待Client端连接请求。打开Network Test Utility，进入“TCP Client”界面，填写Remote host和port,即 ``socket.blind(ip,port)``
-的IP地址和端口。Connect连接成功后，发送文本，板子接收到文本显示至oled屏并将返回至TCP Client端。您可在手机接收界面看到文本从Client->Server，Server->Client的过程。
+First, the board and mobile phone must be connected to the same LAN. The board restarts the running program, and the TCP server waits for the client connection request. Open Network Test Utility, enter the "TCP Client" interface, fill in the Remote host and port, ie ``socket.blind(ip,port)``
+IP address and port. After the Connect connection is successful, the text is sent, and the board receives the text display to the oled screen and returns to the TCP Client. You can see the text from Client->Server, Server->Client on the phone receiving interface.
 
 
 .. image:: ../../images/tutorials/socket_2.gif
-    :scale: 60 %
-    :align: center
-
+    :scale: 60 %
+    :align: center

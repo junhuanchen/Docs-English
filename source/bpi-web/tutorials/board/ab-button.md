@@ -1,31 +1,29 @@
-# 按鈕開關
+# power switch button
 
-在 開發板正面的左右兩側，預設了兩顆按鈕開關，透過開關的操控，更能實作物聯網的情境，甚至打造真實的遊戲遙控器或智慧家電的應用。
+On the left and right sides of the front of the development board, two button switches are preset. Through the control of the switch, the situation of crop networking can be realized, and even the real game remote control or smart home appliance application can be created.
 
-## 按鈕開關積木說明
+## Button switch block description
 
-按鈕開關積木可以指定「按下、放開、長按」三種開關行為，三種行為可分別套用至 A、B 或 A 和 B 同時。( 長按的定義為持續按下一秒 )
+The push button switch block can specify three kinds of switch behaviors: “press, release, long press”. The three behaviors can be applied to A, B or A and B respectively. (Long press is defined as continuous press for one second)
 
-![按鈕開關](../images/zh-tw/docs/webbit/board/ab-button-01.jpg)
+![Button Switch](../images/zh-tw/docs/webbit/board/ab-button-01.jpg)
 
-> *使用按鈕開關積木必須搭配「開發板」積木*，選擇模擬器，執行後可以使用滑鼠點擊模擬器，選擇 USB，執行後會透過 USB 連線方式控制實體開發板，選擇 Wi-Fi 則可透過 Wi-Fi 指定 Device ID 操控。
-> - USB 控制模式為「安裝版編輯器」限定，請參考 [編輯器](../index.html#software)
-> - Wi-Fi 模式需要開發板連接 Wi-Fi，請參考 [硬體開發板 ( 初始化設定 )](../info/setup.html)
+> * Use the button switch block to match the "development board" building block*, select the simulator, after execution, you can use the mouse to click the simulator, select USB, after execution, the physical development board will be controlled via USB connection, and Wi-Fi will be selected. Device ID control can be specified via Wi-Fi.
+> - USB control mode is limited to "Installation Editor", please refer to [Editor] (../index.html#software)
+> - Wi-Fi mode requires a development board to connect to Wi-Fi, please refer to [Hardware Development Board (Initial Settings)] (../info/setup.html)
 
-![按鈕開關](../images/zh-tw/docs/webbit/board/ab-button-04.jpg)
+![Button Switch](../images/zh-tw/docs/webbit/board/ab-button-04.jpg)
 
-## 按下開關改變 LED 矩陣圖案
+## Press the switch to change the LED matrix pattern
 
-在編輯畫面放入按下 A、按下 B 和按下 A+B 的積木，接著分別在各自的區塊內放入 LED 矩陣顯示圖形的積木，執行後，如果是使用模擬器，就可以用滑鼠點擊 A 、B 或 A+B 按鈕查看變化效果，如果是使用實體開發板，則可以直接用手指按壓開關。
+Put the A, B, and A+B blocks on the editing screen, and then place the LED matrix display blocks in the respective blocks. After the execution, if you use the simulator, you can use Click the A, B or A+B button to see the effect of the change. If you are using the physical development board, you can press the switch directly with your finger.
 
-> 模擬器裡的 A+B 按鈕開關，只有在編輯畫面有 A+B 按鈕開關的積木時才會出現。
+> The A+B button switch in the simulator will only appear if there are blocks on the editing screen with the A+B button switch.
 
-![按鈕開關](../images/zh-tw/docs/webbit/board/ab-button-02.gif)
+![Button Switch](../images/zh-tw/docs/webbit/board/ab-button-02.gif)
 
-## 按下、放開和長按
+## Press, release, and long press
 
-透過開關的按下、放開和長按三種行為，就能做出「按下時有圖案，變成長按後圖案會變色，最後放開開關就會關燈」的範例，執行後，如果是使用模擬器，就可以用滑鼠點擊 A 按鈕查看變化效果，如果是使用實體開發板，則可以直接用手指按壓開關。
+Through the three actions of pressing, releasing and long-pressing the switch, you can make an example of "there is a pattern when pressed, the pattern will change after the long press, and the light will be turned off when the switch is turned off". If it is executed, if it is Using the simulator, you can click the A button to see the change effect. If you are using the physical development board, you can press the switch directly with your finger.
 
-![按鈕開關](../images/zh-tw/docs/webbit/board/ab-button-03.gif)
-
-
+![Button Switch](../images/zh-tw/docs/webbit/board/ab-button-03.gif)

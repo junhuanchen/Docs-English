@@ -1,10 +1,8 @@
-操作小怪兽
-========================================
+Operating little monsters
+=================================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 2
 
-   basic
-   event
-
-   
+   Basic
+   Event

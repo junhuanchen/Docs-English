@@ -1,70 +1,69 @@
+How to use scratch3 for bpi:bit
+=========================================================== ===
 
-如何使用 scratch3 for bpi:bit
-=====================================================
+Online `Scratch3 Codelab`_ website, see here more in detail ` `codelab`_ and `scratch open source documentation `_\ .
 
-在线 `Scratch3 Codelab`_ 网站，更详细的看这里\ `codelab`_ 和 `scratch 开源文档`_\ 。
+First choose the version of the system that suits you, get `adapter`_, no need to install, open it.
 
-首先选择适合你的系统版本，获取 `adapter`_ ，无需安装，打开即可。
-
-接着参考一下 `usb_microbit 使用手册`_\ ，同理，如下图，勾选 mpfshell 选项。
+Then refer to the `usb_microbit user manual `_\, and similarly, as shown below, check the mpfshell option.
 
 .. figure:: codelab/used.png
 
-如何使用它们？
-------------------------------------------------------
+How to use them?
+-------------------------------------------------- ----
 
-确定 adapter 软件 和 scratch3 网站都打开了。 在 scratch3 网站中，接着点开它（左下角的拓展按钮）
+Make sure the adapter software and the scratch3 website are open. On the scratch3 website, click on it (the expansion button in the lower left corner)
 
 .. figure:: codelab/external.png
 
-并滚动到最底，找到 bpi:bit 插件选择它，点击确认后回到主界面。
+And scroll to the bottom, find the bpi:bit plugin to select it, click OK to return to the main interface.
 
 .. figure:: codelab/select.png
 
-勾选 isconnected 表示进行连接
+Check isconnected to connect
 
 .. figure:: codelab/isconnected.png
 
-此时插入硬件，点击连接，可以看到很快就连上了。（如果不能确定，就用通常的 mpfshell 的方式来核对一下吧）
+At this point, insert the hardware, click on the connection, you can see that it will be connected soon. (If you are not sure, check it out with the usual mpfshell method)
 
 .. figure:: codelab/result.png
 
-此时它可以用的标准积木有如下图
+At this time, the standard building blocks that it can use are as follows.
 
 .. figure:: codelab/function.png
 
-自此你就可以自由的使用自带的积木了，但是，如果你对自带的积木不满意，可以直接使用
-mpfshell，直接控制硬件，直接完成接口的调用和测试，如果你希望某些组合调试的接口，变成一个单独的积木，可以提交给我，直接合并，但是因为 scratch3 还没有动态积木载入，所以没办法完全开放对接。
+Since then you are free to use the built-in blocks, but if you are not satisfied with the building blocks, you can use them directly.
+Mpfshell, directly control the hardware, directly complete the interface call and test, if you want some combination debugging interface, become a separate building block, you can submit it to me, merge directly, but because scratch3 does not have dynamic building block loading, so There is no way to completely open the docking.
 
 .. figure:: codelab/demo.png
 
-如何使用 Scratch3 for Mpfshell ？
-------------------------------------------------------
+How to use Scratch3 for Mpfshell?
+-------------------------------------------------- ----
 
-如何使用 mpfshell ，其实只需要看几个实例就知道它们的由来和对照关系了。
+How to use mpfshell, in fact, only need to look at a few examples to know their origin and control relationship.
 
 .. figure:: codelab/example.png
 
-如果你知道 mpfshell 怎么用，那么这个也是同样的道理，所谓的控制硬件实际上就相当于每次调用 mpfshell exec 而已。
+If you know how mpfshell is used, then the same is true. The so-called control hardware is actually equivalent to calling mpfshell exec every time.
 
-但要注意的地方就是 eim/mpfshell/exec/bpibit 是一个典型的主题，意思是指，这个是一个实例的访问接口了，如果你有多个硬件的话，它就会呈现出不同的接口，比如默认的
-mpfshell 插件主题的是 eim/mpfshell/exec/default ，而 bpibit 的拓展是 eim/mpfshell/exec/bpibit，所以可以根据这种区分多个实例的控制，等到你需要的时候，就会发现它的必要性了。
+But the point to note is that eim/mpfshell/exec/bpibit is a typical theme, meaning that this is an instance access interface. If you have multiple hardware, it will present different interfaces, such as default
+The mpfshell plugin theme is eim/mpfshell/exec/default, and the extension of bpibit is eim/mpfshell/exec/bpibit, so you can distinguish the control of multiple instances according to this, and when you need it, you will find it necessary. Sex.
 
-说说它是如何设计出来的
-------------------------------------------------------
+Talk about how it was designed
+-------------------------------------------------- ----
 
-这次我们提供了可二次编辑的接口，但如果真的想知道如何做到的可以了解这两个项目。
+This time we have a second-editable interface, but if you really want to know how to do it, you can understand both projects.
 
--  `scratch3-eim-mpfshell`_
+- `scratch3-eim-mpfshell`_
 
--  `webduino-module-eim`_
+- `webduino-module-eim`_
 
-并且 scratch3 插件最后会期望同步到 Webduino blockly 当中，因为在我们 blockly 的平台上，允许不建立服务器也可以定义属于自己的积木，意味着可以更加专注的实现自己的积木了，而不是每修改一次就要合并到服务器里重建。这样开发出的积木和拓展插件是完全属于自己的，还可以通吃绝大部分积木前端平台了，更加的自由不受限制，完美！
+And the scratch3 plugin will eventually expect to sync to Webduino blockly, because on our blockly platform, allowing you to define your own building blocks without building a server, means you can focus on implementing your own building blocks instead of modifying each time. To merge into the server to rebuild. The building blocks and expansion plug-ins developed in this way are completely their own, and they can also eat most of the front-end platforms of building blocks, and the freedom is not limited, perfect!
 
 .. _Scratch3 Codelab: https://scratch3.codelab.club/
 .. _codelab: https://www.codelab.club
-.. _scratch 开源文档: https://blog.just4fun.site/tag/scratch.html
+.. _scratch open source documentation: https://blog.just4fun.site/tag/scratch.html
 .. _adapter: https://adapter.codelab.club/user_guide/install/
-.. _usb_microbit 使用手册: https://adapter.codelab.club/user_guide/usage/#3-microbit
+.. _usb_microbit User Manual: https://adapter.codelab.club/user_guide/usage/#3-microbit
 .. _scratch3-eim-mpfshell: https://github.com/junhuanchen/scratch3-eim-mpfshell
 .. _webduino-module-eim: https://github.com/junhuanchen/webduino-module-eim

@@ -1,171 +1,171 @@
-再谈 REPL
-=============================
+Talk again about REPL
+==============================
 
 .. Attention::
 
-    请确认您的编程环境里已经安装了 Python3 和 pip 工具，否则下面的内容你都无法开始。
+    Make sure you have the Python3 and pip tools installed in your programming environment, otherwise you won't be able to get started.
 
-我们已经知道 REPL 可以进行一些简单的代码交互和反馈，现在我们就要让重新认识一下 REPL 了。
+We already know that REPL can do some simple code interaction and feedback, and now we have to revisit REPL.
 
-安装 mpfshell 工具
+Install the mpfshell tool
 ----------------------------------------
 
-请从此处获取  `mpfshell-lite <https://github.com/BPI-STEAM/mpfshell-lite>`_  工具，安装与使用方法均在此提及。
+Please get the `mpfshell-lite <https://github.com/BPI-STEAM/mpfshell-lite>`_ tool from here, the installation and use methods are mentioned here.
 
-在 mpfshell 的 REPL
+REPL in mpfshell
 ----------------------------------------
 
-安装了它，在 repl 即可使用下述的功能，当然你也可以在 Xshell 、 MobaXterm 等其他串口终端中实现。
+Install it, you can use the following functions in repl, of course, you can also implement in other serial terminals such as Xshell and MobaXterm.
 
 .. image:: mpfs.png
 
-输入历史记录
+Enter history
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-REPL 会记住您输入的一定数量的前几行文本（在 ESP32 上最多 8 行）。
-要调用上一行，请使用 向上 和 向下 箭头键。
+REPL will remember a certain number of the first few lines of text you entered (up to 8 lines on ESP32).
+To call the previous line, use the up and down arrow keys.
 
-使用 Tab 键
+Use the Tab key
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Tab 键可以查看模块中所有成员列表。这对于找出模块或对象具有的函数和方法非常有用。
-假设您在下面的例子中导入了 import machine 然后键入 ``.`` 再按 Tab 键以查看 machine 模块所有成员列表::
+The Tab key allows you to view a list of all members in the module. This is useful for finding out which functions and methods a module or object has.
+Suppose you import import machine in the example below and type ``.`` and then press Tab to see a list of all members of the machine module::
 
-    >>> import machine
-    >>> machine.
-    __class__       __name__        ADC             DAC
-    DEEPSLEEP       DEEPSLEEP_RESET                 EXT0_WAKE
-    EXT1_WAKE       HARD_RESET      I2C             PIN_WAKE
-    PWM             PWRON_RESET     Pin             RTC
-    SLEEP           SOFT_RESET      SPI             Signal
-    TIMER_WAKE      TOUCHPAD_WAKE   Timer           TouchPad
-    UART            ULP_WAKE        WDT             WDT_RESET
-    deepsleep       disable_irq     enable_irq      freq
-    idle            mem16           mem32           mem8
-    reset           reset_cause     sleep           time_pulse_us
-    unique_id       wake_reason
-    >>> machine.
+    >>> import machine
+    >>> machine.
+    __class__ __name__ ADC DAC
+    DEEPSLEEP DEEPSLEEP_RESET EXT0_WAKE
+    EXT1_WAKE HARD_RESET I2C PIN_WAKE
+    PWM PWRON_RESET Pin RTC
+    SLEEP SOFT_RESET SPI Signal
+    TIMER_WAKE TOUCHPAD_WAKE Timer TouchPad
+    UART ULP_WAKE WDT WDT_RESET
+    Deepsleep disable_irq enable_irq freq
+    Idle mem16 mem32 mem8
+    Reset reset_cause sleep time_pulse_us
+    Unique_id wake_reason
+    >>> machine.
 
 
-行继续和自动缩进
+Line continuation and automatic indentation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-您键入的某些内容将需要“继续”，也就是说，需要更多行文本才能生成正确的 Python 语句。在这种情况下，
-提示符将更改为``...``并且光标将自动缩进正确的数量，以便您可以立即开始键入下一行。
-通过定义以下函数来尝试此操作::
+Some of the content you type will need to "go", that is, more line text is needed to generate the correct Python statement. under these circumstances,
+The prompt will change to ``...`` and the cursor will automatically be indented to the correct amount so that you can start typing the next line immediately.
+Try this by defining the following function:
 
 
-    >>> def toggle(p):
-    ...    p.value(not p.value())
-    ...    
-    ...    
-    ...    
-    >>>
+    >>> def toggle(p):
+    ... p.value(not p.value())
+    ...
+    ...
+    ...
+    >>>
 
-在上面，您需要连续按三次Enter键才能完成复合语句（即三条线上只有点）。完成复合语句的另一种方法是按退格键到达行的开头，然后按Enter键。 （如果您输错了并且想要退出，那么按ctrl-C，所有行都将被忽略。）
+Above, you need to press Enter three times in a row to complete the compound statement (ie, only three points on the three lines). Another way to complete a compound statement is to press the backspace key to reach the beginning of the line and press Enter. (If you make a mistake and want to quit, press ctrl-C and all lines will be ignored.)
 
-您刚刚定义函数功能为翻转引脚电平。您之前创建的pin对象应该仍然存在
-（如果没有，则需重新创建它），您可以使用以下命令翻转LED::
+You just defined the function function to flip the pin level. The pin object you created earlier should still exist
+(If you don't have one, you need to recreate it), you can flip the LED with the following command:
 
-    >>> toggle(pin)
+    >>> toggle(pin)
 
-现在让我们在一个循环中翻转 LED （如果您没有 LED ，那么您可以打印一些文本而不是调用切换，看看效果）：
+Now let's flip the LED in a loop (if you don't have an LED, you can print some text instead of calling the switch to see the effect):
 
-    >>> import time
-    >>> while True:
-    ...     toggle(pin) # print('test')
-    ...     time.sleep_ms(500)
-    ...    
-    ...    
-    ...    
-    >>>
+    >>> import time
+    >>> while True:
+    ... toggle(pin) # print('test')
+    ... time.sleep_ms(500)
+    ...
+    ...
+    ...
+    >>>
 
-这将以1Hz（半秒开，半秒关）翻转LED。要停止切换按 ``ctrl-C`` ，这将引发键盘中断异常并退出循环。
+This will flip the LED at 1 Hz (half second on, half second off). To stop switching by ``ctrl-C``, this will cause a keyboard interrupt exception and exit the loop.
 
 
-粘贴模式
+Paste mode
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-按 ``ctrl-E`` 将进入特殊粘贴模式，您可将一大块文本复制并粘贴到REPL中。如果按ctrl-E，您将看到粘贴模式提示::
+Press ``ctrl-E`` to enter the special paste mode, you can copy and paste a large piece of text into the REPL. If you press ctrl-E, you will see the paste mode prompt::
 
-    paste mode; Ctrl-C to cancel, Ctrl-D to finish
-    === 
+    Paste mode; Ctrl-C to cancel, Ctrl-D to finish
+    ===
 
-然后，您可以粘贴（或键入）您的文本。请注意，没有任何特殊键或命令在粘贴模式下工作（例如Tab或退格）
-，它们只是按原样接受。按 ``ctrl-D`` 完成输入文本并执行。
+You can then paste (or type) your text. Please note that there are no special keys or commands to work in paste mode (eg tab or backspace)
+They are only accepted as they are. Press ``ctrl-D`` to finish entering the text and execute it.
 
-其他控制命令
+Other control commands
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-还有其他四个控制命令：
+There are four other control commands:
 
-- 空白行上的 Ctrl-A 将进入原始 REPL 模式。这类似于永久粘贴模式，除了不回显字符。
+- Ctrl-A on the blank line will enter the original REPL mode. This is similar to the permanent paste mode except that characters are not echoed.
 
-- 空白处的 Ctrl-B 转到正常的 REPL 模式。
+- Ctrl-B in the blank to go to the normal REPL mode.
 
-- ``Ctrl-C`` 取消任何输入，或中断当前运行的代码。
+- ``Ctrl-C`` Cancel any input or interrupt the currently running code.
 
-- 空白行上的 ``Ctrl-D`` 将执行软重启。
+- ``Ctrl-D`` on the blank line will perform a soft restart.
 
-管理板子上的文件
+Manage files on the board
 ----------------------------------------
 
-mpfs 提供了真正意义上的文件管理功能，近似大多数 linux 终端文件管理工具。
+Mpfs provides true file management capabilities, similar to most linux terminal file management tools.
 
-MicroPython 内部提供了基于 oofats 建立的 FAT16 分区文件系统，就可以在上面存放一些文件内容，如代码文件、资源文件、音乐文件等等。
+MicroPython internally provides a FAT16 partition file system based on oofats, which can store some file contents, such as code files, resource files, music files, and so on.
 
-详细的你需要去看 mpfshell 的 readme 文档，在这里我说明几个重要功能即可。
+In detail, you need to look at the mpfshell readme documentation. Here I will explain a few important features.
 
 .. Note::
 
-    mpfs 即为 mpfshell 的简称。
+    Mpfs is short for mpfshell.
 
-运行 python 文件 lexecfile 和 execfile
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run python files lexecfile and execfile
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~
 
-execfile 指运行板子上存在的代码文件，添加了 l 即可将本地的代码文件传到板子中并进入 repl 中运行。
+Execfile refers to the code file that exists on the running board. After adding l, the local code file can be transferred to the board and run into repl.
 
-查看板子上的所有文件 ls
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+View all files on the board ls
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~
 
-这将列举板子上所有的目录、文件的名称。
-
-.. code:: shell
-
-    mpfs [/]> ls
-
-    Remote files in '/':
-
-        boot.py
-        wifi_cfg.py
-
-快速查看文件内容 cat
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-假如要查看上述所显示的 boot.py 文件，输入 cat boot.py 。
-
+This will list the names of all the directories and files on the board.
 
 .. code:: shell
 
-    mpfs [/]> cat boot.py
-    # This file is executed on every boot (including wake-boot from deepsleep)
-    #import esp
-    #esp.osdebug(None)
-    #import webrepl
-    #webrepl.start()
-    import wifi
-    wifi.ready()
+    Mpfs [/]> ls
 
-    mpfs [/]>
+    Remote files in '/':
 
-删除指定文件 rm
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Boot.py
+        Wifi_cfg.py
 
-假如要删除上述所显示的 boot.py 文件，输入 rm boot.py 即可，此操作不可逆。
+Quickly view the contents of the file cat
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~
 
-文件的 推送 put 和 获取 get 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+To view the boot.py file shown above, type cat boot.py .
 
-这两兄弟可以帮你把文件下载或上传，保存在 lpwd 目录下，可用 lcd 修改。
 
-还有更多功能你需要 亲自去尝试 或 在工具的文档中 寻找答案。
+.. code:: shell
+
+    Mpfs [/]> cat boot.py
+    # This file is executed on every boot (including wake-boot from deepsleep)
+    #import esp
+    #esp.osdebug(None)
+    #import webrepl
+    #webrepl.start()
+    Import wifi
+    Wifi.ready()
+
+    Mpfs [/]>
+
+Delete the specified file rm
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~
+
+If you want to delete the boot.py file shown above, enter rm boot.py, which is irreversible.
+
+File push put and get get
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~
+
+The two brothers can help you download or upload the file, save it in the lpwd directory, and modify it with lcd.
+
+There are more features you need to try in person or find answers in the tool's documentation.

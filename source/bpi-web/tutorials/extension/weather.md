@@ -1,82 +1,80 @@
-# 氣象資訊
+#气象资讯
 
-氣象資訊積木能夠即時從中央氣象局取得開放資料，包含即時氣象、空氣品質、天氣預報、地震資訊、水庫水情和雷達回波圖...等常用氣象資訊，透過這些氣象資訊搭配物聯網的實作，更能落實氣象資訊的有效應用。
+Meteorological information blocks can instantly obtain open data from the Central Meteorological Administration, including common meteorological information such as weather, air quality, weather forecast, earthquake information, reservoir water conditions and radar echo maps. Implementation can better implement the effective application of meteorological information.
 
-## 氣象資訊積木清單
+## Weather Information Building Block List
 
-![氣象資訊](../images/zh-tw/docs/webbit/extension/weather-01.jpg)
+![Weather Information](../images/zh-tw/docs/webbit/extension/weather-01.jpg)
 
-## 取得氣象資料
+## Obtaining meteorological data
 
-氣象資訊有一塊「取得氣象資訊」積木，可以取得六種常用資訊，分別是「空氣品質」、「即時觀測」、「天氣預報」、「地震資訊」、「水庫水情」和「雷達回波圖」。
+Meteorological Information has a "Get Meteorological Information" building block. It can obtain six common types of information: "Air Quality", "Instant Observation", "Weather Forecast", "Earthquake Information", "Reservoir Water" and "Radar Echo". Figure".
 
-> 取得氣象資訊的積木屬於「*取得資訊後才會繼續執行後方程序*」的類型，當編輯畫面中有這塊積木，*執行時當程序遇到這塊積木會暫停，直到取得氣象資訊之後才會再繼續*。
+> The building block for obtaining meteorological information belongs to the type of "* will continue to execute the rear program* after obtaining the information". When there is this building block in the editing screen, * when the program encounters this building block, it will pause until the weather information is obtained. Will continue to *.
 
-![氣象資訊](../images/zh-tw/docs/webbit/extension/weather-03.jpg)
+![Weather Information](../images/zh-tw/docs/webbit/extension/weather-03.jpg)
 
-## 空氣品質
+## Air quality
 
-「空氣品質」積木能夠顯示空氣品質的相關資訊，包含 AQI、PM2.5、PM10...等相關數值以及綜合指標的文字描述，偵測的地點為中央氣象局在台灣的觀測站台，可選擇離住家最近的地點作為觀測依據。
+The "air quality" building blocks can display information about air quality, including AQI, PM2.5, PM10... and other related values ​​as well as textual descriptions of comprehensive indicators. The location of the detection is the observation station of the Central Meteorological Administration in Taiwan. The location closest to the home is used as the basis for observation.
 
-> 空氣品質積木需搭配「取得氣象資料」積木取得「空氣品質」資訊。
+> Air quality building blocks are required to obtain "air quality" information in conjunction with "Get Meteorological Data" blocks.
 
-![氣象資訊](../images/zh-tw/docs/webbit/extension/weather-02.jpg)
+![Weather Information](../images/zh-tw/docs/webbit/extension/weather-02.jpg)
 
-下圖的例子，取得前鎮區空氣品質資料，並透過小怪獸講出空氣品質綜合指標，以及個別的偵測數值。
+In the example below, the air quality data of the former town area is obtained, and the air quality comprehensive indicators and individual detection values ​​are spoken through the small monsters.
 
-![氣象資訊](../images/zh-tw/docs/webbit/extension/weather-04.jpg)
+![Weather Information](../images/zh-tw/docs/webbit/extension/weather-04.jpg)
 
-## 即時觀測
+## Instant observation
 
-「即時觀測」積木能夠顯示目前天氣的相關資訊，包含溫度、濕度、風力、累積雨量...等相關數值，偵測的地點為中央氣象局在台灣的觀測站台，可選擇離住家最近的地點作為觀測依據。
+"Instantaneous observation" building blocks can display relevant information about the current weather, including temperature, humidity, wind power, accumulated rainfall, etc. The detection location is the observation station of the Central Meteorological Administration in Taiwan, and the location closest to the home can be selected. As the basis for observation.
 
-> 即時觀測積木需搭配「取得氣象資料」積木取得「即時觀測」資訊。
+> Instant observation of building blocks is required to obtain "instant observation" information with the "Get Meteorological Data" building blocks.
 
-![氣象資訊](../images/zh-tw/docs/webbit/extension/weather-05.jpg)
+![Weather Information](../images/zh-tw/docs/webbit/extension/weather-05.jpg)
 
-下圖的例子，分別透過小怪獸講出高雄與台北的即時氣象資訊。
+In the example below, the weather information of Kaohsiung and Taipei is reported through the little monsters.
 
-![氣象資訊](../images/zh-tw/docs/webbit/extension/weather-06.jpg)
+![Weather Information](../images/zh-tw/docs/webbit/extension/weather-06.jpg)
 
-## 氣象預報
+## Weather forecast
 
-「氣象預報」積木能夠顯示未來六小時、十八小時和三十六小時的氣象預報，預報地點為台灣的主要縣市，可選住家所在縣市作為觀測依據。
+The "weather forecast" building blocks can display weather forecasts for the next six hours, eighteen hours and thirty-six hours. The forecast locations are the major counties and cities in Taiwan, and the counties and cities where the homes are located can be used as the basis for observation.
 
-![氣象資訊](../images/zh-tw/docs/webbit/extension/weather-07.jpg)
+![Weather Information](../images/zh-tw/docs/webbit/extension/weather-07.jpg)
 
-下圖的例子，分別透過小怪獸講出高雄八小時的氣象預報，以及新竹十八小時的氣象預報。
+In the example below, the weather forecast for Kaohsiung's eight hours and the weather forecast for Hsinchu's eighteen hours are reported through the little monsters.
 
-![氣象資訊](../images/zh-tw/docs/webbit/extension/weather-08.jpg)
+![Weather Information](../images/zh-tw/docs/webbit/extension/weather-08.jpg)
 
-## 水庫水情
+## Reservoir water situation
 
-「水庫水情」積木能夠取得全台灣所有水庫的水情資心，包含蓄水百分比、有效蓄水量和降雨量...等。
+The "Reservoir Water" building blocks can obtain the water conditions of all reservoirs in Taiwan, including the percentage of water storage, effective water storage and rainfall...etc.
 
-![氣象資訊](../images/zh-tw/docs/webbit/extension/weather-09.jpg)
+![Weather Information](../images/zh-tw/docs/webbit/extension/weather-09.jpg)
 
-下圖的例子，分別透過小怪獸講出石門水庫和曾文水庫的水情資訊。
+In the example below, the water information of the Shimen Reservoir and the Zengwen Reservoir are told through the little monsters.
 
-![氣象資訊](../images/zh-tw/docs/webbit/extension/weather-10.jpg)
-
-
-## 地震資訊
-
-「地震資訊」積木能夠取得最近 1~3 次的地震資訊。
-
-![氣象資訊](../images/zh-tw/docs/webbit/extension/weather-11.jpg)
-
-下圖的例子，透過小怪獸講出最近一次的地震資訊 ( 範例日期為 5/17 )。
-
-![氣象資訊](../images/zh-tw/docs/webbit/extension/weather-12.jpg)
-
-## 雷達回波
-
-「雷達回波」積木能夠取得一張雷達回波圖，圖片格式為 jpg。
-
-![氣象資訊](../images/zh-tw/docs/webbit/extension/weather-13.jpg)
-
-下圖的例子，透過小怪獸展示雷達回波圖。
-
-![氣象資訊](../images/zh-tw/docs/webbit/extension/weather-14.jpg)
+![Weather Information](../images/zh-tw/docs/webbit/extension/weather-10.jpg)
 
 
+## Earthquake Information
+
+The "Earth Information" building blocks can obtain the latest 1-3 earthquake information.
+
+![Weather Information](../images/zh-tw/docs/webbit/extension/weather-11.jpg)
+
+In the example below, the last earthquake information is reported by the little monster (example date is 5/17).
+
+![Weather Information](../images/zh-tw/docs/webbit/extension/weather-12.jpg)
+
+## Radar echo
+
+The "radar echo" building block can obtain a radar echo map in the form of jpg.
+
+![Weather Information](../images/zh-tw/docs/webbit/extension/weather-13.jpg)
+
+The example below shows a radar echo map through a small monster.
+
+![Weather Information](../images/zh-tw/docs/webbit/extension/weather-14.jpg)

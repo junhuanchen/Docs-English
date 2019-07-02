@@ -1,28 +1,25 @@
-# 鍵盤行為
+# Keyboard behavior
 
-滑鼠和鍵盤是電腦不可或缺的兩大輸入裝置，熟悉了操控鍵盤行為的方式，就可以簡單地將鍵盤轉換為有趣的互動元件，不論是要做成鋼琴鍵盤或遊戲控制器都是輕而易舉，更可以搭配文字的輸入，做出許多意想不到的互動效果。
+The mouse and keyboard are two indispensable input devices for the computer. When you are familiar with the way you control the behavior of the keyboard, you can simply convert the keyboard into interesting interactive components. It is easy to make a piano keyboard or game controller. It can also be used with text input to make many unexpected interaction effects.
 
-## 偵測鍵盤行為
+## Detecting keyboard behavior
 
-「偵測鍵盤行為」積木可以偵測電腦鍵盤上大多數的按鍵，偵測方式包含按下與放開兩種。
+The "Detect Keyboard Behavior" building block can detect most of the keys on the computer keyboard. The detection methods include pressing and releasing.
 
-> 偵測鍵盤行為積木*處於隨時偵測*的狀態，*不需要搭配無限重複迴圈*。
+> Detecting keyboard behavior building blocks* is in a state of detecting * at any time, * does not need to be matched with an infinite repeating loop*.
 
-![鍵盤行為](../images/zh-tw/docs/webbit/detect/keyboard-01.jpg)
+![Keyboard Behavior](../images/zh-tw/docs/webbit/detect/keyboard-01.jpg)
 
-透過按下和放開兩種行為，就可以在按下鍵盤的同時，讓小怪獸說出對應按鍵名稱，放開鍵盤後就不說話。
+By pressing and releasing the two behaviors, you can let the little monster say the corresponding button name while pressing the keyboard, and then do not speak after releasing the keyboard.
 
-![鍵盤行為](../images/zh-tw/docs/webbit/detect/keyboard-02.gif)
+![Keyboard Behavior](../images/zh-tw/docs/webbit/detect/keyboard-02.gif)
 
-按下鍵盤的行為會「*連續執行指令*」，類似在打字的時候，如果按著某個按鍵不放，畫面中就會出現一連串這個按鍵的文字，例如下圖，設定按下鍵盤 A 的時候小怪獸會往左旋轉，網頁執行後，持續按住 A 怪獸就會持續旋轉，放開 A 怪獸就會停止，不需要設定放開的指令。
+The behavior of pressing the keyboard will be "*Continuous execution of the command*". Similar to the typing, if a button is pressed, a series of characters of the button will appear on the screen, for example, the following figure, set to press the keyboard A. The little monster will rotate to the left. After the web page is executed, keep pressing the A monster and it will continue to rotate. When the A monster is released, it will stop, and there is no need to set the release command.
 
-![鍵盤行為](../images/zh-tw/docs/webbit/detect/keyboard-03.gif)
+![Keyboard Behavior] (../images/zh-tw/docs/webbit/detect/keyboard-03.gif)
 
-## 鍵盤控制小怪獸移動
+## Keyboard Controls Little Monsters Move
 
-積木可以*同時偵測多個鍵盤按鍵行為*，透過鍵盤行為就能很簡單的做出「按下上下左右鍵，小怪獸就會上下左右移動」。
+Building blocks can *detect multiple keyboard button behaviors* at the same time. It is very easy to make "press the up, down, left and right buttons through the keyboard behavior, and the little monsters will move up and down and left and right."
 
-![鍵盤行為](../images/zh-tw/docs/webbit/detect/keyboard-04.gif)
-
-
-
+![Keyboard Behavior](../images/zh-tw/docs/webbit/detect/keyboard-04.gif)

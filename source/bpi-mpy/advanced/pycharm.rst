@@ -1,40 +1,40 @@
-使用 Pycharm IDE 编程
-=====================================================
+Programming with Pycharm IDE
+=========================================================== ===
 
-是时候换一个顶级的 Python 专业 IDE 来编程了，你觉得呢？本文将教你如何在 Pycharm 里写 MicroPython 并运行。
+It's time to switch to a top-level Python professional IDE. What do you think? This article will teach you how to write MicroPython and run it in Pycharm.
 
-获取 intellij-MicroPython 插件
-------------------------------------------------------
+Get the intellij-MicroPython plugin
+-------------------------------------------------- ----
 
-在此下载 :download:`intellij-micropython <https://github.com/BPI-STEAM/BPI-BIT-MicroPython/releases/tag/pycharm>` 。
+Download here: download:`intellij-micropython <https://github.com/BPI-STEAM/BPI-BIT-MicroPython/releases/tag/pycharm>`.
 
-可以在此查看，`项目主页 <https://github.com/junhuanchen/intellij-micropython>`_ 。
+You can view it here, `project home page <https://github.com/junhuanchen/intellij-micropython>`_.
 
-安装 pycharm 社区版
+Install pycharm community edition
 ---------------------------
 
-获取 `pycharm`_ 使用 windows 系统 `点此下载 2019.1 版本`_ (community 版免费使用)
+Get `pycharm`_ using windows system `Click here to download 2019.1 version`_ (community version is free to use)
 
-安装完成打开即可，按 默认 的设置一路进入到以下界面即可。
+Once the installation is complete, you can open the following interface by default.
 
 |image0|
 
-新建一个项目
+Create a new project
 ---------------------------
 
-点击 Create New Project 弹出以下界面。
+Click Create New Project to bring up the following interface.
 
 |image1|
 
-如果没有安装 Python 则是以下界面
+If Python is not installed, it is the following interface.
 
 |image2|
 
-最后可以看到项目已经建立完成。
+Finally, you can see that the project has been completed.
 
 |image3|
 
-安装 intellij-MicroPython 插件
+Install the intellij-MicroPython plugin
 ---------------------------
 
 |image4|
@@ -43,75 +43,75 @@
 
 |image6|
 
-提示：该版本已经修改了底层为 mpfshell，并没有完全整合到官方，所以仍和主仓的插件同名，因此 IDE 提示插件需要升级或是其他修复的时候，会被替换回原版，遇到这种情况的时候，忽视了就好。
+Hint: This version has been modified to the bottom of the mpfshell, and is not fully integrated into the official, so it still has the same name as the plugin of the main warehouse, so when the IDE prompts the plugin to be upgraded or other repairs, it will be replaced back to the original version. In the case of the situation, it is good to ignore it.
 
 |image7|
 
-运行一个文件
+Run a file
 ---------------------------
 
-安装好插件后，在项目中启动它。
+Once the plugin is installed, launch it in your project.
 
 |image8|
 
-你可以在设置里搜索 ``MicroPython``\ 得到以上页面。
+You can find the above page by searching for ``MicroPython`` in the settings.
 
 |image9|
 
-现在启动它，依次点开如图设置，Enable MicroPython support。
+Now start it, click on the setting, Enable MicroPython support.
 
 |image10|
 
-选择 ESP8266 （ESP32）配置设备类型，再点击 Detect 可以自动判断你连接的板子的路径（或名称），此时的 Detect 一定会失败，因为关键的依赖还没安装。
+Select ESP8266 (ESP32) to configure the device type, and then click Detect to automatically determine the path (or name) of the board you are connected to. At this time, Detect will fail because the key dependencies have not been installed.
 
 |image11|
 
-当出现自动识别串口失败，则需要你自己填入自己板子的串口名称（包括路径），或是其他连接参数，比如：ws:192.168.1.1,1234，这和 ``mpfshell`` 的 open 是一样的。
+When the automatic identification of the serial port fails, you need to fill in the serial port name (including the path) of your board, or other connection parameters, such as: ws: 192.168.1.1, 1234, which is the same as the opening of ``mpfshell``. of.
 
 |image12|
 
-此时已经设定好板子的连接参数了，现在可以在 untitled 处右键新建一个
-python 文件，第一次使用的时候，务必创建一个文件来触发安装依赖，安装完成后才能使用自动识别串口 和 其他工具（菜单项中的 Tools）。
+At this point, the connection parameters of the board have been set. You can now create a new one at untitled.
+For python files, the first time you use it, be sure to create a file to trigger the installation dependencies. After the installation is complete, you can use the auto-recognition serial port and other tools (Tools in the menu item).
 
 |image13|
 
-在右侧代码编辑框中写入一句\ ``print(helloworld!)``\ 。
+Write a ` `print(helloworld!)``\ in the code edit box on the right.
 
 |image14|
 
-第一次使用的时候，会提示你需要安装依赖项，因此点击消息的 Install requirements 即可在后台自动下载安装。
+When you use it for the first time, you will be prompted to install the dependencies, so you can download and install it automatically in the background by clicking the Install requirement of the message.
 
 |image15|
 
-耐心等待一会就可以了。
+Wait patiently for a while.
 
 |image16|
 
-安装完成会提示。
+The installation will be prompted.
 
 |image17|
 
-现在我们可以运行 main.py 文件了，在编辑框的任意地方右键显示菜单选取 Run ‘Flash main.py’，即可自动生成运行文件配置并在板子中运行。
+Now we can run the main.py file, right-click anywhere in the edit box and select Run ‘Flash main.py’ to automatically generate the run file configuration and run it on the board.
 
 .. Attention::
 
-    如果 Linux 系统出现串口连接不上，须核对串口是否对一般用户有权限，如果不确定，请核对这条指令\ ``usermod -a -G dialout Username && sudo reboot``\ ，Username 是指你的用户名，不是 Username 。
+    If the serial port connection does not appear on the Linux system, check whether the serial port has permission for the general user. If you are not sure, please check this command \ ``usermod -a -G dialout Username && sudo reboot``\ , Username refers to your Username, not Username.
 
 |image18|
 
-可以看到运行结果如下
+Can see the results of the operation as follows
 
 |image19|
 
-直接使用 Mpfshell
+Use Mpfshell directly
 ---------------------------
 
-在 MicroPython -> Run Mpfshell Tools 中可以使用 REPL 和 Mpfshell 的快捷功能。
+The shortcuts for REPL and Mpfshell are available in MicroPython -> Run Mpfshell Tools.
 
 |image20|
 
 .. _pycharm: https://www.jetbrains.com/pycharm/
-.. _点此下载 2019.1 版本: https://download-cf.jetbrains.com/python/pycharm-community-2019.1.exe
+.. _Click here to download version 2019.1: https://download-cf.jetbrains.com/python/pycharm-community-2019.1.exe
 
 .. |image0| image:: pycharm/03.png
 .. |image1| image:: pycharm/05.png

@@ -1,102 +1,102 @@
-控制金手指 IO 
-=====================================================
+Control gold finger IO
+=========================================================== ===
 
-IO 在计算机中指 Input/Output ，也就是输入和输出，简称 IO 口。
+IO refers to Input/Output in the computer, that is, input and output, referred to as IO port.
 
-.. image:: images/io.png
+.. image::image/io.png
 
-各种 IO 接口都不尽相同，有些特殊的接口是要更大一些，而且一般来说，它附近也会印有标签方便用户理解，如这块板子的底部是按照 0/1/2/3V/GND 的顺序分布在金手指上（计算机中大多都是是从 0 开始计算的）。
+The various IO interfaces are different. Some special interfaces are larger. In general, labels are also printed near the user for easy understanding. For example, the bottom of the board is 0/1/2/3V. The order of /GND is distributed on the golden finger (mostly the computer is calculated from 0).
 
-如果你把金手指接上底座，那么其他更小的蓝白线条相间的引脚（pin）也就能够被用上了，这在第一章的硬件介绍的时候，是有特别指出的，忘了可以查看左侧的产品介绍。
+If you attach the gold finger to the base, then the pins of other smaller blue and white lines can be used. This is especially pointed out in the hardware introduction in the first chapter. You can check the product introduction on the left.
 
-在这个 microbit 的模块中，将板子的接口定义为 pinN 对象，其中 N 代表接口的数值，所以 0 号接口也就叫做 pin0 对象，如果你在之后觉得这并不好用，可以通过 import machine 的 Pin 重新定义成自己喜欢的引脚名称。
+In this microbit module, the interface of the board is defined as a pinN object, where N represents the value of the interface, so the interface number 0 is also called the pin0 object. If you feel that this is not easy to use later, you can use the pin of the import machine. Redefine to the pin name you like.
 
-“害羞”的板子
+"shy" board
 ---------------------------
 
-下面要写的一个案例，就非常有意思了。
+The following case to write is very interesting.
 
-我想要触摸板子的引脚并让它做出对应的反应，看起来这个板子就好像个害羞的小姑娘。
+I want to touch the board's pin and let it react accordingly. It looks like this board is like a shy girl.
 
-准备的代码如下：
+The prepared code is as follows:
 
 .. code:: python
 
-   from microbit import *
-   while True:
-       if pin1.is_touched():
-           display.show(Image.HAPPY)
-       else:
-           display.show(Image.SAD)
+   From microbit import *
+   While True:
+       If pin1.is_touched():
+           Display.show(Image.HAPPY)
+       Else:
+           Display.show(Image.SAD)
 
-这个时候你需要一只手触摸在 1 号标签的引脚上，就可以能看到板子由 悲 转 喜
-了，如果你松开了，它又会改变表情了，是生气吗？XD
+At this time, you need a hand to touch the pin of the No. 1 tag, you can see the board turned from sad to happy.
+If you loosen it, it will change your expression again. Is it angry? XD
 
-程序解释起来如下 1. 反复运行 ``pin1.is_touched()``
-来判断这个引脚是否有被触摸到。（原理是 ADC 采样） 2. 运行后返回了 True，
-此时显示它为笑脸，否则一直显示苦脸，所以你不去摸它的时候，它会感到悲伤的。（等等！这是哪门子的害羞呢！！！！）
+The program is explained as follows: 1. Run ``pin1.is_touched()` repeatedly.
+To determine if this pin has been touched. (The principle is ADC sampling) 2. Returned to True after running.
+It is displayed as a smiley face at this time, otherwise it will always show bitter face, so when you don't touch it, it will feel sad. (Wait! What kind of shy is this!!!!)
 
-运行效果如下：
+The effect is as follows:
 
 .. image:: images/touched_io.gif
 
-需要注意的是，因为我们人体（手）有静电，有可能会电到它，导致它的表情有时候会很抽搐。
+It should be noted that because our body (hand) has static electricity, it may be electrically connected to it, causing its expression to sometimes be very convulsive.
 
-灯的开与关
+Light on and off
 ---------------------------
 
-最初上手的时候，我们早已学会了如何控制板子 LED 灯的变化，但那都是别人帮我们做好的，所以今天我们来亲自动手尝试一下，别人是怎么做到的，掌握它后成为别人常说的 别人家的孩子 吧。
+When we first started, we have already learned how to control the changes of the LED lights on the board, but that is what others have done for us, so today we will try it out automatically, how others do it, and become a regular after others. Say someone else’s child.
 
-为此我们准备了以下几个常见的 Led 灯，你会发现它们长短不一，这是为了区分它们的正负极，其中正极是长的那端，所以负极就是短的那端。
+To this end, we have prepared the following common Led lamps, you will find that they are different in length, in order to distinguish between their positive and negative poles, where the positive pole is the long end, so the negative pole is the short end.
 
-提示：区分正负极的意图是希望你在接线的时候，元件（LED）正极接电源正极（+），元件（LED）负极接电源负极（-）。
+Tip: The intention of distinguishing between positive and negative poles is that when you are wiring, the positive pole of the component (LED) is connected to the positive pole (+) of the power supply, and the negative pole of the component (LED) is connected to the negative pole of the power supply (-).
 
 .. image:: images/leds.jpg
 
-我们开始第一步吧，先普通的把灯点亮，也就是直接将其（LED）接到电源上，那么就把大的那家伙直接接到板子的
-3V 和 GND 上吧，3V 指电源正极（3V），GND 指电源负级，也称接地。
+Let's start with the first step. First light the lamp, that is, directly connect it (LED) to the power supply, then connect the big guy directly to the board.
+3V and GND, 3V refers to the positive power supply (3V), GND refers to the negative power supply, also known as ground.
 
 .. image:: images/led.gif
 
-这样就点亮了一盏灯（注意正负极），但这样点亮的灯是不可以控制的，它只会亮，不能灭。
+This will light up a light (note the positive and negative), but the light that is lit can not be controlled, it will only be bright, not extinguished.
 
-本想拿另外一盏灯接上去做对比的，但我们发现一个问题，其他的灯都太短了，所以就交换了以下，用我们的大灯来控制了，可以看到此时接上去灯是不会亮的。
+I wanted to take another light to connect to compare, but we found a problem, the other lights are too short, so we exchanged the following, with our headlights to control, you can see that the lights are connected at this time. It won't light up.
 
 .. image:: images/led_off.jpg
 
-那么我们就通过下面的代码来控制它的亮和灭吧，可以看图中我们使用了 pin2 的引脚来控制。
+Then we use the following code to control its lighting and extinction, we can see that we use pin2 pin to control.
 
 .. code:: python
 
-   from microbit import *
-   pin2.write_digital(1)
+   From microbit import *
+   Pin2.write_digital(1)
 
-可以看到它亮了起来，那就说明我们可以控制了它的亮，这是不是就和最开始入门教程的一致了？
+You can see that it is lit up, which means that we can control its brightness. Is this consistent with the initial tutorial?
 
 .. image:: images/led_on.jpg
 
-那么我们这次就补充一个 Blink（闪烁）的效果吧，使用如下代码。
+Then we will add a Blink effect this time, using the following code.
 
 .. code:: python
 
-   from microbit import *
+   From microbit import *
 
-   while True:
-       pin2.write_digital(1)
-       sleep(200)
-       pin2.write_digital(0)
-       sleep(1000)
+   While True:
+       Pin2.write_digital(1)
+       Sleep(200)
+       Pin2.write_digital(0)
+       Sleep(1000)
 
-运行效果如下：
+The effect is as follows:
 
 .. image:: images/blink.gif
 
 .. Note::
 
-   1. 使用 pin2 引脚进行输出 1 ， 这会让 LED 存在变成高电平，简单认为上就是这个引脚有电压了，效果相当于直接接了电源正极。（原理上应该理解为两个引脚之间形成电势差）。
-   
-   2. 首先先将其点亮，即为 `pin2.write_digital(1)`，之后使用 `sleep(200) ` 让板子休息 200 毫秒。
+   1. Use the pin2 pin to output 1 , which will make the LED become high. It is simply assumed that there is voltage on this pin, and the effect is equivalent to directly connecting the positive terminal of the power supply. (In principle, it should be understood that a potential difference is formed between the two pins).
+   
+   2. First light it up, which is `pin2.write_digital(1)`, then use `sleep(200) ` to let the board rest for 200 milliseconds.
 
-   3. 然后就将其熄灭，也就是 `pin2.write_digital(0)`，之后再休息 1000 毫秒，也就是 1 秒。
+   3. Then turn it off, which is `pin2.write_digital(0)`, then rest for 1000 milliseconds, which is 1 second.
 
-   4. 将上述过程重新来一遍。
+   4. Repeat the process above.

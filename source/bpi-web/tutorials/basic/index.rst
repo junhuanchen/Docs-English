@@ -13,4 +13,3 @@
    array
    color
    function
-   

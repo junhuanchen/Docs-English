@@ -1,62 +1,61 @@
-# 硬體開發板 ( 更新韌體 )
+#硬体开发 board (update firmware)
 
-如果已經完成了 開發板的初始化設定且也順利連接上所在場所的 Wi-Fi，接著就可以準備更新 開發板的韌體程序了，又或者如果是使用編輯器安裝版，可以再不用初始化的狀態下，直接透過安裝版完成韌體更新。
+If you have completed the initialization settings of the development board and also successfully connected to the Wi-Fi location, you can then prepare to update the firmware of the development board, or if you are using the editor installation version, you can no longer initialize the state. Next, complete the firmware update directly through the installation version.
 
-## 更新韌體方法 1：使用安裝版進行更新
+## Update Firmware Method 1: Update with the installed version
 
-在電腦中打開安裝版 ( 不清楚什麼是安裝版，請參考 [編輯器](../index.html#software) )，將 開發板使用 USB 線連接電腦，確認安裝版已經正確讀取到 開發板之後 ( 上方會出現 開發板的 Device ID 以及版本號碼 )，按下 `Ctrl + W` 打開工具列，滑鼠選擇「*工具 > 更新韌體*」，就能開始更新。
+Open the installation version on the computer (not sure what is the installation version, please refer to [editor] (../index.html#software)), connect the development board to the computer with a USB cable, and confirm that the installation version has been correctly read and developed. After the board (the device ID and version number of the development board will appear above), press `Ctrl + W` to open the toolbar, and select "*Tools > Update Firmware*" to start the update.
 
-> *特別提醒！如果無法出現 Device ID 以及版本號碼*，**可能需要先手動更新開發板韌體**。
-> 
-> 更新韌體方式請按照以下步驟進行
+> *Special reminder! If the Device ID and version number* cannot be displayed, ** may need to manually update the board firmware**.
 >
-> - [初始化方法 2：連線到開發板進行初始化](#step2)
-> - [更新韌體方法 2：透過 Wi-Fi 遠端更新](ota.md#step2)
+> Update the firmware method, please follow the steps below
+>
+> - [Initialization Method 2: Wire to the development board for initialization] (#step2)
+> - [Update Firmware Method 2: Update via Wi-Fi Remote] (ota.md#step2)
 
-![硬體 ( 更新韌體 )](../images/zh-tw/docs/webbit/info/ota-01.jpg)
+![Hardware (Update Firmware)](../images/zh-tw/docs/webbit/info/ota-01.jpg)
 
-如果系統有偵測到有新版本韌體，也會在連接電腦後彈出視窗提示。
+If the system detects a new version of the firmware, it will pop up a window prompt after connecting to the computer.
 
-![硬體 ( 更新韌體 )](../images/zh-tw/docs/webbit/info/ota-02.jpg)
+![Hardware (Update Firmware)](../images/zh-tw/docs/webbit/info/ota-02.jpg)
 
-如果沒有彈出視窗提示，亦會在上方的訊息文字裡，出現提示更新的訊息。
+If there is no pop-up window prompt, a message prompting for an update will appear in the message text above.
 
-![硬體 ( 更新韌體 )](../images/zh-tw/docs/webbit/info/ota-04.jpg)
+![Hardware (Update Firmware)](../images/zh-tw/docs/webbit/info/ota-04.jpg)
 
-點選更新後，會再度提示請勿關閉程序或移除 USB 線，按下確認後就開始更新。
+After clicking the update, you will be prompted again not to close the program or remove the USB cable, and press the confirmation to start the update.
 
-![硬體 ( 更新韌體 )](../images/zh-tw/docs/webbit/info/ota-03.jpg)
+![Hardware (Update Firmware)](../images/zh-tw/docs/webbit/info/ota-03.jpg)
 
-更新時最上方的訊息文字，會同步顯示更新的進度。
+The message text at the top of the update will show the progress of the update simultaneously.
 
-![硬體 ( 更新韌體 )](../images/zh-tw/docs/webbit/info/ota-05.jpg)
+![Hardware (Update Firmware)](../images/zh-tw/docs/webbit/info/ota-05.jpg)
 
-更新直到 100% 之後會顯示目前的版本號碼，表示 開發板韌體已經更新完成。( 下圖範例已經從 0.1.07_0105 更新為 0.1.09_0401_01 )
+The current version number will be displayed after the update until 100%, indicating that the development board firmware has been updated. (The example below has been updated from 0.1.07_0105 to 0.1.09_0401_01)
 
-![硬體 ( 更新韌體 )](../images/zh-tw/docs/webbit/info/ota-06.jpg)
+![Hardware (Update Firmware)](../images/zh-tw/docs/webbit/info/ota-06.jpg)
 
-## 更新韌體方法 2：透過 Wi-Fi 遠端更新
+## Update Firmware Method 2: Remote Update via Wi-Fi
 
-遠端更新 ( OTA ) 可以在 開發板連上網路後，連線遠端伺服器更新取得最新版本韌體，更新步驟如下：
+Remote Update (OTA) After the development board is connected to the network, the remote server is updated to obtain the latest firmware version. The update steps are as follows:
 
-- 步驟 1、確認開發板已經可以正常連上 WiFi，若不行，請檢查 WiFi 連線或重新進行初始化設定。
-- 步驟 2、移除開發板電源。
-- 步驟 3、接上開發板電源，**在白色跑馬燈燈顯示文字的時候，按住按鈕 A，持續按住按鈕 A，直到開發板閃完紅燈、綠燈熄滅上線後，此時會再聽到蜂鳴器發出輕微的一個聲響，再放開按鈕 A**。
+- Step 1. Confirm that the development board is connected to WiFi normally. If not, please check the WiFi connection or re-initialize the settings.
+- Step 2. Remove the power from the development board.
+- Step 3. Connect the power supply to the development board. **When the white marquee light displays the text, press and hold button A, and keep pressing button A until the development board flashes red and the green light goes out. When you hear a slight sound from the buzzer, release the button A**.
 
-  ![硬體 ( 更新韌體 )](../images/zh-tw/docs/webbit/info/ota-06.gif)
+  ![Hardware (Update Firmware)](../images/zh-tw/docs/webbit/info/ota-06.gif)
 
-- 步驟 4、完成後會看到開發板的點矩陣，由第一顆燈開始亮藍燈，表示開始進行更新，*當藍燈全部亮起接著熄滅後，表示更新完成*。
+- Step 4. After completion, you will see the dot matrix of the development board. The first light starts to light blue, indicating that the update is started. * When the blue light is all on and then off, the update is completed*.
 
-  ![硬體 ( 更新韌體 )](../images/zh-tw/docs/webbit/info/ota-07.gif)
+  ![Hardware (Update Firmware)](../images/zh-tw/docs/webbit/info/ota-07.gif)
 
-- 步驟 6、更新完成後開發板會閃紅燈自動進行連線，連線成功會亮綠燈後綠燈熄滅，表示遠端更新完成，此時也可以透過 WiFi 連線開發板，由 192.168.4.1 進入設定畫面，在設定畫面最下方會看到開發板的版本號變成新的版本。
+- Step 6. After the update is completed, the development board will flash red light to automatically connect. After the connection is successful, the green light will be off and the green light will be off, indicating that the remote update is complete. At this time, the development board can also be connected via WiFi. Enter 192.168.4.1. In the setting screen, the version number of the development board will be changed to the new version at the bottom of the setting screen.
 
-## 還原初始設定值
+## Restore initial settings
 
-如果我們想要還原硬體出廠時的設定值，可以透過類似 Wi-Fi 遠端更新的方式來實現，步驟如下：
+If we want to restore the factory default settings, we can do this by means of a Wi-Fi remote update, as follows:
 
-- 步驟 1、移除開發板電源。
-- 步驟 2、**同時按住按鈕 A 和 B。**
-- 步驟 3、接上開發板電源，**聽到蜂鳴器發出聲響後放開按鈕 A 與 B**，此時開發板已經恢復出廠設定值。( **恢復設定值會將自訂的 Wi-Fi 帳號、密碼、自訂的 device SSID 和密碼清除，這個步驟會造成開發板無法連接所在場所的 Wi-Fi** )
-- 步驟 4、重新執行初始化設定，參考：[硬體 ( 初始化設定 )](setup.html)
-
+- Step 1. Remove the power from the development board.
+- Step 2.** Press and hold buttons A and B simultaneously. **
+- Step 3. Connect the power supply to the development board. ** Release the buttons A and B** after the buzzer sounds. The development board has been restored to the factory settings. (**Recovery settings will clear the custom Wi-Fi account, password, customized device SSID and password. This step will cause the development board to be unable to connect to the Wi-Fi** of the location)
+- Step 4. Re-execute the initial settings, refer to: [Hardware (Initial Settings)] (setup.html)

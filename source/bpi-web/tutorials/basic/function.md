@@ -1,64 +1,63 @@
-# 函式
+#函
 
-函式積木可以幫助我們簡化或管理較為複雜的程序邏輯，因為在寫程序的時候，常會遇到需要重複撰寫並執行的程序碼，如果每重複一次都得重寫一次，勢必會造成整份程序邏輯的複雜度，透過函式，將這些重複的程序集中管理，需要使用的時候再去呼叫函式，就可以執行對應的內容。
+Functional building blocks can help us simplify or manage more complex program logic, because when writing a program, we often encounter code that needs to be written and executed repeatedly. If we have to rewrite it once every time, it will inevitably cause the whole program. The complexity of the logic, through the function of the centralized management of these repeated procedures, you need to use the call function, you can execute the corresponding content.
 
-## 函式積木清單
+## Functional building blocks list
 
-函式積木預設有三塊，分別是建立函式、建立帶有回傳值的函式、函式內判斷並回傳值。
+The function building block is pre-configured with three blocks, which are to establish a function, to establish a function with a return value, to judge within the function, and to return the value.
 
-![函式](../images/zh-tw/docs/webbit/basic/function-01.jpg)
+![Function](../images/zh-tw/docs/webbit/basic/function-01.jpg)
 
-## 建立函式
+##Build function
 
-「建立函式」積木可以將許多重複會用到的程序積木包裝成函示。
+The "Building Function" building block can be used to package a number of program blocks that are used repeatedly.
 
-![函式](../images/zh-tw/docs/webbit/basic/function-03.jpg)
+![Function](../images/zh-tw/docs/webbit/basic/function-03.jpg)
 
-使用建立函式積木*並不會執行函式*，因為函式是*定義「需要執行的內容」*，建立完成函式積木內容後，在函式積木的目錄裡，就會出現對應的*執行函式積木*，使用這塊積木才表示執行這個函式。
+Using the building function * does not execute the function *, because the function is * defines "content to be executed" *, after the completion of the function building block content, in the directory of the function building block, the corresponding * Execute the function building block*, using this building block to indicate the execution of this function.
 
-![函式](../images/zh-tw/docs/webbit/basic/function-02.jpg)
+![Function](../images/zh-tw/docs/webbit/basic/function-02.jpg)
 
-下圖建立了 a 和 b 兩個函式之後，使用*呼叫函式 a 和 b*，網頁執行後，綠色小怪獸就會說出蘋果，紅色小怪獸就會說出香蕉。( *如果單純只有建立函式而不呼叫，執行後什麼事情都不會發生* )
+After the two functions a and b are created, use the *call functions a and b*. After the web page is executed, the green monster will say the apple, and the red monster will say the banana. (*If you simply create a function without calling, nothing will happen after execution*)
 
-![函式](../images/zh-tw/docs/webbit/basic/function-05.jpg)
+![Function](../images/zh-tw/docs/webbit/basic/function-05.jpg)
 
-除了單純的使用函式，我們也可以建立「*函式內的变量*」，點選函式積木前方的小齒輪，就可以新增变量。
+In addition to simply using the function, we can also create a "variable* in the * function" and click on the pinion in front of the building block to add a variable.
 
-![函式](../images/zh-tw/docs/webbit/basic/function-06.gif)
+![Function](../images/zh-tw/docs/webbit/basic/function-06.gif)
 
-新增函式內的变量後，執行函式時也會看到放入变量數值的缺口。( 有幾個函式內的变量就會有幾個缺口 )
+After adding a variable in the function, you will also see the gap in the value of the variable when you execute the function. (There are several gaps in variables in several functions)
 
-![函式](../images/zh-tw/docs/webbit/basic/function-07.jpg)
+![Function](../images/zh-tw/docs/webbit/basic/function-07.jpg)
 
-函式內的变量讓程序增加了許多彈性，並也可以減少許多重的程序碼，舉例來說，透過函式和函式內变量，就能做出提供变量數值，就算出數值加總的函式。
+The variables in the function add a lot of flexibility to the program, and can also reduce a lot of heavy code. For example, through the function and the variables in the function, you can make a value by adding the value of the variable. formula.
 
-![函式](../images/zh-tw/docs/webbit/basic/function-08.jpg)
+![Function](../images/zh-tw/docs/webbit/basic/function-08.jpg)
 
-## 建立帶有回傳值的函式
+## Creating a function with a return value
 
-「建立帶有回傳值的函式」積木可以讓執行的函式，變成單純的數值，這對於一些複雜的程序應用相當有幫助。
+The "Build a function with a return value" building block can make the executed function a simple value, which is quite helpful for some complex program applications.
 
-![函式](../images/zh-tw/docs/webbit/basic/function-09.jpg)
+![Function](../images/zh-tw/docs/webbit/basic/function-09.jpg)
 
-如果使用的是「建立帶有回傳值的函式」，就會發現執行函式時積木前方多了一個作為組合用的形狀。( 下圖是延伸前一段建立帶有函式內变量的函式 )
+If you are using "Build a function with a return value", you will find that there is one more shape in front of the building block for the combination. (The following figure shows the function of creating a variable with a function before extending the previous section)
 
-![函式](../images/zh-tw/docs/webbit/basic/function-10.jpg)
+![Function](../images/zh-tw/docs/webbit/basic/function-10.jpg)
 
-透過函式內的变量，搭配函式回傳的數值，就能做到依據提供的变量數值不同 ( x、y 不同值 )，而產生不同的結果。
+Through the variables in the function and the values ​​returned by the function, different values ​​(x and y different values) can be obtained according to the variables provided, and different results are produced.
 
-![函式](../images/zh-tw/docs/webbit/basic/function-11.jpg)
+![Function](../images/zh-tw/docs/webbit/basic/function-11.jpg)
 
-## 函式內判斷並回傳值
+## Function to judge and return value
 
-「函式內判斷並回傳值」積木必須和「建立帶有回傳值的函式」的積木搭配，主要作為判斷要回傳什麼數值使用。( 這個積木也必須放在函式內才能正常運作 ) 
+The "Judgement and return value in the function" block must be matched with the building block of "Build a function with a return value", mainly used to determine what value to return. (This brick must also be placed in the function to function properly)
 
-![函式](../images/zh-tw/docs/webbit/basic/function-12.jpg)
+![Function](../images/zh-tw/docs/webbit/basic/function-12.jpg)
 
-透過這個積木，搭配函式內的变量，就可以透過傳入的变量數值，最後回傳 x 和 y 哪個比較大的結果。
+Through this building block, with the variables in the function, you can pass the value of the variable passed in, and finally return the larger result of x and y.
 
-![函式](../images/zh-tw/docs/webbit/basic/function-13.jpg)
+![Function](../images/zh-tw/docs/webbit/basic/function-13.jpg)
 
-因為「函式內判斷並回傳值」積木具備邏輯判斷的功能，所以也可以使用邏輯積木加上一個变量來做判斷，就能做出一模一樣的效果。
+Because the "judge and return value in the function" building block has the function of logical judgment, you can also use the logical building block plus a variable to make the judgment, you can make the same effect.
 
-![函式](../images/zh-tw/docs/webbit/basic/function-14.jpg)
-
+![Function](../images/zh-tw/docs/webbit/basic/function-14.jpg)

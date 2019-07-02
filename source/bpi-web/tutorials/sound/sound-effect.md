@@ -1,30 +1,29 @@
-# 特殊音效
+# Special sound effects
 
-教育版預設三十幾種特殊音效，裡頭包含了動物音效、環境音效、人類生活音效...等，藉由不同音效和小怪獸、開發板的互相搭配，就能實現許多豐富的生活情境。
+The educational version presets more than 30 special sound effects, including animal sound effects, environmental sound effects, human life sound effects, etc., through the combination of different sound effects and small monsters and development boards, many rich life situations can be realized. .
 
-## 積木清單
+## Building block list
 
-特殊音效分成三個項目，分別是動物、人聲和特殊音效。
+The special sound effects are divided into three items, namely animals, vocals and special sound effects.
 
-![特殊音效](../images/zh-tw/docs/webbit/sound/sound-effect-01.jpg)
+![Special sound effects](../images/zh-tw/docs/webbit/sound/sound-effect-01.jpg)
 
-## 點擊小怪獸發出音效
+## Click on the little monster to make a sound effect
 
-搭配點擊小怪獸的積木，網頁執行後，用滑鼠點擊小怪獸就會發出對應的特殊音效。
+With the building blocks of the little monsters, after the webpage is executed, clicking the little monster with the mouse will give the corresponding special sound effect.
 
-![特殊音效](../images/zh-tw/docs/webbit/sound/sound-effect-02.jpg)
+![Special sound effects](../images/zh-tw/docs/webbit/sound/sound-effect-02.jpg)
 
-## 替小怪獸的反彈加入音效
+## Add sound to the bounce of the little monster
 
-教育版內建許多有趣的範例，點選右上方選單「範例」，打開範例清單。
+There are many interesting examples built into the education version. Click on the top right menu "Example" to open the sample list.
 
-![特殊音效](../images/zh-tw/docs/webbit/sound/sound-effect-03.jpg)
+![Special sound effects](../images/zh-tw/docs/webbit/sound/sound-effect-03.jpg)
 
-打開範例清單後，開啟基礎操作裡的「小怪獸移動時碰到邊緣反彈」。
+After opening the sample list, open the "Baby Bounce when the little monster moves" in the basic operation.
 
-![特殊音效](../images/zh-tw/docs/webbit/sound/sound-effect-04.jpg)
+![Special sound effects](../images/zh-tw/docs/webbit/sound/sound-effect-04.jpg)
 
-開啟範例後，在積木中加入「當綠色怪獸碰到舞台畫面的四邊緣」，並在執行的區域內加入特殊音效，網頁執行後，當綠色怪獸碰到畫面邊緣，就會發出特殊音效。
+After opening the example, add "When the green monster hits the four edges of the stage screen" in the building block, and add a special sound effect in the execution area. After the web page is executed, when the green monster touches the edge of the screen, a special sound effect will be emitted.
 
-![特殊音效](../images/zh-tw/docs/webbit/sound/sound-effect-05.jpg)
-
+![Special sound effects](../images/zh-tw/docs/webbit/sound/sound-effect-05.jpg)

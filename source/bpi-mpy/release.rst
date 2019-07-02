@@ -1,73 +1,72 @@
+Release center
+=========================================================== ===
 
-发布中心
-=====================================================
+Here is the release version of the MicroPyhton firmware and software for the BPI-STEAM system.
 
-这里是 BPI-STEAM 体系的 MicroPyhton 固件、软件的 release 版本发布中心。
-
-release firmware
+Release firmware
 ---------------------------
 
-源自于官方标准代码编译的固件，添加了许多额外的特性，如 Smartconfig、Bluetooth、I2S、XSocket、microbit 等等。
+Firmware compiled from official standard code adds many additional features such as Smartconfig, Bluetooth, I2S, XSocket, microbit, and more.
 
-- `使用教程 <https://github.com/BPI-STEAM/BPI-BIT-MicroPython>`_ & `项目主页 <https://github.com/BPI-STEAM/micropython>`_
-- `历史版本 & 更新日志 <https://github.com/BPI-STEAM/BPI-BIT-MicroPython/releases>`_
+- `Using the tutorial <https://github.com/BPI-STEAM/BPI-BIT-MicroPython>`_ & `Project Homepage <https://github.com/BPI-STEAM/micropython>`_
+- `History Version & Update Log <https://github.com/BPI-STEAM/BPI-BIT-MicroPython/releases>`_
 
 .. image:: images/github-firmware.png
 
-mpy-flasher
+Mpy-flasher
 ---------------------------
 
-一款基于 esptool 的 GUI 工具，可用于烧写 MicroPython 和 Webduino 固件，你也可以自己定义配置固件文件。
+An esptool-based GUI tool for programming MicroPython and Webduino firmware, or you can define your own firmware file.
 
-- `使用教程 <https://github.com/BPI-STEAM/mpy-flasher>`_ & `项目主页 <https://github.com/BPI-STEAM/mpy-flasher>`_
-- `历史版本 & 更新日志 <https://github.com/BPI-STEAM/mpy-flasher/releases>`_
+- `Using the tutorial <https://github.com/BPI-STEAM/mpy-flasher>`_ & `Project Homepage <https://github.com/BPI-STEAM/mpy-flasher>`_
+- `History Version & Update Log <https://github.com/BPI-STEAM/mpy-flasher/releases>`_
 
 .. image:: images/github-mpy-flasher.png
 
-mpy-editor
+Mpy-editor
 ---------------------------
 
-一款易于使用的 MicroPython 编辑器，“简单！容易！快速！开始你的 MicroPython 编程吧！”
+An easy-to-use MicroPython editor, "Simple! Easy! Fast! Start your MicroPython programming!"
 
-- `使用教程 <https://github.com/BPI-STEAM/mpy-editor>`_ & `项目主页 <https://github.com/BPI-STEAM/mpy-editor>`_
-- `历史版本 & 更新日志 <https://github.com/BPI-STEAM/mpy-editor/releases>`_
+- `Using the tutorial <https://github.com/BPI-STEAM/mpy-editor>`_ & `Project Homepage <https://github.com/BPI-STEAM/mpy-editor>`_
+- `History Version & Update Log <https://github.com/BPI-STEAM/mpy-editor/releases>`_
 
 .. image:: images/github-mpy-editor.png
 
-mpfshell-lite
+Mpfshell-lite
 ---------------------------
 
-一款 Shell 型 MicroPython 文件资源管理器⛺，随时随地的运行你的 MicroPython 代码。
+A shell-like MicroPython file explorer that runs your MicroPython code anytime, anywhere.
 
-- `使用教程 <https://github.com/BPI-STEAM/mpfshell-lite>`_ & `项目主页 <https://github.com/BPI-STEAM/mpfshell-lite>`_
-- `历史版本 & 更新日志 <https://github.com/BPI-STEAM/mpfshell-lite/releases>`_
+- `Using the tutorial <https://github.com/BPI-STEAM/mpfshell-lite>`_ & `Project Homepage <https://github.com/BPI-STEAM/mpfshell-lite>`_
+- `History Version & Update Log <https://github.com/BPI-STEAM/mpfshell-lite/releases>`_
 
 .. image:: images/github-mpfshell-lite.png
 
-vscode-mpfshell
+Vscode-mpfshell
 ---------------------------
 
-应用于 VSCode 的 Mpfshell 插件。
+The Mpfshell plugin for VSCode.
 
-- `使用教程 <https://marketplace.visualstudio.com/items?itemName=junhuanchen.mpfshell>`_ & `项目主页 <https://github.com/junhuanchen/vscode-mpfshell>`_
-- `历史版本 & 更新日志 <https://marketplace.visualstudio.com/items/junhuanchen.mpfshell/changelog>`_
+- `Using the tutorial <https://marketplace.visualstudio.com/items?itemName=junhuanchen.mpfshell>`_ & `Project Homepage <https://github.com/junhuanchen/vscode-mpfshell>`_
+- `History Version & Update Log <https://marketplace.visualstudio.com/items/junhuanchen.mpfshell/changelog>`_
 
 .. image:: images/github-vscode-mpfshell.png
 
-pycharm-mpfshell
+Pycharm-mpfshell
 ---------------------------
 
-应用于 Pycharm 专业 IDE 的 Mpfshell 插件。
+The Mpfshell plugin for the Pycharm Professional IDE.
 
-- `使用教程 <https://github.com/junhuanchen/intellij-micropython>`_ & `项目主页 <https://github.com/junhuanchen/intellij-micropython>`_
-- `历史版本 & 更新日志 <https://github.com/junhuanchen/intellij-micropython/releases>`_
+- `Using the tutorial <https://github.com/junhuanchen/intellij-micropython>`_ & `Project Homepage <https://github.com/junhuanchen/intellij-micropython>`_
+- `History Version & Update Log <https://github.com/junhuanchen/intellij-micropython/releases>`_
 
 .. image:: images/github-intellij-mpfshell.png
 
-scratch3-adapter
+Scratch3-adapter
 ---------------------------
 
-- `使用教程 <http://adapter.codelab.club/user_guide/usage/>`_ & `项目主页 <https://github.com/Scratch3Lab/codelab_adapter_extensions>`_
-- `历史版本 & 更新日志 <http://adapter.codelab.club/changelog/>`_
+- `Using the tutorial <http://adapter.codelab.club/user_guide/usage/>`_ & `Project Homepage <https://github.com/Scratch3Lab/codelab_adapter_extensions>`_
+- `History Version & Update Log <http://adapter.codelab.club/changelog/>`_
 
 .. image:: images/github-adapter-scratch.png

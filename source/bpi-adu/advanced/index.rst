@@ -1,10 +1,10 @@
-进阶开发
-========================================
+Advanced development
+=================================================
 
-从这里开始，就正式进入使用 PlatformIO 的开发环节了，请按下述教程开始你的进阶之旅吧。
+From here on, you will officially enter the development phase of using PlatformIO. Please follow the tutorial below to start your advanced journey.
 
 .. toctree::
-    :maxdepth: 1
-    :numbered:
-    
-    setting
+    :maxdepth: 1
+    :numbered:
+    
+    Setting

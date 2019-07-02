@@ -1,43 +1,41 @@
-# 網路廣播 
+#网络广播
 
-的網路廣播功能，不僅能讓 與 開發板彼此資訊互動，更可以實現一對多、多對一、虛實互動、遠距廣播...等多樣化的操控情境，透過廣播功能的實現，便能將物聯網的應用發揮到極致。
+The network broadcast function not only allows the development board to interact with each other, but also realizes a variety of control scenarios such as one-to-many, many-to-one, virtual and real interaction, remote broadcast, etc. Can make the application of the Internet of Things to the extreme.
 
-## 廣播積木清單
+## Broadcast Block List
 
-廣播積木包含一塊負責發送廣播訊號的積木、一塊負責接收廣播訊號的積木和一塊呈現廣播訊號的積木。
+The broadcast block consists of a block that is responsible for transmitting broadcast signals, a block that receives broadcast signals, and a block that displays broadcast signals.
 
-![網路廣播](../images/zh-tw/docs/webbit/extension/broadcast-01.jpg)
+![Webcast](../images/zh-tw/docs/webbit/extension/broadcast-01.jpg)
 
-## 發送廣播訊息
+## Sending a broadcast message
 
-「發送廣播訊息」積木可以指定一個頻道名稱，以及要向這個頻道發送的訊息文字，只要頻道名稱相同，所有在該頻道上的裝置或人員，都能收到廣播訊息，*發送廣播訊息不限制只有實體裝置能發送，不論是實體裝置、虛擬裝置、沒有開發板的程序...等，都能夠向指定頻道發送訊息*。
+The "send broadcast message" building block can specify a channel name and the message text to be sent to this channel. As long as the channel name is the same, all devices or personnel on the channel can receive broadcast messages. * Sending broadcast messages is not restricted. Only physical devices can send, whether it is a physical device, a virtual device, a program without a development board, etc., can send a message* to a designated channel.
 
-> 「發送廣播訊息」積木屬於「*發送完成才會繼續執行後方程序*」的類型 ( 點擊前方問號小圖示會提示 )，當編輯畫面中有這塊積木，*執行時當程序遇到這塊積木會暫停，直到發送廣播訊息後才會再繼續*。
+> The "send broadcast message" building block belongs to the type of "* send the completion of the program after the completion of the program*" (click on the small question mark in the front of the question icon), when the block has the block in the edit screen, * when the program encounters this Block bricks will pause until the broadcast message is sent before continuing.
 
-![網路廣播](../images/zh-tw/docs/webbit/extension/broadcast-02.jpg)
+![Webcast](../images/zh-tw/docs/webbit/extension/broadcast-02.jpg)
 
-## 接收廣播訊息
+## Receiving broadcast messages
 
-「接收廣播訊息」積木可以指定一個頻道名稱，就能不斷收聽這個頻道的變化，只要有人或開發板向這個頻道發送訊息，就能夠透過廣播訊息的積木顯示，*接收廣播訊息不限制只有實體裝置能接收，不論是實體裝置、虛擬裝置、沒有開發板的程序...等，都能夠接收指定頻道的訊息*。
+The "receive broadcast message" building block can specify a channel name to continuously listen to changes in the channel. As long as someone or the development board sends a message to this channel, it can display through the building blocks of the broadcast message. * Receiving broadcast messages does not limit only physical devices. Can receive, whether it is a physical device, a virtual device, a program without a development board, etc., can receive the message of the specified channel*.
 
-> 「接收廣播訊息」積木屬於「*不間斷收聽頻道*」的類型 ( 點擊前方問號小圖示會提示 )，不需要放在重複迴圈內，就會自行不斷收聽頻道訊息。
+> The "Receive Broadcast Message" building block belongs to the type of "*Uninterrupted Listening Channel*" (click on the small question mark in the front) and you don't need to put it in the repeating loop, you will continue to listen to the channel message yourself.
 
-![網路廣播](../images/zh-tw/docs/webbit/extension/broadcast-03.jpg)
+![Webcast](../images/zh-tw/docs/webbit/extension/broadcast-03.jpg)
 
-舉例來說，使用者 A 可以在「點擊小怪獸」的同時，向頻道 test 發送廣播訊號，而使用者 B 和 C 負責收聽 test 頻道，如果有收到，就讓的小怪獸顯示收到的廣播訊號。
+For example, user A can send a broadcast signal to channel test while "clicking on the little monster", while users B and C are responsible for listening to the test channel, and if so, let the little monster display the received broadcast. Signal.
 
-![網路廣播](../images/zh-tw/docs/webbit/extension/broadcast-04.gif)
+![Webcast](../images/zh-tw/docs/webbit/extension/broadcast-04.gif)
 
-又或者可以使用 開發板的按鈕開關，按下 A 的時候向 test 頻道發送文字 A，按下 B 的時候發送文字 B。
+Or you can use the button switch of the development board, send the text A to the test channel when you press A, and send the text B when you press B.
 
-![網路廣播](../images/zh-tw/docs/webbit/extension/broadcast-05.jpg)
+![Webcast](../images/zh-tw/docs/webbit/extension/broadcast-05.jpg)
 
-收聽 test 頻道的的開發板可以撰寫邏輯判斷，當收到 A 的時候顯示紅色的 A，收到 B 的時候顯示藍色的 B。
+The development board listening to the test channel can write a logical judgment, displaying a red A when A is received and a blue B when receiving B.
 
-![網路廣播](../images/zh-tw/docs/webbit/extension/broadcast-06.jpg)
+![Webcast](../images/zh-tw/docs/webbit/extension/broadcast-06.jpg)
 
-兩塊開發板的程序都執行後，點擊負責發送廣播的開發板的按鈕開關，就可以看到另外一塊開發板顯示對應的訊號。
+After the two development board programs are executed, click the button switch of the development board responsible for sending the broadcast, and you can see that another development board displays the corresponding signal.
 
-![網路廣播](../images/zh-tw/docs/webbit/extension/broadcast-07.gif)
-
-
+![Webcast](../images/zh-tw/docs/webbit/extension/broadcast-07.gif)

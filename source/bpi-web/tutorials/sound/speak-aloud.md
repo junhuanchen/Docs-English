@@ -1,38 +1,37 @@
-# 語音朗讀
+#语音读
 
-語音朗讀是透過電腦的語音合成器，唸出我們指定的語言，教育版的語音朗讀可以輕鬆做出語音報時器、語音通知、語音對話...等創意應用，更可以調整語音的速度和音調，變化出許多有趣的花樣。
+Voice reading is through the computer's speech synthesizer, and we can pronounce the language we specify. The educational version of the speech reading can easily make creative applications such as voice time, voice notification, voice dialogue, etc., and can adjust the speed of the voice and The tone changes a lot of interesting patterns.
 
-## 積木說明
+## Description of building blocks
 
-語音朗讀積木包含三種語 ( 中文、英文或日文 )，五種音調和五種速度。
+The speech reading block contains three languages ​​(Chinese, English or Japanese), five tones and five speeds.
 
-> 注意，*在「安裝版」編輯器中，可能無法正常朗讀中文和日文*，若遇到無法發音的狀況，請使用「網頁版」版本的編輯器。( 參考 [編輯器](../index.html#software) )
+> Note that * In the "Installed" editor, Chinese and Japanese* may not be read normally. If you are unable to pronounce it, please use the "Web Edition" version of the editor. (Refer to [editor](../index.html#software) )
 
-![語音朗讀](../images/zh-tw/docs/webbit/sound/speak-aloud-01.jpg)
+![Voice reading] (../images/zh-tw/docs/webbit/sound/speak-aloud-01.jpg)
 
-語音朗讀積木屬於「*執行完成才會繼續執行後方程序*」的類型 ( 點擊前方問號小圖示會提示 )，當程序中使用了語音朗讀積木，*朗讀結束後才會接著執行其他程序*，使用上要特別注意。
+The voice reading block is of the type "* will continue to execute the program after execution *" (click on the small question mark in the front), when the program uses the voice reading block, * will continue to execute other programs after the end of the reading *, Pay special attention to the use.
 
-![語音朗讀](../images/zh-tw/docs/webbit/sound/speak-aloud-02.jpg)
+[[Voice reading] (../images/zh-tw/docs/webbit/sound/speak-aloud-02.jpg)
 
-## 朗讀文字
+## Reading text
 
-若要朗讀文字，只需要在後方文字積木輸入對應的文字，網頁執行後就能從電腦喇叭聽到語音。
+To read the text aloud, you only need to enter the corresponding text in the rear text block. After the web page is executed, you can hear the voice from the computer speaker.
 
-![語音朗讀](../images/zh-tw/docs/webbit/sound/speak-aloud-03.jpg)
+![Voice reading](../images/zh-tw/docs/webbit/sound/speak-aloud-03.jpg)
 
-## 朗讀不同段落的文字
+## Read the text of different paragraphs
 
-如果要朗讀不同段落的文字，第一種方法可使用建立字串積木，配合变量積木，在網頁執行後就會從電腦喇叭聽到語音。
+If you want to read the text of different paragraphs, the first method can use the building block to match the variable building blocks, and the voice will be heard from the computer speaker after the web page is executed.
 
-![語音朗讀](../images/zh-tw/docs/webbit/sound/speak-aloud-04.jpg)
+![Voice reading] (../images/zh-tw/docs/webbit/sound/speak-aloud-04.jpg)
 
-第二種方法可以透過語音朗讀積木的特性，將不同段落的文字依序接在後方，網頁執行後再朗讀完第一段，就會接著朗讀第二段。
+The second method can read the characteristics of the building blocks by voice, and sequentially connect the texts of different paragraphs to the rear. After the webpage is executed, the first paragraph is read aloud, and then the second paragraph is read.
 
-![語音朗讀](../images/zh-tw/docs/webbit/sound/speak-aloud-05.jpg)
+![Voice reading] (../images/zh-tw/docs/webbit/sound/speak-aloud-05.jpg)
 
-## 朗讀輸入的文字
+## Read the input text
 
-由於「在對話框中輸入文字」和語音朗讀積木特性相同，搭配重複迴圈，就能做到透過語音朗讀，唸出輸入的文字。
+Since the "Enter text in the dialog box" and the voice reading block have the same characteristics, with the repeated loops, you can read through the voice and read the input text.
 
-![語音朗讀](../images/zh-tw/docs/webbit/sound/speak-aloud-06.jpg)
-
+![Voice reading] (../images/zh-tw/docs/webbit/sound/speak-aloud-06.jpg)

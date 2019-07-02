@@ -1,125 +1,122 @@
-# 邏輯
+#逻辑
 
-在日常生活裡，不論是寫程序、算數學，法庭攻防，甚至是路上交通、買賣東西或要不要起床，都包含許多「邏輯」的成分，邏輯可做許多的條件和判斷，當滿足了某些條件就會執行某件事，例如聽見鬧鐘響就該起床、看到綠燈才可以行進...等狀況，就是一些簡單的邏輯判斷。
+In daily life, whether it is writing programs, mathematics, court offense and defense, or even traffic on the road, buying or selling things, or getting up, there are many "logic" components. The logic can do many conditions and judgments. Some conditions will perform something, such as hearing the alarm ringing, getting up, seeing the green light to travel, etc., etc., is a simple logical judgment.
 
-## 邏輯積木清單
+## Logic building list
 
-邏輯的積木分別由一個主要的積木「如果...執行...」( 前方有藍色小齒輪的積木 )，搭配九種邏輯判斷的積木 ( 判斷式、邏輯運算子、數字型態、空值、包含值、真假值...等 )。
+The logical building blocks are respectively composed of a main building block "If...execution..." (the building blocks with blue pinions in front), with nine logically judged building blocks (judgment, logical operator, digital type, empty Value, inclusion value, true and false value, etc.).
 
-![邏輯](../images/zh-tw/docs/webbit/basic/logic-01.jpg)
+![Logic](../images/zh-tw/docs/webbit/basic/logic-01.jpg)
 
-## 邏輯判斷
+## Logic judgment
 
-「邏輯判斷」積木預設有兩種型態的組裝「缺口」，在上方比較小的是「判斷條件」，下方比較大的是「執行內容」，代表著*如果情況滿足判斷條件 ( 判斷回傳為「真」或「ture」 )，就會執行對應的內容*。
+The "logical judgment" building blocks are pre-configured with two types of assembly "gap". The smaller one is "judgment condition", and the larger one is "execution content", which means * if the situation satisfies the judgment condition (decision back) Passing "true" or "true" will execute the corresponding content*.
 
-![邏輯](../images/zh-tw/docs/webbit/basic/logic-02.jpg)
+![Logic](../images/zh-tw/docs/webbit/basic/logic-02.jpg)
 
-點選左上方的*藍色小齒輪*，可以新增邏輯判斷的條件，點一下可以打開，再點一下可以關閉。
+Click on the *blue pinion* at the top left to add a logical judgment condition. Click to open it, then click it to close it.
 
-![邏輯](../images/zh-tw/docs/webbit/basic/logic-03.gif)
+![Logic](../images/zh-tw/docs/webbit/basic/logic-03.gif)
 
-邏輯判斷條件有三種：*「如果」一定是在第一層，「否則如果」位在中間，「否則」一定在最後*，「否則」的判斷條件表示當「如果」和「否則如果」的條件都沒有滿足，就會執行「否則」的內容。
+There are three kinds of logical judgment conditions: * "If" must be in the first layer, "Otherwise if" is in the middle, "Otherwise" must be in the last *, "Other" judgment condition means "If" and "Otherwise" If the conditions are not met, the "other" content will be executed.
 
-![邏輯](../images/zh-tw/docs/webbit/basic/logic-04.jpg)
+![Logic](../images/zh-tw/docs/webbit/basic/logic-04.jpg)
 
-如果只有*兩個條件*，例如非 A 即 B，就可以單純使用「如果」和「否則」就可以，甚至可以不使用「否則」，這樣在條件外就不會進行任何動作。
+If there are only * two conditions*, such as non-A or B, you can simply use "if" and "otherwise", or even "otherwise", so that no action will be taken outside the condition.
 
-![邏輯](../images/zh-tw/docs/webbit/basic/logic-05.jpg)
+![Logic](../images/zh-tw/docs/webbit/basic/logic-05.jpg)
 
-## 判斷條件式
+## Judging conditional
 
-判斷條件式主要會放在邏輯的「判斷條件」缺口內，提供不同情境的邏輯判斷，判斷的條件主要分為：等於 (=)、不等於 (≠)、小於 (<)、小於等於 (≦)、大於 (>)、大於等於 (≧)。
+Judging conditional conditions are mainly placed in the logical "judgment condition" gap, providing logical judgments of different situations. The conditions for judgment are mainly divided into: equal to (=), not equal to (≠), less than (<), less than or equal to (≦ ), greater than (>), greater than or equal to (≧).
 
-![邏輯](../images/zh-tw/docs/webbit/basic/logic-06.jpg)
+![Logic](../images/zh-tw/docs/webbit/basic/logic-06.jpg)
 
-使用的方式只要把判斷條件的積木，放到判斷條件的缺口內即可。
+The method of use is as long as the building block of the judgment condition is placed in the gap of the judgment condition.
 
-![邏輯](../images/zh-tw/docs/webbit/basic/logic-08.jpg)
+![Logic](../images/zh-tw/docs/webbit/basic/logic-08.jpg)
 
-舉例來說，可以先新增一個变量 a 為 0 到 100 之間的隨機整數，並讓綠色小怪獸講出數字，接著用邏輯判斷，如果变量 a 大於 60 ( 回傳判斷為「true」 )，就讓紅色怪獸講「及格」，否則就講「不及格」，執行程序後就能看到對應的結果。
+For example, you can first add a random integer with a variable a between 0 and 100, and let the green monster tell the number, and then use logic to judge if the variable a is greater than 60 (the return is judged as "true"). Let the red monster say "pass", otherwise it will say "fail", you can see the corresponding result after executing the program.
 
-![邏輯](../images/zh-tw/docs/webbit/basic/logic-09.jpg)
+![Logic](../images/zh-tw/docs/webbit/basic/logic-09.jpg)
 
-## 邏輯運算子
+## 逻辑操作子
 
-「邏輯運算子」積木為邏輯判斷提供了更彈性的判斷條件，當中包含了「*且*」與「*或*」，如果使用「且」，在兩端判斷的條件空格必須都滿足時，才會執行動作，如果使用「或」，只要其中一個條件空格滿足就會執行動作。
+The "Logical Operator" building block provides a more flexible judgment condition for logical judgment, including "* and *" and "* or *". If "and" is used, the conditional spaces judged at both ends must be satisfied. The action will be executed. If you use "or", the action will be executed as long as one of the conditional spaces is satisfied.
 
-![邏輯](../images/zh-tw/docs/webbit/basic/logic-10.jpg)
+![Logic](../images/zh-tw/docs/webbit/basic/logic-10.jpg)
 
-通常當邏輯判斷裡出現「如果否則」的時候，就會用到邏輯運算子，而邏輯運算子常常和判斷條件的積木搭配使用。( 有時也會遇到只有「否則、如果」搭配邏輯運算子的情況 )
+Usually, when "if not" appears in the logical judgment, the logical operator is used, and the logical operator is often used in conjunction with the building block of the judgment condition. (Sometimes you will encounter only "otherwise, if" with logical operators)
 
-![邏輯](../images/zh-tw/docs/webbit/basic/logic-11.jpg)
+![Logic](../images/zh-tw/docs/webbit/basic/logic-11.jpg)
 
-以剛剛的例子來說，可以增加到四個判斷條件，分別是 0、1~59、60~99 和 100，當判斷條件成立時，就會讓小怪獸說出數字以及對應的文字。
+In the example just mentioned, it can be increased to four judgment conditions, namely 0, 1~59, 60~99 and 100. When the judgment condition is established, the little monster will be told the number and the corresponding text.
 
-![邏輯](../images/zh-tw/docs/webbit/basic/logic-12.jpg)
+![Logic](../images/zh-tw/docs/webbit/basic/logic-12.jpg)
 
-## 判斷數字型態
+## Judging the number type
 
-「判斷數字型態」積木可以幫助我們快速判斷*奇數、偶數、整數、數字有小數點、文字或陣列*。
+The "judge digital form" building block can help us quickly determine * odd, even, integer, number with decimal point, text or array *.
 
-![邏輯](../images/zh-tw/docs/webbit/basic/logic-13.jpg)
+![Logic](../images/zh-tw/docs/webbit/basic/logic-13.jpg)
 
-用法上只要直接放入判斷條件的缺口內即可。
+As far as usage is concerned, it can be placed directly into the gap of the judgment condition.
 
-![邏輯](../images/zh-tw/docs/webbit/basic/logic-14.jpg)
+![Logic](../images/zh-tw/docs/webbit/basic/logic-14.jpg)
 
-例如我們可以設定变量 a 為兩個隨機數相除，再透過小怪獸講出整數或小數。( 除法的積木使用了「多行輸入」，可以在積木上按右鍵選擇多行輸入，教學參考：[程序積木小技巧](../info/interface.md#tips) )
+For example, we can set the variable a to divide by two random numbers, and then tell the integer or decimal through the little monster. (Divided building blocks use "multi-line input", you can right-click on the building block to select multi-line input, teaching reference: [programming block tips] (../info/interface.md#tips)
 
-![邏輯](../images/zh-tw/docs/webbit/basic/logic-15.jpg)
+![Logic](../images/zh-tw/docs/webbit/basic/logic-15.jpg)
 
-## 判斷空值
+## Judging null values
 
-「判斷空值」積木主要是針對和「陣列」積木搭配，*如果是空值回傳 true，否則回傳 false*。
+The "judge empty value" building block is mainly for matching with the "array" building block. * If it is a null value, it returns true, otherwise it returns false*.
 
-![邏輯](../images/zh-tw/docs/webbit/basic/logic-16.jpg)
+![Logic](../images/zh-tw/docs/webbit/basic/logic-16.jpg)
 
-會產生空值有幾種情況：「*無文字、數字 0、空陣列、空值、false ( 假 )、沒有值的变量*」，如果判斷這幾種情況是否為空，就會回傳 true。
+There are several cases where null values ​​are generated: "*no text, number 0, empty array, null value, false (false), variable with no value *", if it is judged whether these conditions are empty, it will return true. .
 
-![邏輯](../images/zh-tw/docs/webbit/basic/logic-17.jpg)
+![Logic](../images/zh-tw/docs/webbit/basic/logic-17.jpg)
 
-## 判斷是否包含文字
+## Determine if text is included
 
-「判斷是否包含文字」積木可以檢查某段文字內，是否*包含或不包含*了指定的文字或文字段落。
+"Judge whether text is included" blocks can check whether a * or a specified paragraph is included in a paragraph of text.
 
-![邏輯](../images/zh-tw/docs/webbit/basic/logic-18.jpg)
+![Logic](../images/zh-tw/docs/webbit/basic/logic-18.jpg)
 
-舉例來說，如果檢查「你是我的小呀小蘋果」裡面有包含「找到小蘋果了」，綠色怪獸就會說「小蘋果」，反之如果是「小檸檬」，紅色怪獸就會說「沒有小檸檬」。
+For example, if you check "You are my little apple" and there is "Find a small apple", the green monster will say "Little Apple", otherwise if it is "Little Lemon", the red monster will say " No small lemons."
 
-![邏輯](../images/zh-tw/docs/webbit/basic/logic-19.jpg)
+![Logic](../images/zh-tw/docs/webbit/basic/logic-19.jpg)
 
 ## 非
 
-「非」積木就如字面一樣，表示「不是什麼」，通常會和「真/假」或「空值」的積木搭配使用。
+"Non" blocks are literally "not what" and are usually used in conjunction with "true/false" or "null" blocks.
 
-![邏輯](../images/zh-tw/docs/webbit/basic/logic-20.jpg)
+![Logic](../images/zh-tw/docs/webbit/basic/logic-20.jpg)
 
-如果把積木接在「非」的積木後面，狀態就會相反過來，例如空就會變成非空、真就會變假，假就會變真，依此類推。
+If the bricks are connected behind the "non" bricks, the state will be reversed. For example, the space will become non-empty, the truth will become false, the fake will become true, and so on.
 
-![邏輯](../images/zh-tw/docs/webbit/basic/logic-21.jpg)
-
-
-## 真/假
-
-「真/假」積木主要表示 ture ( 真 ) 與 false ( 假 ) 兩個值，目的在讓判斷的時候在數字、文字之外，多一些判斷的條件，同時也可以將 ture 和 false 提交給变量，在否些情境下也相當好用。
-
-![邏輯](../images/zh-tw/docs/webbit/basic/logic-22.jpg)
-
-## 空
-
-在寫程序的時候，有時候會遇到某個变量或是某個數值變成空值 ( null )，這時就可以使用空值的積木判斷，用法和「真/假」的用法類似。
-
-![邏輯](../images/zh-tw/docs/webbit/basic/logic-23.jpg)
-
-## 三元邏輯運算子
-
-「三元邏輯運算子」積木是針對只有「*兩種條件*」，並針對根據條件傳回「兩個運算式」的其中一個。
-
-![邏輯](../images/zh-tw/docs/webbit/basic/logic-24.jpg)
-
-如果用上面提到的及格與不及格的例子，因為只有兩種條件，就可以透過三元邏輯運算子來輕鬆實現，且還可以使用比較少的積木完成同樣的結果。
-
-![邏輯](../images/zh-tw/docs/webbit/basic/logic-25.jpg)
+![Logic](../images/zh-tw/docs/webbit/basic/logic-21.jpg)
 
 
+##真/假
 
+The "true/false" building blocks mainly represent the values ​​of ture (true) and false (false). The purpose is to make more judgments than numbers and texts when making judgments. It is also possible to submit ture and false to variables. It is also quite easy to use in some situations.
+
+![Logic](../images/zh-tw/docs/webbit/basic/logic-22.jpg)
+
+##空
+
+When writing a program, sometimes a variable is encountered or a value becomes null ( null ). At this time, you can use the building block of the null value. The usage is similar to the usage of "true/false".
+
+![Logic](../images/zh-tw/docs/webbit/basic/logic-23.jpg)
+
+## 三元逻辑操作
+
+The "Ternary Logic Operator" building block is for "only two conditions*" and returns one of the "two expressions" according to the condition.
+
+![Logic](../images/zh-tw/docs/webbit/basic/logic-24.jpg)
+
+If you use the above-mentioned pass and fail examples, because there are only two conditions, you can easily achieve through the ternary logic operator, and you can use less building blocks to achieve the same result.
+
+![Logic](../images/zh-tw/docs/webbit/basic/logic-25.jpg)

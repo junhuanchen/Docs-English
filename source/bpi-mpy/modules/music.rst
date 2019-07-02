@@ -2,166 +2,166 @@
 
 .. module:: music
 
-music 模块
+Music module
 ==============
 
-music模块与microbit的music使用方法相同。
+The music module is used in the same way as the microbit's music.
 
-要使用music模块，你需要::
+To use the music module, you need to:
 
-    import music
+    Import music
 
-音符
+Note
 ++++
 
-以下是音符格式::
+The following is the note format:
 
-    NOTE[octave][:duration]
-
-
-例如，``A1:4`` 指的是八度音程中的音符"A"，持续四个节拍（节拍可以由 ``set_tempo`` 函数设定 - 见下文）。
-如果使用音符 ``R`` ，则将其视为休息（静音）。
-
-在音调符号中，“#”表示将基本音级升高半音；“b”表示将基本音级降低半音；例如，Ab是A-升半音并且C#是C-降半音。
-
-octave默认状态下等于4，为中音阶；duration默认状态是4节拍；
+    NOTE[octave][:duration]
 
 
-贝多芬第五交响曲的开头::
+For example, ``A1:4`` refers to the note "A" in the octave, which lasts for four beats (the beat can be set by the ``set_tempo`` function - see below).
+If the note ``R`` is used, it is considered a break (mute).
 
-    ['r4:2', 'g', 'g', 'g', 'eb:8', 'r:2', 'f', 'f', 'f', 'd:8']
+In the tone symbol, "#" means that the basic pitch is raised by a semitone; "b" means that the basic pitch is lowered by a semitone; for example, Ab is an A-liter semitone and C# is a C-halftone.
 
-八度音阶的定义和范围符合本页列出的关于科学音高表示法的表格 `on this
-page about scientific pitch notation`_.  例如，middle "C"是 ``c4`` 和concert “A”（440）是 ``a4`` 。八度音符从音符"C"开始。
+The default state of octave is equal to 4, which is the middle scale; the default state of duration is 4 beats;
+
+
+Beginning of Beethoven's Fifth Symphony::
+
+    ['r4:2', 'g', 'g', 'g', 'eb:8', 'r:2', 'f', 'f', 'f', 'd:8']
+
+The definition and scope of the octave corresponds to the table on the scientific pitch representation listed on this page `on this
+Page about scientific pitch notation`_. For example, middle "C" is ``c4`` and concert "A" (440) is ``a4``. The octave begins with the note "C".
 
 .. _on this page about scientific pitch notation: https://en.wikipedia.org/wiki/Scientific_pitch_notation#Table_of_note_frequencies
 
 
-函数
+function
 ++++++++
 
 .. function:: set_tempo(ticks=4, bpm=120)
 
-    设置播放节拍
+    Set the play beat
 
-    一定数量的ticks(整数)构成单个节拍。每个节拍以每分钟特定频率播放（每分钟节拍 - 也是整数）。
+    A certain number of ticks (integer) constitute a single beat. Each beat is played at a specific frequency per minute (beats per minute - also an integer).
 
-    可参考以下设置播放节拍:
+    You can play the beat with reference to the following settings:
 
-    * ``music.set_tempo()`` - 将节拍设置恢复为 ticks = 4, bpm = 120
-    * ``music.set_tempo(ticks=8)`` - 只改变单节拍速度
-    * ``music.set_tempo(bpm=180)`` - 只改变节拍频率
+    * ``music.set_tempo()`` - Restores the beat settings to ticks = 4, bpm = 120
+    * ``music.set_tempo(ticks=8)`` - only change the single beat speed
+    * ``music.set_tempo(bpm=180)`` - only change the beat frequency
 
-    计算滴答的长度（以毫秒为单位）是非常简单的算术： ``60000/bpm/ticks_per_beat`` 。
-    对于那些是默认的值或。 ``60000/120/4 = 125 milliseconds`` or ``1 beat = 500 milliseconds``。
+    Calculating the length of the ticks (in milliseconds) is a very simple arithmetic: ``60000/bpm/ticks_per_beat``.
+    For those that are the default values ​​or. ``60000/120/4 = 125 milliseconds`` or ``1 beat = 500 milliseconds``.
 
 .. function:: get_tempo()
 
-    获取当前速度作为整数元组: ``(ticks, bpm)``.
+    Get the current speed as an integer tuple: ``(ticks, bpm)``.
 
 .. function:: play(music, pin=6, wait=True, loop=False)
 
-    - ``music`` 
+    - ``music``
 
-        - 播放 ``music`` 包含上面定义的音乐DSL。
+        - Play ``music`` contains the music DSL defined above.
 
-        - 如果 ``music`` 是一个字符串，则应该是单个音符，例如 ``'c1:4'``。
+        - If ``music`` is a string, it should be a single note, such as ``'c1:4'``.
 
-        - 如果 ``music`` 被指定为音符列表（如上面音乐DSL部分中所定义），则它们一个接一个地播放以执行旋律。
+        - If ``music`` is specified as a list of notes (as defined in the music DSL section above), they are played one after the other to perform the melody.
 
-    - ``pin`` 默认是板子的P6引脚
+    - ``pin`` defaults to the board's P6 pin
 
-    - ``wait`` 阻塞：如果 ``wait`` 设置为 ``True``, 为阻塞,否则未不。
+    - ``wait`` Blocking: If ``wait`` is set to ``True``, it is blocked, otherwise it is not.
 
-    - ``loop`` ：如果 ``loop`` 设置为 ``True`` ，则重复调整直到stop被调用（见下文）或阻塞调用被中断。
-   
+    - ``loop`` : If ``loop`` is set to ``True``, repeat the adjustment until stop is called (see below) or the blocking call is interrupted.
+   
 
 .. function:: pitch(frequency, duration=-1, pin=Pin.P6, wait=True)
 
-    - ``frequency``, ``duration``:以给定指定毫秒数的整数频率播放频率。例如，如果频率设置为440并且长度设置为1000，那么我会听到标准A调一秒钟。
+    - ``frequency``, ``duration``: Plays the frequency at an integer frequency given the specified number of milliseconds. For example, if the frequency is set to 440 and the length is set to 1000, then I will hear standard A for one second.
 
-        如果 ``duration`` 为负，则连续播放频率，直到阻塞或者被中断，或者在后台呼叫的情况下，设置或调用新频率stop（见下文）。
+        If ``duration`` is negative, the frequency is played continuously until blocked or interrupted, or in the case of a background call, the new frequency stop is set or called (see below).
 
-    - ``pin`` pin=Pin.P6,默认是板子的P6引脚。可重定义其他引脚。
+    - ``pin`` pin=Pin.P6, the default is the P6 pin of the board. Other pins can be redefined.
 
-        请注意，您一次只能在一个引脚上播放频率。
+        Please note that you can only play frequencies on one pin at a time.
 
-    - ``wait`` 阻塞：如果 ``wait`` 设置为 ``True``, 为阻塞,否则未不。
+    - ``wait`` Blocking: If ``wait`` is set to ``True``, it is blocked, otherwise it is not.
 
 
 .. function:: stop()
-    
-   停止给定引脚上的所有音乐播放。
+    
+   Stop all music playback on a given pin.
 
 
 .. function:: reset()
 
-    以下列方式重置以下属性的状态
+    Reset the status of the following properties in the following manner
 
-        * ``ticks = 4``
-        * ``bpm = 120``
-        * ``duration = 4``
-        * ``octave = 4``
+        * ``ticks = 4``
+        * ``bpm = 120``
+        * ``duration = 4``
+        * ``octave = 4``
 
-内置旋律
+Built-in melody
 ++++++++
 
-出于教育和娱乐的目的，该模块包含几个以Python列表表示的示例曲调。它们可以像这样使用：
+For educational and entertainment purposes, this module contains several sample tunes represented by a Python list. They can be used like this:
 
-    >>> import music
-    >>> music.play(music.NYAN)
+    >>> import music
+    >>> music.play(music.NYAN)
 
-所有音乐都不受版权保护，由Nicholas H.Tollervey撰写并发布到公共领域或者有一位不知名的作曲家，并受到公平（教育）使用条款的保护。
+All music is not protected by copyright, written by Nicholas H. Tollervey and published in the public domain or has an unknown composer and is protected by fair (education) terms of use.
 
-它们是:
+They are:
 
-    * ``DADADADUM`` - 贝多芬第五交响曲C小调开幕式。
-    * ``ENTERTAINER`` - 斯科特乔普林的Ragtime经典作品“The Entertainer”的开场片段。
-    * ``PRELUDE`` - JSBach的48首前奏曲和赋格曲的第一首C大调前奏曲的开篇。
-    * ``ODE`` - 贝多芬第七交响曲D小调的“欢乐颂”主题。
-    * ``NYAN`` - Nyan Cat主题 (http://www.nyan.cat/). 作曲家不详。
-    * ``RINGTONE`` - 听起来像手机铃声的东西。用于指示传入消息。
-    * ``FUNK`` - 为秘密特工和犯罪主谋提供的时髦低音系列。
-    * ``BLUES`` - 一个boogie-woogie 12杆蓝调步行低音。
-    * ``BIRTHDAY`` - “生日快乐" 版权状态见: http://www.bbc.co.uk/news/world-us-canada-34332853
-    * ``WEDDING`` - 来自瓦格纳歌剧“Lohengrin”的新娘合唱。.
-    * ``FUNERAL`` -  “葬礼进行曲”，也被称为FrédéricChopin的钢琴奏鸣曲第2号B-minor,Op 35。
-    * ``PUNCHLINE`` -一个有趣的片段表明一个笑话已经被创造出来了。
-    * ``PYTHON`` - John Philip Sousa的游行“Liberty Bell”又名“Monty Python's Flying Circus”的主题（之后以Python编程语言命名）。
-    * ``BADDY`` - 沉默的电影时代入口的一个坏人。
-    * ``CHASE`` - 无声电影时代的追逐场景。
-    * ``BA_DING`` - 表示发生了某些事情的短信号
-    * ``WAWAWAWAA`` - 一个非常悲伤的长号。
-    * ``JUMP_UP`` - 用于游戏，表示向上移动。
-    * ``JUMP_DOWN`` - 用于游戏，表示向下移动。
-    * ``POWER_UP`` - 一种炫耀，表明一项成就被释放。
-    * ``POWER_DOWN`` - 一种悲伤，表示一项成就已经失去。
+    * ``DADADADUM`` - Beethoven's Fifth Symphony C minor opening ceremony.
+    * ``ENTERTAINER`` - the opening episode of Scott Joplin's Ragtime classic "The Entertainer".
+    * ``PRELUDE`` - JSBach's 48 preludes and fugues' opening of the first C major prelude.
+    * ``ODE`` - Beethoven's seventh symphony in the D minor "Ode to Joy" theme.
+    * ``NYAN`` - Nyan Cat Theme (http://www.nyan.cat/). The composer is unknown.
+    * ``RINGTONE`` - something that sounds like a ringtone. Used to indicate incoming messages.
+    * ``FUNK`` - a stylish bass series for secret agents and criminal masterminds.
+    * ``BLUES`` - A boogie-woogie 12-bar blues walking bass.
+    * ``BIRTHDAY`` - "Happy Birthday" Copyright status can be found at: http://www.bbc.co.uk/news/world-us-canada-34332853
+    * ``WEDDING`` - a bride chorus from the Wagner opera "Lohengrin". .
+    * ``FUNERAL`` - "Funeral March", also known as Frédéric Chopin's Piano Sonata No. 2 B-minor, Op 35.
+    * ``PUNCHLINE`` - An interesting clip indicates that a joke has been created.
+    * ``PYTHON`` - John Philip Sousa's parade "Liberty Bell" aka "Monty Python's Flying Circus" theme (later named after the Python programming language).
+    * ``BADDY`` - A bad guy at the entrance to the silent movie era.
+    * ``CHASE`` - the chase scene of the silent movie era.
+    * ``BA_DING`` - indicates a short signal that something has happened
+    * ``WAWAWAWAA`` - A very sad trombone.
+    * ``JUMP_UP`` - for games, means moving up.
+    * ``JUMP_DOWN`` - for games, indicating moving down.
+    * ``POWER_UP`` - A show that indicates that an achievement has been released.
+    * ``POWER_DOWN`` - A sadness that indicates that an achievement has been lost.
 
-示例::
+Example:
 
-    """
-        music.py
-        ~~~~~~~~
+    """
+        Music.py
+        ~~~~~~~~
 
-        Plays a simple tune using the Micropython music module.
-        This example requires a speaker/buzzer/headphones connected to P0 and GND.
-    """
-    from microbit import *
-    import music
+        Plays a simple tune using the Micropython music module.
+        This example requires a speaker/buzzer/headphones connected to P0 and GND.
+    """
+    From microbit import *
+    Import music
 
-    # play Prelude in C.
-    notes = [
-        'c4:1', 'e', 'g', 'c5', 'e5', 'g4', 'c5', 'e5', 'c4', 'e', 'g', 'c5', 'e5', 'g4', 'c5', 'e5',
-        'c4', 'd', 'a', 'd5', 'f5', 'a4', 'd5', 'f5', 'c4', 'd', 'a', 'd5', 'f5', 'a4', 'd5', 'f5',
-        'b3', 'd4', 'g', 'd5', 'f5', 'g4', 'd5', 'f5', 'b3', 'd4', 'g', 'd5', 'f5', 'g4', 'd5', 'f5',
-        'c4', 'e', 'g', 'c5', 'e5', 'g4', 'c5', 'e5', 'c4', 'e', 'g', 'c5', 'e5', 'g4', 'c5', 'e5',
-        'c4', 'e', 'a', 'e5', 'a5', 'a4', 'e5', 'a5', 'c4', 'e', 'a', 'e5', 'a5', 'a4', 'e5', 'a5',
-        'c4', 'd', 'f#', 'a', 'd5', 'f#4', 'a', 'd5', 'c4', 'd', 'f#', 'a', 'd5', 'f#4', 'a', 'd5',
-        'b3', 'd4', 'g', 'd5', 'g5', 'g4', 'd5', 'g5', 'b3', 'd4', 'g', 'd5', 'g5', 'g4', 'd5', 'g5',
-        'b3', 'c4', 'e', 'g', 'c5', 'e4', 'g', 'c5', 'b3', 'c4', 'e', 'g', 'c5', 'e4', 'g', 'c5',
-        'a3', 'c4', 'e', 'g', 'c5', 'e4', 'g', 'c5', 'a3', 'c4', 'e', 'g', 'c5', 'e4', 'g', 'c5',
-        'd3', 'a', 'd4', 'f#', 'c5', 'd4', 'f#', 'c5', 'd3', 'a', 'd4', 'f#', 'c5', 'd4', 'f#', 'c5',
-        'g3', 'b', 'd4', 'g', 'b', 'd', 'g', 'b', 'g3', 'b3', 'd4', 'g', 'b', 'd', 'g', 'b'
-    ]
+    # play Prelude in C.
+    Notes = [
+        'c4:1', 'e', ​​'g', 'c5', 'e5', 'g4', 'c5', 'e5', 'c4', 'e', ​​'g', 'c5', 'e5', 'g4', 'c5', 'e5',
+        'c4', 'd', 'a', 'd5', 'f5', 'a4', 'd5', 'f5', 'c4', 'd', 'a', 'd5', 'f5 ', 'a4', 'd5', 'f5',
+        'b3', 'd4', 'g', 'd5', 'f5', 'g4', 'd5', 'f5', 'b3', 'd4', 'g', 'd5', 'f5 ', 'g4', 'd5', 'f5',
+        'c4', 'e', ​​'g', 'c5', 'e5', 'g4', 'c5', 'e5', 'c4', 'e', ​​'g', 'c5', 'e5 ', 'g4', 'c5', 'e5',
+        'c4', 'e', ​​'a', 'e5', 'a5', 'a4', 'e5', 'a5', 'c4', 'e', ​​'a', 'e5', 'a5 ', 'a4', 'e5', 'a5',
+        'c4', 'd', 'f#', 'a', 'd5', 'f#4', 'a', 'd5', 'c4', 'd', 'f#', 'a', 'd5', 'f#4', 'a', 'd5',
+        'b3', 'd4', 'g', 'd5', 'g5', 'g4', 'd5', 'g5', 'b3', 'd4', 'g', 'd5', 'g5 ', 'g4', 'd5', 'g5',
+        'b3', 'c4', 'e', ​​'g', 'c5', 'e4', 'g', 'c5', 'b3', 'c4', 'e', ​​'g', 'c5 ', 'e4', 'g', 'c5',
+        'a3', 'c4', 'e', ​​'g', 'c5', 'e4', 'g', 'c5', 'a3', 'c4', 'e', ​​'g', 'c5 ', 'e4', 'g', 'c5',
+        'd3', 'a', 'd4', 'f#', 'c5', 'd4', 'f#', 'c5', 'd3', 'a', 'd4', 'f#', 'c5 ', 'd4', 'f#', 'c5',
+        'g3', 'b', 'd4', 'g', 'b', 'd', 'g', 'b', 'g3', 'b3', 'd4', 'g', 'b ', 'd', 'g', 'b'
+    ]
 
-    music.play(notes)
+    Music.play(notes)

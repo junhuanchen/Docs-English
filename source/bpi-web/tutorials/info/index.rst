@@ -1,11 +1,11 @@
-认识软件
-========================================
+Understanding software
+=================================================
 
 .. toctree::
-   :maxdepth: 2
-   :numbered:
+   :maxdepth: 2
+   :numbered:
 
-   setup
-   ota
-   toolbar
-   interface
+   Setup
+   Ota
+   Toolbar
+   Interface

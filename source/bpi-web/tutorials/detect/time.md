@@ -1,24 +1,23 @@
-# 日期＆時間
+# Date & time
 
-日期與時間的積木，可以讀取電腦的日期和時間並在網頁上顯示，可以搭配重複迴圈、開關或鍵盤...等行為，做出時鐘、碼表、遊戲計時...等趣味應用。
+The date and time building blocks can read the date and time of the computer and display it on the web page. It can be used with repeated loops, switches or keyboards... to make clocks, code tables, game timings, etc. .
 
-## 取得目前日期與時間
+## Get the current date and time
 
-「日期」積木能夠取得目前的年、月、日，「時間」積木能夠取得目前的小時、分鐘、秒，小時採用 24 小時計算，如果是下午三點會顯示 15。
+The "date" building block can get the current year, month, and day. The "time" building block can get the current hour, minute, and second. The hour is calculated in 24 hours. If it is 3 o'clock in the afternoon, it will display 15.
 
-![日期＆時間](../images/zh-tw/docs/webbit/detect/time-01.jpg)
+![Date & Time](../images/zh-tw/docs/webbit/detect/time-01.jpg)
 
-## 時鐘
+## Clock
 
-因為取得日期和時間的積木「*只會取得一次*」目前的日期時間，所以如果要持續偵測，可以搭配重複迴圈，每一秒偵測一次時間，網頁執行後就能呈顯時鐘效果。
+Because the date and time of the building block "* will only get once *" the current date and time, so if you want to continue detection, you can use the repeated loops, detect the time every second, the page will be able to display the clock effect after execution. .
 
-![日期＆時間](../images/zh-tw/docs/webbit/detect/time-02.gif)
+![Date & Time](../images/zh-tw/docs/webbit/detect/time-02.gif)
 
-## 鬧鐘
+## Alarm clock
 
-延伸時鐘的範例，搭配邏輯的積木，網頁執行後就能做到在某個時間點發生提醒的鬧鐘功能。
+An example of extending the clock, with logical building blocks, can perform an alarm function that alerts at a certain point in time after the web page is executed.
 
-> 判斷時間到了之後，可以透過停止重複的積木將時間停止，避免時間繼續顯示。
+> After the judgment time has elapsed, you can stop the time by stopping the repeated blocks, and avoid the time to continue to display.
 
-![日期＆時間](../images/zh-tw/docs/webbit/detect/time-03.gif)
-
+![Date & Time](../images/zh-tw/docs/webbit/detect/time-03.gif)

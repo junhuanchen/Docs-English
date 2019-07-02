@@ -1,100 +1,99 @@
-# 小怪獸互動＆舞台
+#小怪兽互动&stage
 
-除了可以設定小怪獸的位置或大小，編輯器更能讓我們與小怪獸互動，例如用滑鼠點擊小怪獸、小怪獸互相碰撞、碰撞舞台畫面邊緣...等，透過這些互動行為，就能實現更多想法和創意。
+In addition to setting the position or size of the little monster, the editor allows us to interact with the little monsters, such as clicking the little monster with the mouse, colliding with the little monsters, colliding with the edge of the stage, etc. Achieve more ideas and ideas.
 
-## 小怪獸積木清單 ( 互動＆舞台 )
+## Little monster building blocks list ( interaction & stage )
 
-互動＆舞台的積木分別有滑鼠點擊小怪獸、滑鼠接觸小怪獸、小怪獸互相碰撞、小怪獸碰撞畫面、碰到畫面邊緣就反彈、更換舞台背景和設定全螢幕。
+The interactive & stage blocks have mouse clicks on small monsters, mouse touches on small monsters, small monsters colliding with each other, small monsters colliding with the screen, bumping at the edge of the screen, changing the stage background and setting the full screen.
 
-![小怪獸互動＆舞台](../images/zh-tw/docs/webbit/monster/event-01.jpg)
+![Little Monster Interactive & Stage] (../images/zh-tw/docs/webbit/monster/event-01.jpg)
 
-## 滑鼠點擊
+## Mouse click
 
-「滑鼠點擊」積木可以讓指定滑鼠點擊小怪獸時，要做些什麼事情。
+The "click" block allows you to do something when the specified mouse clicks on the little monster.
 
-> 滑鼠點擊積木「*不需要放在重複迴圈內*」就可重複偵測。
+> The mouse clicks on the building block "* does not need to be placed in the repeating loop*" to repeat the detection.
 
-![小怪獸互動＆舞台](../images/zh-tw/docs/webbit/monster/event-02.jpg)
+![Little Monster Interactive & Stage] (../images/zh-tw/docs/webbit/monster/event-02.jpg)
 
-下圖的例子，點擊綠色小怪獸時會說話，點擊紅色小怪獸會放大，點擊黃色小怪獸會旋轉，點擊藍色小怪獸會改變情緒。
+In the example below, when you click on the green monster, you will talk, click on the red monster to zoom in, click on the yellow monster to rotate, and click on the blue monster to change your mood.
 
-![小怪獸互動＆舞台](../images/zh-tw/docs/webbit/monster/event-03.gif)
+![Little Monster Interactive & Stage] (../images/zh-tw/docs/webbit/monster/event-03.gif)
 
-## 滑鼠碰觸
+## Mouse touch
 
-「滑鼠碰觸」積木包含兩個行為動作，分別是滑鼠碰觸到小怪獸要做什麼事，以及滑鼠離開小怪獸要做什麼事。
+The "snake touch" building block contains two behavioral actions, namely what the mouse touches the little monster, and what the mouse does to leave the little monster.
 
-> 注意，離開的行為一定會接續在碰觸之後，滑鼠碰觸積木「*不需要放在重複迴圈內*」就可重複偵測。
+> Note that the behavior of leaving will be repeated after the touch, the mouse touches the building block "* does not need to be placed in the repeating loop *" to repeat the detection.
 
-![小怪獸互動＆舞台](../images/zh-tw/docs/webbit/monster/event-04.jpg)
+![Little Monster Interactive & Stage] (../images/zh-tw/docs/webbit/monster/event-04.jpg)
 
-下圖的例子，在滑鼠碰觸到綠色小怪獸時，小怪獸的情緒會開心，滑鼠離開後小怪獸又恢復正常的情緒。
+In the example below, when the mouse touches the green monster, the little monster's mood will be happy, and the little monster will return to normal mood after the mouse leaves.
 
-![小怪獸互動＆舞台](../images/zh-tw/docs/webbit/monster/event-05.gif)
+![Little Monster Interactive & Stage] (../images/zh-tw/docs/webbit/monster/event-05.gif)
 
-## 互相碰觸
+## Touching each other
 
-「互相碰觸」積木可以偵測小怪獸彼此之間是否有互相碰觸。
+"Touching each other" blocks can detect if the little monsters touch each other.
 
-> 互相碰觸積木「*只會偵測一次*」，必須*搭配重複迴圈*，才能重複偵測。
+> Touching each other's blocks "* will only detect once*", you must *match the repeating loop* to repeat the detection.
 
-![小怪獸互動＆舞台](../images/zh-tw/docs/webbit/monster/event-06.jpg)
+![Little Monster Interactive & Stage] (../images/zh-tw/docs/webbit/monster/event-06.jpg)
 
-以下圖為例，搭配重複回圈，就能不斷偵測小怪獸是否互相碰觸，用滑鼠拉動小怪獸，當倆倆互相碰到時，小怪獸就變成驚訝的情緒，分開後又恢復正常。
+The following picture is an example. With repeated loops, you can continuously detect whether the little monsters touch each other and use the mouse to pull the little monster. When the two encounter each other, the little monster becomes a surprised mood, and then returns to normal after separation. .
 
-![小怪獸互動＆舞台](../images/zh-tw/docs/webbit/monster/event-07.gif)
+![Little Monster Interactive & Stage] (../images/zh-tw/docs/webbit/monster/event-07.gif)
 
-## 碰觸舞台畫面
+## Touching the stage screen
 
-「碰撞舞台畫面」積木可以偵測小怪獸是否碰觸到互動舞台的四個邊，或個別偵測碰到上、下、左、右四個邊的行為。
+The "collision stage screen" building block can detect whether the small monster touches the four sides of the interactive stage, or individually detects the behavior of the four sides of the upper, lower, left and right sides.
 
-> 碰撞舞台畫面積木「*只會偵測一次*」，必須*搭配重複迴圈*，才能重複偵測。
+> Collision stage painting area wood "* will only detect once *", must be * with repeated loops *, in order to repeat the detection.
 
-![小怪獸互動＆舞台](../images/zh-tw/docs/webbit/monster/event-08.jpg)
+![Little Monster Interactive & Stage] (../images/zh-tw/docs/webbit/monster/event-08.jpg)
 
-以下圖為例，搭配重複回圈，就能讓小怪獸碰到舞台畫面上緣或下緣時，變成開心的情緒，碰到左邊或右邊則呈現生氣的情緒，沒有碰到時則是正常情緒。
+The following picture is an example. With the repeated loops, you can make the little monsters become happy when you touch the upper edge or the lower edge of the stage screen. When you touch the left or right side, you will get angry emotions. If you don’t touch it, it will be normal emotions. .
 
-![小怪獸互動＆舞台](../images/zh-tw/docs/webbit/monster/event-09.gif)
+![Little Monster Interactive & Stage] (../images/zh-tw/docs/webbit/monster/event-09.gif)
 
-## 碰觸舞台畫面就反彈
+## Touching the stage screen will rebound
 
-「碰觸舞台畫面就反彈」積木是「碰觸舞台畫面」積木的簡化版，將碰觸後的行為單一化為「反彈」，反彈表示位置的相反，*如果碰到舞台左右兩側，則小怪獸移動的 X 方向會相反，如果碰到舞台上下兩側，則小怪獸移動的 Y 方向會相反*。
+"Bounces on the stage screen." The building block is a simplified version of the "touch the stage picture" building block. The behavior after the touch is singularized as "bounce". The bounce indicates the opposite position. * If you hit the left and right sides of the stage, The X-direction of the little monster moves in the opposite direction. If you hit the top and bottom of the stage, the Y-direction of the little monster moves in the opposite direction*.
 
-> 碰觸舞台畫面就反彈積木「*只會偵測一次*」，必須*搭配重複迴圈*，才能重複偵測。
+> When you touch the stage screen, you will rebound the building block "* will only detect once*", you must *match the repeating loop* to repeat the detection.
 
-![小怪獸互動＆舞台](../images/zh-tw/docs/webbit/monster/event-10.jpg)
+![Little Monster Interactive & Stage] (../images/zh-tw/docs/webbit/monster/event-10.jpg)
 
-以下圖為例，搭配重複回圈，就能讓小怪獸碰到舞台畫面移動，碰到舞台邊緣時就會反彈。
+The following picture is an example. With a repeating loop, you can make the little monster touch the stage screen and bounce when it hits the edge of the stage.
 
-![小怪獸互動＆舞台](../images/zh-tw/docs/webbit/monster/event-11.gif)
+![Little Monster Interactive & Stage] (../images/zh-tw/docs/webbit/monster/event-11.gif)
 
-## 更換舞台背景顏色或圖片
+## Replace the stage background color or picture
 
-「更換舞台背景顏色」和「更換舞台背景圖片」，可以改變怪獸舞台背景為指定的顏色或圖片，圖片只要填入圖片網址，執行後就會更換。( 圖片支援 jpg、jpeg、png 和 gif )
+"Replace the stage background color" and "Replace the stage background image", you can change the monster stage background to the specified color or picture. The picture will be filled in the image URL and will be replaced after execution. (Image support jpg, jpeg, png, and gif)
 
-![小怪獸互動＆舞台](../images/zh-tw/docs/webbit/monster/event-12.jpg)
+![Little Monster Interactive & Stage] (../images/zh-tw/docs/webbit/monster/event-12.jpg)
 
-舉例來說，找一張[清明上河圖](https://theme.npm.edu.tw/opendata/att/collectionPic/04015934/17024347.jpg#_blank)的圖片網址，將網址貼上在背景圖片的文字積木內，網頁執行後就會看見舞台背景變成清明上殼圖了
+For example, find the image URL of [Qingming Shanghe Map] (https://theme.npm.edu.tw/opendata/att/collectionPic/04015934/17024347.jpg#_blank) and paste the URL on the background image. In the text building block, after the web page is executed, you will see the stage background become a clear upper shell.
 
-![小怪獸互動＆舞台](../images/zh-tw/docs/webbit/monster/event-13.jpg)
+![Little Monster Interactive & Stage] (../images/zh-tw/docs/webbit/monster/event-13.jpg)
 
-## 設定舞台為全螢幕
+## Set the stage to full screen
 
-「設定舞台為全螢幕」積木不影響任何操作，只會在「網頁執行時」把怪獸互動舞台變成全螢幕大小。
+The "Set Stage as Full Screen" building block does not affect any operation. It only turns the monster interactive stage into full screen size when "Web page execution".
 
-![小怪獸互動＆舞台](../images/zh-tw/docs/webbit/monster/event-14.jpg)
+![Little Monster Interactive & Stage] (../images/zh-tw/docs/webbit/monster/event-14.jpg)
 
-如果不想使用該功能，也可以手動操作，點選怪獸互動舞台右上方的小按鈕，也可以進行全螢幕的切換。
+If you don't want to use this function, you can also manually operate it. You can also switch the full screen by clicking the small button at the top right of the monster interaction stage.
 
-![小怪獸互動＆舞台](../images/zh-tw/docs/webbit/monster/event-15.jpg)
+![Little Monster Interactive & Stage] (../images/zh-tw/docs/webbit/monster/event-15.jpg)
 
-## 取得舞台尺寸
+## Get the stage size
 
-「取得舞台尺寸」積木可以取得當下怪獸互動舞台的寬度或高度。
+The "Get Stage Size" building block can get the width or height of the current monster interactive stage.
 
-![小怪獸互動＆舞台](../images/zh-tw/docs/webbit/monster/event-16.jpg)
+![Little Monster Interactive & Stage] (../images/zh-tw/docs/webbit/monster/event-16.jpg)
 
-下圖的例子會在網頁執行的時候，綠色小怪獸講出舞台寬度，紅色小怪獸講出舞台高度。
+The example below will show the stage width when the web page is executed, and the red monster tells the stage height.
 
-![小怪獸互動＆舞台](../images/zh-tw/docs/webbit/monster/event-17.jpg)
-
+![Little Monster Interactive & Stage] (../images/zh-tw/docs/webbit/monster/event-17.jpg)

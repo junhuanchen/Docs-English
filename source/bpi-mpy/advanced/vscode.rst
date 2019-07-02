@@ -1,33 +1,33 @@
-改善一下编程环境（微软加持）
-=====================================================
+Improve the programming environment (Microsoft blessing)
+=========================================================== ===
 
-有没有觉得先前的工具都太 low 了？现在是时候换强大的 IDE 工具了。
+Do you think the previous tools are too low? It's time to switch to a powerful IDE tool.
 
-说说 VSCode
-------------------------------------------------------
+Talk about VSCode
+-------------------------------------------------- ----
 
-在 Build 2015 大会上，微软除了发布了 Microsoft Edge 浏览器和新的 Windows 10 系统外，最大的惊喜莫过于宣布推出免费跨平台的 Visual Studio Code 编辑器了！
+At the Build 2015 conference, in addition to Microsoft's release of the Microsoft Edge browser and the new Windows 10 system, the biggest surprise was the announcement of the free cross-platform Visual Studio Code editor!
 
-Visual Studio Code (简称 VS Code / VSC) 是一款免费开源的现代化轻量级代码编辑器，支持几乎所有主流的开发语言的语法高亮、智能代码补全、自定义快捷键、括号匹配和颜色区分、代码片段、代码对比 Diff、GIT命令 等特性，支持插件扩展，并针对网页开发和云端应用开发做了优化。软件跨平台支持 Win、Mac 以及 Linux，运行流畅，可谓是微软的良心之作......
+Visual Studio Code (VS Code / VSC) is a free, open source, modern lightweight code editor that supports syntax highlighting, smart code completion, custom shortcuts, parenthesis matching, and color in almost all major development languages. Features such as differentiation, code snippets, code comparison Diff, GIT commands, support plug-in extensions, and optimization for web development and cloud application development. Software cross-platform support Win, Mac and Linux, running smoothly, can be described as Microsoft's conscience...
 
-安装 VSCode 编辑器
-------------------------------------------------------
+Install the VSCode editor
+-------------------------------------------------- ----
 
-点此下载宇宙第一的编辑器 :download:`VSCODE <https://code.visualstudio.com/>` 。
+Click here to download the first editor of the universe: download:`VSCODE <https://code.visualstudio.com/>`.
 
-安装 Mpfshell 插件
-------------------------------------------------------
+Install the Mpfshell plugin
+-------------------------------------------------- ----
 
 .. Attention::
 
-    看不懂英文的到这里先搜索中文语言包下载。
+    If you don't understand English, go here and search for the Chinese language pack.
 
-    .. image:: vscode.png
+    .. image:: vscode.png
 
-在拓展商店里，搜索并安装 Python 和 Mpfshell 插件，可以让你处在任何 Python 代码页面下右键编辑运行代码。
+In the expansion store, searching for and installing the Python and Mpfshell plugins allows you to right-click on any Python code page to edit the run code.
 
-使用方法请查看插件说明，其实和 Mpfshell 是一样的。
+Please refer to the plugin description for the method of use, which is the same as Mpfshell.
 
 .. image:: vsc-mpfshell.png
 
-是时候享受 IDE 带来的轻松编程了，工具在手，天下我有。
+It's time to enjoy the easy programming that the IDE brings, the tools are in hand, and I have it all over the world.

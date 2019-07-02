@@ -1,9 +1,9 @@
-使用基础
-========================================
+Use foundation
+=================================================
 
-这里你将会体验和了解什么是 Arduino 编程，开始你的 C/C++ 嵌入式开发之旅吧。
+Here you will experience and understand what Arduino programming is, start your C/C++ embedded development journey.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 2
 
-   install
+   Install

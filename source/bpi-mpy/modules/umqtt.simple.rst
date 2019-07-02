@@ -1,78 +1,76 @@
-
 .. _umqtt.simple:
 :mod:`umqtt.simple`
 
-umqtt.simple 模块
-=========================================
+Umqtt.simple module
+==================================================
 
-MQTT是一种基于发布 - 订阅的“轻量级”消息传递协议，用于在TCP / IP协议之上使用。
-提供订阅/发布模式，更为简约、轻量，易于使用，针对受限环境（带宽低、网络延迟高、网络通信不稳定），可以简单概括为物联网打造。
+MQTT is a publish-subscribe "lightweight" messaging protocol for use over TCP/IP.
+Provides a subscription/release mode that is simpler, lighter, and easier to use. For limited environments (low bandwidth, high network latency, and unstable network communication), it can be easily summarized for the Internet of Things.
 
-.. Hint:: 
+.. Hint::
 
-    该模块来源于 ``MicroPython-lib`` : https://github.com/micropython/micropython-lib/tree/master/umqtt.simple
+    This module is derived from ``MicroPython-lib`` : https://github.com/micropython/micropython-lib/tree/master/umqtt.simple
 
-构建对象
+Build object
 -------------
 
 .. class:: MQTTClient(client_id, server, port=0, user=None, password=None, keepalive=0,ssl=False, ssl_params={})
 
-    - ``client_id``
-    - ``server``
-    - ``port``
-    - ``user``
-    - ``password``
-    - ``keepalive``
-    - ``ssl``
-    - ``ssl_params``
+    - ``client_id``
+    - ``server``
+    - ``port``
+    - ``user``
+    - ``password``
+    - ``keepalive``
+    - ``ssl``
+    - ``ssl_params``
 
-方法
+method
 ----------------
 
 .. method:: MQTTClient.set_callback(f)
 
-    - ``f`` - f(topic, msg) 为回调函数,第1参数为 ``topic`` 接收到的主题,第2参数为 ``msg`` 为该主题消息
+    - ``f`` - f(topic, msg) is the callback function, the first parameter is the subject received by ``topic``, and the second parameter is ``msg`` for the topic message.
 
 
 
-为收到的订阅消息设置回调
+Set a callback for incoming subscription messages
 
 .. method:: MQTTClient.set_last_will(topic, msg, retain=False, qos=0)
 
-设置MQTT“last will”消息。应该在 connect()之前调用。
+Set the MQTT "last will" message. Should be called before connect().
 
 .. method:: MQTTClient.connect( clean_session=True )
 
-连接到服务器。如果此连接使用存储在服务器上的持久会话，则返回True（如果使用clean_session = True参数，则返回False（默认值））。
+Connect to the server. Returns True if this connection uses a persistent session stored on the server (or False (default) if the clean_session = True parameter is used).
 
 .. method:: MQTTClient.disconnect()
 
-断开与服务器的连接，释放资源。
+Disconnect from the server and release resources.
 
 .. method:: MQTTClient.ping()
 
-Ping服务器（响应由wait_msg（）自动处理）
+Ping server (response automatically by wait_msg())
 
 .. method:: MQTTClient.publish(topic, msg, retain=False, qos=0)
 
-发布消息
+make an announcement
 
 .. method:: MQTTClient.subscribe(topic, qos=0)
 
-订阅主题
+Subscribe to topics
 
 .. method:: MQTTClient.wait_msg()
 
-等待服务器消息。订阅消息将通过set_callback（）传递给回调集，任何其他消息都将在内部处理。
+Waiting for a server message. The subscription message will be passed to the callback set via set_callback() and any other messages will be processed internally.
 
 .. method:: MQTTClient.check_msg()
 
-检查服务器是否有待处理的消息。如果是，则以与wait_msg（）相同的方式处理，如果不是，则立即返回。
+Check if the server has pending messages. If yes, it is handled in the same way as wait_msg(), and if not, it returns immediately.
 
 
-.. Attention:: 
+.. Attention::
 
-    * wait_msg()并且check_msg()是“主循环迭代”方法，阻塞和非阻塞版本。wait_msg()如果您没有任何其他前台任务要执行（即您的应用只响应订阅的MQTT消息），check_msg() 如果您也处理其他前台任务，则应定期在循环中调用它们 。
-    * 请注意，如果您只发布消息，则不需要调用wait_msg()/ check_msg()，也不要订阅消息。
-    * 发布和订阅都支持QoS 0和1。不支持QoS2以保持较小的代码大小。除ClientID外，目前只支持“clean session”参数进行连接。
-
+    * wait_msg() and check_msg() are "main loop iteration" methods, blocking and non-blocking versions. Wait_msg() If you don't have any other foreground tasks to execute (ie your app only responds to subscribed MQTT messages), check_msg() If you also handle other foreground tasks, you should periodically call them in a loop.
+    * Note that if you only post messages, you don't need to call wait_msg()/check_msg() or subscribe to the message.
+    * QoS 0 and 1 are supported for both publish and subscribe. QoS2 is not supported to maintain a small code size. In addition to the ClientID, only the "clean session" parameter is currently supported for connection.
