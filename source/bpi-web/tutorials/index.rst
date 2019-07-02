@@ -12,10 +12,10 @@ We are preparing a simplified version of the content, so stay tuned.
 .. toctree::
    :maxdepth: 2
 
-   Flash_web.rst
-   Info/index
-   Basic/index
-   Monster/index
-   Detect/index
-   Sound/index
-   Board/index
+   flash_web.rst
+   info/index
+   basic/index
+   monster/index
+   detect/index
+   sound/index
+   board/index
