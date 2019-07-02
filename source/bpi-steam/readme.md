@@ -3,7 +3,7 @@
 ![](https://img.shields.io/badge/open%20source-bananpi-brightgreen.svg)
 ![](https://img.shields.io/badge/support-webduino-blue.svg)
 
-![](https://webduino.com.cn/site/img/tutorials/en_us/detail-03.gif)
+![](https://webduino.com.cn/site/img/tutorials/zh_cn/detail-03.gif)
 
 This product is designed with ESP-WROOM-32 (ESP32) module as the core, with 40nm process, using Tensilica LX6 dual-core 32-bit processor, frequency up to 240 MHz, with 32 I/O pins, supporting 2.4G Wi -Fi, Bluetooth 4.0 and above, with 448KB ROM and 520 KB SRAM memory capacity, processing speed of 600 DMIPS, with ultra-low power consumption of 40nm process, is the highest performance, most stable and most versatile on the market. One of the products.
 
