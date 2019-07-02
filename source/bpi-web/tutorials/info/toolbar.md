@@ -1,4 +1,4 @@
-#编辑器 (Installation Toolbar)
+# Editor (Installation Toolbar)
 
 The installed version of the editor is specially designed for environments without Wi-Fi. Just open the editor and connect the development board to the USB cable for control, update or related settings. This tutorial will introduce the toolbar function of the installation. . (The editor installation version is collectively referred to as the installation version below)
 

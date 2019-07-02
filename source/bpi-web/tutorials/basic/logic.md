@@ -1,4 +1,4 @@
-#逻辑
+# logic
 
 In daily life, whether it is writing programs, mathematics, court offense and defense, or even traffic on the road, buying or selling things, or getting up, there are many "logic" components. The logic can do many conditions and judgments. Some conditions will perform something, such as hearing the alarm ringing, getting up, seeing the green light to travel, etc., etc., is a simple logical judgment.
 
@@ -40,7 +40,7 @@ For example, you can first add a random integer with a variable a between 0 and 
 
 ![Logic](../images/zh-tw/docs/webbit/basic/logic-09.jpg)
 
-## 逻辑操作子
+## Logical operator
 
 The "Logical Operator" building block provides a more flexible judgment condition for logical judgment, including "* and *" and "* or *". If "and" is used, the conditional spaces judged at both ends must be satisfied. The action will be executed. If you use "or", the action will be executed as long as one of the conditional spaces is satisfied.
 
@@ -88,7 +88,7 @@ For example, if you check "You are my little apple" and there is "Find a small a
 
 ![Logic](../images/zh-tw/docs/webbit/basic/logic-19.jpg)
 
-## 非
+## Not
 
 "Non" blocks are literally "not what" and are usually used in conjunction with "true/false" or "null" blocks.
 
@@ -99,19 +99,19 @@ If the bricks are connected behind the "non" bricks, the state will be reversed.
 ![Logic](../images/zh-tw/docs/webbit/basic/logic-21.jpg)
 
 
-##真/假
+## True / False
 
 The "true/false" building blocks mainly represent the values ​​of ture (true) and false (false). The purpose is to make more judgments than numbers and texts when making judgments. It is also possible to submit ture and false to variables. It is also quite easy to use in some situations.
 
 ![Logic](../images/zh-tw/docs/webbit/basic/logic-22.jpg)
 
-##空
+## None
 
 When writing a program, sometimes a variable is encountered or a value becomes null ( null ). At this time, you can use the building block of the null value. The usage is similar to the usage of "true/false".
 
 ![Logic](../images/zh-tw/docs/webbit/basic/logic-23.jpg)
 
-## 三元逻辑操作
+## Ternary logical operation
 
 The "Ternary Logic Operator" building block is for "only two conditions*" and returns one of the "two expressions" according to the condition.
 

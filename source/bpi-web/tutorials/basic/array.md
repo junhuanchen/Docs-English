@@ -8,7 +8,7 @@ Array blocks include common functions such as building arrays, creating empty ar
 
 ![Array](../images/zh-tw/docs/webbit/basic/array-01.jpg)
 
-## 空阵
+## An empty array
 
 The "empty array" building block creates an array container, which is an array that does not contain any elements.
 

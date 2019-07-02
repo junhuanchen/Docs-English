@@ -1,4 +1,4 @@
-#开发板
+# Development board
 
 Three ways to control the development board are provided, namely "emulator", "USB" and "Wi-Fi". The simulator can learn without hardware. USB can be transmitted without network. USB connection control, and Wi-Fi can be wireless remote control, through three different control modes, regardless of the situation can be controlled as desired.
 

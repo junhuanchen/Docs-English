@@ -1,4 +1,4 @@
-#数学
+# Math
 
 Mathematical building blocks contain many mathematical operations, from basic addition, subtraction, multiplication and division, to rounding, mean, median, etc., whether it is a simple program or a complex application, can be achieved through a variety of mathematical operations.
 
@@ -60,7 +60,7 @@ The "Limited Number Range" block sets the maximum and minimum values ​​and l
 
 ![Mathematics](../images/zh-tw/docs/webbit/basic/math-12.jpg)
 
-## 四舍五入
+## Rounded
 
 The "rounding" building block can round off, unconditionally round, or unconditionally carry numbers with floating point numbers, and can also choose to round or carry to the first decimal point.
 

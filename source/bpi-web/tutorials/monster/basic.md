@@ -1,4 +1,4 @@
-#小怪兽操作
+# Operation little monster
 
 The editor has designed four cute little monsters, which can control the speech, sound, interaction and behavior of each little monster through the logical sequence of program blocks, and even further interact with the actual development board. More fun and interesting apps.
 

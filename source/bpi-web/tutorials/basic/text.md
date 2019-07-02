@@ -1,4 +1,4 @@
-#文字
+# Text
 
 In addition to displaying meaningful vocabulary, the text building block can also combine texts by adding them, or find corresponding words or letters in a vocabulary, or even display the content of speech recognition or the status of the Internet of Things serial sensor. .
 

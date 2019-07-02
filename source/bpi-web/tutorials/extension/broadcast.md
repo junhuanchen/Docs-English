@@ -1,4 +1,4 @@
-#网络广播
+# webcast
 
 The network broadcast function not only allows the development board to interact with each other, but also realizes a variety of control scenarios such as one-to-many, many-to-one, virtual and real interaction, remote broadcast, etc. Can make the application of the Internet of Things to the extreme.
 

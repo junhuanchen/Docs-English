@@ -1,4 +1,4 @@
-#函
+# function
 
 Functional building blocks can help us simplify or manage more complex program logic, because when writing a program, we often encounter code that needs to be written and executed repeatedly. If we have to rewrite it once every time, it will inevitably cause the whole program. The complexity of the logic, through the function of the centralized management of these repeated procedures, you need to use the call function, you can execute the corresponding content.
 

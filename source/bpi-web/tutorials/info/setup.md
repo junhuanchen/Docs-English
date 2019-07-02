@@ -1,4 +1,4 @@
-#硬件开发板( Initialization setting)
+# Hardware development( Initialization setting)
 
 Before use, the most important thing is to initialize the settings. The purpose of the initialization settings is to enable the development board to automatically access the Internet (Internet). With the initial settings, we can also customize the display name and password of the development board, and even connect to the internet. Remote update.
 

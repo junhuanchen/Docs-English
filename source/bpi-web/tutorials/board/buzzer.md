@@ -1,4 +1,4 @@
-#音乐&声
+# Music & sound
 
 The development board has a built-in miniature buzzer that can emit a single sound of three octaves. With a combination of different note codes, or with built-in example music, the board can make a variety of beautiful melodies.
 

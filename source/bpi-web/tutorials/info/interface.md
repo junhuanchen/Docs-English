@@ -1,4 +1,4 @@
-#编辑器(Operation interface)
+# Editor (Operation interface)
 
 The editor is Webduino's latest program editing & learning software. In addition to the Webduino Blockly-based operation mode, it also greatly simplifies the step-by-step process of the operation. Even the virtual development board and the small monster interactive stage are added, whether it is a big friend or a child. Quick and easy to get started with Web: Bit.
 

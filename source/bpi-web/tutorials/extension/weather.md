@@ -1,4 +1,4 @@
-#气象资讯
+# Meteorological information
 
 Meteorological information blocks can instantly obtain open data from the Central Meteorological Administration, including common meteorological information such as weather, air quality, weather forecast, earthquake information, reservoir water conditions and radar echo maps. Implementation can better implement the effective application of meteorological information.
 

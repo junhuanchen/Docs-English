@@ -1,4 +1,4 @@
-#语音读
+# Voice reading
 
 Voice reading is through the computer's speech synthesizer, and we can pronounce the language we specify. The educational version of the speech reading can easily make creative applications such as voice time, voice notification, voice dialogue, etc., and can adjust the speed of the voice and The tone changes a lot of interesting patterns.
 

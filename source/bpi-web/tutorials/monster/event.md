@@ -1,4 +1,4 @@
-#小怪兽互动&stage
+# Little monsters interactive & stage
 
 In addition to setting the position or size of the little monster, the editor allows us to interact with the little monsters, such as clicking the little monster with the mouse, colliding with the little monsters, colliding with the edge of the stage, etc. Achieve more ideas and ideas.
 

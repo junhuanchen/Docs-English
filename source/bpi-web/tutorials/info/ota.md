@@ -1,4 +1,4 @@
-#硬体开发 board (update firmware)
+# Hardware development board (update firmware)
 
 If you have completed the initialization settings of the development board and also successfully connected to the Wi-Fi location, you can then prepare to update the firmware of the development board, or if you are using the editor installation version, you can no longer initialize the state. Next, complete the firmware update directly through the installation version.
 

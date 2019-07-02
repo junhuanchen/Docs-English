@@ -1,4 +1,4 @@
-#语音识别
+# Speech recognition
 
 With the ever-changing technology of technology, the voice recognition function that can be used in mobile devices in the past can now be fully realized. Combined with the technology of Google voice recognition, if the computer has a microphone, it can easily make "Hey Siri" or "OK. Google's fun voice control.
 

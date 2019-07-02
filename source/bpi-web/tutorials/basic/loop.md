@@ -1,4 +1,4 @@
-#重复
+# Loop
 
 In the field of programming, repetition (loop) is a basic function that is often used. Repeating the name is the process of repeated execution. It can also put the code that needs to be executed repeatedly in the loop, and can specify the number of times, delay time, or none. Exhaustive execution.
 

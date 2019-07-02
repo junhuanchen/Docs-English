@@ -30,7 +30,7 @@ With the infinitely repeated loops, you can modify the above example to change t
 
 ![Dialog input text] (../images/zh-tw/docs/webbit/detect/input-05.gif)
 
-##一问一答
+## Question and answer
 
 By inputting text, you can easily achieve the effect of "one question and one answer". Before entering the text block, place the small monster to ask for the name of the text. After the web page is executed, it will stay at the stage of inputting the text. After inputting the text, create the string. Building blocks, let the little monsters say "XXX hello" text combination.
 

@@ -1,4 +1,4 @@
-#检测光与温度
+# Light and temperature detection
 
 The development board has two built-in photoresistors and a temperature-sensitive resistor. The photoresistor can detect the lumen value of the ambient light. The temperature-sensitive resistor can detect the temperature change of two decimal places, and the light and temperature are detected. It is easy to make field monitoring related environment applications.
 
