@@ -1,100 +1,91 @@
 .. Introduction to BPI-STEAM documentation master file, created by
-   sphinx-quickstart on Sun May 26 22:43:43 2019.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+   Sphinx-quickstart on Sun May 26 22:43:43 2019.
+   You can adapt this file completely to your liking, but it should at least
+   Contain the root `toctree` directive.
 
 Welcome to BPI-STEAM documentation!
-=====================================================
+==============================================================
 
 .. Hint::
 
-    欢迎来到 BPI-STEAM 的用户使用文档，本项目托管于 `Github BPI-STEAM <https://github.com/BPI-STEAM>`_ 开源组织。
+    Welcome to the user documentation for BPI-STEAM, which is hosted on the `Github BPI-STEAM <https://github.com/BPI-STEAM>`_ open source organization.
 
 .. Attention::
 
-    由于开源发展迅速，文档中可以搜索得到英文参考文档，有助于开发者在日后的学习和查阅 API 所用，无法完全中文内容，还请谅解。
+    Due to the rapid development of open source, the English reference document can be searched in the document, which is helpful for developers to learn and consult the API in the future, and cannot fully Chinese content. Please understand.
 
-为您介绍一下 BPI-BIT 这款产品的基本信息。
+I will introduce you to the basic information of BPI-BIT.
 
 .. image:: _static/facade.gif
 
-BPI-BIT 是一款基于 ESP32 高性能芯片且兼容 micro:bit 设计的开源 STEAM 教育产品。
+BPI-BIT is an open source STEAM education product based on ESP32 high performance chip and compatible with micro:bit design.
 
 .. toctree::
-   :maxdepth: 2
-   :caption: BPI-BIT
-   
-   bpi-steam/readme
-   bpi-steam/driver
+   :maxdepth: 2
+   :caption: BPI-BIT
+   
+   bpi-steam/readme
+   bpi-steam/driver
 
-使用 Webduino 编程
+Programming with Webduino
 ---------------------------
 
-用户通过烧写 Webduino 固件，就可以使用面向全世界的 Webduino Blockly 积木化在线编程。
+By programming the Webduino firmware, users can use Webduino Blockly for online programming.
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Webduino
-   
-   bpi-web/release
-   bpi-web/tutorials/index
-   bpi-web/advanced/index
-   bpi-web/modules/index
+   :maxdepth: 2
+   :caption: Webduino
+   
+   bpi-web/release
+   bpi-web/tutorials/index
+   bpi-web/advanced/index
+   bpi-web/modules/index
 
-只需浏览器，即可随时查看云端和托管你的代码，配合 Github 上各种有趣的插件系统与多语言化环境，享受全世界流行的积木编程吧!
+Just look at the cloud and host your code at any time with the browser, and with the fun plug-in system and multi-language environment on Github, enjoy the world's popular building blocks programming!
 
-使用 MicroPython 编程
+Programming with MicroPython
 ---------------------------
 
-用户通过烧写 MicroPython 固件，就可以使用当下世界上最流行的 Python 语言进行编程。
+By programming MicroPython firmware, users can program in the world's most popular Python language.
 
-配合专业 IDE 的支持（如：VsCode、PyCharm），以便您轻松地将代码从电脑传输到板子中，从而体验程序创作的无穷乐趣！
+With the support of professional IDE (such as: VsCode, PyCharm), you can easily transfer the code from the computer to the board to experience the fun of program creation!
 
 .. toctree::
-   :maxdepth: 2
-   :caption: MicroPython
+   :maxdepth: 2
+   :caption: MicroPython
 
-   bpi-mpy/release
-   bpi-mpy/tutorials/index
-   bpi-mpy/advanced/index
-   bpi-mpy/samples/index
-   bpi-mpy/modules/index
-   mPython/docs/library/micropython/index.rst
-   mPython/docs/library/pythonStd/index.rst
+   bpi-mpy/release
+   bpi-mpy/tutorials/index
+   bpi-mpy/advanced/index
+   bpi-mpy/samples/index
+   bpi-mpy/modules/index
+   micropython/docs/index
 
-使用 Arduino 编程
+Programming with Arduino
 ---------------------------
 
 .. Hint::
 
-    Arduino 将不会阐述过多基础内容，请自行具备 C/C++ 的语言开发基础。
+    Arduino will not elaborate on too much basic content, please have your own language development foundation for C/C++.
 
-BPI-BIT 提供了入门 Arduino 的软件工具和最佳示例，这将成为你进入嵌入式专业开发的最低门槛。
+BPI-BIT provides the software tools and best practices for getting started with Arduino, which will be your minimum barrier to entry into embedded professional development.
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Arduino
-   
-   bpi-adu/tutorials/index
-   bpi-adu/advanced/index
-   bpi-adu/modules/index
+   :maxdepth: 2
+   :caption: Arduino
+   
+   bpi-adu/tutorials/index
+   bpi-adu/advanced/index
+   bpi-adu/modules/index
 
-拓展板支持
+Expansion board support
 ---------------------------
 
-BPI-BIT 大幅度的兼容 microbit 的底座硬件设计与使用，你可以查看以下支持的 Microbit 的拓展板或根据拓展板设计方案进行拓展应用。
+BPI-BIT is designed to be compatible with microbit-compatible base hardware. You can view the following supported Microbit expansion boards or expand applications based on the expansion board design.
 
 .. toctree::
-   :maxdepth: 2
-   :caption: 拓展板
-
-.. 
-.. toctree::
-   :maxdepth: 2
-   :caption: 引用区域
-   mPython/docs/index
-   micropython/docs/index
-.. 
+   :maxdepth: 2
+   :caption: expansion board
 
 .. image:: _static/footer.png
 
