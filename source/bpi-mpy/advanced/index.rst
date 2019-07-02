@@ -26,14 +26,14 @@ As shown in the figure.
 Once you have confirmed these two things, you can start your advanced journey.
 
 .. toctree::
-     :maxdepth: 2
-     :numbered:
+    :maxdepth: 2
+    :numbered:
 
-     Mpfs
-     Leds
-     Wifi
-     Wireless
-     Vscode
-     Mqtt
-     Codelab
-     Pycharm
+    mpfs
+    leds
+    wifi
+    wireless
+    vscode
+    mqtt
+    codelab
+    pycharm

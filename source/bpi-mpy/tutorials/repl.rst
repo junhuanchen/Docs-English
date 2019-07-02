@@ -19,25 +19,25 @@ MicroPython will run the code you entered and print the result (if any); if the 
 
 Try entering the following at the prompt:
 
-     >>> print('hello MicroPython')
-     Hello MicroPython
+    >>> print('hello MicroPython')
+    Hello MicroPython
 
 Note that you don't need to type the ``>>>`` arrows, which means you should type text at this prompt, and the next line is the content of the response.
 
 .. Hint::
 
-     In fact, the black box under mpy-editor is actually the repl area where you can interact.
+    In fact, the black box under mpy-editor is actually the repl area where you can interact.
 
-     .. image:: images/editor_repl.png
+    .. image:: images/editor_repl.png
 
 If you already know some python, you can try some basic commands now. E.g::
 
-     >>> 1+2
-     3
-     >>> 1/2
-     0.5
-     >>> 12*34
-     408
+    >>> 1+2
+    3
+    >>> 1/2
+    0.5
+    >>> 12*34
+    408
 
 Try it out?
 

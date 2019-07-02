@@ -15,13 +15,13 @@ After a brief introduction, I can design a simple judgment, such as obtaining th
     From microbit import *
 
     While True:
-         Reading = accelerometer.get_x()
-         If reading > 20:
-              Display.show("R")
-         Elif reading < -20:
-              Display.show("L")
-         Else:
-              Display.show("-")
+        Reading = accelerometer.get_x()
+        If reading > 20:
+             Display.show("R")
+        Elif reading < -20:
+             Display.show("L")
+        Else:
+             Display.show("-")
 
 The effect is as follows:
 
@@ -37,18 +37,18 @@ Attitude detection, such as up, down, left, right, left and right, forward and b
     From microbit import *
 
     While True:
-         Gesture = accelerometer.current_gesture()
-         If gesture == "face up":
-              Display.show(Image.HAPPY)
-         Else:
-              Display.show(Image.ANGRY)
+        Gesture = accelerometer.current_gesture()
+        If gesture == "face up":
+             Display.show(Image.HAPPY)
+        Else:
+             Display.show(Image.ANGRY)
 
 Experience balance ball game
 ---------------------------
 
 .. Hint::
-     
-     The code is too complicated to paste the running experience directly.
+    
+    The code is too complicated to paste the running experience directly.
 
 Based on the previous basic application, we can make a fun balance ball game.
 
@@ -68,28 +68,28 @@ Based on the previous basic application, we can make a fun balance ball game.
     View = Pixel()
     X, Y, Color, Flag = 2, 2, 2, 0
     While True:
-         # print('acceleration:', sensor.acceleration)
-         # print('gyro:', sensor.gyro)
-         # print('magnetic:', sensor.magnetic)
-         A = sensor.acceleration # -1 and -2 Software correction
-         View.LoadXY(X, Y, (0, 0, 0), False)
-         If (A[1] > -1 and A[1] > X and X < View.Max - 1):
-              X = X + 1
-         Elif (A[1] < -1 and A[1] < X and X > View.Min):
-              X = X - 1
-         If (A[0] > -2 and A[0] > Y and Y > View.Min):
-              Y = Y - 1
-         Elif (A[0] < -2 and A[0] < Y and Y < View.Max - 1):
-              Y = Y + 1
+        # print('acceleration:', sensor.acceleration)
+        # print('gyro:', sensor.gyro)
+        # print('magnetic:', sensor.magnetic)
+        A = sensor.acceleration # -1 and -2 Software correction
+        View.LoadXY(X, Y, (0, 0, 0), False)
+        If (A[1] > -1 and A[1] > X and X < View.Max - 1):
+             X = X + 1
+        Elif (A[1] < -1 and A[1] < X and X > View.Min):
+             X = X - 1
+        If (A[0] > -2 and A[0] > Y and Y > View.Min):
+             Y = Y - 1
+        Elif (A[0] < -2 and A[0] < Y and Y < View.Max - 1):
+             Y = Y + 1
 
-         Color = Color + Flag
-         If (Color == 10):
-              Flag = -2
-         Elif (Color == 2):
-              Flag = +2
+        Color = Color + Flag
+        If (Color == 10):
+             Flag = -2
+        Elif (Color == 2):
+             Flag = +2
 
-         View.LoadXY(X, Y, (0, Color, Color), False)
-         View.Show()
-         Utime.sleep_ms(100)
+        View.LoadXY(X, Y, (0, Color, Color), False)
+        View.Show()
+        Utime.sleep_ms(100)
 
 .. image:: images/balance_ball.gif

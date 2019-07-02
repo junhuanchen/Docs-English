@@ -14,7 +14,7 @@ The effect is as follows
 
 .. Note::
 
-     Through the previous chapter, we think you should know the purpose of the first line, then the second line refers to the display module to display the built-in Image image, the smile pattern we show is actually only part of the Image, and its name Called Happy, and we want to show it by using show and placing it in brackets, so write it as ``display.show(Image.HAPPY)`` and try it out.
+    Through the previous chapter, we think you should know the purpose of the first line, then the second line refers to the display module to display the built-in Image image, the smile pattern we show is actually only part of the Image, and its name Called Happy, and we want to show it by using show and placing it in brackets, so write it as ``display.show(Image.HAPPY)`` and try it out.
 
 Built-in image list
 ---------------------------
@@ -83,10 +83,10 @@ Each LED can be set to a value on the physical display, similar to high and low 
     From microbit import *
 
     Boat = Image("05050:"
-                     "05050:"
-                     "05050:"
-                     "99999:"
-                     "09990")
+                    "05050:"
+                    "05050:"
+                    "99999:"
+                    "09990")
 
     Display.show(boat)
 
@@ -94,11 +94,11 @@ Each LED can be set to a value on the physical display, similar to high and low 
 
 .. Note::
 
-     At runtime, you should be able to see one such picture! !
+    At runtime, you should be able to see one such picture! !
 
 Now that you know how to draw, you should notice that there is one at the end of each line: then both sides are enclosed with double quotation marks, which are just the brightness of the numerical representation, so creating an image is as simple as that.
 
-     But in fact, you don't need to write multiple lines. If you can guarantee that each line doesn't go wrong, you can write it like this.
+    But in fact, you don't need to write multiple lines. If you can guarantee that each line doesn't go wrong, you can write it like this.
 
 .. code:: python
 
@@ -153,40 +153,40 @@ Let's create a list of our own animations. In this case, we'll make an animation
     From microbit import *
 
     Boat1 = Image("05050:"
-                      "05050:"
-                      "05050:"
-                      "99999:"
-                      "09990")
+                     "05050:"
+                     "05050:"
+                     "99999:"
+                     "09990")
 
     Boat2 = Image("00000:"
-                      "05050:"
-                      "05050:"
-                      "05050:"
-                      "99999")
+                     "05050:"
+                     "05050:"
+                     "05050:"
+                     "99999")
 
     Boat3 = Image("00000:"
-                      "00000:"
-                      "05050:"
-                      "05050:"
-                      "05050")
+                     "00000:"
+                     "05050:"
+                     "05050:"
+                     "05050")
 
     Boat4 = Image("00000:"
-                      "00000:"
-                      "00000:"
-                      "05050:"
-                      "05050")
+                     "00000:"
+                     "00000:"
+                     "05050:"
+                     "05050")
 
     Boat5 = Image("00000:"
-                      "00000:"
-                      "00000:"
-                      "00000:"
-                      "05050")
+                     "00000:"
+                     "00000:"
+                     "00000:"
+                     "05050")
 
     Boat6 = Image("00000:"
-                      "00000:"
-                      "00000:"
-                      "00000:"
-                      "00000")
+                     "00000:"
+                     "00000:"
+                     "00000:"
+                     "00000")
 
     All_boats = [boat1, boat2, boat3, boat4, boat5, boat6]
     Display.show(all_boats, delay=500, loop=True)
@@ -194,9 +194,9 @@ Let's create a list of our own animations. In this case, we'll make an animation
 
 .. Note::
 
-     running result:
+    running result:
 
-     .. image:: images/running.gif
+    .. image:: images/running.gif
 
 Modify the color of the image
 ---------------------------
@@ -227,9 +227,9 @@ Of course, what if the built-in colors do not meet the requirements? You can als
 
 .. Note::
 
-     Then let's explain how the code works.
+    Then let's explain how the code works.
 
-     - The first code is to create an image of 6 ships.
-     - Then store them with a list.
-     - Then use display to display these images and set the delay to 500 milliseconds
-     - Finally, loop=True is set, so this ship will sink again and again.
+    - The first code is to create an image of 6 ships.
+    - Then store them with a list.
+    - Then use display to display these images and set the delay to 500 milliseconds
+    - Finally, loop=True is set, so this ship will sink again and again.

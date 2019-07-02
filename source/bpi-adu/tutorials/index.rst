@@ -6,4 +6,4 @@ Here you will experience and understand what Arduino programming is, start your 
 .. toctree::
     :maxdepth: 2
 
-    Install
+    install

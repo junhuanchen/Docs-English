@@ -117,16 +117,16 @@ Now I use the following code to configure the board to have the registration fun
 .. code:: python
 
     Try:
-         Import network
-         Mdns = network.mDNS()
-         Mdns.start("bpibit", "MicroPython with mDNS")
-         _ = mdns.addService('_ftp', '_tcp', 21, "MicroPython",
+        Import network
+        Mdns = network.mDNS()
+        Mdns.start("bpibit", "MicroPython with mDNS")
+        _ = mdns.addService('_ftp', '_tcp', 21, "MicroPython",
                                     {"board": "ESP32", "service": "bpibit FTP File transfer", "passive": "True"})
-         _ = mdns.addService('_telnet', '_tcp', 23, "MicroPython", {"board": "ESP32", "service": "bpibit Telnet REPL"})
-         _ = mdns.addService('_http', '_tcp', 80, "MicroPython", {"board": "ESP32", "service": "bpibit Web server"})
-         Print("mDNS started")
+        _ = mdns.addService('_telnet', '_tcp', 23, "MicroPython", {"board": "ESP32", "service": "bpibit Telnet REPL"})
+        _ = mdns.addService('_http', '_tcp', 80, "MicroPython", {"board": "ESP32", "service": "bpibit Web server"})
+        Print("mDNS started")
     Except Exception as e:
-         Print("mDNS not started")
+        Print("mDNS not started")
 
 You can use ``bpibit.local`` instead of IP on your computer.
 Address access it, as shown below, you can also take the name you want, change the code

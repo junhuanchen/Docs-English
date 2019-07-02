@@ -5,7 +5,7 @@ This section describes how to use the analog input and output of the board pins.
 
 .. Attention::
 
-     You can refer to the :ref:`board subinterface pin description <MicroPythonPindesc>` for the available analog pins.
+    You can refer to the :ref:`board subinterface pin description <MicroPythonPindesc>` for the available analog pins.
 
 
 .. _analog_in:
@@ -18,40 +18,40 @@ The analog input pins available for the board are **P0**, **P1**, **P2**, **P3**
 
 .. admonition:: What is an analog input?
 
-     The analog input is the conversion of an analog signal to a digital signal, referred to as the ADC.
+    The analog input is the conversion of an analog signal to a digital signal, referred to as the ADC.
 
 
 
 The following is to read the analog input using the P0 pin:
 
-     From MicroPython import * # Import MicroPython module
+    From MicroPython import * # Import MicroPython module
 
-     P0=MicroPythonPin(0,PinMode.ANALOG) # Instantiate MicroPythonPin and set P0 to "PinMode.ANALOG" mode
-     While True:
-          Value=p0.read_analog() # Read P0 pin analog
-          oled.DispChar("analog:%d" %value,30,20)
-          Oled.show()
-          Oled.fill(0)
+    P0=MicroPythonPin(0,PinMode.ANALOG) # Instantiate MicroPythonPin and set P0 to "PinMode.ANALOG" mode
+    While True:
+         Value=p0.read_analog() # Read P0 pin analog
+         oled.DispChar("analog:%d" %value,30,20)
+         Oled.show()
+         Oled.fill(0)
 
 
 ::
-     
-     From MicroPython import *
-     P0=MicroPythonPin(0,PinMode.ANALOG)
+    
+    From MicroPython import *
+    P0=MicroPythonPin(0,PinMode.ANALOG)
 
 .. Note::
 
-     ``MicroPythonPin`` is instantiated. ``mode`` is set to ``PinMode.ANALOG`` analog input mode.
+    ``MicroPythonPin`` is instantiated. ``mode`` is set to ``PinMode.ANALOG`` analog input mode.
 
 
 
 Read analog input::
 
-     P0.read_analog()
+    P0.read_analog()
 
 .. Note::
 
-     Because the adc sample data width is 12bit, the full scale is 4095.
+    Because the adc sample data width is 12bit, the full scale is 4095.
 
 
 EXT alligator clip
@@ -62,18 +62,18 @@ Next, you can connect resistive components (such as light-sensitive, thermistor)
 
 The EXT connection is the P3 pin of the board::
 
-     From MicroPython import * # Import MicroPython module
+    From MicroPython import * # Import MicroPython module
 
-          P3=MicroPythonPin(3,PinMode.ANALOG) # Instantiate MicroPythonPin and set P3 to "PinMode.ANALOG" mode
-          While True:
+         P3=MicroPythonPin(3,PinMode.ANALOG) # Instantiate MicroPythonPin and set P3 to "PinMode.ANALOG" mode
+         While True:
                 Value=p3.read_analog() # Read EXT(P3) pin analog
                 oled.DispChar("analog:%d" %value,30,20)
                 Oled.show()
                 Oled.fill(0)
 
 .. image:: ../../images/tutorials/ext.png
-     :width: 180
-     :align: center
+    :width: 180
+    :align: center
 
 
 Analog output
@@ -81,25 +81,25 @@ Analog output
 
 .. admonition:: What is an analog output?
 
-     The board's pins cannot output analog signals like an audio amplifier - by modulating the voltage on the pins. These pins can only enable a full 3.3V output or pull it down to 0V.
-     However, it is still possible to control the brightness of the LED or the speed of the motor by turning the voltage on and off very quickly, and to control its turn-on time and turn-off time.
-     This technique is called Pulse Width Modulation (PWM), which is the method of ``write_analog``.
+    The board's pins cannot output analog signals like an audio amplifier - by modulating the voltage on the pins. These pins can only enable a full 3.3V output or pull it down to 0V.
+    However, it is still possible to control the brightness of the LED or the speed of the motor by turning the voltage on and off very quickly, and to control its turn-on time and turn-off time.
+    This technique is called Pulse Width Modulation (PWM), which is the method of ``write_analog``.
 
 
 Output a PWM signal of a voltage::
 
-     From MicroPython import * # Import MicroPython module
+    From MicroPython import * # Import MicroPython module
 
-     P0=MicroPythonPin(0,PinMode.PWM) # Instantiate MicroPythonPin, set P0 to "PinMode.PWM" mode
+    P0=MicroPythonPin(0,PinMode.PWM) # Instantiate MicroPythonPin, set P0 to "PinMode.PWM" mode
 
-     Voltage=2.0 # voltage 2V
-     P0.write_analog(int(voltage/3.3*1023)) #calculate the duty cycle of the corresponding voltage PWM
+    Voltage=2.0 # voltage 2V
+    P0.write_analog(int(voltage/3.3*1023)) #calculate the duty cycle of the corresponding voltage PWM
 
 .. Note::
 
-     * ``value`` in ``write_analog(value)`` is the duty cycle of the PWM signal.
-     * Since the IO pin voltage is 3.3V, I need an output voltage of 2V. Therefore, the mapped value is 2/3*1023.
-     * Since the calculated floating point number, we also need to use ``int()`` to convert to integer.
+    * ``value`` in ``write_analog(value)`` is the duty cycle of the PWM signal.
+    * Since the IO pin voltage is 3.3V, I need an output voltage of 2V. Therefore, the mapped value is 2/3*1023.
+    * Since the calculated floating point number, we also need to use ``int()`` to convert to integer.
 
 .. image:: ../../images/tutorials/pwm.png
 

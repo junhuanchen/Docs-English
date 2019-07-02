@@ -8,11 +8,11 @@ Welcome to BPI-STEAM documentation!
 
 .. Hint::
 
-     Welcome to the user documentation for BPI-STEAM, which is hosted on the `Github BPI-STEAM <https://github.com/BPI-STEAM>`_ open source organization.
+    Welcome to the user documentation for BPI-STEAM, which is hosted on the `Github BPI-STEAM <https://github.com/BPI-STEAM>`_ open source organization.
 
 .. Attention::
 
-     Due to the rapid development of open source, the English reference document can be searched in the document, which is helpful for developers to learn and consult the API in the future, and cannot fully Chinese content. Please understand.
+    Due to the rapid development of open source, the English reference document can be searched in the document, which is helpful for developers to learn and consult the API in the future, and cannot fully Chinese content. Please understand.
 
 I will introduce you to the basic information of BPI-BIT.
 
@@ -66,7 +66,7 @@ Programming with Arduino
 
 .. Hint::
 
-     Arduino will not elaborate on too much basic content, please have your own language development foundation for C/C++.
+    Arduino will not elaborate on too much basic content, please have your own language development foundation for C/C++.
 
 BPI-BIT provides the software tools and best practices for getting started with Arduino, which will be your minimum barrier to entry into embedded professional development.
 

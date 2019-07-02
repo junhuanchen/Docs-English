@@ -3,12 +3,12 @@ Let the board connect to the Internet
 
 .. Attention::
 
-     After the 20190528 official firmware has been turned off the debug information, so you need to disable the following code, you can modify it in the boot.py content.
-     
-     .. code:: python
+    After the 20190528 official firmware has been turned off the debug information, so you need to disable the following code, you can modify it in the boot.py content.
+    
+    .. code:: python
 
-          Import esp
-          Esp.osdebug(None)
+         Import esp
+         Esp.osdebug(None)
 
 Connect to a WIFI hotspot
 ---------------------------
@@ -47,7 +47,7 @@ You can confirm that you have entered the distribution mode. If necessary, you c
 
 .. Attention::
 
-     In this mode, the ``Mpfshell`` open will not work properly, but it can be accessed using other serial tools. This is because the board has been unable to respond to the REPL operation, and the REPL will continue to run when the distribution network is completed.
+    In this mode, the ``Mpfshell`` open will not work properly, but it can be accessed using other serial tools. This is because the board has been unable to respond to the REPL operation, and the REPL will continue to run when the distribution network is completed.
 
 .. image:: wifi/smartconfig.png
 
@@ -57,9 +57,9 @@ After confirming that you have entered the distribution mode, you need to use an
 
 .. Attention::
 
-     Now the software is developing very fast. The software UI interface in the figure below has changed, but the function is unchanged. Please download EspTouch.APK to view and support reading the WIFI name after Android 9+.
-     
-     If you can't get it, go to the community and search for it.
+    Now the software is developing very fast. The software UI interface in the figure below has changed, but the function is unchanged. Please download EspTouch.APK to view and support reading the WIFI name after Android 9+.
+    
+    If you can't get it, go to the community and search for it.
 
 .. image:: wifi/view_apk.png
 

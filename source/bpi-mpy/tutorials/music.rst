@@ -7,7 +7,7 @@ Cough, not much nonsense, come to the music, a built-in buzzer has been pre-wire
 
 .. Attention::
 
-          Do not install a piezoelectric buzzer, it can only play a single tone.
+         Do not install a piezoelectric buzzer, it can only play a single tone.
 
 Use the code as follows (interface can refer to Microbit documentation)
 
@@ -20,27 +20,27 @@ You can see the following list, which is our built-in music.
 
 .. code:: python
 
-          music.DADADADUM
-          music.ENTERTAINER
-          music.PRELUDE
-          music.ODE
-          music.NYAN
-          music.RINGTONE
-          music.FUNK
-          music.BLUES
-          music.BIRTHDAY
-          music.WEDDING
-          music.FUNERAL
-          music.PUNCHLINE
-          music.PYTHON
-          music.BADDY
-          music.CHASE
-          music.BA_DING
-          music.WAWAWAWAA
-          music.JUMP_UP
-          music.JUMP_DOWN
-          music.POWER_UP
-          music.POWER_DOWN
+         music.DADADADUM
+         music.ENTERTAINER
+         music.PRELUDE
+         music.ODE
+         music.NYAN
+         music.RINGTONE
+         music.FUNK
+         music.BLUES
+         music.BIRTHDAY
+         music.WEDDING
+         music.FUNERAL
+         music.PUNCHLINE
+         music.PYTHON
+         music.BADDY
+         music.CHASE
+         music.BA_DING
+         music.WAWAWAWAA
+         music.JUMP_UP
+         music.JUMP_DOWN
+         music.POWER_UP
+         music.POWER_DOWN
 
 Pick some out and listen, there should be something you like.
 
@@ -76,14 +76,14 @@ To explain this well, let's look at the case in the next chapter.
 
 .. Hint::
 
-          The default beat position of the music module is ticks=4, bmp=120, ticks
-          Refers to the default value of the beat type of a note, such as ‘C4’ and ticks=4, which is equivalent to
-          ‘C4:4’ means the length of time this node plays under the bpm benchmark, and bpm
-          Refers to the unit of beats per minute, which is dependent on BPM in electronic music.
-          The value of the value describes the rate of different music.
+         The default beat position of the music module is ticks=4, bmp=120, ticks
+         Refers to the default value of the beat type of a note, such as ‘C4’ and ticks=4, which is equivalent to
+         ‘C4:4’ means the length of time this node plays under the bpm benchmark, and bpm
+         Refers to the unit of beats per minute, which is dependent on BPM in electronic music.
+         The value of the value describes the rate of different music.
 
-          According to the formula, the tempo of the benchmark can be calculated. beats = 60(s) \* 000 / 120 / ticks
-          If it is the default value, the duration of the beat unit is 60000/120/4 = 125 milliseconds.
+         According to the formula, the tempo of the benchmark can be calculated. beats = 60(s) \* 000 / 120 / ticks
+         If it is the default value, the duration of the beat unit is 60000/120/4 = 125 milliseconds.
 
 Try playing music
 ----------------------------------------
@@ -106,7 +106,7 @@ In order to be able to play this classic two tigers on the board, we prepared th
     Import music
 
     Tune = ["C4:4", "D4:4", "E4:4", "C4:4", "C4:4", "D4:4", "E4:4", "C4:4" ,
-              "E4:4", "F4:4", "G4:8", "E4:4", "F4:4", "G4:8"]
+             "E4:4", "F4:4", "G4:8", "E4:4", "F4:4", "G4:8"]
     Music.play(tune)
 
 And the magic is not only that, it can further simplify the composition process, for example, the current node
@@ -117,7 +117,7 @@ And the magic is not only that, it can further simplify the composition process,
     Import music
 
     Tune = ["C4:4", "D", "E", "C", "C", "D", "E", "C", "E", "F", "G:8" ,
-              "E:4", "F", "G:8"]
+             "E:4", "F", "G:8"]
     Music.play(tune)
 
 Did it produce the same effect?
@@ -132,10 +132,10 @@ Music lets you make non-note sounds, like here we create a siren
     From microbit import *
     Import music
     While True:
-         Music.pitch(range(880, 1760, 16), 15)
-         Sleep(50)
-         Music.pitch(range(1760, 880, -16), 15)
-         Sleep(50)
+        Music.pitch(range(880, 1760, 16), 15)
+        Sleep(50)
+        Music.pitch(range(1760, 880, -16), 15)
+        Sleep(50)
 
 Slightly note that the music.pitch method is an example of using it, it requires a frequency, and the frequency of 440 is equivalent to the frequency of a concert a used for tuning.
 
@@ -187,8 +187,8 @@ Copy the converted code and let the board play the music.
     Import music
     Music.set_tempo(ticks=16, bpm=45)
     Tune = ['D#6', 'D#', 'D#:2', 'F', 'G', 'G#', 'G#', 'G', 'F', 'F:6',
-              'D:2', 'D', 'D', 'D', 'D#', 'F', 'G', 'G', 'F', 'D#', 'D#:6',
-              'D#:2', 'D#', 'D#', 'D#', 'F', 'G', 'G#', 'G#', 'G', 'F', 'F:4']
+             'D:2', 'D', 'D', 'D', 'D#', 'F', 'G', 'G', 'F', 'D#', 'D#:6',
+             'D#:2', 'D#', 'D#', 'D#', 'F', 'G', 'G#', 'G#', 'G', 'F', 'F:4']
     Music.play(tune)
 
 .. _fizban99: https://github.com/fizban99

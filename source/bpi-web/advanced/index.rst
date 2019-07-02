@@ -7,19 +7,19 @@ There may be some basic questions that are commonplace, but this does not affect
 
 .. Hint::
 
-     Please perform the `Webduino Blockly Standard Edition <https://bit.webduino.com.cn/blockly/?lang=zh-hans>`_ development in a standard environment.
+    Please perform the `Webduino Blockly Standard Edition <https://bit.webduino.com.cn/blockly/?lang=zh-hans>`_ development in a standard environment.
 
 The following tutorial corresponds to the teaching website: `Online teaching files <https://bit.webduino.com.cn/site/zh_cn/tutorials.html>`_.
 
 .. toctree::
-     :maxdepth: 1
-     :numbered:
-     
-     Setting
-     Blockly
-     Rgbmatrix
-     Button
-     Photocell
-     Temperature
-     Buzzer
-     Mpu9250
+    :maxdepth: 1
+    :numbered:
+    
+    setting
+    blockly
+    rgbmatrix
+    button
+    photocell
+    temperature
+    buzzer
+    mpu9250

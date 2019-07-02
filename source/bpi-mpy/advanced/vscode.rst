@@ -20,9 +20,9 @@ Install the Mpfshell plugin
 
 .. Attention::
 
-     If you don't understand English, go here and search for the Chinese language pack.
+    If you don't understand English, go here and search for the Chinese language pack.
 
-     .. image:: vscode.png
+    .. image:: vscode.png
 
 In the expansion store, searching for and installing the Python and Mpfshell plugins allows you to right-click on any Python code page to edit the run code.
 

@@ -9,28 +9,28 @@ Provides a subscription/release mode that is simpler, lighter, and easier to use
 
 .. Hint::
 
-     This module is derived from ``MicroPython-lib`` : https://github.com/micropython/micropython-lib/tree/master/umqtt.simple
+    This module is derived from ``MicroPython-lib`` : https://github.com/micropython/micropython-lib/tree/master/umqtt.simple
 
 Build object
 -------------
 
 .. class:: MQTTClient(client_id, server, port=0, user=None, password=None, keepalive=0,ssl=False, ssl_params={})
 
-     - ``client_id``
-     - ``server``
-     - ``port``
-     - ``user``
-     - ``password``
-     - ``keepalive``
-     - ``ssl``
-     - ``ssl_params``
+    - ``client_id``
+    - ``server``
+    - ``port``
+    - ``user``
+    - ``password``
+    - ``keepalive``
+    - ``ssl``
+    - ``ssl_params``
 
 method
 ----------------
 
 .. method:: MQTTClient.set_callback(f)
 
-     - ``f`` - f(topic, msg) is the callback function, the first parameter is the subject received by ``topic``, and the second parameter is ``msg`` for the topic message.
+    - ``f`` - f(topic, msg) is the callback function, the first parameter is the subject received by ``topic``, and the second parameter is ``msg`` for the topic message.
 
 
 
@@ -71,6 +71,6 @@ Check if the server has pending messages. If yes, it is handled in the same way 
 
 .. Attention::
 
-     * wait_msg() and check_msg() are "main loop iteration" methods, blocking and non-blocking versions. Wait_msg() If you don't have any other foreground tasks to execute (ie your app only responds to subscribed MQTT messages), check_msg() If you also handle other foreground tasks, you should periodically call them in a loop.
-     * Note that if you only post messages, you don't need to call wait_msg()/check_msg() or subscribe to the message.
-     * QoS 0 and 1 are supported for both publish and subscribe. QoS2 is not supported to maintain a small code size. In addition to the ClientID, only the "clean session" parameter is currently supported for connection.
+    * wait_msg() and check_msg() are "main loop iteration" methods, blocking and non-blocking versions. Wait_msg() If you don't have any other foreground tasks to execute (ie your app only responds to subscribed MQTT messages), check_msg() If you also handle other foreground tasks, you should periodically call them in a loop.
+    * Note that if you only post messages, you don't need to call wait_msg()/check_msg() or subscribe to the message.
+    * QoS 0 and 1 are supported for both publish and subscribe. QoS2 is not supported to maintain a small code size. In addition to the ClientID, only the "clean session" parameter is currently supported for connection.

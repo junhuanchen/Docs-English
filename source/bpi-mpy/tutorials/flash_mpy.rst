@@ -7,7 +7,7 @@ For the first time, please burn the MicroPython firmware first. If you don't bur
 
 .. Hint::
 
-     Please confirm that the driver has been installed and you have already know the name of your hardware serial port, for example: COM5, ttyUSB0.
+    Please confirm that the driver has been installed and you have already know the name of your hardware serial port, for example: COM5, ttyUSB0.
 
 .. toctree::
     :maxdepth: 2
@@ -34,4 +34,4 @@ Please refer to other web tutorials. If you have special needs, you can submit a
 
 .. Attention::
 
-     If you have any questions, please go to the Chinese community <https://forum.banana-pi.org.cn/c/bpi-bit>`_ feedback.
+    If you have any questions, please go to the Chinese community <https://forum.banana-pi.org.cn/c/bpi-bit>`_ feedback.

@@ -59,7 +59,7 @@ Sometimes you want to have repeatable random behavior: a reproducible random sou
 
     Random.seed(1337)
     While True:
-         If button_a.was_pressed():
-              Display.show(str(random.randint(1, 6)))
+        If button_a.was_pressed():
+             Display.show(str(random.randint(1, 6)))
 
 Running the above program we always get the same result, showing '5' on the led panel, because the seed we give here is a fixed value, so this program always produces a fixed number.

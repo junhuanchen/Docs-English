@@ -12,10 +12,10 @@ Therefore, UDP transmission speed is faster than TCP, but it is easy to lose pac
 The following figure shows the interaction process between the server and the client UDP communication connection:
 
 .. figure:: ../../images/tutorials/udpprincipal.png
-     :scale: 100 %
-     :align: center
+    :scale: 100 %
+    :align: center
 
-     Socket UDP communication process
+    Socket UDP communication process
 
 -----------------
 
@@ -46,32 +46,32 @@ The general steps of the UDP programming client are:
 Example of a UDP client:
 
 .. code-block:: python
-     :linenos:
+    :linenos:
 
-     From MicroPython import *
-     Import socket
-     
-     Mywifi=wifi() # Create wifi object
-     mywifi.connectWiFi("ssid","password") # Connect to the network
-     Dst = ("192.168.0.3", 6000) # destination ip address and port number
+    From MicroPython import *
+    Import socket
+    
+    Mywifi=wifi() # Create wifi object
+    mywifi.connectWiFi("ssid","password") # Connect to the network
+    Dst = ("192.168.0.3", 6000) # destination ip address and port number
 
-     # caught exception, stop closing the socket if it is unexpectedly interrupted in the "try" code block
-     Try:
-          s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) # Create UDP sockets
-          S.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) # Set socket properties
+    # caught exception, stop closing the socket if it is unexpectedly interrupted in the "try" code block
+    Try:
+         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) # Create UDP sockets
+         S.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) # Set socket properties
 
-          While True:
+         While True:
                 S.sendto(b'hello message from MicroPython\r\n',dst) # Send data to destination ip
                 Sleep(2)
 
-     # When catching an exception, close the socket, network
-     Except:
-          If (s):
+    # When catching an exception, close the socket, network
+    Except:
+         If (s):
                 S.close()
-          mywifi.disconnectWiFi()
+         mywifi.disconnectWiFi()
 
 .. image:: ../../images/tutorials/udpclient.gif
-     :align: center
+    :align: center
 
 UDP server
 ~~~~~~~~
@@ -87,24 +87,24 @@ The general steps on the server side of UDP programming are:
 Example of a UDP server:
 
 .. code-block:: python
-     :linenos:
+    :linenos:
 
-     From MicroPython import *
-     Import socket
-     
-     Mywifi=wifi() # Create wifi object
-     mywifi.connectWiFi("ssid","password") # Connect to the network
+    From MicroPython import *
+    Import socket
+    
+    Mywifi=wifi() # Create wifi object
+    mywifi.connectWiFi("ssid","password") # Connect to the network
 
-     # caught exception, stop closing the socket if it is unexpectedly interrupted in the "try" code block
-     Try:
-          s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) # Create UDP sockets
-          S.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) # Set socket properties
-          Ip=mywifi.sta.ifconfig()[0] # Get the local ip address
-          S.bind((ip,6000)) # bind ip and port number
-          Print('waiting...')
-          oled.DispChar("%s:6000" %ip,0,0)
-          Oled.show()
-          While True:
+    # caught exception, stop closing the socket if it is unexpectedly interrupted in the "try" code block
+    Try:
+         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) # Create UDP sockets
+         S.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) # Set socket properties
+         Ip=mywifi.sta.ifconfig()[0] # Get the local ip address
+         S.bind((ip,6000)) # bind ip and port number
+         Print('waiting...')
+         oled.DispChar("%s:6000" %ip,0,0)
+         Oled.show()
+         While True:
                 Data,addr=s.recvfrom(1024) # Receive the data sent by the other party, the read byte is set to 1024 bytes, and the (data, addr) binary group is returned.
                 Print('received:',data,'from',addr) #Print received data
                 Oled.fill(0) #清屏
@@ -113,15 +113,15 @@ Example of a UDP server:
                 Oled.show()
                 
 
-     # When catching an exception, close the socket, network
-     Except:
-          If (s):
+    # When catching an exception, close the socket, network
+    Except:
+         If (s):
                 S.close()
-          mywifi.disconnectWiFi()
+         mywifi.disconnectWiFi()
 
 .. Note::
 
-     The return value of the ``recvfrom()`` function is a tuple (bytes, address), where bytes is the received byte data, and address is the sender's IP address at the port number.
-     Expressed in a binary group (host, port). Note that the return value of the recv() function is only bytes data. UDP, each time you send ``sendto()`` and receive data ``recvfrom``, you need to specify the address information in TCP programming. You do not need to call ``listen()`` and ``accept()``. .
+    The return value of the ``recvfrom()`` function is a tuple (bytes, address), where bytes is the received byte data, and address is the sender's IP address at the port number.
+    Expressed in a binary group (host, port). Note that the return value of the recv() function is only bytes data. UDP, each time you send ``sendto()`` and receive data ``recvfrom``, you need to specify the address information in TCP programming. You do not need to call ``listen()`` and ``accept()``. .
 
 .. Attention:: In the above example, use ``connectWiFi()`` to connect to the same router wifi. You can also use the ``enable_APWiFi()`` to enable the AP mode and build a wifi network to allow other devices to access it. This eliminates the need to rely on other router wifi networks.

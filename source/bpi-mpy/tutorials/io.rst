@@ -24,10 +24,10 @@ The prepared code is as follows:
 
     From microbit import *
     While True:
-         If pin1.is_touched():
-              Display.show(Image.HAPPY)
-         Else:
-              Display.show(Image.SAD)
+        If pin1.is_touched():
+             Display.show(Image.HAPPY)
+        Else:
+             Display.show(Image.SAD)
 
 At this time, you need a hand to touch the pin of the No. 1 tag, you can see the board turned from sad to happy.
 If you loosen it, it will change your expression again. Is it angry? XD
@@ -82,10 +82,10 @@ Then we will add a Blink effect this time, using the following code.
     From microbit import *
 
     While True:
-         Pin2.write_digital(1)
-         Sleep(200)
-         Pin2.write_digital(0)
-         Sleep(1000)
+        Pin2.write_digital(1)
+        Sleep(200)
+        Pin2.write_digital(0)
+        Sleep(1000)
 
 The effect is as follows:
 

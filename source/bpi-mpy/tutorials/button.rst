@@ -53,7 +53,7 @@ It is judged whether the button is pressed, and this judgment method is suggeste
 .. code:: python
 
     While True:
-         # Do stuff
+        # Do stuff
 
 So we can build a very simple code
 
@@ -62,8 +62,8 @@ So we can build a very simple code
     From microbit import *
 
     While True:
-         If button_a.is_pressed():
-              Display.show(Image.HAPPY)
-              Display.clear()
+        If button_a.is_pressed():
+             Display.show(Image.HAPPY)
+             Display.clear()
 
 At this point, you can press the button A to display the Image we have learned before. This is what the so-called learning is.
