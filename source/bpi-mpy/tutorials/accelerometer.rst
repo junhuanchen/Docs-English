@@ -1,5 +1,5 @@
 Board attitude detection
-=========================================================== ===
+==============================================================
 
 This module allows you to obtain the current nine-axis attitude of the board, which is the direction state values ​​of acceleration, gravity, and magnetic induction (X, Y).
 

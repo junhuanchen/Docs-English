@@ -1,5 +1,5 @@
 Change the Bluetooth slave
-=========================================================== ===
+==============================================================
 
 We know that microbit has a Bluetooth, the same bpibit is not only WIFI, but also Bluetooth ble, this article is to explain how to use it in MicroPyhton.
 

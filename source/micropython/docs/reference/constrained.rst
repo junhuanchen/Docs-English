@@ -373,9 +373,9 @@ that memory.
 The final output produced by ``micropython.mem_info(1)`` will vary in detail but
 may be interpreted as follows:
 
-====== =================
+=======================
 Symbol Meaning
-====== =================
+=======================
    .   free block
    h   head block
    =   tail block
@@ -386,7 +386,7 @@ Symbol Meaning
    F   float
    B   byte code
    M   module
-====== =================
+=======================
 
 Each letter represents a single block of memory, a block being 16 bytes. So each
 line of the heap dump represents 0x400 bytes or 1KiB of RAM.

@@ -1,5 +1,5 @@
 Detection panel button
-=========================================================== ===
+==============================================================
 
 Ok, at least I have created some code to let the board do something.
 So, let's deal with the input of the device, such as the key input.

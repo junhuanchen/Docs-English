@@ -1,5 +1,5 @@
 Built-in module
-=========================================================== ==
+=============================================================
 
 The following modules are all modules owned by BPI-BIT MicroPython's current firmware. Enter help('modules') under REPL to confirm that the bottom list provides unofficial build-in module documentation.
 

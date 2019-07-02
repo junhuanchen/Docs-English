@@ -1,12 +1,12 @@
 Understanding wireless programming
-=========================================================== ===
+==============================================================
 
 Wired connection to the board has been a feature of the last century, so in the future development process, we support and try to go in the direction of wireless control, because various simple IoT devices will not leave a special one. The wired interface gives you connection to the computer control, for example: a smart-controlled light.
 
 So at this time, wireless is used. It can be seen that when the board is connected to the Internet, we can directly help the board to access the Internet without inserting a computer, so this is the basis of wireless programming, to pass a simple The way to get the board into your network, you can control it.
 
 Remote connection board
--------------------------------------------------- ----
+------------------------------------------------------
 
 MicroPython's interactive interface uses Python
 REPL, which is itself a re-operable system operating environment, is different from previous Linux. It is simple and easy to use. We are not enjoying the beauty brought by technology itself. If programming is only let Tools become difficult to use, so why continue programming?
@@ -40,14 +40,14 @@ In the future, you will use the battery-powered way to get out of the computer, 
 .. _WebREPL: http://micropython.org/webrepl
 
 Remote management board
--------------------------------------------------- ----
+------------------------------------------------------
 
 Although REPL can be used to program the board, we also need some additional network support services to make our board more enjoyable.
 
 Here I will briefly introduce them.
 
 FTP standard file system operation service
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use the following code to start the FTP service
 
@@ -75,7 +75,7 @@ It is not the same as FTP, it uses port 80, access is used http, not ftp.
 .. figure:: wireless/webdav_index.png
 
 Hostname local domain name service
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This requires specific routing service support, for example: openwrt(linux).
 
@@ -99,7 +99,7 @@ And after you go to other places to change the network, you do not need to chang
 Configuration is fine.
 
 MDns Reverse Domain Name Resolution Service
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you can't use the hostname to replace the IP memory, in addition to requesting the cloud service provider to register the DNS.
 In addition to domain name resolution, there is still a way to reverse registration DNS, DNS
@@ -144,7 +144,7 @@ MicroPython corresponds to the parameters of mdns.addService.
 Look at the picture to see the information we provided when we registered, such as FTP and HTTP services.
 
 Python dynamically builds web services
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Webdav implements a static, pure website that is not suitable for background Python
 Website service for computing.

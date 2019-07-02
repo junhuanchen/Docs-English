@@ -1,5 +1,5 @@
 Get ambient temperature
-=========================================================== ===
+==============================================================
 
 The thermistor underneath this LED panel allows you to get the ambient temperature around you. Before using it, it is recommended to place the board under cooling and collect it again. Otherwise, the reading temperature will deviate from the surrounding temperature. Because the board will heat up, the heat source that has the most influence around it is the temperature of the board itself, so the environment The temperature will change to the temperature of the board.
 

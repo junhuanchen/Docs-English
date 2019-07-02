@@ -1,5 +1,5 @@
 Play simple music
-=========================================================== ===
+==============================================================
 
 I have provided a MIDI playback function module that can perform PWM output on the specified buzzer to play music, although you may not need to know this.
 

@@ -1,5 +1,5 @@
 Release center
-=========================================================== ===
+==============================================================
 
 Here is the release version of the MicroPyhton firmware and software for the BPI-STEAM system.
 

@@ -1,7 +1,7 @@
 .. _flash_mpy:
 
 Brush in MicroPython firmware
-=========================================================== ===
+==============================================================
 
 For the first time, please burn the MicroPython firmware first. If you don't burn it, there is no MicroPython programming environment.
 

@@ -1,5 +1,5 @@
 Panel display image
-=========================================================== ===
+==============================================================
 
 Before I start the project, you can know that MicroPython has a lot of built-in images. If you want to display a smiley face, then you only need to run the following code.
 

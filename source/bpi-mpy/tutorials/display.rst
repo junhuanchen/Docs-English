@@ -1,5 +1,5 @@
 Hello, World!
-=========================================================== ===
+==============================================================
 
 The traditional way to start programming in a new language is to have the computer print "Hello, World!".
 

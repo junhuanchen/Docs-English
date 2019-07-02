@@ -1,10 +1,10 @@
 Programming with Pycharm IDE
-=========================================================== ===
+==============================================================
 
 It's time to switch to a top-level Python professional IDE. What do you think? This article will teach you how to write MicroPython and run it in Pycharm.
 
 Get the intellij-MicroPython plugin
--------------------------------------------------- ----
+------------------------------------------------------
 
 Download here: download:`intellij-micropython <https://github.com/BPI-STEAM/BPI-BIT-MicroPython/releases/tag/pycharm>`.
 

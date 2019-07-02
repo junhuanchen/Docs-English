@@ -1,5 +1,5 @@
 Advanced tutorial
-=========================================================== ===
+==============================================================
 
 When you have mastered the basic tutorials above, you are already getting started, and you have the basic ability to use code. If you want to be advanced, you should look at the more advanced development documentation.
 

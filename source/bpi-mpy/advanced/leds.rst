@@ -1,15 +1,15 @@
 Lighting the LED light again
-=========================================================== ===
+==============================================================
 
 If Hello World is a religious programming start for software programmers, then for those who are hardware programmers, Blink Led, too, all hardware programming starts with lighting a light. . Therefore, we pay attention to the gradual progress, first a light, then a row of lights.
 
 .. figure:: leds/ready.png
 
 Light up the LED light on the GPIO
--------------------------------------------------- ----
+------------------------------------------------------
 
 Enter repl mode
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: leds/into_repl.png
 
@@ -44,7 +44,7 @@ Then you can see that it is gone.
 .. figure:: leds/light_restore.png
 
 Use the mian.py file
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Prepare the following code into the main.py file. The difference from the previous one is that the effect is continuous. It will make the light be on, wait for a second and then go out. Since the effect is continuous, there is no way to pass the graph. Show the situation, so try it yourself.
 
@@ -82,7 +82,7 @@ If the effect is not obvious, you can write an infinite loop to see the effect, 
 .. figure:: leds/blink_led.png
 
 LED panel light that illuminates the panel (NeoPixel)
--------------------------------------------------- ----
+------------------------------------------------------
 
 Prepare the following code into main.py
 

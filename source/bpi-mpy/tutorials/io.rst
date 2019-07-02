@@ -1,5 +1,5 @@
 Control gold finger IO
-=========================================================== ===
+==============================================================
 
 IO refers to Input/Output in the computer, that is, input and output, referred to as IO port.
 

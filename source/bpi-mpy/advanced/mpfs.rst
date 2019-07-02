@@ -121,12 +121,12 @@ In detail, you need to look at the mpfshell readme documentation. Here I will ex
     Mpfs is short for mpfshell.
 
 Run python files lexecfile and execfile
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Execfile refers to the code file that exists on the running board. After adding l, the local code file can be transferred to the board and run into repl.
 
 View all files on the board ls
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This will list the names of all the directories and files on the board.
 
@@ -140,7 +140,7 @@ This will list the names of all the directories and files on the board.
         Wifi_cfg.py
 
 Quickly view the contents of the file cat
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To view the boot.py file shown above, type cat boot.py .
 
@@ -159,12 +159,12 @@ To view the boot.py file shown above, type cat boot.py .
     Mpfs [/]>
 
 Delete the specified file rm
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you want to delete the boot.py file shown above, enter rm boot.py, which is irreversible.
 
 File push put and get get
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The two brothers can help you download or upload the file, save it in the lpwd directory, and modify it with lcd.
 

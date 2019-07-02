@@ -1,5 +1,5 @@
 How to use scratch3 for bpi:bit
-=========================================================== ===
+==============================================================
 
 Online `Scratch3 Codelab`_ website, see here more in detail ` `codelab`_ and `scratch open source documentation `_\ .
 
@@ -10,7 +10,7 @@ Then refer to the `usb_microbit user manual `_\, and similarly, as shown below, 
 .. figure:: codelab/used.png
 
 How to use them?
--------------------------------------------------- ----
+------------------------------------------------------
 
 Make sure the adapter software and the scratch3 website are open. On the scratch3 website, click on it (the expansion button in the lower left corner)
 
@@ -38,7 +38,7 @@ Mpfshell, directly control the hardware, directly complete the interface call an
 .. figure:: codelab/demo.png
 
 How to use Scratch3 for Mpfshell?
--------------------------------------------------- ----
+------------------------------------------------------
 
 How to use mpfshell, in fact, only need to look at a few examples to know their origin and control relationship.
 
@@ -50,7 +50,7 @@ But the point to note is that eim/mpfshell/exec/bpibit is a typical theme, meani
 The mpfshell plugin theme is eim/mpfshell/exec/default, and the extension of bpibit is eim/mpfshell/exec/bpibit, so you can distinguish the control of multiple instances according to this, and when you need it, you will find it necessary. Sex.
 
 Talk about how it was designed
--------------------------------------------------- ----
+------------------------------------------------------
 
 This time we have a second-editable interface, but if you really want to know how to do it, you can understand both projects.
 
