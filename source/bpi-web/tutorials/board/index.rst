@@ -2,12 +2,12 @@ Development board function
 =================================================
 
 .. toctree::
-   :maxdepth: 2
-   :numbered:
+    :maxdepth: 2
+    :numbered:
 
-   board
-   rgbled-matrix
-   ab-button
-   photocell-thermistor
-   buzzer
-   mpu9250
+    board
+    rgbled-matrix
+    ab-button
+    photocell-thermistor
+    buzzer
+    mpu9250

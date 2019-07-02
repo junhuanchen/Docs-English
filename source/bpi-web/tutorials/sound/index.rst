@@ -2,9 +2,9 @@ Voice & sound
 =================================================
 
 .. toctree::
-   :maxdepth: 2
-   :numbered:
+    :maxdepth: 2
+    :numbered:
 
    sound-effect
-   speak-aloud
-   speech-recognition
+    speak-aloud
+    speech-recognition

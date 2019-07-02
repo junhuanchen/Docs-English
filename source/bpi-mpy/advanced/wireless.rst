@@ -29,7 +29,7 @@ The running program is normal, but you need to be aware that the path settings o
 1. The webrepl standard path is ``ws://192.168.30.116:8266``\.
 
 2. The path to mpfshell is
-   ``ws:192.168.30.116,1234``\, the difference is that the latter allows the pass-through password, thus eliminating the connection authentication.
+    ``ws:192.168.30.116,1234``\, the difference is that the latter allows the pass-through password, thus eliminating the connection authentication.
 
 At this point, you can use it like wired in the past. If there is any problem during the period, you only need to restart the board. It will automatically connect to the network and open it.
 Webrepl's support services.
@@ -53,8 +53,8 @@ Use the following code to start the FTP service
 
 .. code:: python
 
-   Import ftptiny
-   ftptiny.FtpTiny().start()
+    Import ftptiny
+    ftptiny.FtpTiny().start()
 
 .. figure:: wireless/ftp.png
 
@@ -65,8 +65,8 @@ Use the following code to start
 
 .. code:: python
 
-   Import webdav
-   Webdav.start()
+    Import webdav
+    Webdav.start()
 
 .. figure:: wireless/webdav.png
 
@@ -116,17 +116,17 @@ Now I use the following code to configure the board to have the registration fun
 
 .. code:: python
 
-   Try:
-       Import network
-       Mdns = network.mDNS()
-       Mdns.start("bpibit", "MicroPython with mDNS")
-       _ = mdns.addService('_ftp', '_tcp', 21, "MicroPython",
-                           {"board": "ESP32", "service": "bpibit FTP File transfer", "passive": "True"})
-       _ = mdns.addService('_telnet', '_tcp', 23, "MicroPython", {"board": "ESP32", "service": "bpibit Telnet REPL"})
-       _ = mdns.addService('_http', '_tcp', 80, "MicroPython", {"board": "ESP32", "service": "bpibit Web server"})
-       Print("mDNS started")
-   Except Exception as e:
-       Print("mDNS not started")
+    Try:
+         Import network
+         Mdns = network.mDNS()
+         Mdns.start("bpibit", "MicroPython with mDNS")
+         _ = mdns.addService('_ftp', '_tcp', 21, "MicroPython",
+                                    {"board": "ESP32", "service": "bpibit FTP File transfer", "passive": "True"})
+         _ = mdns.addService('_telnet', '_tcp', 23, "MicroPython", {"board": "ESP32", "service": "bpibit Telnet REPL"})
+         _ = mdns.addService('_http', '_tcp', 80, "MicroPython", {"board": "ESP32", "service": "bpibit Web server"})
+         Print("mDNS started")
+    Except Exception as e:
+         Print("mDNS not started")
 
 You can use ``bpibit.local`` instead of IP on your computer.
 Address access it, as shown below, you can also take the name you want, change the code

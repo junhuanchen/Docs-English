@@ -12,12 +12,12 @@ MicroPython comes with a random number module that makes it easy to introduce ra
 
 .. code:: python
 
-   From microbit import *
-   Import random
+    From microbit import *
+    Import random
 
-   Names = ["Mary", "Yolanda", "Damien", "Alia", "Kushal", "Mei Xiu", "Zoltan" ]
+    Names = ["Mary", "Yolanda", "Damien", "Alia", "Kushal", "Mei Xiu", "Zoltan" ]
 
-   Display.scroll(random.choice(names))
+    Display.scroll(random.choice(names))
 
 The names contain strings of 7 different names. Use the random.choice method to take a list (names) as a parameter and return a randomly selected item. This item (randomly chosen name) is used as a parameter to display.scroll. The effect is that you can see the randomly selected name on the led display panel.
 
@@ -28,10 +28,10 @@ Random numbers are very useful. They are very common in games, such as scorpions
 
 .. code:: python
 
-   From microbit import *
-   Import random
+    From microbit import *
+    Import random
 
-   Display.show(str(random.randint(1, 6)))
+    Display.show(str(random.randint(1, 6)))
 
 Each time the board executes this function, it will display a number between 1 and 6. Random.randint() returns an integer (including 6) between two arguments 1 and 6. Note that because the show function requires a character to display, the str function is used here to convert the value to a character (for example, we convert 6 to "6" by str(6)).
 If you want a number between 0 and N, use the random.randrange() function. If you give it a parameter, it will return a random integer, but does not include the value of the parameter N (this is different from random.randint()). Sometimes you need a number with a decimal point. These are called floating point numbers. How do you generate random floating point numbers? At this time, you should use random.random(). This function will only return floating point numbers between 0.0 and 1.0. So how do you generate a larger number of floating point numbers? You should have an answer in your heart. That is to use both random.randrange and random.random
@@ -39,11 +39,11 @@ If you want a number between 0 and N, use the random.randrange() function. If yo
 .. code:: python
 
 
-   From microbit import *
-   Import random
+    From microbit import *
+    Import random
 
-   Answer = random.randrange(100) + random.random()
-   Display.scroll(str(answer))
+    Answer = random.randrange(100) + random.random()
+    Display.scroll(str(answer))
 
 Seed random number
 --------------------
@@ -54,12 +54,12 @@ Sometimes you want to have repeatable random behavior: a reproducible random sou
 
 .. code:: python
 
-   From microbit import *
-   Import random
+    From microbit import *
+    Import random
 
-   Random.seed(1337)
-   While True:
-       If button_a.was_pressed():
-           Display.show(str(random.randint(1, 6)))
+    Random.seed(1337)
+    While True:
+         If button_a.was_pressed():
+              Display.show(str(random.randint(1, 6)))
 
 Running the above program we always get the same result, showing '5' on the led panel, because the seed we give here is a fixed value, so this program always produces a fixed number.

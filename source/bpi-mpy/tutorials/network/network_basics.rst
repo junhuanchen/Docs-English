@@ -11,41 +11,41 @@ STA mode
 
 The board is packaged in a network-based module :ref:`MicroPython.wifi()<MicroPython.wifi>` Simplified wifi connection settings::
 
-    From MicroPython import * #import MicroPython module
+     From MicroPython import * #import MicroPython module
 
-    Mywifi=wifi() #instantiate wifi class
-    mywifi.connectWiFi("ssid","password") #WiFi connection, set ssid and password
+     Mywifi=wifi() #instantiate wifi class
+     mywifi.connectWiFi("ssid","password") #WiFi connection, set ssid and password
 
 .. Note::
 
-    After instantiating wifi(), two objects ``sta`` and ``ap`` are built. The ``sta`` object is in workstation mode and is connected to the network via a router. ``ap`` is AP mode, providing wifi access.
+     After instantiating wifi(), two objects ``sta`` and ``ap`` are built. The ``sta`` object is in workstation mode and is connected to the network via a router. ``ap`` is AP mode, providing wifi access.
 
 After the connection is successful, the Repl serial port prints as follows:
 
-    Connecting to network...
-    Connecting to network...
-    WiFi Connection Successful, Network Config:('192.168.0.2', '255.255.255.0', '192.168.0.1', '192.168.0.1')
+     Connecting to network...
+     Connecting to network...
+     WiFi Connection Successful, Network Config:('192.168.0.2', '255.255.255.0', '192.168.0.1', '192.168.0.1')
 
 
 Disconnect WiFi connection::
 
-    mywifi.disconnectWiFi()
+     mywifi.disconnectWiFi()
 
 Check if the wifi connection has been established::
 
-    Mywifi.sta.isconnected()
+     Mywifi.sta.isconnected()
 
 .. Note:: If a connection has been established, return ``True``, otherwise ``False``.
 
 You can view the network settings in the following ways:
 
-    Mywifi.sta.ifconfig()
+     Mywifi.sta.ifconfig()
 
 .. Note:: Return value 4 tuples: (IP address, netmask, gateway, DNS)
-    
+     
 When ``ifconfig()`` takes parameters, configure a static IP. E.g:
 
-    Mywifi.sta.ifconfig(('192.168.0.4', '255.255.255.0', '192.168.0.1', '192.168.0.1'))
+     Mywifi.sta.ifconfig(('192.168.0.4', '255.255.255.0', '192.168.0.1', '192.168.0.1'))
 
 AP mode
 -------
@@ -54,10 +54,10 @@ In addition to the STA mode to connect to the router wifi, the board can also us
 
 ::
 
-    From MicroPython import wifi # Import the wifi class of the MicroPython module
+     From MicroPython import wifi # Import the wifi class of the MicroPython module
 
-    Mywifi=wifi() # instance wifi
-    mywifi.enable_APWiFi("MicroPython-wifi", 13) # Configure and enable AP mode, the first parameter: wifi name, use channel
+     Mywifi=wifi() # instance wifi
+     mywifi.enable_APWiFi("MicroPython-wifi", 13) # Configure and enable AP mode, the first parameter: wifi name, use channel
 
 ``wifi.enable_APWiFi(essid, channel=10)`` is used to configure and enable the AP mode function. The ``essid`` parameter is the wifi name, and the ``channel`` parameter is the wifi channel. After the AP mode is enabled, other boards or network devices can connect to the network for network communication.
 

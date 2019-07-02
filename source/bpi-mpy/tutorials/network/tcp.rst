@@ -17,10 +17,10 @@ TCP communication requires three steps: creating a connection, transferring data
 When working, the socket divides the two sides of the connection into server and client, that is, C/S mode. The principle of TCP communication is as follows:
 
 .. figure:: ../../images/tutorials/tcpprincipal.png
-    :scale: 90 %
-    :align: center
+     :scale: 90 %
+     :align: center
 
-    Socket TCP communication process
+     Socket TCP communication process
 
 
 ---------------------------------
@@ -52,50 +52,50 @@ The general steps of the TCP programming client are:
 tcpClient example:
 
 .. code-block:: python
-    :linenos:
+     :linenos:
 
-    Import socket
-    From MicroPython import *
+     Import socket
+     From MicroPython import *
 
-    Host = "172.25.1.63" #TCP server IP address
-    Port = 5001 # TCP server port
-    s=None
+     Host = "172.25.1.63" #TCP server IP address
+     Port = 5001 # TCP server port
+     s=None
 
-    Mywifi=wifi() # Create wifi class
+     Mywifi=wifi() # Create wifi class
 
 
-    # caught exception, stop closing the socket if it is unexpectedly interrupted in the "try" code block
-    Try:
-        mywifi.connectWiFi("ssid","password") #WiFi connection, set ssid and password
-        # mywifi.enable_APWiFi("wifi_name",13) # You can also enable AP mode and build your own wifi network.
-        Ip=mywifi.sta.ifconfig()[0] # Get the local IP address
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Create a TCP socket, or you can give no parameters. The default is TCP communication mode
-        S.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) # Set the socket property
-        S.connect((host,port)) # Set the IP and port of the server to be connected and connect
-        S.send("hello MicroPython, I am TCP Client") # Send data to the server
+     # caught exception, stop closing the socket if it is unexpectedly interrupted in the "try" code block
+     Try:
+          mywifi.connectWiFi("ssid","password") #WiFi connection, set ssid and password
+          # mywifi.enable_APWiFi("wifi_name",13) # You can also enable AP mode and build your own wifi network.
+          Ip=mywifi.sta.ifconfig()[0] # Get the local IP address
+          s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Create a TCP socket, or you can give no parameters. The default is TCP communication mode
+          S.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) # Set the socket property
+          S.connect((host,port)) # Set the IP and port of the server to be connected and connect
+          S.send("hello MicroPython, I am TCP Client") # Send data to the server
 
-        While True:
-            Data = s.recv(1024) # Read 1024 bytes of data from the server-side socket
-            If(len(data) == 0): # If the received data is 0 bytes, close the socket
-                Print("close socket")
-                S.close()
-                Break
-            Print(data)
-            Data=data.decode('utf-8') # decode the string in UTF-8 encoding
-            Oled.fill(0) #清屏
-            oled.DispChar(data,0,0) # oledDisplay socket receiving data
-            Oled.show() # show
-            S.send(data) # Send the received data to the server
+          While True:
+                Data = s.recv(1024) # Read 1024 bytes of data from the server-side socket
+                If(len(data) == 0): # If the received data is 0 bytes, close the socket
+                     Print("close socket")
+                     S.close()
+                     Break
+                Print(data)
+                Data=data.decode('utf-8') # decode the string in UTF-8 encoding
+                Oled.fill(0) #清屏
+                oled.DispChar(data,0,0) # oledDisplay socket receiving data
+                Oled.show() # show
+                S.send(data) # Send the received data to the server
 
-    # When catching an exception, close the socket, network
-    Except:
-        If (s):
-            S.close()
-        mywifi.disconnectWiFi()
+     # When catching an exception, close the socket, network
+     Except:
+          If (s):
+                S.close()
+          mywifi.disconnectWiFi()
 
 .. Attention::
 
-    Since it is transmitted in bytes in the network, it is necessary to pay attention to data encoding and decoding.
+     Since it is transmitted in bytes in the network, it is necessary to pay attention to data encoding and decoding.
 
 .. Attention:: In the above example, use ``connectWiFi()`` to connect to the same router wifi. You can also use the ``enable_APWiFi()`` to enable the AP mode and build a wifi network to allow other devices to access it.
 
@@ -108,7 +108,7 @@ Receive the text and display the text on the oled screen.
 
 
 .. image:: ../../images/tutorials/socket_1.gif
-   
+    
 
 TCP server
 ~~~~~~~~
@@ -129,53 +129,53 @@ The general steps of the TCP programming server are:
 tcpServer example:
 
 .. code-block:: python
-    :linenos:
+     :linenos:
 
-    Import socket
-    From MicroPython import *
+     Import socket
+     From MicroPython import *
 
-    Port=5001 #TCP server port, range0~65535
-    listenSocket=None
+     Port=5001 #TCP server port, range0~65535
+     listenSocket=None
 
-    Mywifi=wifi() # Create wifi class
+     Mywifi=wifi() # Create wifi class
 
-    # caught exception, stop closing the socket if it is unexpectedly interrupted in the "try" code block
-    Try:
-        mywifi.connectWiFi("ssid","password") #WiFi connection, set ssid and password
-        # mywifi.enable_APWiFi("wifi_name",13) # You can also enable AP mode and build your own wifi network.
-        Ip= mywifi.sta.ifconfig()[0] # Get the local IP address
-        listenSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Create a socket, the default parameter is TCP communication mode.
-        listenSocket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) # Set socket property parameters
-        listenSocket.bind((ip,port)) # bind ip and port
-        listenSocket.listen(3) # Start listening and set the maximum number of connections
-        Print ('tcp waiting...')
-        oled.DispChar("%s:%s" %(ip,port),0,0) # oled screen shows the local server ip and port
-        oled.DispChar('accepting.....',0,16)
-        Oled.show()
+     # caught exception, stop closing the socket if it is unexpectedly interrupted in the "try" code block
+     Try:
+          mywifi.connectWiFi("ssid","password") #WiFi connection, set ssid and password
+          # mywifi.enable_APWiFi("wifi_name",13) # You can also enable AP mode and build your own wifi network.
+          Ip= mywifi.sta.ifconfig()[0] # Get the local IP address
+          listenSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Create a socket, the default parameter is TCP communication mode.
+          listenSocket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) # Set socket property parameters
+          listenSocket.bind((ip,port)) # bind ip and port
+          listenSocket.listen(3) # Start listening and set the maximum number of connections
+          Print ('tcp waiting...')
+          oled.DispChar("%s:%s" %(ip,port),0,0) # oled screen shows the local server ip and port
+          oled.DispChar('accepting.....',0,16)
+          Oled.show()
 
-        While True:
-            Print("accepting.....")
-            Conn, addr = listenSocket.accept() # Block, wait for the client's request to connect, if there is a new client to connect to the server, then a new socket will be returned to serve this client specifically
-            Print(addr,"connected")
-        
-            While True:
-                Data = conn.recv(1024) # Receive the data sent by the other party, the read byte is set to 1024 bytes.
-                If(len(data) == 0):
-                    Print("close socket")
-                    Conn.close() # Close the socket if the received data is 0 bytes
-                    Break
-                Data_utf=data.decode() # Received byte stream to decode the string in utf8 encoding
-                Print(data_utf)
-                oled.DispChar(data_utf,0,48) # will display the received text oled
-                Oled.show()
-                Oled.fill_rect(0,48,128,16,0) # Partial clear screen
-                Conn.send(data) # return data to the client
+          While True:
+                Print("accepting.....")
+                Conn, addr = listenSocket.accept() # Block, wait for the client's request to connect, if there is a new client to connect to the server, then a new socket will be returned to serve this client specifically
+                Print(addr,"connected")
+          
+                While True:
+                     Data = conn.recv(1024) # Receive the data sent by the other party, the read byte is set to 1024 bytes.
+                     If(len(data) == 0):
+                          Print("close socket")
+                          Conn.close() # Close the socket if the received data is 0 bytes
+                          Break
+                     Data_utf=data.decode() # Received byte stream to decode the string in utf8 encoding
+                     Print(data_utf)
+                     oled.DispChar(data_utf,0,48) # will display the received text oled
+                     Oled.show()
+                     Oled.fill_rect(0,48,128,16,0) # Partial clear screen
+                     Conn.send(data) # return data to the client
 
-    # When catching an exception, close the socket, network
-    Except:
-        If(listenSocket):
-            listenSocket.close()
-        mywifi.disconnectWiFi()
+     # When catching an exception, close the socket, network
+     Except:
+          If(listenSocket):
+                listenSocket.close()
+          mywifi.disconnectWiFi()
 
 .. Attention:: In the above example, use ``connectWiFi()`` to connect to the same router wifi. You can also use the ``enable_APWiFi()`` to enable the AP mode and build a wifi network to allow other devices to access it.
 
@@ -184,5 +184,5 @@ IP address and port. After the Connect connection is successful, the text is sen
 
 
 .. image:: ../../images/tutorials/socket_2.gif
-    :scale: 60 %
-    :align: center
+     :scale: 60 %
+     :align: center

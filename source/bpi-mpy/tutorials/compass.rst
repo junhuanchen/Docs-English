@@ -46,22 +46,22 @@ Experience the compass
 
 .. code:: python
 
-   """
-       Compass.py
-       Creates a compass.
-       The user will need to calibrate the compass first. The compass uses the
-       Built-in clock images to display the position of the needle.
+    """
+         Compass.py
+         Creates a compass.
+         The user will need to calibrate the compass first. The compass uses the
+         Built-in clock images to display the position of the needle.
 
-   """
-   From microbit import *
+    """
+    From microbit import *
 
-   # Start calibrating
-   Compass.calibrate()
-   # Try to keep the needle pointed in (roughly) the correct direction
-   While True:
-       Sleep(100)
-       Needle = ((15 - compass.heading()) // 30) % 12
-       Display.show(Image.ALL_CLOCKS[needle])
+    # Start calibrating
+    Compass.calibrate()
+    # Try to keep the needle pointed in (roughly) the correct direction
+    While True:
+         Sleep(100)
+         Needle = ((15 - compass.heading()) // 30) % 12
+         Display.show(Image.ALL_CLOCKS[needle])
 
 In this example, the first step is to calibrate the electronic compass (mpu). After the calibration is complete, we can see that there is a compass on our led panel. It always points to the south no matter how we turn the board.
 |compass|

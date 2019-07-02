@@ -5,12 +5,12 @@ For the first time, please burn the Webduino firmware first. If you don't burn i
 
 .. Hint::
 
-    Please confirm that the driver has been installed and you have already know the name of your hardware serial port, for example: COM5, ttyUSB0.
+     Please confirm that the driver has been installed and you have already know the name of your hardware serial port, for example: COM5, ttyUSB0.
 
 .. toctree::
-   :maxdepth: 2
+    :maxdepth: 2
 
-   ../bpi-steam/driver
+    ../bpi-steam/driver
 
 Under Windows
 ---------------------------
@@ -32,4 +32,4 @@ Please refer to other web tutorials. If you have special needs, you can submit a
 
 .. Hint::
 
-    For the problem of displaying x after burning, please see this `Skip production test X <https://github.com/BPI-STEAM/BPI-BIT-WebDuino/issues/3>`_, more questions can be found in `中文Community <https://forum.banana-pi.org.cn/c/bpi-bit>`_ Feedback.
+     For the problem of displaying x after burning, please see this `Skip production test X <https://github.com/BPI-STEAM/BPI-BIT-WebDuino/issues/3>`_, more questions can be found in `中文Community <https://forum.banana-pi.org.cn/c/bpi-bit>`_ Feedback.

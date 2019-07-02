@@ -22,12 +22,12 @@ The prepared code is as follows:
 
 .. code:: python
 
-   From microbit import *
-   While True:
-       If pin1.is_touched():
-           Display.show(Image.HAPPY)
-       Else:
-           Display.show(Image.SAD)
+    From microbit import *
+    While True:
+         If pin1.is_touched():
+              Display.show(Image.HAPPY)
+         Else:
+              Display.show(Image.SAD)
 
 At this time, you need a hand to touch the pin of the No. 1 tag, you can see the board turned from sad to happy.
 If you loosen it, it will change your expression again. Is it angry? XD
@@ -68,8 +68,8 @@ Then we use the following code to control its lighting and extinction, we can se
 
 .. code:: python
 
-   From microbit import *
-   Pin2.write_digital(1)
+    From microbit import *
+    Pin2.write_digital(1)
 
 You can see that it is lit up, which means that we can control its brightness. Is this consistent with the initial tutorial?
 
@@ -79,13 +79,13 @@ Then we will add a Blink effect this time, using the following code.
 
 .. code:: python
 
-   From microbit import *
+    From microbit import *
 
-   While True:
-       Pin2.write_digital(1)
-       Sleep(200)
-       Pin2.write_digital(0)
-       Sleep(1000)
+    While True:
+         Pin2.write_digital(1)
+         Sleep(200)
+         Pin2.write_digital(0)
+         Sleep(1000)
 
 The effect is as follows:
 
@@ -93,10 +93,10 @@ The effect is as follows:
 
 .. Note::
 
-   1. Use the pin2 pin to output 1 , which will make the LED become high. It is simply assumed that there is voltage on this pin, and the effect is equivalent to directly connecting the positive terminal of the power supply. (In principle, it should be understood that a potential difference is formed between the two pins).
-   
-   2. First light it up, which is `pin2.write_digital(1)`, then use `sleep(200) ` to let the board rest for 200 milliseconds.
+    1. Use the pin2 pin to output 1 , which will make the LED become high. It is simply assumed that there is voltage on this pin, and the effect is equivalent to directly connecting the positive terminal of the power supply. (In principle, it should be understood that a potential difference is formed between the two pins).
+    
+    2. First light it up, which is `pin2.write_digital(1)`, then use `sleep(200) ` to let the board rest for 200 milliseconds.
 
-   3. Then turn it off, which is `pin2.write_digital(0)`, then rest for 1000 milliseconds, which is 1 second.
+    3. Then turn it off, which is `pin2.write_digital(0)`, then rest for 1000 milliseconds, which is 1 second.
 
-   4. Repeat the process above.
+    4. Repeat the process above.

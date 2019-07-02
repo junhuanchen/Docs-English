@@ -16,7 +16,7 @@ Xiao Ming wants to send a message to Xiao Hong, then Xiao Ming can create a topi
 
 .. Hint::
 
-    Under such a framework, the code between us is the client code, so there is no need to write the receiving program of the server. As long as the two parties agree on the data protocol of the interface, the communication between them is too transparent. Therefore, its current security is also too dependent on surface authentication, and this authority and communication control will be improved in the future.
+     Under such a framework, the code between us is the client code, so there is no need to write the receiving program of the server. As long as the two parties agree on the data protocol of the interface, the communication between them is too transparent. Therefore, its current security is also too dependent on surface authentication, and this authority and communication control will be improved in the future.
 
 Prepare the MQTT server
 ---------------------------
@@ -48,47 +48,47 @@ Now prepare the following code
 
 .. code:: python
 
-   Import wifi
-   Wifi.start()
+    Import wifi
+    Wifi.start()
 
-   Server_ip = "mq.tongxinmao.com" # Online public MQTT server
-   Client_id = "umqtt_client" # Client ID, optionally defined, to identify the data that it sends.
+    Server_ip = "mq.tongxinmao.com" # Online public MQTT server
+    Client_id = "umqtt_client" # Client ID, optionally defined, to identify the data that it sends.
 
-   Import time
+    Import time
 
-   From umqtt.robust import MQTTClient
+    From umqtt.robust import MQTTClient
 
-   Try:
-       # see https://github.com/micropython/micropython-lib/blob/master/umqtt.simple/umqtt/simple.py
-       c = MQTTClient(client_id, server_ip, 18830) # Configure the connection. This is the server configuration of the communication cat. The port is 18830. The default is 1883.
+    Try:
+         # see https://github.com/micropython/micropython-lib/blob/master/umqtt.simple/umqtt/simple.py
+         c = MQTTClient(client_id, server_ip, 18830) # Configure the connection. This is the server configuration of the communication cat. The port is 18830. The default is 1883.
 
-       c.DEBUG = True # Output Debug information
+         c.DEBUG = True # Output Debug information
 
-       Def sub_cb(topic, msg):
-           Print((topic, msg))
-           C.publish(topic, msg) # No matter what subscription information is received, it is returned with the same subject and data.
+         Def sub_cb(topic, msg):
+              Print((topic, msg))
+              C.publish(topic, msg) # No matter what subscription information is received, it is returned with the same subject and data.
 
-       C.set_callback(sub_cb) # Receive callback processing for data that is subscribed to the remote.
+         C.set_callback(sub_cb) # Receive callback processing for data that is subscribed to the remote.
 
-       If not c.connect(clean_session=False):
-           C.subscribe(b"foo_topic") # Subscribe to a topic of foo_topic (topic)
+         If not c.connect(clean_session=False):
+              C.subscribe(b"foo_topic") # Subscribe to a topic of foo_topic (topic)
 
-       C.publish(b"foo_topic", b"hello") # Send a hello string to the topic of foo_topic.
+         C.publish(b"foo_topic", b"hello") # Send a hello string to the topic of foo_topic.
 
-       While 1:
-           # Let the chip run a little slower and easy to observe.
-           Time.sleep(1)
+         While 1:
+              # Let the chip run a little slower and easy to observe.
+              Time.sleep(1)
 
-           # Waiting to process data for MQTT
-           If c.check_msg() is not None:
-               C.wait_msg()
+              # Waiting to process data for MQTT
+              If c.check_msg() is not None:
+                    C.wait_msg()
 
-           # No other things can be done when the data can be processed.
-           Else:
-               Print('other operator')
+              # No other things can be done when the data can be processed.
+              Else:
+                    Print('other operator')
 
-   Finally:
-       C.disconnect() # Debug the program to reopen the service, remember to close the line, otherwise the board will restart before you can continue.
+    Finally:
+         C.disconnect() # Debug the program to reopen the service, remember to close the line, otherwise the board will restart before you can continue.
 
 .. _ communication cat MQTT server: http://www.tongxinmao.com/txm/webmqtt.php
 .. _mosquitto Windows: https://github.com/BPI-STEAM/BPI-BIT-MicroPython/releases/tag/windows-mosquitto
@@ -99,16 +99,16 @@ Now prepare the following code
 The above is a concrete example of MQTT, which should have the following effects.
 
 1. The board will send a ``hello`` to the subscribed foo_topic theme.
-   Data, users who subscribe to the topic on the web page at this time should get the data and display it.
+    Data, users who subscribe to the topic on the web page at this time should get the data and display it.
 
 2. The board subscribes to the foo_topic theme, so it will receive 1 `hello` previously sent by itself.
-   Data, and then according to the code, it will send this received data back, so this time the board will be
-   Receive and send data cyclically on the foo_topic theme.
+    Data, and then according to the code, it will send this received data back, so this time the board will be
+    Receive and send data cyclically on the foo_topic theme.
 
 3. If we are on the web side of the section to foo_topic
-   If the subject sends data, the board will receive the data and display the corresponding data, as seen in the figure.
-   ``11 22 3311`` data, pay attention to this time, your new data will also participate 2
-   The loop mentioned in the output data.
+    If the subject sends data, the board will receive the data and display the corresponding data, as seen in the figure.
+    ``11 22 3311`` data, pay attention to this time, your new data will also participate 2
+    The loop mentioned in the output data.
 
 .. image:: mqtt/online_test.png
 

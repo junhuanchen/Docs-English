@@ -13,18 +13,18 @@ In fact, this is not difficult, it is better to say that it is easy to do.
 
 .. code:: python
 
-   From microbit import *
+    From microbit import *
 
-   Sleep(2000)
+    Sleep(2000)
 
-   Display.scroll(str(button_a.get_presses()))
+    Display.scroll(str(button_a.get_presses()))
 
 This code will pause for two seconds before running, then you will start to press the button, which will scroll to show you press A.
 The number of times. It's that simple, although the code is not very useful, it still provides some new ideas, so you can imagine more ways to control the hardware.
 
 This sleep
-   The function can pause the board for a certain amount of time. The pause time is the number of milliseconds. If you want to pause at some time in your program, write it as above.
-   The sleep function will do.
+    The function can pause the board for a certain amount of time. The pause time is the number of milliseconds. If you want to pause at some time in your program, write it as above.
+    The sleep function will do.
 2. The button_a object allows you to get the number of times pressed in a time via the get_presses method.
 
 Then once get_presses gets the value, pass it to display.sroll
@@ -52,18 +52,18 @@ It is judged whether the button is pressed, and this judgment method is suggeste
 
 .. code:: python
 
-   While True:
-       # Do stuff
+    While True:
+         # Do stuff
 
 So we can build a very simple code
 
 .. code:: python
 
-   From microbit import *
+    From microbit import *
 
-   While True:
-       If button_a.is_pressed():
-           Display.show(Image.HAPPY)
-           Display.clear()
+    While True:
+         If button_a.is_pressed():
+              Display.show(Image.HAPPY)
+              Display.clear()
 
 At this point, you can press the button A to display the Image we have learned before. This is what the so-called learning is.

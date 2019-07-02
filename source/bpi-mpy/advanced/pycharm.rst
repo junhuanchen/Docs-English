@@ -95,7 +95,7 @@ Now we can run the main.py file, right-click anywhere in the edit box and select
 
 .. Attention::
 
-    If the serial port connection does not appear on the Linux system, check whether the serial port has permission for the general user. If you are not sure, please check this command \ ``usermod -a -G dialout Username && sudo reboot``\ , Username refers to your Username, not Username.
+     If the serial port connection does not appear on the Linux system, check whether the serial port has permission for the general user. If you are not sure, please check this command \ ``usermod -a -G dialout Username && sudo reboot``\ , Username refers to your Username, not Username.
 
 |image18|
 

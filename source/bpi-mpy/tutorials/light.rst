@@ -19,15 +19,15 @@ There is a light built-in module in the firmware. I can easily get the intensity
 
 .. code:: python
 
-   Import light
-   From time import sleep_ms
-   R = light.Intensity(39)
-   L = light.Intensity(36)
+    Import light
+    From time import sleep_ms
+    R = light.Intensity(39)
+    L = light.Intensity(36)
 
-   While True:
-       Print('R=',R.read())
-       Print('L=',L.read())
-       Sleep_ms(1000)
+    While True:
+         Print('R=',R.read())
+         Print('L=',L.read())
+         Sleep_ms(1000)
 
 We want to use the light module, we must first import this module, you can use import light
 To import.
@@ -51,20 +51,20 @@ Preset Gesture() in our light module, which allows us to implement simple gestur
 
 .. code:: python
 
-   Import light
-   From display import*
-   Ts = light.Gesture()
-   Display = Display()
-   t = 0
-   While True:
-       Res = ts.get_gesture()
-       If res != None:
-           t = t+1
-           Print(res, t)
-           If res == 'right':
-               Display.show(Image.ARROW_E)
-           Else:
-               Display.show(Image.ARROW_W)
+    Import light
+    From display import*
+    Ts = light.Gesture()
+    Display = Display()
+    t = 0
+    While True:
+         Res = ts.get_gesture()
+         If res != None:
+              t = t+1
+              Print(res, t)
+              If res == 'right':
+                    Display.show(Image.ARROW_E)
+              Else:
+                    Display.show(Image.ARROW_W)
 
 First import our light module, then instantiate the Gesture() class, ts = light.Gesture() to complete the initialization of the detected gestures with this code.
 
@@ -82,22 +82,22 @@ The measured results are as follows
 
 .. Attention::
 
-    There are several places to note when using get_gesture()
+     There are several places to note when using get_gesture()
 
-    To use in an environment with moderate light intensity, do not use it in an environment where the light is too strong or too weak. Under the indoor fluorescent lamp, the accuracy of recognition is the best.
+     To use in an environment with moderate light intensity, do not use it in an environment where the light is too strong or too weak. Under the indoor fluorescent lamp, the accuracy of recognition is the best.
 
-    It is important to ensure that the photosensor is facing the light source when using it, and then emphasize the need to point the board toward the light source.
+     It is important to ensure that the photosensor is facing the light source when using it, and then emphasize the need to point the board toward the light source.
 
 After we understand how to use the photosensor, we can use it to do some interesting things, such as using gestures to light the led, detecting the light intensity to control the switch, etc., and also combining the previous display to start your brain. Hole and try to do some interesting little things.
 
 .. Hint::
 
-    If you want to know why is light.Intensity(39) and light.Intensity(36)?
+     If you want to know why is light.Intensity(39) and light.Intensity(36)?
 
-    Let's take a look at the circuit diagram at a glance (`View the schematic of bpibit`_)
+     Let's take a look at the circuit diagram at a glance (`View the schematic of bpibit`_)
 
-    .. figure:: light/sensor.png
+     .. figure:: light/sensor.png
 
-    The photo sensor on the left is connected to pin pin36, and the photo sensor on the right is connected to pin pin39.
+     The photo sensor on the left is connected to pin pin36, and the photo sensor on the right is connected to pin pin39.
 
-    .. _View the schematic of bpibit: https://github.com/BPI-STEAM/BPI-BIT/blob/master/doc/BPI-WEBDUINO-BIT-V1_4.pdf
+     .. _View the schematic of bpibit: https://github.com/BPI-STEAM/BPI-BIT/blob/master/doc/BPI-WEBDUINO-BIT-V1_4.pdf

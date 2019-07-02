@@ -2,9 +2,9 @@ External monitoring
 =================================================
 
 .. toctree::
-   :maxdepth: 2
-   :numbered:
+    :maxdepth: 2
+    :numbered:
 
-   keyboard
-   time
-   input
+    keyboard
+    time
+    input

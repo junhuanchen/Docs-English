@@ -17,13 +17,13 @@ Manual input (you can also select the text to copy, right-click in the black box
 
 .. code:: python
 
-      From machine import Pin
+        From machine import Pin
 
 re-enter
 
 .. code:: python
 
-      Pin(18, Pin.OUT).value(1)
+        Pin(18, Pin.OUT).value(1)
 
 .. figure:: leds/light_up.png
 
@@ -35,7 +35,7 @@ To further confirm that it is the light we control, enter
 
 .. code:: python
 
-      Pin(18, Pin.OUT).value(0)
+        Pin(18, Pin.OUT).value(0)
 
 .. figure:: leds/light_down.png
 
@@ -50,15 +50,15 @@ Prepare the following code into the main.py file. The difference from the previo
 
 .. code:: python
 
-      From machine import Pin
-      Import time
-      Led = Pin(18, Pin.OUT) # get a led on gpio 18.
-      Print('turn on')
-      Led.value(1) # turn on
-      Print('sleep 1s')
-      Time.sleep(1) # sleep 1s
-      Print('turn off')
-      Led.value(0) # turn off
+        From machine import Pin
+        Import time
+        Led = Pin(18, Pin.OUT) # get a led on gpio 18.
+        Print('turn on')
+        Led.value(1) # turn on
+        Print('sleep 1s')
+        Time.sleep(1) # sleep 1s
+        Print('turn off')
+        Led.value(0) # turn off
 
 .. figure:: leds/mian_light.png
 
@@ -66,18 +66,18 @@ If the effect is not obvious, you can write an infinite loop to see the effect, 
 
 .. code:: python
 
-      From machine import Pin
-      Import time
-      Led = Pin(18, Pin.OUT) # get a led on gpio 18.
-      While True:
-            Print('turn on')
-            Led.value(1) # turn on
-            Print('sleep 1s')
-            Time.sleep(1) # sleep 1s
-            Print('turn off')
-            Led.value(0) # turn off
-            Print('sleep 1s')
-            Time.sleep(1) # sleep 1s
+        From machine import Pin
+        Import time
+        Led = Pin(18, Pin.OUT) # get a led on gpio 18.
+        While True:
+                Print('turn on')
+                Led.value(1) # turn on
+                Print('sleep 1s')
+                Time.sleep(1) # sleep 1s
+                Print('turn off')
+                Led.value(0) # turn off
+                Print('sleep 1s')
+                Time.sleep(1) # sleep 1s
 
 .. figure:: leds/blink_led.png
 
@@ -88,10 +88,10 @@ Prepare the following code into main.py
 
 .. code:: python
 
-      From pixel import Pixel
-      View = Pixel()
-      RGB = (10, 10, 10)
-      View.LoadXY(2, 2, RGB)
-      View.Show()
+        From pixel import Pixel
+        View = Pixel()
+        RGB = (10, 10, 10)
+        View.LoadXY(2, 2, RGB)
+        View.Show()
 
 Use ``runfile main.py`` to execute.

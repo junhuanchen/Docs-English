@@ -26,14 +26,14 @@ See the city ID for details: http://mobile.weather.com.cn/js/citylist.xml
 {
   "weatherinfo":
   {
-    "city": "Jingzhou",
-    "cityid": "101200801",
-    "img1": "n7.gif",
-    "img2": "d2.gif",
-    "ptime": "18:00",
-    "temp1": "16°C",
-    "temp2": "23°C",
-    "weather": "Little rain turns negative"
+     "city": "Jingzhou",
+     "cityid": "101200801",
+     "img1": "n7.gif",
+     "img2": "d2.gif",
+     "ptime": "18:00",
+     "temp1": "16°C",
+     "temp2": "23°C",
+     "weather": "Little rain turns negative"
   }
 }
 ```

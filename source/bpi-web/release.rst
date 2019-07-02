@@ -28,7 +28,7 @@ Webduino development version
 
 .. Hint::
 
-    The online tutorial has been synced to the advanced tutorial, please see the list on the left.
+     The online tutorial has been synced to the advanced tutorial, please see the list on the left.
 
 - `Online tutorial <https://webduino.com.cn/site/zh_cn/tutorials.html>`_ & `Online website <https://webduino.com.cn/site/en_us/index.html>`_
 

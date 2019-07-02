@@ -10,13 +10,13 @@ Come and try it now.
 
 .. code:: python
 
-   From microbit import *
+    From microbit import *
 
-   While True:
-       Temp = temperature() # get temperature °C
-       Print(temp)
-       Display.scroll(str(temp))
-       Sleep(10000)
+    While True:
+         Temp = temperature() # get temperature °C
+         Print(temp)
+         Display.scroll(str(temp))
+         Sleep(10000)
 
 Measured contrast effect
 ---------------------------
