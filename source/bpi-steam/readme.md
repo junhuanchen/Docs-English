@@ -50,23 +50,23 @@ The board is divided into multiple versions, such as version 1.2 and version 1.4
 
 ## Product Support
 
-### [Install Driver] (driver.md)
+### [Install Driver](driver.md)
 
 ### Webduino
 
-- [Webduino Basic Teaching] (https://webduino.com.cn/site/zh_cn/tutorials.html)
-- [Webduino Player Guide] (https://github.com/BPI-STEAM/BPI-BIT-WebDuino)
-- [Webduino Chinese Community] (https://forum.banana-pi.org.cn/c/bpi-bit/webduino)
+- [Webduino Basic Teaching](https://webduino.com.cn/site/zh_cn/tutorials.html)
+- [Webduino Player Guide](https://github.com/BPI-STEAM/BPI-BIT-WebDuino)
+- [Webduino Chinese Community](https://forum.banana-pi.org.cn/c/bpi-bit/webduino)
 
 ### MicroPython
 
-- [MicroPython Player Guide] (https://github.com/BPI-STEAM/BPI-BIT-MicroPython)
-- [MicroPython sample code] (https://github.com/BPI-STEAM/BPI-BIT-Samples)
-- [MicroPython Chinese Community] (https://forum.banana-pi.org.cn/c/bpi-bit/micropython)
+- [MicroPython Player Guide](https://github.com/BPI-STEAM/BPI-BIT-MicroPython)
+- [MicroPython sample code](https://github.com/BPI-STEAM/BPI-BIT-Samples)
+- [MicroPython Chinese Community](https://forum.banana-pi.org.cn/c/bpi-bit/micropython)
 
 ### Arduino
 
-- [Arduino Player Guide] (https://github.com/BPI-STEAM/BPI-BIT-Arduino)
+- [Arduino Player Guide](https://github.com/BPI-STEAM/BPI-BIT-Arduino)
 
 ## hardware design
 
@@ -82,15 +82,15 @@ The board is divided into multiple versions, such as version 1.2 and version 1.4
 
 ### Hardware Information
 
-- [BPI-WEBDUINO-BIT-V1_2] (https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/BPI-WEBDUINO-BIT-V1_2.pdf)
+- [BPI-WEBDUINO-BIT-V1_2](https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/BPI-WEBDUINO-BIT-V1_2.pdf)
 
-- [BPI-WEBDUINO-BIT-V1_4] (https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/BPI-WEBDUINO-BIT-V1_4.pdf)
+- [BPI-WEBDUINO-BIT-V1_4](https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/BPI-WEBDUINO-BIT-V1_4.pdf)
 
-- [Buzzer-SS-S050020Z-120] (https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/Buzzer-SS-S050020Z-120.pdf)
+- [Buzzer-SS-S050020Z-120](https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/Buzzer-SS-S050020Z-120.pdf)
 
-- [CH340DS1-ch] (https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/CH340DS1-ch.pdf)
+- [CH340DS1-ch](https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/CH340DS1-ch.pdf)
 
-- [CH340DS1-en] (https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/CH340DS1-en.pdf)
+- [CH340DS1-en](https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/CH340DS1-en.pdf)
 
 - [esp32_hardware_design_guidelines_en](https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/esp32_hardware_design_guidelines_en.pdf)
 
@@ -98,27 +98,27 @@ The board is divided into multiple versions, such as version 1.2 and version 1.4
 
 - [esp-wroom-32_datasheet_cn](https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/esp-wroom-32_datasheet_en.pdf)
 
-- [LightSensor-PTSMD021-0805] (https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/LightSensor-PTSMD021-0805.pdf)
+- [LightSensor-PTSMD021-0805](https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/LightSensor-PTSMD021-0805.pdf)
 
-- [LM1117] (https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/LM1117.pdf)
+- [LM1117](https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/LM1117.pdf)
 
-- [MPU-9250 Datasheet-v1.1-ch] (https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/MPU-9250%20Datasheet-v1.1-ch. Pdf)
+- [MPU-9250 Datasheet-v1.1-ch](https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/MPU-9250%20Datasheet-v1.1-ch. Pdf)
 
-- [MPU-9250 Datasheet-v1.1-en] (https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/MPU-9250%20Datasheet-v1.1-en. Pdf)
+- [MPU-9250 Datasheet-v1.1-en](https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/MPU-9250%20Datasheet-v1.1-en. Pdf)
 
-- [MPU-9250 Register Map-v1.6] (https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/MPU-9250%20Register%20Map-v1.6.pdf )
+- [MPU-9250 Register Map-v1.6](https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/MPU-9250%20Register%20Map-v1.6.pdf )
 
-- [NTC-0805-103F-3950F] (https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/NTC-0805-103F-3950F.pdf)
+- [NTC-0805-103F-3950F](https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/NTC-0805-103F-3950F.pdf)
 
-- [SY7208] (https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/SY7208.pdf)
+- [SY7208](https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/SY7208.pdf)
 
-- [WS2812B] (https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/WS2812B.pdf)
+- [WS2812B](https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/WS2812B.pdf)
 
-- [DS-000189-ICM-20948-v1.3] (https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/DS-000189-ICM-20948-v1.3 .pdf)
+- [DS-000189-ICM-20948-v1.3](https://github.com/BPI-STEAM/BPI-BIT-Hardware/tree/master/docs/DS-000189-ICM-20948-v1.3 .pdf)
 
 ## Related Websites
 
-- [Official Chinese Community] (https://forum.banana-pi.org.cn/c/bpi-bit)
-- [Official English Community] (http://forum.banana-pi.org/c/bpi-bit)
-- [Webduino Domestic Edition] (https://webduino.com.cn/site/)
-- [Webduino International Edition] (https://webduino.io/)
+- [Official Chinese Community](https://forum.banana-pi.org.cn/c/bpi-bit)
+- [Official English Community](http://forum.banana-pi.org/c/bpi-bit)
+- [Webduino Domestic Edition](https://webduino.com.cn/site/)
+- [Webduino International Edition](https://webduino.io/)
