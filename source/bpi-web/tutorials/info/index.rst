@@ -5,7 +5,7 @@ Understanding software
    :maxdepth: 2
    :numbered:
 
-   Setup
-   Ota
-   Toolbar
-   Interface
+   setup
+   ota
+   toolbar
+   interface

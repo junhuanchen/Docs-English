@@ -5,6 +5,6 @@ Voice & sound
    :maxdepth: 2
    :numbered:
 
-   Sound-effect
-   Speak-aloud
-   Speech-recognition
+   sound-effect
+   speak-aloud
+   speech-recognition

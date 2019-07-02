@@ -5,9 +5,9 @@ Development board function
    :maxdepth: 2
    :numbered:
 
-   Board
-   Rgbled-matrix
-   Ab-button
-   Photocell-thermistor
-   Buzzer
-   Mpu9250
+   board
+   rgbled-matrix
+   ab-button
+   photocell-thermistor
+   buzzer
+   mpu9250

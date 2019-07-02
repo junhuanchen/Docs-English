@@ -5,6 +5,6 @@ External monitoring
    :maxdepth: 2
    :numbered:
 
-   Keyboard
-   Time
-   Input
+   keyboard
+   time
+   input
